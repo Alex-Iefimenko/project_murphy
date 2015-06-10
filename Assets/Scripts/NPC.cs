@@ -208,8 +208,8 @@ public class NPC : MonoBehaviour {
 		SetTaskNPC(movement.currentRoom.ContainsUnconscious());
 		if (movement.IsNearObject (taskNPC.gameObject)) 
 		{
-			SetTaskAdress(ShipState.allRooms[(int)Room.RoomTypes.MedBay]);
-			taskNPC.SetTaskAdress(ShipState.allRooms[(int)Room.RoomTypes.MedBay]);
+			SetTaskAdress(ShipState.allRooms[(int)Room.RoomTypes.MedBay].GetComponent<Room> (), false);
+			taskNPC.SetTaskAdress(ShipState.allRooms[(int)Room.RoomTypes.MedBay].GetComponent<Room> (), false);
 			currentState = States.Pull;
 		}
 		else 

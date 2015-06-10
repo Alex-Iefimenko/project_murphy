@@ -102,7 +102,6 @@ public class ShipState : MonoBehaviour {
 				}
 			}
 		}
-
 		// Restoring of closest path
 		if ((float)distances[targetRoom] == float.PositiveInfinity)
 		{

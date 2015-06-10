@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour {
 	void Update () {
 		if (movementPath != null && movementPath.Count != 0) 
 			Move ((Vector3)movementPath[0]);
-		if (targetRoomObject && movementPath.Count == 0)
+		else if (targetRoomObject && movementPath.Count == 0)
 			MoveTowardsObject ();
 	}
 
@@ -53,9 +53,9 @@ public class Movement : MonoBehaviour {
 	// Create movement to exact target object
 	public void NewMovementPath (GameObject localTargetObject) 
 	{
-		Room targetObjectRoom = Helpers.GetCurretntRoomOf(localTargetObject);
 		targetRoomObject = localTargetObject;
-		NewMovementPath(targetObjectRoom, false);
+		Room targetObjectRoom = Helpers.GetCurretntRoomOf(localTargetObject);
+		if (targetObjectRoom != currentRoom) NewMovementPath(targetObjectRoom, false);
 	}
 
 	// Move character towards next movements point. Delete it if reached
@@ -63,18 +63,18 @@ public class Movement : MonoBehaviour {
 	{
 		nextPoint.z = transform.position.z;
 		transform.position = Vector3.MoveTowards(transform.position, nextPoint, speed * Time.deltaTime);
-		if (npcCollider.OverlapPoint(nextPoint)) movementPath.RemoveAt(0);
+		if (npcCollider.OverlapPoint(nextPoint)) 
+		{	
+			if (movementPath.Count > 0) movementPath.RemoveAt(0);
+			if (targetRoomObject && currentRoom == Helpers.GetCurretntRoomOf(targetRoomObject)) movementPath.Clear();
+		}
 	}
 
 	// Follow for certain (dynamic object)
 	private void MoveTowardsObject ()
 	{
-		if (currentRoom.HasObject (targetRoomObject) && !IsNearObject (targetRoomObject)) 
-		{
-			Vector3 nextPoint = targetRoomObject.transform.position;
-			nextPoint.z = transform.position.z;
-			transform.position = Vector3.MoveTowards(transform.position, nextPoint, speed * Time.deltaTime);;
-		}
+		if (!IsNearObject (targetRoomObject)) 
+			Move (targetRoomObject.transform.position);
 	}
 
 	// Check if there are no movement points in character Path
@@ -87,7 +87,7 @@ public class Movement : MonoBehaviour {
 	public bool IsNearObject (GameObject exactObject)
 	{
 		bool result = false;
-		if (exactObject.collider2D && npcCollider.bounds.Intersects(exactObject.collider2D.bounds)) result = true;
+		result = (exactObject.collider2D && npcCollider.bounds.Intersects (exactObject.collider2D.bounds));
 		return result;
 	}
 
