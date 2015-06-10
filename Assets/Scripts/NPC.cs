@@ -135,7 +135,7 @@ public class NPC : MonoBehaviour {
 	{
 		if (taskAdress != room) taskAdress = room;
 		if (movement.currentRoom != taskAdress || movement.targetRoom != taskAdress) 
-			movement.NewMovementPath(taskAdress, navigateToRoomObject);
+			movement.NewMovementPath(taskAdress);
 	}
 
 	// Adds object point added to movement path

@@ -18,8 +18,8 @@ public class Door : MonoBehaviour {
 	// Method returns Linked to door Room as key and closest to it point as value
 	public void GetLinkedRooms ()
 	{
-		Vector3 entranceOne = transform.position + transform.up * GetComponent<BoxCollider2D>().size.y / 2f;
-		Vector3 entranceTwo = transform.position - transform.up * GetComponent<BoxCollider2D>().size.y / 2f;
+		Vector3 entranceOne = transform.position + transform.up * GetComponent<BoxCollider2D>().size.y / 2f * transform.localScale.y;
+		Vector3 entranceTwo = transform.position - transform.up * GetComponent<BoxCollider2D>().size.y / 2f * transform.localScale.y;
 
 		foreach (GameObject room in ShipState.allRooms.Values)
 		{
