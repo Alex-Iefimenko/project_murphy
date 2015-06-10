@@ -13,7 +13,6 @@ public class Room : MonoBehaviour {
 	public ArrayList neighbors = new ArrayList(); // Neighbors list 
 	private ArrayList npcs = new ArrayList();	  // NPC list
 	public Furniture[] furniture;				  // Room furniture list
-	private bool[] furnitureIsOccupied; 				  // Room furniture status of occuption list
 
 	// Room collider object
 	//private Collider2D roomCollider;
@@ -29,7 +28,6 @@ public class Room : MonoBehaviour {
 		currentDurability = maxDurability;
 		furniture = GetComponentsInChildren<Furniture>();
 		foreach (Furniture item in furniture) item.currentRoom = this;
-		furnitureIsOccupied = new bool[furniture.Length];
 	}
 	
 	// Update is called once per frame
@@ -118,7 +116,7 @@ public class Room : MonoBehaviour {
 		bool result = false;
 		if (sObject.GetComponent<NPC> () && npcs.Contains (sObject.GetComponent<NPC> ()))
 			result = true;
-		else if (sObject.GetComponent<Furniture> () && System.Array.LastIndexOf(furniture, sObject.GetComponent<Furniture> ()) != -1)
+		else if (sObject.GetComponent<Furniture> () && System.Array.IndexOf(furniture, sObject.GetComponent<Furniture> ()) != -1)
 			result = true;
 		return result;
 	}
@@ -127,8 +125,11 @@ public class Room : MonoBehaviour {
 	public GameObject GetUnoccupiedRoomObject ()
 	{
 		GameObject resultObject = null;
-		int firstFreeObject = System.Array.LastIndexOf(furnitureIsOccupied, false);
-		if (firstFreeObject > -1) resultObject = furniture[firstFreeObject].gameObject;
+		ArrayList unoccypiedObjects = new ArrayList();
+		foreach (Furniture item in furniture)
+			if (item.isFree) unoccypiedObjects.Add (item);
+		if (unoccypiedObjects.Count > 0) 
+			resultObject = Helpers.GetRandomArrayValue<Furniture>(unoccypiedObjects).gameObject;
 		return resultObject;
 	}
 }

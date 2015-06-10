@@ -36,10 +36,16 @@ public class Movement : MonoBehaviour {
 	}
 
 	// Create movement path with no params to center of the room
-	public void NewMovementPath (Room localTargetRoom) 
+	public void NewMovementPath (Room localTargetRoom, bool randRoomObject) 
 	{
 		movementPath = ShipState.GetStepsToRoom(currentRoom, localTargetRoom);
 		targetRoom = localTargetRoom;
+		if (randRoomObject)
+		{
+			if (movementPath.Count >= 1) movementPath.RemoveAt(movementPath.Count - 1); 
+			movementPath.Add(localTargetRoom.GetUnoccupiedRoomObject().transform.position);
+		}
+
 		// Place for movement path visaulization points code
 		//
 	}
@@ -49,17 +55,8 @@ public class Movement : MonoBehaviour {
 	{
 		Room targetObjectRoom = Helpers.GetCurretntRoomOf(localTargetObject);
 		targetRoomObject = localTargetObject;
-		NewMovementPath(targetObjectRoom);
+		NewMovementPath(targetObjectRoom, false);
 	}
-
-	// Create movement to random target object in any room
-	public void NewMovementPath (Room localTargetRoom, bool randRoomObject) 
-	{
-		NewMovementPath(localTargetRoom);
-		if (movementPath.Count > 1) movementPath.RemoveAt(movementPath.Count - 1); 
-		targetRoomObject = localTargetRoom.GetUnoccupiedRoomObject();
-	}
-
 
 	// Move character towards next movements point. Delete it if reached
 	private void Move (Vector3 nextPoint)

@@ -133,9 +133,11 @@ public class NPC : MonoBehaviour {
 	// CreatesNew movement Path to room or object
 	public void SetTaskAdress(Room room, bool navigateToRoomObject)
 	{
-		if (taskAdress != room) taskAdress = room;
-		if (movement.currentRoom != taskAdress || movement.targetRoom != taskAdress) 
-			movement.NewMovementPath(taskAdress);
+		if (taskAdress != room) 
+		{
+			taskAdress = room;
+			movement.NewMovementPath(taskAdress, navigateToRoomObject);
+		}
 	}
 
 	// Adds object point added to movement path
