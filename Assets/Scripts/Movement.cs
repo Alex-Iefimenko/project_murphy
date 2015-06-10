@@ -91,8 +91,14 @@ public class Movement : MonoBehaviour {
 		Vector3 p1 = transform.position;
 		Vector3 p2 = nextPoint;
 		float angle = Mathf.Atan2(p2.y-p1.y, p2.x-p1.x)*180 / Mathf.PI;
-
-		sRenderer.sprite = sprites [1];
+		if ( 45f <= angle && angle <= 135f ) 
+			sRenderer.sprite = sprites [3];
+		else if ( -135f <= angle && angle <= -45f )
+			sRenderer.sprite = sprites [1];
+		else if ( -45f <= angle && angle <= 45f )
+			sRenderer.sprite = sprites [2];
+		else if ( 135f <= angle || angle <= -135f )
+			sRenderer.sprite = sprites [0];
 	}
 
 	// Check if there are no movement points in character Path
