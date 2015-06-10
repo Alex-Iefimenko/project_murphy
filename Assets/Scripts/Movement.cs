@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class Movement : MonoBehaviour {
 
@@ -9,15 +10,21 @@ public class Movement : MonoBehaviour {
 	private ArrayList movementPath = new ArrayList();
 	// NPC Collider
 	private Collider2D npcCollider; 
+	// NPC Sprite rendering
+	private SpriteRenderer sRenderer;
+	private Sprite[] sprites = new Sprite[4];
 	// Current room field
 	[HideInInspector] public Room currentRoom;
 	[HideInInspector] public Room targetRoom;
 	[HideInInspector] public GameObject targetRoomObject;
 
+
 	// Use this for initialization
 	void Awake () {
 		// Get Door collider object
 		npcCollider = gameObject.GetComponent<Collider2D>();
+		sRenderer   = gameObject.GetComponent<SpriteRenderer>();
+		sprites = Resources.LoadAll ("NPC/Crew/").Skip (1).Cast<Sprite>().ToArray();
 	}
 
 	// Updates current room value
@@ -63,6 +70,7 @@ public class Movement : MonoBehaviour {
 	{
 		nextPoint.z = transform.position.z;
 		transform.position = Vector3.MoveTowards(transform.position, nextPoint, speed * Time.deltaTime);
+		UpdateSprite (nextPoint);
 		if (npcCollider.OverlapPoint(nextPoint)) 
 		{	
 			if (movementPath.Count > 0) movementPath.RemoveAt(0);
@@ -75,6 +83,16 @@ public class Movement : MonoBehaviour {
 	{
 		if (!IsNearObject (targetRoomObject)) 
 			Move (targetRoomObject.transform.position);
+	}
+
+	// Method for handle sprite NPC representation update
+	private void UpdateSprite (Vector3 nextPoint)
+	{
+		Vector3 p1 = transform.position;
+		Vector3 p2 = nextPoint;
+		float angle = Mathf.Atan2(p2.y-p1.y, p2.x-p1.x)*180 / Mathf.PI;
+
+		sRenderer.sprite = sprites [1];
 	}
 
 	// Check if there are no movement points in character Path
