@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21211740}
   - 61: {fileID: 6111740}
   - 50: {fileID: 5011740}
-  - 114: {fileID: 11411740}
   m_Layer: 0
   m_Name: AirFarm
   m_TagString: Untagged
@@ -58,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.51300001, y: -1.07299995, z: -1.15999997}
+  m_LocalPosition: {x: 2.51300001, y: -1.07299995, z: -.100000001}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 441404}
@@ -72,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141404}
   m_LocalRotation: {x: 0, y: 0, z: -.156763047, w: .987636268}
-  m_LocalPosition: {x: .340000004, y: 1.53999996, z: .569999993}
+  m_LocalPosition: {x: .340000004, y: 1.53999996, z: .0500000007}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 411740}
@@ -84,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141406}
   m_LocalRotation: {x: 0, y: 0, z: -.156763047, w: .987636268}
-  m_LocalPosition: {x: -.660000026, y: -.0900000036, z: .569999993}
+  m_LocalPosition: {x: -.660000026, y: -.0900000036, z: .0500000007}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 411740}
@@ -115,19 +114,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 4.90999985, y: 6.34000015}
   m_Center: {x: 0, y: 0}
---- !u!114 &11411740
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentRoom: {fileID: 0}
-  isFree: 1
 --- !u!212 &21211740
 SpriteRenderer:
   m_ObjectHideFlags: 1
