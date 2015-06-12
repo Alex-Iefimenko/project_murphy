@@ -194,9 +194,15 @@ public class CharacterStats : MonoBehaviour {
 	// Updates stats reduction
 	public void UpdateStats ()
 	{
+		if (healthReduction <= 0f && fatigue <= 0f) healthReduction = 1f;
+		else if (healthReduction != 0f) healthReduction = 0f;
+
 		health  -= healthReduction;
 		fatigue -= fatigueReduction;
 		sanity  -= sanityReduction;
+
+		// Check State change
+		CheckConscious ();
 
 		// Psychopath Trait
 		if (HaveTrait (CharacterStats.Traits.Psychopath) && !isInsane && sanity <= 0) 
@@ -204,5 +210,25 @@ public class CharacterStats : MonoBehaviour {
 			isInsane = true;
 			isHostile = !isHostile;
 		}
+
+		Mathf.Clamp (health, 0f, maxHealth);
+		Mathf.Clamp (fatigue, 0f, maxFatigue);
+		Mathf.Clamp (sanity, 0f, maxSanity);
+	}
+
+	void CheckConscious ()
+	{
+		if (health <= 0f && npc.currentState != NPC.States.Dead) 
+		{
+			npc.ClearTaskAims();
+			npc.currentState = NPC.States.Dead;
+		}
+		else if (health <= healthTreshold && npc.currentState != NPC.States.Unconscious)
+		{
+			npc.ClearTaskAims();
+			npc.currentState = NPC.States.Unconscious;
+		}
+		else if ((npc.currentState == NPC.States.Dead || npc.currentState == NPC.States.Unconscious) && health > healthTreshold)
+			npc.currentState = NPC.States.Idle;
 	}
 }

@@ -9,7 +9,9 @@ public class Navigation : MonoBehaviour
 	public float cameraSizeMin = 2f;
 	// Max value of Camera size 
 	public float cameraSizeMax = 10f;
-
+	// ShipObject
+	private GameObject ship; 
+	public GameObject prefab; 
 	// last finger touch id
 	private int lastFingerId = -1;
 	// last touch position in px (screen dimention)
@@ -31,16 +33,18 @@ public class Navigation : MonoBehaviour
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		layer = 1 << LayerMask.NameToLayer(layerName);
+		ship = GameObject.FindGameObjectWithTag("Ship");
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
 		TouchControl ();
-		CameraSizeUpdate ();
+
 		// Editor debug
 		//if (Application.platform == RuntimePlatform.WindowsEditor) 
 		MouseControl ();
+		CameraSizeUpdate ();
 
 	}
 
@@ -165,5 +169,24 @@ public class Navigation : MonoBehaviour
 		{
 			Camera.main.orthographicSize -= 2 * speed * Time.deltaTime;
 		}
+
+		// Block far camera movement
+		Vector3 v3Camera = Camera.main.transform.position;
+		Vector2 cameraSize = new Vector2 (
+			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).x - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).x, 
+			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).y - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).y
+			);
+
+		// OX
+		float xMin = ship.transform.position.x - ship.renderer.bounds.size.x / 2f - 0.45f * cameraSize.x;
+		float xMax = ship.transform.position.x + ship.renderer.bounds.size.x / 2f + 0.45f * cameraSize.x;
+		v3Camera.x = Mathf.Clamp (v3Camera.x, xMin, xMax);
+		
+		// OY
+		float yMin = ship.transform.position.y - ship.renderer.bounds.size.y / 2f - 0.45f * cameraSize.y;
+		float yMax = ship.transform.position.y + ship.renderer.bounds.size.y / 2f + 0.45f * cameraSize.y;
+		v3Camera.y = Mathf.Clamp (v3Camera.y, yMin, yMax);
+
+		Camera.main.transform.position = v3Camera;
 	}
 }

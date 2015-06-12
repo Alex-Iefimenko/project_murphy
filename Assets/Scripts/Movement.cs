@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour {
 	// Character speed
 	public float speed = 1f;
 	// List with points of current NPC walking path
-	private ArrayList movementPath = new ArrayList();
+	[HideInInspector] public ArrayList movementPath = new ArrayList();
 	// NPC Collider
 	private Collider2D npcCollider; 
 	// NPC Sprite rendering

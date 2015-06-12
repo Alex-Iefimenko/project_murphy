@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &17250131
 GameObject:
@@ -10217,7 +10218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &999840289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22346,7 +22347,7 @@ GameObject:
   - 212: {fileID: 1880454933}
   m_Layer: 0
   m_Name: ShipEnviroment
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25089,7 +25090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1caf45dbfefaa7343929cd85a0867145, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6137710, guid: 1caf45dbfefaa7343929cd85a0867145, type: 2}
       propertyPath: m_Size.x
@@ -25158,6 +25159,7 @@ MonoBehaviour:
   speed: 1
   cameraSizeMin: 2
   cameraSizeMax: 10
+  prefab: {fileID: 100000, guid: b821eb6a65e0a3340af0d4e1051ec7c7, type: 2}
 --- !u!1 &2095057488
 GameObject:
   m_ObjectHideFlags: 0

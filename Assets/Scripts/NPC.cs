@@ -75,7 +75,7 @@ public class NPC : MonoBehaviour {
 		// Recalculate stats
 		stats.UpdateStats ();
 		// Next action chose
-		PerformRelevantAction ();
+		if (currentState != States.Unconscious && currentState != States.Dead) PerformRelevantAction ();
 	}
 
 	// Decides what next action would be taken and calls it
@@ -113,7 +113,7 @@ public class NPC : MonoBehaviour {
 	}
 
 	// Clears Task's related fields
-	void ClearTaskAims ()
+	public void ClearTaskAims ()
 	{
 		taskAdress = null;
 		taskNPC = null;
@@ -122,6 +122,7 @@ public class NPC : MonoBehaviour {
 		movement.targetRoomObject = null;
 		movement.targetRoom = null;
 		taskLength = 0f;
+		movement.movementPath = new ArrayList();
 	}
 
 	// Updates taskNPC if it was setted as new
@@ -289,7 +290,7 @@ public class NPC : MonoBehaviour {
 			if (stats.IsResponsibleFor(room.GetComponent<Room>())) 
 			{
 				ClearTaskAims ();
-				taskAdress = room.GetComponent<Room>();
+				SetTaskAdress (room.GetComponent<Room>(), false);
 				Navigate ();
 			}
 		}
@@ -326,7 +327,7 @@ public class NPC : MonoBehaviour {
 		case Tasks.Attack:
 			if (stats.ableDistantAttack) Shot ();
 			if (!stats.ableDistantAttack) Fight ();
-			if (taskNPC.currentState == NPC.States.Unconscious || taskNPC.currentState == NPC.States.Dead) 	ClearTaskAims ();
+			if (taskNPC.currentState == NPC.States.Unconscious || taskNPC.currentState == NPC.States.Dead) ClearTaskAims ();
 			break;
 		}
 	}
@@ -336,8 +337,6 @@ public class NPC : MonoBehaviour {
 	{
 		stats.health -= amount;
 		if (stats.HaveTrait (CharacterStats.Traits.Masochist)) stats.sanity += 2f;
-		if (stats.health <= stats.healthTreshold) currentState = States.Unconscious;
-		if (stats.health <= 0f) currentState = States.Dead;
 	}
 
 }
