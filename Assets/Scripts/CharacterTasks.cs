@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class NPC : MonoBehaviour {
+public class CharacterTasks : MonoBehaviour {
 
 	//Profession
-	public enum NPCTypes{Engineer, Safety, Doctor, Scientist};
+	public enum NPCTypes{ Engineer, Safety, Doctor, Scientist };
 	public NPCTypes npcType;
 
 	//Current action
@@ -17,20 +17,20 @@ public class NPC : MonoBehaviour {
 	[HideInInspector] public Tasks currentTask = Tasks.Idle;
 
 	// Hash with Action methods
-	public Dictionary<NPC.Tasks, System.Action> actionMethods;
+	public Dictionary<CharacterTasks.Tasks, System.Action> actionMethods;
 
 	//Task adress
-	private Room taskAdress;
+	[HideInInspector] public Room taskAdress;
 	// Task NPC
-	private NPC taskNPC;
+	[HideInInspector] public CharacterTasks taskNPC;
 	// Task Length
-	private float taskLength;
+	[HideInInspector] public float taskLength;
 
 	//							//
 	//  NPC Related components	//
 	//							//
 	//AILogic handler
-	[HideInInspector] public AIHandler npcAI;
+	[HideInInspector] public CharacterAI npcAI;
 	// Movement Component
 	[HideInInspector] public Movement movement;
 	// Stats components
@@ -40,14 +40,14 @@ public class NPC : MonoBehaviour {
 	void Awake () {
 		// Generate stats
 		stats = this.GetComponent<CharacterStats> ();
-		npcAI = new AIHandler(this);
+		npcAI = new CharacterAI(this);
 		movement = this.GetComponent<Movement> ();
 		CreateActionDictionary ();
 	}
 
 	// Creation of Hash with Action methods
 	void CreateActionDictionary () {
-		actionMethods = new Dictionary<NPC.Tasks, System.Action> ()
+		actionMethods = new Dictionary<CharacterTasks.Tasks, System.Action> ()
 		{
 			{ Tasks.Attack            , Attack },
 			{ Tasks.Heal              , Heal },
@@ -94,7 +94,7 @@ public class NPC : MonoBehaviour {
 	void ChangeState () 
 	{
 		// Create task-to-state transition matrix
-		Dictionary<NPC.Tasks, NPC.States> stateTaskTransition = new Dictionary<NPC.Tasks, NPC.States> ()
+		Dictionary<CharacterTasks.Tasks, CharacterTasks.States> stateTaskTransition = new Dictionary<CharacterTasks.Tasks, CharacterTasks.States> ()
 		{
 			{ Tasks.Heal              , States.Iteract },
 			{ Tasks.Repair            , States.Repair },
@@ -126,7 +126,7 @@ public class NPC : MonoBehaviour {
 	}
 
 	// Updates taskNPC if it was setted as new
-	public void SetTaskNPC (NPC npc)
+	public void SetTaskNPC (CharacterTasks npc)
 	{
 		if (taskNPC != npc)	taskNPC = npc;
 	}
@@ -152,28 +152,6 @@ public class NPC : MonoBehaviour {
 	{
 		SetTaskNPC(movement.currentRoom.ContainsHostile(!stats.isHostile, false));
 		if (!stats.ableDistantAttack) SetTaskAdress(taskNPC.gameObject);
-	}
-
-	// Range combat
-	void Shot () 
-	{
-		if (stats.attackCoolDown <= 0f) 
-		{
-			stats.attackCoolDown = stats.attackRate;
-			currentState = States.Shot;
-			taskNPC.Damage (stats.damage);
-		}
-	}
-
-	// Close combat
-	void Fight () 
-	{
-		if (stats.attackCoolDown <= 0f || movement.IsNearObject(taskNPC.gameObject))  
-		{
-			stats.attackCoolDown = stats.attackRate;
-			currentState = States.Fight;
-			taskNPC.Damage (stats.damage);
-		}
 	}
 
 	// Heal action
@@ -312,31 +290,6 @@ public class NPC : MonoBehaviour {
 		SetTaskAdress(quarters, true);
 		if (movement.IsStaying()) taskLength -= 0.5f;
 		if (taskLength == 0f) ClearTaskAims ();
-	}
-
-	// Update is called once per frame
-	void Update () {
-		ApplyAction ();
-	}
-	
-	// Way to decide what Action take
-	void ApplyAction ()
-	{
-		switch (currentTask)
-		{
-		case Tasks.Attack:
-			if (stats.ableDistantAttack) Shot ();
-			if (!stats.ableDistantAttack) Fight ();
-			if (taskNPC.currentState == NPC.States.Unconscious || taskNPC.currentState == NPC.States.Dead) ClearTaskAims ();
-			break;
-		}
-	}
-	
-	// Damage
-	void Damage (float amount) 
-	{
-		stats.health -= amount;
-		if (stats.HaveTrait (CharacterStats.Traits.Masochist)) stats.sanity += 2f;
 	}
 
 }

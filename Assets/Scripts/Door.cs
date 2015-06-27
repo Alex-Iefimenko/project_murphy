@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Door : MonoBehaviour {
@@ -33,7 +33,7 @@ public class Door : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.GetComponent<NPC>() && numberOfNPC == 0)
+		if (other.GetComponent<CharacterTasks>() && numberOfNPC == 0)
 		{
 			foreach (Animator anim in doorsAnimators) anim.SetBool("IsOpen", true);
 			numberOfNPC += 1;
@@ -42,7 +42,7 @@ public class Door : MonoBehaviour {
 	
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.GetComponent<NPC>() && numberOfNPC == 1)
+		if (other.GetComponent<CharacterTasks>() && numberOfNPC == 1)
 		{
 			foreach (Animator anim in doorsAnimators) anim.SetBool("IsOpen", false);
 			numberOfNPC -= 1;

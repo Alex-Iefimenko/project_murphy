@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -58,54 +58,54 @@ public class Room : MonoBehaviour {
 	// Add NPC to Rooms NPC List
 	void OnTriggerEnter2D (Collider2D otherCollider) 
 	{
-		if (otherCollider.GetComponent<NPC>() && !npcs.Contains(otherCollider.GetComponent<NPC>()))
-			npcs.Add(otherCollider.GetComponent<NPC>());
+		if (otherCollider.GetComponent<CharacterTasks>() && !npcs.Contains(otherCollider.GetComponent<CharacterTasks>()))
+			npcs.Add(otherCollider.GetComponent<CharacterTasks>());
 	}
 
 	// Delete NPC from Rooms NPC List
 	void OnTriggerExit2D (Collider2D otherCollider) 
 	{
-		if (otherCollider.GetComponent<NPC>() && npcs.Contains(otherCollider.GetComponent<NPC>()))
-			npcs.Remove(otherCollider.GetComponent<NPC>());
+		if (otherCollider.GetComponent<CharacterTasks>() && npcs.Contains(otherCollider.GetComponent<CharacterTasks>()))
+			npcs.Remove(otherCollider.GetComponent<CharacterTasks>());
 	}
 
 	// Check if Room continse hostile NPC
-	public NPC ContainsHostile (bool hostile, bool killAim) 
+	public CharacterTasks ContainsHostile (bool hostile, bool killAim) 
 	{
-		foreach (NPC npc in npcs)
+		foreach (CharacterTasks npc in npcs)
 		{
 			if (npc.stats.isHostile == hostile && killAim)
 			{
-				if (npc.currentState != NPC.States.Dead) return npc;
+				if (npc.currentState != CharacterTasks.States.Dead) return npc;
 			}
 			else if (npc.stats.isHostile == hostile && !killAim)
 			{
-				if (npc.currentState != NPC.States.Dead && npc.currentState != NPC.States.Unconscious) return npc;
+				if (npc.currentState != CharacterTasks.States.Dead && npc.currentState != CharacterTasks.States.Unconscious) return npc;
 			}
 		}
 		return null;
 	}
 
 	// Check if Room continse unconscious NPC
-	public NPC ContainsUnconscious ()
+	public CharacterTasks ContainsUnconscious ()
 	{
-		foreach (NPC npc in npcs)
-			if (npc.currentState == NPC.States.Unconscious) return npc;
+		foreach (CharacterTasks npc in npcs)
+			if (npc.currentState == CharacterTasks.States.Unconscious) return npc;
 		return null;
 	}
 
 	// Check if Room continse dead NPC
-	public NPC ContainsDead ()
+	public CharacterTasks ContainsDead ()
 	{
-		foreach (NPC npc in npcs)
-			if (npc.currentState == NPC.States.Dead) return npc;
+		foreach (CharacterTasks npc in npcs)
+			if (npc.currentState == CharacterTasks.States.Dead) return npc;
 		return null;
 	}
 
 	// Check if Room continse wounded NPC
-	public NPC ContainsWounded ()
+	public CharacterTasks ContainsWounded ()
 	{
-		foreach (NPC npc in npcs)
+		foreach (CharacterTasks npc in npcs)
 			if (npc.stats.health < npc.stats.maxHealth) return npc;
 		return null;
 	}
@@ -114,7 +114,7 @@ public class Room : MonoBehaviour {
 	public bool HasObject (GameObject sObject)
 	{
 		bool result = false;
-		if (sObject.GetComponent<NPC> () && npcs.Contains (sObject.GetComponent<NPC> ()))
+		if (sObject.GetComponent<CharacterTasks> () && npcs.Contains (sObject.GetComponent<CharacterTasks> ()))
 			result = true;
 		else if (sObject.GetComponent<Furniture> () && System.Array.IndexOf(furniture, sObject.GetComponent<Furniture> ()) != -1)
 			result = true;

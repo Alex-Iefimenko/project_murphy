@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Furniture : MonoBehaviour {
 
@@ -12,14 +12,14 @@ public class Furniture : MonoBehaviour {
 	// Add NPC to Rooms NPC List
 	void OnTriggerEnter2D (Collider2D otherCollider) 
 	{
-		if (otherCollider.GetComponent<NPC> ()) 
+		if (otherCollider.GetComponent<CharacterTasks> ()) 
 			isFree = false;
 	}
 	
 	// Delete NPC from Rooms NPC List
 	void OnTriggerExit2D (Collider2D otherCollider) 
 	{
-		if (otherCollider.GetComponent<NPC>())
+		if (otherCollider.GetComponent<CharacterTasks>())
 			isFree = true;
 	}
 }

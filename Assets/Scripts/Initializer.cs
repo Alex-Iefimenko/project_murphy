@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Initializer : MonoBehaviour {
@@ -34,6 +34,6 @@ public class Initializer : MonoBehaviour {
 
 	void GenStats ()
 	{
-		foreach (GameObject npc in ShipState.allNPC) npc.GetComponent<NPC>().InitGenerateCharacterStats();
+		foreach (GameObject npc in ShipState.allNPC) npc.GetComponent<CharacterTasks>().InitGenerateCharacterStats();
 	}
 }

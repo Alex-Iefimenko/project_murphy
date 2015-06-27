@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -64,9 +64,9 @@ public class CharacterStats : MonoBehaviour {
 	public float fireExtinguish = 1f;
 
 	// Components
-	private NPC npc;
-	private AIHandler aiHandler;
-	private NPC.Tasks[] npcTypeTasks;
+	private CharacterTasks npc;
+	private CharacterAI aiHandler;
+	private CharacterTasks.Tasks[] npcTypeTasks;
 
 	// Update method
 	void Update () {
@@ -75,7 +75,7 @@ public class CharacterStats : MonoBehaviour {
 
 
 	// Constructor
-	public void GenerateCharacterStats (NPC currnetNPC)
+	public void GenerateCharacterStats (CharacterTasks currnetNPC)
 	{
 		npc = currnetNPC;
 		aiHandler = npc.npcAI;
@@ -101,20 +101,20 @@ public class CharacterStats : MonoBehaviour {
 		sanity  = maxSanity;
 		
 		GetBasicRoom (npc);
-		npcTypeTasks = (NPC.Tasks[])aiHandler.GetNPCTypeTasks (npc).ToArray (typeof(NPC.Tasks));
+		npcTypeTasks = (CharacterTasks.Tasks[])aiHandler.GetNPCTypeTasks (npc).ToArray (typeof(CharacterTasks.Tasks));
 
 	}
 
 	// Getbasic room
-	public void GetBasicRoom (NPC npc)
+	public void GetBasicRoom (CharacterTasks npc)
 	{
-		Dictionary<NPC.NPCTypes, Room.RoomTypes> professionRelatedRoom;
-		professionRelatedRoom = new Dictionary<NPC.NPCTypes, Room.RoomTypes> ()
+		Dictionary<CharacterTasks.NPCTypes, Room.RoomTypes> professionRelatedRoom;
+		professionRelatedRoom = new Dictionary<CharacterTasks.NPCTypes, Room.RoomTypes> ()
 		{
-			{ NPC.NPCTypes.Engineer     , Room.RoomTypes.Engineering },
-			{ NPC.NPCTypes.Doctor       , Room.RoomTypes.MedBay },
-			{ NPC.NPCTypes.Safety       , Room.RoomTypes.Safety },
-			{ NPC.NPCTypes.Scientist    , Room.RoomTypes.Science },
+			{ CharacterTasks.NPCTypes.Engineer     , Room.RoomTypes.Engineering },
+			{ CharacterTasks.NPCTypes.Doctor       , Room.RoomTypes.MedBay },
+			{ CharacterTasks.NPCTypes.Safety       , Room.RoomTypes.Safety },
+			{ CharacterTasks.NPCTypes.Scientist    , Room.RoomTypes.Science },
 		};
 		basicRoom = ShipState.allRooms[(int)professionRelatedRoom[npc.npcType]].GetComponent<Room>();
 	}
@@ -146,13 +146,13 @@ public class CharacterStats : MonoBehaviour {
 		{
 			switch (npc.npcType)
 			{
-				case(NPC.NPCTypes.Engineer):
+				case(CharacterTasks.NPCTypes.Engineer):
 					repairAmount *= 1.5f;
 					break;
-				case(NPC.NPCTypes.Doctor):
+				case(CharacterTasks.NPCTypes.Doctor):
 					healOther *= 1.5f;
 					break;
-				case(NPC.NPCTypes.Safety):
+				case(CharacterTasks.NPCTypes.Safety):
 					fireExtinguish *= 1.5f;
 					break;
 			}
@@ -183,7 +183,7 @@ public class CharacterStats : MonoBehaviour {
 	public bool IsResponsibleFor (Room room)
 	{
 		bool result = false;
-		foreach (NPC.Tasks respTask in npcTypeTasks) 
+		foreach (CharacterTasks.Tasks respTask in npcTypeTasks) 
 		{
 			if (aiHandler.conditionMethods.ContainsKey(respTask) && aiHandler.conditionMethods[respTask].Invoke(npc, room))
 				result = true;
@@ -218,17 +218,24 @@ public class CharacterStats : MonoBehaviour {
 
 	void CheckConscious ()
 	{
-		if (health <= 0f && npc.currentState != NPC.States.Dead) 
+		if (health <= 0f && npc.currentState != CharacterTasks.States.Dead) 
 		{
 			npc.ClearTaskAims();
-			npc.currentState = NPC.States.Dead;
+			npc.currentState = CharacterTasks.States.Dead;
 		}
-		else if (health <= healthTreshold && npc.currentState != NPC.States.Unconscious)
+		else if (health <= healthTreshold && npc.currentState != CharacterTasks.States.Unconscious)
 		{
 			npc.ClearTaskAims();
-			npc.currentState = NPC.States.Unconscious;
+			npc.currentState = CharacterTasks.States.Unconscious;
 		}
-		else if ((npc.currentState == NPC.States.Dead || npc.currentState == NPC.States.Unconscious) && health > healthTreshold)
-			npc.currentState = NPC.States.Idle;
+		else if ((npc.currentState == CharacterTasks.States.Dead || npc.currentState == CharacterTasks.States.Unconscious) && health > healthTreshold)
+			npc.currentState = CharacterTasks.States.Idle;
+	}
+
+	// Damage
+	public void Damage (float amount) 
+	{
+		health -= amount;
+		if (HaveTrait (CharacterStats.Traits.Masochist)) sanity += 2f;
 	}
 }
