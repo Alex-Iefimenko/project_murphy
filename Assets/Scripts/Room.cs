@@ -11,8 +11,8 @@ public class Room : MonoBehaviour {
 	// Room objects
 	public ArrayList doors = new ArrayList();     // Door list
 	public ArrayList neighbors = new ArrayList(); // Neighbors list 
-	private ArrayList npcs = new ArrayList();	  // NPC list
-	public Furniture[] furniture;				  // Room furniture list
+	[HideInInspector] public ArrayList npcs = new ArrayList();	  // NPC list
+	[HideInInspector] public Furniture[] furniture;				  // Room furniture list
 
 	// Room collider object
 	//private Collider2D roomCollider;

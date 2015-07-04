@@ -66,6 +66,7 @@ public class CharacterStats : MonoBehaviour {
 	// Components
 	private CharacterTasks npc;
 	private CharacterAI aiHandler;
+	private ActionNotificator notificator;
 	private CharacterTasks.Tasks[] npcTypeTasks;
 
 	// Update method
@@ -79,6 +80,7 @@ public class CharacterStats : MonoBehaviour {
 	{
 		npc = currnetNPC;
 		aiHandler = npc.npcAI;
+		notificator = npc.notificator;
 
 		// Traits generation
 		ArrayList traitsValues = new ArrayList(System.Enum.GetValues (typeof(Traits)));
@@ -218,15 +220,19 @@ public class CharacterStats : MonoBehaviour {
 
 	void CheckConscious ()
 	{
-		if (health <= 0f && npc.currentState != CharacterTasks.States.Dead) 
-		{
-			npc.ClearTaskAims();
-			npc.currentState = CharacterTasks.States.Dead;
-		}
-		else if (health <= healthTreshold && npc.currentState != CharacterTasks.States.Unconscious)
+
+
+		if (health <= healthTreshold && npc.currentState != CharacterTasks.States.Unconscious && npc.currentState != CharacterTasks.States.Dead)
 		{
 			npc.ClearTaskAims();
 			npc.currentState = CharacterTasks.States.Unconscious;
+			notificator.Notify(CharacterTasks.States.Unconscious.ToString());
+		}
+		else if (health <= 0f && npc.currentState != CharacterTasks.States.Dead) 
+		{
+			npc.ClearTaskAims();
+			npc.currentState = CharacterTasks.States.Dead;
+			notificator.Notify(CharacterTasks.States.Dead.ToString());
 		}
 		else if ((npc.currentState == CharacterTasks.States.Dead || npc.currentState == CharacterTasks.States.Unconscious) && health > healthTreshold)
 			npc.currentState = CharacterTasks.States.Idle;

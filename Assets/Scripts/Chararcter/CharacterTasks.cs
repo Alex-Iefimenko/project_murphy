@@ -35,6 +35,8 @@ public class CharacterTasks : MonoBehaviour {
 	[HideInInspector] public Movement movement;
 	// Stats components
 	[HideInInspector] public CharacterStats stats;
+	// Action Notificator
+	[HideInInspector] public ActionNotificator notificator;
 
 	// Use this for initialization
 	void Awake () {
@@ -42,6 +44,7 @@ public class CharacterTasks : MonoBehaviour {
 		stats = this.GetComponent<CharacterStats> ();
 		npcAI = new CharacterAI(this);
 		movement = this.GetComponent<Movement> ();
+		notificator = this.GetComponentInChildren<ActionNotificator> ();
 		CreateActionDictionary ();
 	}
 
@@ -86,6 +89,7 @@ public class CharacterTasks : MonoBehaviour {
 		if ( ( taskLength <= 0f || (nextAction != Tasks.Work && nextAction != Tasks.Rest) ) )
 			currentTask = nextAction;
 		//print (currentTask);
+		notificator.Notify(currentTask.ToString());
 		actionMethods[currentTask].Invoke();
 		ChangeState ();
 	}
