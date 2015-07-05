@@ -34,7 +34,16 @@ public class ActionNotificator : MonoBehaviour {
 	// Chat notification start
 	public void isChat ()
 	{
-		chatting = (movement.currentRoom.npcs.Count > 1 && timer <= 0f);
-		if (chatting) sRenderer.sprite = actions["Speak"];
+		if (chatting && timer <= 0f)
+		{
+			chatting = false;
+			timer = Random.Range(1f, 2f);
+		}
+		else if (!chatting && movement.currentRoom.npcs.Count > 1 && timer <= 0f)
+		{
+			chatting = true;
+			sRenderer.sprite = actions["Speak"];
+			timer = Random.Range(1f, 2f);
+		}
 	}
 }
