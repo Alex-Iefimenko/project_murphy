@@ -56,7 +56,6 @@ public class ShipState : MonoBehaviour {
 	{
 		allDoors = GameObject.FindGameObjectsWithTag("Door");
 		allNPC   = GameObject.FindGameObjectsWithTag("NPC");
-
 		GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
 		allRooms = new Dictionary<int, GameObject>();
 		int corridorDummy = System.Enum.GetNames(typeof(Room.RoomTypes)).Length;

@@ -11,8 +11,8 @@ public class Movement : MonoBehaviour {
 	// NPC Collider
 	private Collider2D npcCollider; 
 	// NPC Sprite rendering
-	private SpriteRenderer sRenderer;
-	private Sprite[] sprites = new Sprite[4];
+	private Animator cAnimator;
+	private RuntimeAnimatorController[] controllers = new RuntimeAnimatorController[4];
 	// Current room field
 	[HideInInspector] public Room currentRoom;
 	[HideInInspector] public Room targetRoom;
@@ -23,8 +23,8 @@ public class Movement : MonoBehaviour {
 	void Awake () {
 		// Get Door collider object
 		npcCollider = gameObject.GetComponent<Collider2D>();
-		sRenderer   = gameObject.GetComponent<SpriteRenderer>();
-		sprites = Resources.LoadAll ("NPC/Crew/").Skip (1).Cast<Sprite>().ToArray();
+		cAnimator   = gameObject.GetComponent<Animator>();
+		controllers = Resources.LoadAll ("NPC/Crew/").Cast<RuntimeAnimatorController>().ToArray();
 	}
 
 	// Updates current room value
@@ -70,7 +70,7 @@ public class Movement : MonoBehaviour {
 	{
 		nextPoint.z = transform.position.z;
 		transform.position = Vector3.MoveTowards(transform.position, nextPoint, speed * Time.deltaTime);
-		UpdateSprite (nextPoint);
+		UpdateAnimator (nextPoint);
 		if (npcCollider.OverlapPoint(nextPoint)) 
 		{	
 			if (movementPath.Count > 0) movementPath.RemoveAt(0);
@@ -86,19 +86,19 @@ public class Movement : MonoBehaviour {
 	}
 
 	// Method for handle sprite NPC representation update
-	private void UpdateSprite (Vector3 nextPoint)
+	private void UpdateAnimator (Vector3 nextPoint)
 	{
 		Vector3 p1 = transform.position;
 		Vector3 p2 = nextPoint;
 		float angle = Mathf.Atan2(p2.y-p1.y, p2.x-p1.x)*180 / Mathf.PI;
 		if ( 45f <= angle && angle <= 135f ) 
-			sRenderer.sprite = sprites [3];
+			cAnimator.runtimeAnimatorController = controllers [3];
 		else if ( -135f <= angle && angle <= -45f )
-			sRenderer.sprite = sprites [1];
+			cAnimator.runtimeAnimatorController = controllers [0];
 		else if ( -45f <= angle && angle <= 45f )
-			sRenderer.sprite = sprites [2];
+			cAnimator.runtimeAnimatorController = controllers [2];
 		else if ( 135f <= angle || angle <= -135f )
-			sRenderer.sprite = sprites [0];
+			cAnimator.runtimeAnimatorController = controllers [1];
 	}
 
 	// Check if there are no movement points in character Path

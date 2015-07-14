@@ -37,6 +37,8 @@ public class CharacterTasks : MonoBehaviour {
 	[HideInInspector] public CharacterStats stats;
 	// Action Notificator
 	[HideInInspector] public ActionNotificator notificator;
+	// Animator
+	[HideInInspector] public Animator cAnimator;
 
 	// Use this for initialization
 	void Awake () {
@@ -45,6 +47,7 @@ public class CharacterTasks : MonoBehaviour {
 		npcAI = new CharacterAI(this);
 		movement = this.GetComponent<Movement> ();
 		notificator = this.GetComponentInChildren<ActionNotificator> ();
+		cAnimator = this.GetComponent<Animator> ();
 		CreateActionDictionary ();
 	}
 
@@ -79,6 +82,7 @@ public class CharacterTasks : MonoBehaviour {
 		stats.UpdateStats ();
 		// Next action chose
 		if (currentState != States.Unconscious && currentState != States.Dead) PerformRelevantAction ();
+		cAnimator.SetInteger("State", (int)currentState);
 	}
 
 	// Decides what next action would be taken and calls it
@@ -113,6 +117,14 @@ public class CharacterTasks : MonoBehaviour {
 		if (movement.IsStaying () && stateTaskTransition.ContainsKey(currentTask)) 
 		{
 			if (currentState != stateTaskTransition[currentTask]) currentState = stateTaskTransition[currentTask];
+		}
+		else if (!movement.IsStaying ())
+		{
+			currentState = States.Walk;
+		}
+		else
+		{
+			currentState = States.Idle;
 		}
 	}
 
