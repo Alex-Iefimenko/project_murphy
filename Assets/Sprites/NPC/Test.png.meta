@@ -159,7 +159,7 @@ TextureImporter:
         y: 603
         width: 32
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_1
@@ -169,7 +169,7 @@ TextureImporter:
         y: 595
         width: 29
         height: 81
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_2
@@ -179,7 +179,7 @@ TextureImporter:
         y: 602
         width: 31
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_3
@@ -189,7 +189,7 @@ TextureImporter:
         y: 595
         width: 32
         height: 81
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_4
@@ -199,7 +199,7 @@ TextureImporter:
         y: 602
         width: 29
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_5
@@ -209,7 +209,7 @@ TextureImporter:
         y: 601
         width: 27
         height: 75
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_6
@@ -219,7 +219,7 @@ TextureImporter:
         y: 595
         width: 34
         height: 81
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_7
@@ -229,7 +229,7 @@ TextureImporter:
         y: 616
         width: 28
         height: 60
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_8
@@ -239,7 +239,7 @@ TextureImporter:
         y: 612
         width: 26
         height: 64
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_9
@@ -249,7 +249,7 @@ TextureImporter:
         y: 612
         width: 32
         height: 64
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_10
@@ -259,7 +259,7 @@ TextureImporter:
         y: 615
         width: 28
         height: 61
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_11
@@ -269,7 +269,7 @@ TextureImporter:
         y: 612
         width: 35
         height: 64
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_12
@@ -279,7 +279,7 @@ TextureImporter:
         y: 597
         width: 30
         height: 79
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_13
@@ -289,7 +289,7 @@ TextureImporter:
         y: 597
         width: 31
         height: 79
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_14
@@ -299,7 +299,7 @@ TextureImporter:
         y: 597
         width: 35
         height: 79
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_15
@@ -309,7 +309,7 @@ TextureImporter:
         y: 597
         width: 33
         height: 79
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_16
@@ -319,7 +319,7 @@ TextureImporter:
         y: 595
         width: 35
         height: 81
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_17
@@ -329,8 +329,8 @@ TextureImporter:
         y: 509
         width: 36
         height: 73
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_18
       rect:
@@ -339,7 +339,7 @@ TextureImporter:
         y: 503
         width: 30
         height: 83
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_19
@@ -349,7 +349,7 @@ TextureImporter:
         y: 501
         width: 31
         height: 85
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_20
@@ -359,7 +359,7 @@ TextureImporter:
         y: 503
         width: 31
         height: 83
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_21
@@ -369,7 +369,7 @@ TextureImporter:
         y: 502
         width: 36
         height: 84
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_22
@@ -379,7 +379,7 @@ TextureImporter:
         y: 493
         width: 53
         height: 93
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_23
@@ -387,10 +387,10 @@ TextureImporter:
         serializedVersion: 2
         x: 191
         y: 494
-        width: 74
+        width: 70
         height: 92
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_24
       rect:
@@ -399,7 +399,7 @@ TextureImporter:
         y: 518
         width: 26
         height: 56
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_25
@@ -409,7 +409,7 @@ TextureImporter:
         y: 516
         width: 29
         height: 58
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_26
@@ -419,7 +419,7 @@ TextureImporter:
         y: 513
         width: 29
         height: 61
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_27
@@ -429,7 +429,7 @@ TextureImporter:
         y: 513
         width: 28
         height: 61
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_28
@@ -439,7 +439,7 @@ TextureImporter:
         y: 510
         width: 25
         height: 72
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_29
@@ -449,7 +449,7 @@ TextureImporter:
         y: 512
         width: 37
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_30
@@ -459,7 +459,7 @@ TextureImporter:
         y: 517
         width: 30
         height: 65
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_31
@@ -469,7 +469,7 @@ TextureImporter:
         y: 516
         width: 37
         height: 66
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_32
@@ -479,7 +479,7 @@ TextureImporter:
         y: 512
         width: 30
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_33
@@ -489,7 +489,7 @@ TextureImporter:
         y: 509
         width: 30
         height: 73
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_34
@@ -499,7 +499,7 @@ TextureImporter:
         y: 404
         width: 56
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_35
@@ -509,7 +509,7 @@ TextureImporter:
         y: 403
         width: 49
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_36
@@ -519,7 +519,7 @@ TextureImporter:
         y: 401
         width: 37
         height: 73
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_37
@@ -529,7 +529,7 @@ TextureImporter:
         y: 402
         width: 40
         height: 72
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_38
@@ -539,7 +539,7 @@ TextureImporter:
         y: 400
         width: 38
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_39
@@ -549,7 +549,7 @@ TextureImporter:
         y: 399
         width: 34
         height: 75
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_40
@@ -559,7 +559,7 @@ TextureImporter:
         y: 397
         width: 33
         height: 77
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_41
@@ -569,7 +569,7 @@ TextureImporter:
         y: 396
         width: 34
         height: 78
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_42
@@ -579,7 +579,7 @@ TextureImporter:
         y: 398
         width: 34
         height: 76
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_43
@@ -589,7 +589,7 @@ TextureImporter:
         y: 399
         width: 56
         height: 75
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_44
@@ -599,7 +599,7 @@ TextureImporter:
         y: 400
         width: 50
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_45
@@ -609,7 +609,7 @@ TextureImporter:
         y: 399
         width: 46
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_46
@@ -619,7 +619,7 @@ TextureImporter:
         y: 400
         width: 50
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_47
@@ -629,7 +629,7 @@ TextureImporter:
         y: 363
         width: 81
         height: 31
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_48
@@ -639,7 +639,7 @@ TextureImporter:
         y: 356
         width: 91
         height: 38
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_49
@@ -649,7 +649,7 @@ TextureImporter:
         y: 343
         width: 87
         height: 51
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_50
@@ -659,7 +659,7 @@ TextureImporter:
         y: 324
         width: 45
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_51
@@ -669,7 +669,7 @@ TextureImporter:
         y: 322
         width: 41
         height: 72
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_52
@@ -679,7 +679,7 @@ TextureImporter:
         y: 321
         width: 38
         height: 73
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_53
@@ -689,7 +689,7 @@ TextureImporter:
         y: 321
         width: 40
         height: 73
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_54
@@ -699,7 +699,7 @@ TextureImporter:
         y: 323
         width: 25
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_55
@@ -709,7 +709,7 @@ TextureImporter:
         y: 327
         width: 37
         height: 67
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_56
@@ -719,7 +719,7 @@ TextureImporter:
         y: 323
         width: 30
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_57
@@ -729,7 +729,7 @@ TextureImporter:
         y: 322
         width: 38
         height: 72
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_58
@@ -739,7 +739,7 @@ TextureImporter:
         y: 328
         width: 30
         height: 66
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_59
@@ -749,7 +749,7 @@ TextureImporter:
         y: 326
         width: 30
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_60
@@ -759,7 +759,7 @@ TextureImporter:
         y: 326
         width: 36
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_61
@@ -769,7 +769,7 @@ TextureImporter:
         y: 251
         width: 55
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_62
@@ -779,7 +779,7 @@ TextureImporter:
         y: 251
         width: 48
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_63
@@ -789,7 +789,7 @@ TextureImporter:
         y: 250
         width: 37
         height: 69
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_64
@@ -799,7 +799,7 @@ TextureImporter:
         y: 252
         width: 40
         height: 67
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_65
@@ -809,7 +809,7 @@ TextureImporter:
         y: 251
         width: 38
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_66
@@ -819,7 +819,7 @@ TextureImporter:
         y: 246
         width: 34
         height: 73
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_67
@@ -829,7 +829,7 @@ TextureImporter:
         y: 247
         width: 33
         height: 72
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_68
@@ -839,7 +839,7 @@ TextureImporter:
         y: 249
         width: 34
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_69
@@ -849,7 +849,7 @@ TextureImporter:
         y: 247
         width: 34
         height: 72
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_70
@@ -859,7 +859,7 @@ TextureImporter:
         y: 252
         width: 56
         height: 67
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_71
@@ -869,7 +869,7 @@ TextureImporter:
         y: 251
         width: 48
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_72
@@ -879,7 +879,7 @@ TextureImporter:
         y: 251
         width: 47
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_73
@@ -889,7 +889,7 @@ TextureImporter:
         y: 252
         width: 50
         height: 67
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_74
@@ -899,7 +899,7 @@ TextureImporter:
         y: 287
         width: 82
         height: 32
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_75
@@ -909,7 +909,7 @@ TextureImporter:
         y: 205
         width: 90
         height: 39
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_76
@@ -919,7 +919,7 @@ TextureImporter:
         y: 195
         width: 88
         height: 49
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_77
@@ -929,7 +929,7 @@ TextureImporter:
         y: 178
         width: 45
         height: 66
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_78
@@ -939,7 +939,7 @@ TextureImporter:
         y: 177
         width: 41
         height: 67
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_79
@@ -949,7 +949,7 @@ TextureImporter:
         y: 175
         width: 39
         height: 69
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_80
@@ -959,7 +959,7 @@ TextureImporter:
         y: 176
         width: 39
         height: 68
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_81
@@ -969,7 +969,7 @@ TextureImporter:
         y: 173
         width: 31
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_82
@@ -979,7 +979,7 @@ TextureImporter:
         y: 170
         width: 27
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_83
@@ -989,7 +989,7 @@ TextureImporter:
         y: 174
         width: 29
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_84
@@ -999,7 +999,7 @@ TextureImporter:
         y: 170
         width: 30
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_85
@@ -1009,7 +1009,7 @@ TextureImporter:
         y: 174
         width: 28
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_86
@@ -1019,7 +1019,7 @@ TextureImporter:
         y: 174
         width: 26
         height: 70
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_87
@@ -1029,7 +1029,7 @@ TextureImporter:
         y: 181
         width: 31
         height: 63
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_88
@@ -1039,7 +1039,7 @@ TextureImporter:
         y: 163
         width: 25
         height: 81
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_89
@@ -1049,7 +1049,7 @@ TextureImporter:
         y: 166
         width: 25
         height: 78
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_90
@@ -1059,7 +1059,7 @@ TextureImporter:
         y: 169
         width: 31
         height: 75
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_91
@@ -1069,7 +1069,7 @@ TextureImporter:
         y: 87
         width: 27
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_92
@@ -1079,7 +1079,7 @@ TextureImporter:
         y: 87
         width: 31
         height: 74
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_93
@@ -1089,7 +1089,7 @@ TextureImporter:
         y: 90
         width: 28
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_94
@@ -1099,7 +1099,7 @@ TextureImporter:
         y: 90
         width: 30
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_95
@@ -1109,7 +1109,7 @@ TextureImporter:
         y: 90
         width: 34
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_96
@@ -1119,7 +1119,7 @@ TextureImporter:
         y: 90
         width: 32
         height: 71
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_97
@@ -1129,7 +1129,7 @@ TextureImporter:
         y: 85
         width: 29
         height: 76
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_98
@@ -1139,7 +1139,7 @@ TextureImporter:
         y: 86
         width: 30
         height: 75
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_99
@@ -1149,7 +1149,7 @@ TextureImporter:
         y: 85
         width: 30
         height: 76
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_100
@@ -1159,7 +1159,7 @@ TextureImporter:
         y: 84
         width: 29
         height: 77
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_101
@@ -1169,7 +1169,7 @@ TextureImporter:
         y: 80
         width: 36
         height: 81
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_102
@@ -1179,7 +1179,7 @@ TextureImporter:
         y: 67
         width: 51
         height: 85
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_103
@@ -1189,7 +1189,7 @@ TextureImporter:
         y: 79
         width: 68
         height: 82
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_104
@@ -1199,7 +1199,7 @@ TextureImporter:
         y: 83
         width: 26
         height: 78
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_105
@@ -1209,7 +1209,7 @@ TextureImporter:
         y: 84
         width: 31
         height: 77
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_106
@@ -1219,7 +1219,7 @@ TextureImporter:
         y: 85
         width: 27
         height: 76
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Test_107
@@ -1229,7 +1229,7 @@ TextureImporter:
         y: 85
         width: 27
         height: 76
-      alignment: 7
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
