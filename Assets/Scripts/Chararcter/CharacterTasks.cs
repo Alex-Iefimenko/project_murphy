@@ -38,7 +38,7 @@ public class CharacterTasks : MonoBehaviour {
 	// Action Notificator
 	[HideInInspector] public ActionNotificator notificator;
 	// Animator
-	[HideInInspector] public Animator cAnimator;
+	[HideInInspector] public Animator characterAnimator;
 
 	// Use this for initialization
 	void Awake () {
@@ -47,7 +47,7 @@ public class CharacterTasks : MonoBehaviour {
 		npcAI = new CharacterAI(this);
 		movement = this.GetComponent<Movement> ();
 		notificator = this.GetComponentInChildren<ActionNotificator> ();
-		cAnimator = this.GetComponent<Animator> ();
+		characterAnimator = this.GetComponent<Animator> ();
 		CreateActionDictionary ();
 	}
 
@@ -82,7 +82,12 @@ public class CharacterTasks : MonoBehaviour {
 		stats.UpdateStats ();
 		// Next action chose
 		if (currentState != States.Unconscious && currentState != States.Dead) PerformRelevantAction ();
-		cAnimator.SetInteger("State", (int)currentState);
+	}
+
+	// Used only for Animator state update
+	void Update () 
+	{
+		if (characterAnimator.GetInteger("State") != (int)currentState) characterAnimator.SetInteger("State", (int)currentState);
 	}
 
 	// Decides what next action would be taken and calls it
@@ -188,7 +193,7 @@ public class CharacterTasks : MonoBehaviour {
 		if (taskAdress.currentDurability >= taskAdress.maxDurability) ClearTaskAims ();
 	}
 
-	// Fight action
+	// Extinguish action
 	void Extinguish () 
 	{
 		// Navigate to RoomObject

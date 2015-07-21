@@ -2036,7 +2036,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1caf45dbfefaa7343929cd85a0867145, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446920, guid: 1caf45dbfefaa7343929cd85a0867145, type: 2}
+      propertyPath: npcType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1caf45dbfefaa7343929cd85a0867145, type: 2}
@@ -8494,7 +8498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &810457955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8644,7 +8648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa89e59222a574e3aaf743728f8538d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcType: 2
+  npcType: 1
   currentState: 0
   currentTask: 0
   taskAdress: {fileID: 0}
@@ -8653,7 +8657,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   stats: {fileID: 0}
   notificator: {fileID: 0}
-  cAnimator: {fileID: 0}
+  characterAnimator: {fileID: 0}
 --- !u!114 &810457966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10410,7 +10414,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   stats: {fileID: 0}
   notificator: {fileID: 0}
-  cAnimator: {fileID: 0}
+  characterAnimator: {fileID: 0}
 --- !u!114 &999840300
 MonoBehaviour:
   m_ObjectHideFlags: 0

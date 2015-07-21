@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour {
 	[HideInInspector] public Room currentRoom;
 	[HideInInspector] public Room targetRoom;
 	[HideInInspector] public GameObject targetRoomObject;
-
+	private Quaternion endPointRotation;
 
 	// Use this for initialization
 	void Awake () {
@@ -45,12 +45,16 @@ public class Movement : MonoBehaviour {
 	// Create movement path with no params to center of the room
 	public void NewMovementPath (Room localTargetRoom, bool randRoomObject) 
 	{
+		transform.rotation = Quaternion.identity;
 		movementPath = ShipState.GetStepsToRoom(currentRoom, localTargetRoom);
 		targetRoom = localTargetRoom;
 		if (randRoomObject)
 		{
-			if (movementPath.Count >= 1) movementPath.RemoveAt(movementPath.Count - 1); 
-			movementPath.Add(localTargetRoom.GetUnoccupiedRoomObject().transform.position);
+			if (movementPath.Count >= 1) movementPath.RemoveAt(movementPath.Count - 1);
+			GameObject furniture = localTargetRoom.GetUnoccupiedRoomObject();
+			furniture.GetComponent<Furniture>().isFree = false;
+			movementPath.Add(furniture.transform.position);
+			endPointRotation = furniture.transform.rotation;
 		}
 
 		// Place for movement path visaulization points code
@@ -73,9 +77,17 @@ public class Movement : MonoBehaviour {
 		UpdateAnimator (nextPoint);
 		if (npcCollider.OverlapPoint(nextPoint)) 
 		{	
-			if (movementPath.Count > 0) movementPath.RemoveAt(0);
+			if (movementPath.Count == 1) AdjustPostion();
+			movementPath.RemoveAt(0);
 			if (targetRoomObject && currentRoom == Helpers.GetCurretntRoomOf(targetRoomObject)) movementPath.Clear();
 		}
+	}
+
+	private void AdjustPostion ()
+	{
+		Vector3 pos = (Vector3)movementPath[0];
+		transform.position = new Vector3(pos.x, pos.y, transform.position.z);
+		transform.rotation = endPointRotation;
 	}
 
 	// Follow for certain (dynamic object)
