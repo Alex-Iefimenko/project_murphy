@@ -1,0 +1,20 @@
+{
+  "AIFlows":{
+    "Doctor":[
+      "Dead",
+      "Unconsitious",
+      "Heal",
+   	  "Attack",
+      "Navigate",
+      "HealOther",
+      "EliminateDeadBody",
+      "Repair",
+      "Extinguish",
+      "TakeBody",
+      "Eat",
+      "Sleep",
+      "Work",
+      "Rest"
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Door : MonoBehaviour {
 
-	public Hashtable linkedRooms = new Hashtable();
+	public Dictionary<Room, Vector3> linkedRooms = new Dictionary<Room, Vector3>();
 	//private Collider2D doorCollider;
 	private Animator[] doorsAnimators;
 	private int numberOfNPC = 0;
@@ -33,7 +33,7 @@ public class Door : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.GetComponent<CharacterTasks>() && numberOfNPC == 0)
+		if (other.GetComponent<CharacterMain>() != null && numberOfNPC == 0)
 		{
 			foreach (Animator anim in doorsAnimators) anim.SetBool("IsOpen", true);
 			numberOfNPC += 1;
@@ -42,7 +42,7 @@ public class Door : MonoBehaviour {
 	
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.GetComponent<CharacterTasks>() && numberOfNPC == 1)
+		if (other.GetComponent<CharacterMain>() != null && numberOfNPC == 1)
 		{
 			foreach (Animator anim in doorsAnimators) anim.SetBool("IsOpen", false);
 			numberOfNPC -= 1;

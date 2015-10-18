@@ -3,10 +3,13 @@ using System.Collections;
 
 public class Initializer : MonoBehaviour {
 
+	void Awake () {
+
+	}
+
 
 	// Use this for initialization step by step
 	void Start () {
-	
 		// Calls all neccessary function to build ship structure
 		BuildShipsStructure ();
 		// Checks respondability of objects to ingame time events
@@ -34,6 +37,6 @@ public class Initializer : MonoBehaviour {
 
 	void GenStats ()
 	{
-		foreach (GameObject npc in ShipState.allNPC) npc.GetComponent<CharacterTasks>().InitGenerateCharacterStats();
+		//foreach (GameObject npc in ShipState.allNPC) npc.GetComponent<CharacterMain>().InitGenerateCharacterStats();
 	}
 }

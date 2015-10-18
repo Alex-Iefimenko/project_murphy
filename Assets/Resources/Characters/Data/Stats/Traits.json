@@ -1,0 +1,96 @@
+{
+	"Hungry": {
+		"Specific": false,
+		"Stat": "FatigueReduction",
+		"Coefficient": 2.0
+	}, 
+	"Pessimist": {
+		"Specific": false,	
+		"Stat": "MaxSanity",
+		"Coefficient": 0.9	
+	}, 
+	"IronWill": {
+		"Specific": false,	
+		"Stat": "MaxSanity",
+		"Coefficient": 1.1	
+	}, 
+	"Puny": {
+		"Specific": false,
+		"Stat": "MaxHealth",
+		"Coefficient": 0.9	
+	}, 
+	"Big": {
+		"Specific": false,
+		"Stat": "MaxHealth",
+		"Coefficient": 1.1	
+	}, 
+	"SlowRecovery": {
+		"Specific": false,
+		"Stat": "HealthIncrease",
+		"Coefficient": 0.5	
+	}, 
+	"Depresive": {
+		"Specific": false,
+		"Stat": "SanityIncrease",
+		"Coefficient": 0.5	
+	}, 
+	"Bully": {
+		"Specific": false,
+		"Stat": "Damage",
+		"Coefficient": 1.5	
+	}, 
+	"Dweeb": {
+		"Specific": false,
+		"Stat": "Damage",
+		"Coefficient": 0.5	
+	}, 
+	"KungFu": {
+		"Specific": false,
+		"Stat": "AttackRate",
+		"Coefficient": 1.3	
+	}, 
+	"Muff": {
+		"Specific": false,
+		"Stat": "AttackRate",
+		"Coefficient": 0.7	
+	}, 
+	"Lazy": {
+		"Specific": false,
+		"Stat": "RestProbability",
+		"Coefficient": 1.3	
+	}, 
+	"HardWorker": {
+		"Specific": false,
+		"Stat": "RestProbability",
+		"Coefficient": 0.7	
+	}, 
+	"Slowpoke": {
+		"Specific": false,
+		"Stat": "Speed",
+		"Coefficient": 0.7	
+	}, 
+	"Fast": {
+		"Specific": false,
+		"Stat": "Speed",
+		"Coefficient": 1.3	
+	}, 
+	"Proffi": {
+		"Specific": true,
+		"Stat": {
+			"Doctor": "HealOther",
+			"Engineer": "Repair",
+			"Safety": "FireExtinguish"
+		},
+		"Coefficient": 1.5
+	}, 
+	"Psychopath": {
+		"Specific": true,
+		"Stat": null,
+		"Coefficient": null
+	}, 
+	"Masochist": {
+		"Specific": true,
+		"Stat": null,
+		"Coefficient": null	
+	}
+}

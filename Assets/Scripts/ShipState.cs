@@ -73,10 +73,12 @@ public class ShipState : MonoBehaviour {
 
 	// Returns list of world points for NPC traveling
 	// https://gist.github.com/joninvski/701720
-	public static ArrayList GetStepsToRoom (Room initialRoom, Room targetRoom) {
+	public static List<Vector3> GetStepsToRoom (Room initialRoom, Room targetRoom) {
 		// Initializing
 		Hashtable distances = new Hashtable();
 		Hashtable predecessors = new Hashtable();
+
+		if (initialRoom == targetRoom) return new List<Vector3>() {targetRoom.gameObject.transform.position};
 
 		foreach (Room node in shipGraph.Keys)
 		{
@@ -108,7 +110,7 @@ public class ShipState : MonoBehaviour {
 		}
 		else
 		{
-			ArrayList result = new ArrayList();
+			List<Vector3> result = new List<Vector3>();
 			Room stepRoom = targetRoom;
 			Room nextStepRoom;
 			Door betweenDoor;

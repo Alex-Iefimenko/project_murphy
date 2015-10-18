@@ -1,0 +1,43 @@
+{
+  "Stats":{
+    "Doctor":{
+      "Speed": 0.5,
+      "BasicRoom":"MedBay",
+      "RestProbability": 0.25,
+      "Traits": true,
+      "Health":{
+        "Max": [60.0, 80.0],
+        "Treshhold": [10.0, 25.0],
+        "Reduction": 0.0,
+        "Regeneration": 0.0,
+        "Increase": [4.0, 6.0]
+      },
+      "Fatigue":{
+        "Max": [60.0, 80.0],
+        "Treshhold": [10.0, 25.0],
+        "Reduction": [0.3, 0.6],
+        "Regeneration": 0.0,
+        "Increase": [4.0, 6.0]
+      },
+      "Sanity":{
+        "Max": [60.0, 80.0],
+        "Treshhold": [10.0, 25.0],
+        "Reduction": [0.3, 0.6],
+        "Regeneration": 0.0,
+        "Increase": [4.0, 6.0]
+      },
+      "Fighting":{
+      	"Damage": 5.0,
+      	"AttackRate": 1.0,
+	  	"AbbleDistantAttack": false 
+	  },
+	  "CharacterActivities":{
+	  	"HealOther": 2.0
+	  },
+	  "HardwareActivities":{
+	  	"Repair": 1.0,
+	  	"FireExtinguish": 1.0
+	  }
+    }
+  }
+}

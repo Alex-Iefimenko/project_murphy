@@ -58,102 +58,102 @@ public class Navigation : MonoBehaviour
 	// Touch control method
 	void TouchControl () 
 	{
-		int touchCount  = Input.touchCount;
-		if (touchCount > 0) isResetPreviously = false;
-		// Touch control for one finger input: slide, move, info
-		if (touchCount == 1)
-		{
-			Touch touch = Input.GetTouch(0);
-			// Beginning of touch phase: 
-			if (touch.phase == TouchPhase.Began && lastFingerId == -1 )
-			{ 	 
-				lastFingerId = touch.fingerId;
-				touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-			} 
-			// Touch moved: camera moving
-			else if (touch.phase == TouchPhase.Moved && lastFingerId == touch.fingerId)
-			{
-				Camera.main.transform.position += (Camera.main.ScreenToWorldPoint(touch.position) - touchPosition) * speed;
-				touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-			}
-			// Touch ended:
-			else if (touch.phase == TouchPhase.Ended)
-			{
-				Vector3 worldTouch = Camera.main.ScreenToWorldPoint(touch.position);
-				RaycastHit2D hit;
-				hit = Physics2D.Raycast (new Vector2(worldTouch.x,worldTouch.y), Vector2.zero, 20, layer);
-				if (hit) 
-				{
-					Movement playerMovement = player.GetComponent<Movement>();
-					playerMovement.NewMovementPath(hit.collider.GetComponent<Room>(), false);
-				}
-				Reset ();
-			}
-		}
-		// touch control for twi finger input: screen resize
-		else if (touchCount == 2)
-		{
-			isResetPreviously = false;
-			Touch touch1 = Input.GetTouch(0);
-			Touch touch2 = Input.GetTouch(1);
-
-			// Beginning of touches phase: Get initial distance between fingers
-			if (touch1.phase == TouchPhase.Began || touch2.phase == TouchPhase.Began) 
-			{
-				touchDistance = Vector2.Distance(touch1.position, touch2.position);
-			}
-			// Touches moved: Changes Camera size consider distance delta
-			else if (touch1.phase == TouchPhase.Moved || touch2.phase == TouchPhase.Moved) 
-			{
-
-				Camera.main.orthographicSize += (touchDistance - Vector2.Distance(touch1.position, touch2.position)) * Time.deltaTime;
-				touchDistance = Vector2.Distance(touch1.position, touch2.position);
-			}
-			// Touch ended: reset state
-			else if (touch1.phase == TouchPhase.Ended || touch2.phase == TouchPhase.Ended)
-			{
-				Reset ();
-			}
-		}
-		else
-		{
-			if (!isResetPreviously) Reset ();
-		}
+//		int touchCount  = Input.touchCount;
+//		if (touchCount > 0) isResetPreviously = false;
+//		// Touch control for one finger input: slide, move, info
+//		if (touchCount == 1)
+//		{
+//			Touch touch = Input.GetTouch(0);
+//			// Beginning of touch phase: 
+//			if (touch.phase == TouchPhase.Began && lastFingerId == -1 )
+//			{ 	 
+//				lastFingerId = touch.fingerId;
+//				touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+//			} 
+//			// Touch moved: camera moving
+//			else if (touch.phase == TouchPhase.Moved && lastFingerId == touch.fingerId)
+//			{
+//				Camera.main.transform.position += (Camera.main.ScreenToWorldPoint(touch.position) - touchPosition) * speed;
+//				touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+//			}
+//			// Touch ended:
+//			else if (touch.phase == TouchPhase.Ended)
+//			{
+//				Vector3 worldTouch = Camera.main.ScreenToWorldPoint(touch.position);
+//				RaycastHit2D hit;
+//				hit = Physics2D.Raycast (new Vector2(worldTouch.x,worldTouch.y), Vector2.zero, 20, layer);
+//				if (hit) 
+//				{
+//					Movement playerMovement = player.GetComponent<Movement>();
+//					playerMovement.NewMovementPath(hit.collider.GetComponent<Room>(), false);
+//				}
+//				Reset ();
+//			}
+//		}
+//		// touch control for twi finger input: screen resize
+//		else if (touchCount == 2)
+//		{
+//			isResetPreviously = false;
+//			Touch touch1 = Input.GetTouch(0);
+//			Touch touch2 = Input.GetTouch(1);
+//
+//			// Beginning of touches phase: Get initial distance between fingers
+//			if (touch1.phase == TouchPhase.Began || touch2.phase == TouchPhase.Began) 
+//			{
+//				touchDistance = Vector2.Distance(touch1.position, touch2.position);
+//			}
+//			// Touches moved: Changes Camera size consider distance delta
+//			else if (touch1.phase == TouchPhase.Moved || touch2.phase == TouchPhase.Moved) 
+//			{
+//
+//				Camera.main.orthographicSize += (touchDistance - Vector2.Distance(touch1.position, touch2.position)) * Time.deltaTime;
+//				touchDistance = Vector2.Distance(touch1.position, touch2.position);
+//			}
+//			// Touch ended: reset state
+//			else if (touch1.phase == TouchPhase.Ended || touch2.phase == TouchPhase.Ended)
+//			{
+//				Reset ();
+//			}
+//		}
+//		else
+//		{
+//			if (!isResetPreviously) Reset ();
+//		}
 	}
 
 	// Alias method for debug in editor. 
 	// Dublicates functionality of TouchControl for mouse
 	void MouseControl ()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		}
-		else if (Input.GetMouseButton(0))
-		{
-			Camera.main.transform.position += (Camera.main.ScreenToWorldPoint(Input.mousePosition) - touchPosition) * speed;
-			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		}
-		else if (Input.GetMouseButtonUp(0))
-		{
-			Vector3 worldTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			RaycastHit2D hit;
-			hit = Physics2D.Raycast (new Vector2(worldTouch.x,worldTouch.y), Vector2.zero, 20, layer);
-			if (hit && player) 
-			{
-				Movement playerMovement = player.GetComponent<Movement>();
-				playerMovement.NewMovementPath(hit.collider.GetComponent<Room>(), false);
-			}
-		}
-
-		if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward
-		{
-			Camera.main.orthographicSize += speed;
-		}
-		if (Input.GetAxis("Mouse ScrollWheel") < 0) // back
-		{
-			Camera.main.orthographicSize -= speed;
-		}
+//		if (Input.GetMouseButtonDown(0))
+//		{
+//			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+//		}
+//		else if (Input.GetMouseButton(0))
+//		{
+//			Camera.main.transform.position += (Camera.main.ScreenToWorldPoint(Input.mousePosition) - touchPosition) * speed;
+//			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+//		}
+//		else if (Input.GetMouseButtonUp(0))
+//		{
+//			Vector3 worldTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+//			RaycastHit2D hit;
+//			hit = Physics2D.Raycast (new Vector2(worldTouch.x,worldTouch.y), Vector2.zero, 20, layer);
+//			if (hit && player) 
+//			{
+//				Movement playerMovement = player.GetComponent<Movement>();
+//				playerMovement.NewMovementPath(hit.collider.GetComponent<Room>(), false);
+//			}
+//		}
+//
+//		if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward
+//		{
+//			Camera.main.orthographicSize += speed;
+//		}
+//		if (Input.GetAxis("Mouse ScrollWheel") < 0) // back
+//		{
+//			Camera.main.orthographicSize -= speed;
+//		}
 
 	}
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Helpers : MonoBehaviour {
 
@@ -52,9 +53,9 @@ public class Helpers : MonoBehaviour {
 	}
 
 	// Returns random array table
-	public static T GetRandomArrayValue<T> (ArrayList array)
+	public static T GetRandomArrayValue<T> (List<T> array)
 	{
-		T value = (T)array[Random.Range (0, array.Count)];
+		T value = array[Random.Range (0, array.Count)];
 		return value;
 	}
 
@@ -63,7 +64,7 @@ public class Helpers : MonoBehaviour {
 	{
 		Room result = null;
 		if (sObject.GetComponent<Movement> ())
-			result = sObject.GetComponent<Movement> ().currentRoom;
+			result = sObject.GetComponent<Movement> ().CurrentRoom;
 		else if (sObject.GetComponent<Furniture> ())
 			result = sObject.GetComponent<Furniture> ().currentRoom; 
 		return result;

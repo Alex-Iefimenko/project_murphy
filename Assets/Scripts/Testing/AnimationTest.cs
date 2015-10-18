@@ -15,8 +15,7 @@ public class AnimationTest : MonoBehaviour {
 	void Awake ()  {
 		// Get Door collider object
 		cAnimator   = gameObject.GetComponent<Animator>();
-		controllers = Resources.LoadAll ("NPC/Crew/").Cast<RuntimeAnimatorController>().ToArray();
-
+		controllers = Resources.LoadAll ("Character/Crew/").Cast<RuntimeAnimatorController>().ToArray();
 	}
 
 	// Update is called once per frame
