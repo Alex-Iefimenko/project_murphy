@@ -2,6 +2,6 @@
 
 public interface ICharacterAIHandler {
 
-	void DetectReaction ();
+	void React ();
 
 }

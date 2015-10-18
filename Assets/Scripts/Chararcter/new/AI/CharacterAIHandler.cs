@@ -6,7 +6,7 @@ public class CharacterAIHandler : ICharacterAIHandler {
 
 	private System.Func<Room, bool>[] aiPrioriteis;
 	private IReaction[] aiReactions;
-	private IReaction currentReaction;
+	private IReaction currentReaction = null;
 	private ICharacter character;
 
 	// Initialize
@@ -22,19 +22,20 @@ public class CharacterAIHandler : ICharacterAIHandler {
 			aiReactions[i] = (IReaction)Activator.CreateInstance(Type.GetType(priorities[i] + "Reaction")); 
 		}
 	}
+	
+	public void React()
+	{
+		IReaction newReaction = DetectReaction ();
+		if (newReaction != currentReaction) currentReaction = newReaction;
+	}
 
-	public void DetectReaction ()
+	private IReaction DetectReaction ()
 	{
 		for (int i = 0; i < aiPrioriteis.Length; i++) 
 		{
-			if (aiPrioriteis[i].Invoke(character.Movement.CurrentRoom)) currentReaction = aiReactions[i];
+			if (aiPrioriteis[i].Invoke(character.Movement.CurrentRoom)) return aiReactions[i];
 		}
-		React();
-	}
-
-	private void React()
-	{
-
+		return null;
 	}
 
 	// Fight conditions

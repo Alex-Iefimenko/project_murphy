@@ -31,7 +31,8 @@ public class Movement : MonoBehaviour, IMovement {
 		charAnim   = gameObject.GetComponent<Animator>();
 		string side = System.Enum.GetName (typeof(CharacterMain.CharacterSides), currentCharater.Side);
 		string type = System.Enum.GetName (typeof(CharacterMain.CharacterTypes), currentCharater.Type);
-		animContrs = Resources.LoadAll ("Characters/Controllers/" + side + "/" + type + "/").Cast<RuntimeAnimatorController>().ToArray();
+		string path = "Characters/Controllers/" + side + "/" + type + "/" + Random.Range(1, 3).ToString() + "/";
+		animContrs = Resources.LoadAll (path).Cast<RuntimeAnimatorController>().ToArray();
 		speed = currentCharater.Stats.Speed;
 	}
 
