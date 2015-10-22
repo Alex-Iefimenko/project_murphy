@@ -1358,9 +1358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &178539007
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1455,9 +1454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 1
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &181507229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7478,9 +7476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 7
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &581130240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9900,9 +9897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &864888967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12076,9 +12072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 8
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &975038711
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12268,9 +12263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1001490864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12778,9 +12772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 9
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1127728775
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13041,6 +13034,79 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300012, guid: 695f601290fe8344a9d16de997d0e8ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1147769487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1147769491}
+  - 114: {fileID: 1147769490}
+  - 114: {fileID: 1147769489}
+  - 114: {fileID: 1147769488}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1147769488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147769487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowActivationOnStandalone: 0
+--- !u!114 &1147769489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147769487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_AllowActivationOnMobileDevice: 0
+--- !u!114 &1147769490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147769487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &1147769491
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147769487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &1149701085
 GameObject:
   m_ObjectHideFlags: 0
@@ -13120,9 +13186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 2
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1149701089
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13377,9 +13442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 4
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1188201483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15881,9 +15945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 6
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1520693490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18457,9 +18520,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 5
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1719438530
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18953,9 +19015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1756471393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22318,9 +22379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &1927153539
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23128,9 +23188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  furniture: []
-  maxDurability: 200
-  currentDurability: 0
+  doors: []
+  neighbors: []
 --- !u!212 &2039705823
 SpriteRenderer:
   m_ObjectHideFlags: 0

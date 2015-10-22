@@ -58,4 +58,20 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	{
 		if (attackCoolDown > 0f) attackCoolDown -= Time.deltaTime;
 	}
+
+	public bool IsDead ()
+	{
+		return Health <= 0f;
+	}
+
+	public bool IsUnconscious ()
+	{
+		return (Health <= HealthThreshold && !IsDead());
+	}
+
+	public bool IsWounded ()
+	{
+		return (Health <= MaxHealth && !IsUnconscious());
+	}
+
 }

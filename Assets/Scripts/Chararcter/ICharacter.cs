@@ -11,6 +11,10 @@ public interface ICharacter {
 
 	IMovement Movement { get; }
 
-	ICharacterView CharacterView { get; }
+	ICharacterView View { get; }
+
+	void Init ();
+
+	void PurgeActions ();
 
 }

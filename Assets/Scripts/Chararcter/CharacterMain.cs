@@ -17,17 +17,23 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	public CharacterStatsBase Stats { get; private set; }
 	public ICharacterAIHandler AiHandler { get; private set; }
 	public IMovement Movement { get; private set; }
-	public ICharacterView CharacterView { get; private set; }
+	public ICharacterView View { get; private set; }
 
 	// Initialize method
-	void Start () 
+	public void Init ()
 	{
 		Stats = CharacterStatsGenerator.GenerateCharacterStats(this);
 		Movement = (IMovement)gameObject.AddComponent("Movement");
 		AiHandler = CharacterAIGenerator.GenerateAIHandler(this);
-		CharacterView = (ICharacterView)gameObject.AddComponent("CharacterView");
+		View = (ICharacterView)gameObject.AddComponent("CharacterView");
 	}
 
+	public void PurgeActions ()
+	{
+		AiHandler.Purge();
+		Movement.Purge();
+		View.Purge();
+	}
 
 
 }

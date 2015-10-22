@@ -16,4 +16,6 @@ public interface IMovement {
 
 	bool IsNearObject(GameObject exactObject);
 
+	void Purge();
+
 }

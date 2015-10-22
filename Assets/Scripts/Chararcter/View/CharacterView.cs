@@ -20,4 +20,10 @@ public class CharacterView : MonoBehaviour, ICharacterView {
 		if (characterAnimator.GetInteger("SubState") != newSubState) characterAnimator.SetInteger("SubState", newSubState);
 	}
 
+	public void Purge ()
+	{
+		characterAnimator.SetInteger("SubState", -1);
+		characterAnimator.SetInteger("State", -1);
+	}
+
 }

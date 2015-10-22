@@ -4,4 +4,5 @@ public interface ICharacterAIHandler {
 
 	void React ();
 
+	void Purge ();
 }

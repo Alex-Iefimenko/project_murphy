@@ -5,4 +5,5 @@ public interface ICharacterView {
 
 	void SetSubState (int newState); 
 
+	void Purge ();
 }

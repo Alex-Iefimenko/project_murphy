@@ -3,16 +3,16 @@
     "Doctor":[
       "Dead",
       "Unconsitious",
-      "Heal",
+      "HealHimself",
    	  "Attack",
       "Navigate",
       "HealOther",
-      "EliminateDeadBody",
-      "Repair",
-      "Extinguish",
-      "TakeBody",
+      "TakeWoundedBody",
       "Eat",
       "Sleep",
+      "Repair",
+      "Extinguish",
+      "EliminateDeadBody",
       "Work",
       "Rest"
     ]

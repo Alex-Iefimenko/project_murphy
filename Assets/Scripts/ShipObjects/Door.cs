@@ -21,9 +21,9 @@ public class Door : MonoBehaviour {
 		Vector3 entranceOne = transform.position + transform.up * GetComponent<BoxCollider2D>().size.y / 2f * transform.localScale.y;
 		Vector3 entranceTwo = transform.position - transform.up * GetComponent<BoxCollider2D>().size.y / 2f * transform.localScale.y;
 
-		foreach (GameObject room in ShipState.allRooms.Values)
+		foreach (Room room in ShipState.allRooms.Values)
 		{
-			Room currentRoom = room.GetComponent<Room>();
+			Room currentRoom = room;
 			if (room.collider2D.OverlapPoint(entranceOne) || room.collider2D.OverlapPoint(entranceTwo))
 			{
 				linkedRooms.Add (currentRoom, Helpers.GetClosestPointTo(currentRoom.transform.position, entranceOne, entranceTwo));

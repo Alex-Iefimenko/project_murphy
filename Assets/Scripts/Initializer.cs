@@ -26,10 +26,10 @@ public class Initializer : MonoBehaviour {
 		// Init relations in Doors
 		foreach (GameObject door in ShipState.allDoors) door.GetComponent<Door>().GetLinkedRooms();
 		// Init relations in Rooms
-		foreach (GameObject room in ShipState.allRooms.Values) 
+		foreach (Room room in ShipState.allRooms.Values) 
 		{
-			room.GetComponent<Room>().GetAttachedDoors ();
-			room.GetComponent<Room>().GetNeighbors ();
+			room.GetAttachedDoors ();
+			room.GetNeighbors ();
 		}
 		// Inititialize ship as graph
 		ShipState.CreateShipStructureGraph ();
@@ -37,6 +37,6 @@ public class Initializer : MonoBehaviour {
 
 	void GenStats ()
 	{
-		//foreach (GameObject npc in ShipState.allNPC) npc.GetComponent<CharacterMain>().InitGenerateCharacterStats();
+		foreach (GameObject character in ShipState.allCharacters) character.GetComponent<CharacterMain>().Init();
 	}
 }

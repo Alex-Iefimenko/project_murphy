@@ -7,23 +7,8 @@ public class ShipState : MonoBehaviour {
 	public static Hashtable shipGraph = new Hashtable();
 	//public static GameObject[] allRooms;
 	public static GameObject[] allDoors;
-	public static GameObject[] allNPC;
-	public static Dictionary<int, GameObject> allRooms;
-	
-	//Awake function
-	void Awake () {
-
-	}
-
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public static GameObject[] allCharacters;
+	public static Dictionary<int, Room> allRooms;
 
 	// Initialize method for creating ship structure as graph
 	// Structure {room: [[neighbor1 details], [neighbor1 details], ...], ...}
@@ -31,10 +16,10 @@ public class ShipState : MonoBehaviour {
 	{
 		// Find all "Room" tagged object in iterate over them
 		UpdateRoomAndDoorsLists ();
-		foreach (GameObject room in allRooms.Values)
+		foreach (Room room in allRooms.Values)
 		{
 			// Get Room component as current room
-			Room currentRoom = room.GetComponent<Room>();
+			Room currentRoom = room;
 			// Create empty array for current room neighbors details
 			ArrayList currentRoomNeighbors = new ArrayList();
 			// For each neighbor fullfil itself, distance to current room, similar door and add it to array
@@ -55,9 +40,9 @@ public class ShipState : MonoBehaviour {
 	public static void UpdateRoomAndDoorsLists ()
 	{
 		allDoors = GameObject.FindGameObjectsWithTag("Door");
-		allNPC   = GameObject.FindGameObjectsWithTag("NPC");
+		allCharacters = GameObject.FindGameObjectsWithTag("Character");
 		GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
-		allRooms = new Dictionary<int, GameObject>();
+		allRooms = new Dictionary<int, Room>();
 		int corridorDummy = System.Enum.GetNames(typeof(Room.RoomTypes)).Length;
 		foreach (GameObject room in rooms)
 		{
@@ -67,7 +52,7 @@ public class ShipState : MonoBehaviour {
 				key = corridorDummy;
 				corridorDummy += 1;
 			}
-			allRooms.Add(key, room);
+			allRooms.Add(key, room.GetComponent<Room>());
 		}
 	}
 
@@ -78,7 +63,7 @@ public class ShipState : MonoBehaviour {
 		Hashtable distances = new Hashtable();
 		Hashtable predecessors = new Hashtable();
 
-		if (initialRoom == targetRoom) return new List<Vector3>() {targetRoom.gameObject.transform.position};
+		if (initialRoom == targetRoom) return new List<Vector3>() { targetRoom.gameObject.transform.position };
 
 		foreach (Room node in shipGraph.Keys)
 		{
