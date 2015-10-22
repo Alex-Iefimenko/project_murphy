@@ -1,11 +1,35 @@
 fileFormatVersion: 2
 guid: 8d8ab76c5a2604d5aa18a7b0ed99154d
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Doctor
+    21300002: Doctor_0
+    21300004: Doctor_1
+    21300006: Doctor_2
+    21300008: Doctor_3
+    21300010: Doctor_4
+    21300012: Doctor_5
+    21300014: Doctor_6
+    21300016: Doctor_7
+    21300018: Doctor_9
+    21300020: Doctor_11
+    21300022: Doctor_12
+    21300024: Doctor_13
+    21300026: Doctor_14
+    21300028: Doctor_15
+    21300030: Doctor_16
+    21300032: Doctor_17
+    21300034: Doctor_18
+    21300036: Doctor_19
+    21300038: Doctor_20
+    21300040: Doctor_21
+    21300042: Doctor_22
+    21300044: Doctor_23
+    21300046: Doctor_22
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -21,17 +45,17 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 1024
+  textureFormat: -3
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +66,236 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Doctor_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 359
+        width: 74
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 359
+        width: 74
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 360
+        width: 65
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_3
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 361
+        width: 64
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_4
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 362
+        width: 71
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 335
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 335
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 349
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_9
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 337
+        width: 27
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 180
+        width: 86
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 180
+        width: 86
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_13
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 181
+        width: 93
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_14
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 180
+        width: 93
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_15
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 181
+        width: 55
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 151
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_17
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 151
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 84
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_19
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 3
+        width: 84
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_20
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 3
+        width: 84
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_21
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 3
+        width: 85
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_22
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 5
+        width: 55
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_23
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 152
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doctor_22
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 331
+        width: 27
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
