@@ -72,7 +72,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400008}
-  - 111: {fileID: 11100000}
   - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: Doctor4
@@ -417,7 +416,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
-  m_LocalRotation: {x: -.707107008, y: .000371772796, z: -.000372423849, w: .707106352}
+  m_LocalRotation: {x: -.707107067, y: .000371772825, z: -.000372423878, w: .707106411}
   m_LocalPosition: {x: -.062766239, y: .380825371, z: -.470000505}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -509,20 +508,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 11192cdec6a234042a37bf287ef7d0e3, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
