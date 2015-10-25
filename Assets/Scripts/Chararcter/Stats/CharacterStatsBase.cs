@@ -66,12 +66,12 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 
 	public bool IsUnconscious ()
 	{
-		return (Health <= HealthThreshold && !IsDead());
+		return (Health <= 10f && !IsDead());
 	}
 
 	public bool IsWounded ()
 	{
-		return (Health <= MaxHealth && !IsUnconscious());
+		return (Health <= MaxHealth && !IsDead());
 	}
 
 }

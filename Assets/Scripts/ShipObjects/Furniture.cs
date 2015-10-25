@@ -8,7 +8,6 @@ public class Furniture : MonoBehaviour {
 	[HideInInspector] public Room currentRoom;
 	[HideInInspector] public bool isFree = true;
 
-
 	// Add NPC to Rooms NPC List
 	void OnTriggerEnter2D (Collider2D otherCollider) 
 	{

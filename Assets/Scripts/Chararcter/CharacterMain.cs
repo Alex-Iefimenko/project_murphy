@@ -18,7 +18,7 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	public ICharacterAIHandler AiHandler { get; private set; }
 	public IMovement Movement { get; private set; }
 	public ICharacterView View { get; private set; }
-
+	
 	// Initialize method
 	public void Init ()
 	{
@@ -34,6 +34,5 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		Movement.Purge();
 		View.Purge();
 	}
-
-
+	
 }

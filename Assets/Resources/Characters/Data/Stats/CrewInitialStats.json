@@ -7,7 +7,7 @@
       "Traits": true,
       "Health":{
         "Max": [60.0, 80.0],
-        "Treshhold": [10.0, 25.0],
+        "Treshhold": [15.0, 25.0],
         "Reduction": 0.0,
         "Regeneration": 0.0,
         "Increase": [4.0, 6.0]
