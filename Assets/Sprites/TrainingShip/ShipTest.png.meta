@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 4d2b55cb36f58db4abec666a09cee0da
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ShipTest_0
+    21300002: ShipTest_1
+    21300004: ShipTest_2
+    21300006: ShipTest_3
+    21300008: ShipTest_4
+    21300010: ShipTest_5
+    21300012: ShipTest_6
+    21300014: ShipTest_7
+    21300016: ShipTest_8
+    21300018: ShipTest_9
+    21300020: ShipTest_10
+    21300022: ShipTest_11
+    21300024: ShipTest_12
+    21300026: ShipTest_13
+    21300028: ShipTest_14
+    21300030: ShipTest_15
+    21300032: ShipTest_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ShipTest_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 84
+        width: 1628
+        height: 2876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_1
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 2551
+        width: 485
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_2
+      rect:
+        serializedVersion: 2
+        x: 2492
+        y: 2360
+        width: 508
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_3
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 2130
+        width: 484
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_4
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 2225
+        width: 318
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_5
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 1706
+        width: 492
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_6
+      rect:
+        serializedVersion: 2
+        x: 2641
+        y: 1788
+        width: 303
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_7
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 1373
+        width: 367
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_8
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 1373
+        width: 361
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_9
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 916
+        width: 106
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_10
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 960
+        width: 365
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_11
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 960
+        width: 339
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_12
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 556
+        width: 110
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_13
+      rect:
+        serializedVersion: 2
+        x: 2012
+        y: 525
+        width: 495
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_14
+      rect:
+        serializedVersion: 2
+        x: 2683
+        y: 530
+        width: 111
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_15
+      rect:
+        serializedVersion: 2
+        x: 2900
+        y: 401
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_16
+      rect:
+        serializedVersion: 2
+        x: 2012
+        y: 19
+        width: 960
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
