@@ -4,8 +4,8 @@ using System.Linq;
 
 public class AnimationTest : MonoBehaviour {
 
-//	public CharacterMain.CharacterSides side = CharacterMain.CharacterSides.Crew;
-//	public CharacterMain.CharacterTypes type = CharacterMain.CharacterTypes.Doctor;
+	public CharacterMain.CharacterSides side = CharacterMain.CharacterSides.Crew;
+	public CharacterMain.CharacterTypes type = CharacterMain.CharacterTypes.Doctor;
 //	public enum Subtype{ One = 1, Two = 2, Three = 3};
 //	public Subtype subtype = Subtype.One;
 	public enum Sides{ Down = 0, Left = 1, Right = 2, Up = 3 };
@@ -15,18 +15,17 @@ public class AnimationTest : MonoBehaviour {
 	public Animation currentState = Animation.Dead;
 	public int subState = 1;
 
-
-//	private RuntimeAnimatorController[] controllers = new RuntimeAnimatorController[4];
+	private RuntimeAnimatorController controller;
 
 	void Awake ()  {
 		// Get Door collider object
 		cAnimator   = gameObject.GetComponent<Animator>();
-//		string localSide = System.Enum.GetName (typeof(CharacterMain.CharacterSides), side);
-//		string localType = System.Enum.GetName (typeof(CharacterMain.CharacterTypes), type);
+		string localSide = System.Enum.GetName (typeof(CharacterMain.CharacterSides), side);
+		string localType = System.Enum.GetName (typeof(CharacterMain.CharacterTypes), type);
 //		int localSubtype = (int)subtype;
-//		string path = "Characters/Controllers/" + localSide + "/" + localType + "/" + localSubtype.ToString() + "/Controller";
-//		controller = Resources.Load (path).Cast<RuntimeAnimatorController>();
-//		cAnimator.runtimeAnimatorController = controller;
+		string path = "Characters/Controllers/" + localSide + "/" + localType + "/Controller";
+		controller = Resources.Load (path) as RuntimeAnimatorController;
+		cAnimator.runtimeAnimatorController = controller;
 	}
 
 	// Update is called once per frame
