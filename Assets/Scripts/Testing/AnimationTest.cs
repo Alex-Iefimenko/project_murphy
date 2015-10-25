@@ -11,7 +11,9 @@ public class AnimationTest : MonoBehaviour {
 	public enum Sides{ Down = 0, Left = 1, Right = 2, Up = 3 };
 	public Sides currentSide = Sides.Up;
 	private Animator cAnimator;
-	public enum Animation{ Dead, Unconsitious, Attack, HealHimself, Navigate, Repair, Extinguish, HealOther, Eat, Sleep, EliminateDeadBody, TakeWoundedBody, Work, Rest };
+	public enum Animation{ Dead = 1, Unconsitious = 2, Attack = 3, HealHimself = 4, Navigate = 5, Repair = 6, 
+		Extinguish = 7, HealOther = 8, Eat = 9, Sleep = 10, EliminateDeadBody = 11, TakeWoundedBody = 12, 
+		Work = 13, Rest = 14 };
 	public Animation currentState = Animation.Dead;
 	public int subState = 1;
 

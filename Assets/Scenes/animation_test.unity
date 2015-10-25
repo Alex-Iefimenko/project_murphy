@@ -1530,8 +1530,8 @@ MonoBehaviour:
   side: 0
   type: 2
   currentSide: 3
-  currentState: 0
-  subState: 1
+  currentState: 2
+  subState: 0
 --- !u!1 &583435124
 GameObject:
   m_ObjectHideFlags: 0
