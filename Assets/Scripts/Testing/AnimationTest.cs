@@ -9,7 +9,7 @@ public class AnimationTest : MonoBehaviour {
 //	public enum Subtype{ One = 1, Two = 2, Three = 3};
 //	public Subtype subtype = Subtype.One;
 	public enum Sides{ Down = 0, Left = 1, Right = 2, Up = 3 };
-	public Sides currentSide = Sides.Up;
+	public Sides currentProjection = Sides.Up;
 	private Animator cAnimator;
 	public enum Animation{ Dead = 1, Unconsitious = 2, Attack = 3, HealHimself = 4, Navigate = 5, Repair = 6, 
 		Extinguish = 7, HealOther = 8, Eat = 9, Sleep = 10, EliminateDeadBody = 11, TakeWoundedBody = 12, 
@@ -32,9 +32,28 @@ public class AnimationTest : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		cAnimator.SetInteger("Projection", (int)currentSide);
+//		cAnimator.SetInteger("Projection", (int)currentSide);
 		cAnimator.SetInteger("State", (int)currentState);
 		cAnimator.SetInteger("SubState", subState);
+		switch (currentProjection)
+		{
+			case Sides.Up:
+				cAnimator.SetFloat("ProjectionX", 0f);
+				cAnimator.SetFloat("ProjectionY", 1f);
+				break;
+			case Sides.Down:
+				cAnimator.SetFloat("ProjectionX", 0f);
+				cAnimator.SetFloat("ProjectionY", -1f);
+				break;
+			case Sides.Left:
+				cAnimator.SetFloat("ProjectionX", -1f);
+				cAnimator.SetFloat("ProjectionY", 0f);
+				break;
+			case Sides.Right:
+				cAnimator.SetFloat("ProjectionX", 1f);
+				cAnimator.SetFloat("ProjectionY", 0f);
+				break;
+		}
 	}
 
 }

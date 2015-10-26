@@ -20,13 +20,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: x
+  - m_Name: ProjectionX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: y
+  - m_Name: ProjectionY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -79,8 +79,8 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: x
-  m_BlendParameterY: y
+  m_BlendParameter: ProjectionX
+  m_BlendParameterY: ProjectionY
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
@@ -120,8 +120,8 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: x
-  m_BlendParameterY: y
+  m_BlendParameter: ProjectionX
+  m_BlendParameterY: ProjectionY
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
@@ -161,8 +161,8 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: x
-  m_BlendParameterY: y
+  m_BlendParameter: ProjectionX
+  m_BlendParameterY: ProjectionY
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
@@ -308,18 +308,18 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110239683}
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110188283}
+      - {fileID: 110180714}
+      - {fileID: 110102500}
     data:
       first: {fileID: 110241367}
       second:
       - {fileID: 110100000}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110239683}
       second:
-      - {fileID: 110180714}
-      - {fileID: 110102500}
+      - {fileID: 110188283}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 24, y: 72, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
