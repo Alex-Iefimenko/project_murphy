@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 95: {fileID: 9500000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Doctor4
   m_TagString: Untagged
@@ -329,7 +330,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.19726944, y: 1.54965901, z: 0}
+  m_LocalPosition: {x: -2.01326227, y: 1.62369895, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -503,12 +504,27 @@ Animator:
   m_GameObject: {fileID: 100008}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 98b9ccbafc37fb847913debbd57715ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 26dd31bdfe8f44b7b931505dc793f7b6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95eb65839e14d4f5b9ffb7c743651ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 0
+  type: 2
+  currentSide: 3
+  currentState: 0
+  subState: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
