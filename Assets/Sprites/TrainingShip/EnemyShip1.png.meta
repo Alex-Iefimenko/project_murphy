@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 4199802d0279160458a2d4bd5e58acad
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: EnemyShip1
+    21300002: EnemyShip1_0
+    21300004: EnemyShip1_1
+    21300006: EnemyShip1_2
+    21300008: EnemyShip1_3
+    21300010: EnemyShip1_4
+    21300012: EnemyShip1_5
+    21300014: EnemyShip1_6
+    21300016: EnemyShip1_7
+    21300018: EnemyShip1_8
+    21300020: EnemyShip1_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: EnemyShip1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 368
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_1
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 123
+        width: 621
+        height: 950
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 315
+        width: 166
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 330
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_4
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 229
+        width: 44
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 227
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_6
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 233
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_7
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 232
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_8
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 193
+        width: 55
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemyShip1_9
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 123
+        width: 219
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

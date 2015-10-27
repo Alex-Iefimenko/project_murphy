@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 1fdc320d402f24843ac2986467afe857
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Guards
+    21300002: Guards_0
+    21300004: Guards_1
+    21300006: Guards_2
+    21300008: Guards_3
+    21300010: Guards_4
+    21300012: Guards_5
+    21300014: Guards_6
+    21300016: Guards_7
+    21300018: Guards_8
+    21300020: Guards_9
+    21300022: Guards_10
+    21300024: Guards_11
+    21300026: Guards_12
+    21300028: Guards_13
+    21300030: Guards_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Guards_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 352
+        width: 93
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 352
+        width: 93
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 352
+        width: 94
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_3
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 352
+        width: 94
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_4
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 432
+        width: 56
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 175
+        width: 85
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_6
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 175
+        width: 89
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_7
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 176
+        width: 93
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_8
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 176
+        width: 94
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_9
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 244
+        width: 61
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 99
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_11
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 99
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_12
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1
+        width: 95
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_13
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1
+        width: 95
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guards_14
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 74
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
