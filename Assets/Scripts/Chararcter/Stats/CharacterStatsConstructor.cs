@@ -41,8 +41,9 @@ public class CharacterStatsConstructor {
 	// Hardware Activities
 	public float Repair { get; set; }
 	public float FireExtinguish { get; set; }
-	// Resting
+	// Working andResting
 	public float RestProbability { get; set; }
+	public List<string> WorkTasks { get; set; }
 	// traits
 	public CharatcerStatsAbstract.Traits TraitOne { get; set; }
 	public CharatcerStatsAbstract.Traits TraitTwo { get; set; }
@@ -120,6 +121,8 @@ public class CharacterStatsConstructor {
 	private void ApplyRestProb (JsonData json)
 	{
 		RestProbability = Convert.ToSingle((double) json["RestProbability"]);
+		WorkTasks = new List<string> ();
+		for (int i = 0; i < json["WorkTasks"].Count; i++) WorkTasks.Add((string)json["WorkTasks"][i]);
 	}
 
 	private void GenerateTraits ()

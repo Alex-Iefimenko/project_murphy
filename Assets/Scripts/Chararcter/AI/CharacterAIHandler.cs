@@ -35,6 +35,14 @@ public class CharacterAIHandler : ICharacterAIHandler {
 		currentState.ExecuteStateActions();
 	}
 
+	public void ForceState<T>()
+	{
+		for (int i = 0; i < aiStates.Length; i++) 
+		{ 
+			if (aiStates[i].GetType() == typeof(T)) { ChageState(aiStates[i]); }
+		}
+	}
+
 	private void ChageState(IState newState)
 	{
 		currentState = newState;
@@ -78,13 +86,13 @@ public class CharacterAIHandler : ICharacterAIHandler {
 	// Repair conditions
 	public bool Repair (Room room)
 	{
-		return room.State.Durability < room.State.MaxDurability;
+		return room.State.IsBroken();
 	}
 	
 	// Fire Extinguish conditions
 	public bool Extinguish (Room room)
 	{
-		return room.State.FireLevel > 0f;
+		return room.State.IsOnFire();
 	}
 	
 	// Take body away condition

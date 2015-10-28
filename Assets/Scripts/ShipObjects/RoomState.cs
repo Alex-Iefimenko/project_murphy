@@ -18,4 +18,13 @@ public class RoomState {
 		ChemistryLevel = 0f;
 	}
 
+	public bool IsBroken ()
+	{
+		return Durability < MaxDurability;
+	}
+
+	public bool IsOnFire ()
+	{
+		return FireLevel > 0f;
+	}
 }

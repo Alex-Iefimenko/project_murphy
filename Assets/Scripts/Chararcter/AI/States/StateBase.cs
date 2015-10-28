@@ -13,22 +13,22 @@ public class StateBase : MonoBehaviour, IState {
 
 	public virtual int StateKind { get; set; }
 
-	public virtual void ExecuteStateActions () {}
-
 	public virtual void Actualize () 
 	{
 		character.PurgeActions();
 		character.View.SetState(StateKind);
 	}
 
+	public virtual void ExecuteStateActions () {}
+
 	public void NavigateTo (Room room)
 	{
 		character.Movement.NavigateTo(room);
 	}
 
-	public void NavigateTo (CharacterMain character)
+	public void NavigateTo (ICharacter targetCharacter)
 	{
-		character.Movement.NavigateTo(character);
+		character.Movement.NavigateTo(targetCharacter);
 	}
 
 	public void NavigateTo (Room room, Furniture item)

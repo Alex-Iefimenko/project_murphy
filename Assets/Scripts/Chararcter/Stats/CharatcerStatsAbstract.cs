@@ -46,8 +46,9 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	// Hardware Activities
 	[HideInInspector] public readonly float repair;
 	[HideInInspector] public readonly float fireExtinguish;
-	// Resting
+	// Working and Resting
 	[HideInInspector] public readonly float restProbability;
+	[HideInInspector] public readonly string[] workTasks;
 	// traits
 	[HideInInspector] public readonly Traits traitOne;
 	[HideInInspector] public readonly Traits traitTwo;
@@ -89,8 +90,9 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	// Hardware Activities
 	public virtual float Repair { get; set; }
 	public virtual float FireExtinguish { get; set; }
-	// Resting
+	// Working and Resting
 	public virtual float RestProbability { get; set; }
+	public virtual string[] WorkTasks { get; set; }
 	// traits
 	public virtual Traits TraitOne { get; set; }
 	public virtual Traits TraitTwo { get; set; }

@@ -3,6 +3,7 @@
     "Doctor":{
       "Speed": 0.5,
       "BasicRoom":"MedBay",
+      "WorkTasks": ["HealOther", "TakeWoundedBody"],
       "RestProbability": 0.25,
       "Traits": true,
       "Health":{

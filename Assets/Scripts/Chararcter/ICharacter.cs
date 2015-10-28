@@ -1,5 +1,8 @@
-﻿
+﻿using UnityEngine;
+
 public interface ICharacter {
+
+	// Character Components
 
 	CharacterMain.CharacterSides Side { get; }
 
@@ -13,8 +16,18 @@ public interface ICharacter {
 
 	ICharacterView View { get; }
 
+	GameObject GObject { get; }
+
+	// System Character Actions
+
 	void Init ();
 
 	void PurgeActions ();
+
+	// Outside Character Facade
+
+	void Navigate(Room room);
+
+	void Heal(float amount);
 
 }

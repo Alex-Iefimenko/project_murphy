@@ -11,6 +11,9 @@ public class UnconsitiousState : StateBase {
 	
 	public override void Actualize () { base.Actualize (); }
 	
-	public override void ExecuteStateActions () {}
+	public override void ExecuteStateActions () 
+	{
+		if (character.Stats.Health > character.Stats.HealthThreshold) character.PurgeActions();
+	}
 	
 }

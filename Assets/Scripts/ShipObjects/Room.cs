@@ -124,4 +124,15 @@ public class Room : MonoBehaviour {
 			resultObject = Helpers.GetRandomArrayValue<Furniture>(unoccypiedObjects);
 		return resultObject;
 	}
+
+	public void Repair (float amount)
+	{
+		State.Durability += amount;
+	}
+
+	public void Extinguish (float amount)
+	{
+		State.FireLevel -= amount;
+	}
+
 }

@@ -62,7 +62,7 @@ public class Movement : MonoBehaviour, IMovement {
 		movementPath[-1] = item.gameObject.transform.position;
 	}
 
-	public void NavigateTo(CharacterMain character) 
+	public void NavigateTo(ICharacter character) 
 	{
 		Debug.Log ("METHOD NOT IMPLEMENTED YET!");
 	}

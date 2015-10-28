@@ -27,3 +27,20 @@ public class CharacterView : MonoBehaviour, ICharacterView {
 	}
 
 }
+
+//	// Chat notification start
+//	public void isChat ()
+//	{
+//		if (chatting && timer <= 0f)
+//		{
+//			chatting = false;
+//			timer = Random.Range(1f, 2f);
+//		}
+////		else if (!chatting && movement.currentRoom.npcCollidercs.Count > 1 && timer <= 0f)
+//		{
+//			chatting = true;
+//			sRenderer.sprite = actions["Speak"];
+//			timer = Random.Range(1f, 2f);
+//		}
+//	}
+//}

@@ -10,7 +10,7 @@ public interface IMovement {
 
 	void NavigateTo(Room room, Furniture item);
 
-	void NavigateTo(CharacterMain character);
+	void NavigateTo(ICharacter character);
 
 	bool IsMoving();
 

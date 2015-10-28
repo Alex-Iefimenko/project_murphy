@@ -18,7 +18,10 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	public ICharacterAIHandler AiHandler { get; private set; }
 	public IMovement Movement { get; private set; }
 	public ICharacterView View { get; private set; }
-	
+
+	// GameObject
+	public GameObject GObject { get { return this.gameObject; } }
+
 	// Initialize method
 	public void Init ()
 	{
@@ -34,5 +37,16 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		Movement.Purge();
 		View.Purge();
 	}
-	
+
+	// Facade implementations
+	public void Heal(float amount)
+	{
+		Stats.Health += amount;
+	}
+
+	public void Navigate(Room room)
+	{
+		AiHandler.ForceState<NavigateState>();
+		Movement.Navigate(room);
+	}
 }
