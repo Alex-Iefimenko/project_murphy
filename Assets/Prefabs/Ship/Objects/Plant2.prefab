@@ -9,6 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 414912}
   - 212: {fileID: 21214912}
+  - 50: {fileID: 5000000}
+  - 61: {fileID: 6100000}
   m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
@@ -23,11 +25,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.45499992, y: -3.74000001, z: -1}
+  m_LocalPosition: {x: -1.49199998, y: -3.76799989, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5000000
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114912}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!61 &6100000
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114912}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .99000001, y: .449999988}
+  m_Center: {x: 0, y: 0}
 --- !u!212 &21214912
 SpriteRenderer:
   m_ObjectHideFlags: 1
