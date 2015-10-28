@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StateBase : MonoBehaviour, IState {
+public class StateBase : IState {
 
 	public ICharacter character;
 	private int stateIndex;
 
-	public StateBase (CharacterMain newCharacter) 
+	public StateBase (ICharacter newCharacter) 
 	{
 		character = newCharacter;
 	}

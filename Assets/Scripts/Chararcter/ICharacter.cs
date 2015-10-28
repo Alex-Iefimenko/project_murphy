@@ -24,6 +24,8 @@ public interface ICharacter {
 
 	void PurgeActions ();
 
+	void Tick ();
+
 	// Outside Character Facade
 
 	void Navigate(Room room);

@@ -38,6 +38,12 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		View.Purge();
 	}
 
+	public void Tick ()
+	{
+		Stats.StatsUpdate();
+		AiHandler.React();
+	}
+
 	// Facade implementations
 	public void Heal(float amount)
 	{

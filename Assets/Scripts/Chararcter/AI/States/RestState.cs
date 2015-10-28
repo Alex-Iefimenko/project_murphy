@@ -25,3 +25,4 @@ public class RestState : StateBase {
 		if (tick <= 0)
 			character.PurgeActions();
 	}
+}

@@ -8,23 +8,13 @@ public class WorkState : StateBase {
 	private int tick;
 	private System.Func<Room, bool>[] responsabilities;
 	
-	public WorkState (CharacterMain character) : base(character) 
-	{ 
-		responsabilities = new System.Func<Room, bool>[character.Stats.WorkTasks.Length];
-		for (int i = 0; i < character.Stats.WorkTasks.Length; i++)
-		{
-			System.Reflection.MethodInfo method = typeof(CharacterAIHandler).GetMethod(character.Stats.WorkTasks[i]);
-			responsabilities[i] = (System.Func<Room, bool>) System.Delegate.CreateDelegate(
-				typeof(System.Func<Room, bool>), 
-				(CharacterAIHandler)character.AiHandler, 
-				method);
-		}
-	}
+	public WorkState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
 	
 	public override void Actualize () { 
 		base.Actualize (); 
+		if (responsabilities == null) CreateWorkDelegates ();
 		NavigateTo(character.Stats.BasicRoom);
 		tick = Random.Range(7, 10);
 	}
@@ -40,6 +30,19 @@ public class WorkState : StateBase {
 			character.View.SetSubState(1);
 		if (tick <= 0)
 			character.PurgeActions();
+	}
+
+	private void CreateWorkDelegates ()
+	{
+		responsabilities = new System.Func<Room, bool>[character.Stats.WorkTasks.Length];
+		for (int i = 0; i < character.Stats.WorkTasks.Length; i++)
+		{
+			System.Reflection.MethodInfo method = typeof(CharacterAIHandler).GetMethod(character.Stats.WorkTasks[i]);
+			responsabilities[i] = (System.Func<Room, bool>) System.Delegate.CreateDelegate(
+				typeof(System.Func<Room, bool>), (CharacterAIHandler)character.AiHandler, method
+				);
+		}
+
 	}
 
 	private void CheckRelatedEvents()

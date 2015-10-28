@@ -54,7 +54,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 		health = health + healthRegeneration - healthReduction;
 	}
 
-	public  void Update()
+	public void Update()
 	{
 		if (attackCoolDown > 0f) attackCoolDown -= Time.deltaTime;
 	}

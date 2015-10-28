@@ -38,7 +38,7 @@ static class Broadcaster {
 	// Broadcast Tick
 	public static void BroadcastTick () {
 		//if (npcRespondToTick)  
-//		foreach (GameObject npc in ShipState.allNPC) npc.GetComponent<CharacterTasks>().Tick();
+		foreach (ICharacter character in ShipState.allCharacters) character.Tick();
 		//if (doorRespondToTick) foreach (GameObject door in ShipState.allDoors) door.GetComponent<Door>().Tick();
 		//if (roomRespondToTick) foreach (GameObject room in ShipState.allRooms) room.GetComponent<Room>().Tick();
 	}

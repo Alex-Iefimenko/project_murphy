@@ -7,7 +7,7 @@ public class ShipState : MonoBehaviour {
 	public static Hashtable shipGraph = new Hashtable();
 	//public static GameObject[] allRooms;
 	public static GameObject[] allDoors;
-	public static GameObject[] allCharacters;
+	public static CharacterMain[] allCharacters;
 	public static Dictionary<int, Room> allRooms;
 
 	// Initialize method for creating ship structure as graph
@@ -38,9 +38,11 @@ public class ShipState : MonoBehaviour {
 
 	// Updtates lists of doors and rooms 
 	public static void UpdateRoomAndDoorsLists ()
-	{
+	{	GameObject[] charactersObjects = GameObject.FindGameObjectsWithTag("Character");
+		allCharacters = new CharacterMain[charactersObjects.Length];
+		for (int i = 0; i < charactersObjects.Length; i++ )
+			allCharacters[i] = charactersObjects[i].GetComponent<CharacterMain>();
 		allDoors = GameObject.FindGameObjectsWithTag("Door");
-		allCharacters = GameObject.FindGameObjectsWithTag("Character");
 		GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
 		allRooms = new Dictionary<int, Room>();
 		int corridorDummy = System.Enum.GetNames(typeof(Room.RoomTypes)).Length;

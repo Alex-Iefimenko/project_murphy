@@ -127,17 +127,17 @@ public class Movement : MonoBehaviour, IMovement {
 	// Method for handle sprite Character representation update
 	private void UpdateAnimator (Vector3 nextPoint)
 	{
-		Vector3 p1 = transform.position;
-		Vector3 p2 = nextPoint;
-		float angle = Mathf.Atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Mathf.PI;
-		if ( 45f <= angle && angle <= 135f ) 
-			charAnim.runtimeAnimatorController = animContrs [3];
-		else if ( -135f <= angle && angle <= -45f )
-			charAnim.runtimeAnimatorController = animContrs [0];
-		else if ( -45f <= angle && angle <= 45f )
-			charAnim.runtimeAnimatorController = animContrs [2];
-		else if ( 135f <= angle || angle <= -135f )
-			charAnim.runtimeAnimatorController = animContrs [1];
+//		Vector3 p1 = transform.position;
+//		Vector3 p2 = nextPoint;
+//		float angle = Mathf.Atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Mathf.PI;
+//		if ( 45f <= angle && angle <= 135f ) 
+//			charAnim.runtimeAnimatorController = animContrs [3];
+//		else if ( -135f <= angle && angle <= -45f )
+//			charAnim.runtimeAnimatorController = animContrs [0];
+//		else if ( -45f <= angle && angle <= 45f )
+//			charAnim.runtimeAnimatorController = animContrs [2];
+//		else if ( 135f <= angle || angle <= -135f )
+//			charAnim.runtimeAnimatorController = animContrs [1];
 	}
 
 }

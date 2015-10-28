@@ -37,6 +37,6 @@ public class Initializer : MonoBehaviour {
 
 	void GenStats ()
 	{
-		foreach (GameObject character in ShipState.allCharacters) character.GetComponent<CharacterMain>().Init();
+		foreach (CharacterMain character in ShipState.allCharacters) character.Init();
 	}
 }

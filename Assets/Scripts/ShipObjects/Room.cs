@@ -16,7 +16,7 @@ public class Room : MonoBehaviour {
 	// Room objects
 	[HideInInspector] public List<Door> doors = new List<Door>();
 	[HideInInspector] public List<Room> neighbors = new List<Room>();
-	private List<CharacterMain> characters = new List<CharacterMain>();
+	private List<ICharacter> characters = new List<ICharacter>();
 	private Furniture[] furniture;
 	
 	// Room state
@@ -51,21 +51,21 @@ public class Room : MonoBehaviour {
 	// Add Character to Rooms Character List
 	void OnTriggerEnter2D (Collider2D otherCollider) 
 	{
-		CharacterMain otherCharacter = otherCollider.GetComponent<CharacterMain>();
+		ICharacter otherCharacter = otherCollider.GetComponent<CharacterMain>();
 		if (otherCharacter != null && !characters.Contains(otherCharacter)) characters.Add(otherCharacter);
 	}
 
 	// Delete Character from Rooms Character List
 	void OnTriggerExit2D (Collider2D otherCollider) 
 	{
-		CharacterMain otherCharacter = otherCollider.GetComponent<CharacterMain>();
+		ICharacter otherCharacter = otherCollider.GetComponent<CharacterMain>();
 		if (otherCharacter != null && characters.Contains(otherCharacter)) characters.Remove(otherCharacter);
 	}
 
 	// Check if Room continse hostile Character
 	public ICharacter ContainsHostile (ICharacter character) 
 	{
-		foreach (CharacterMain visitor in characters)
+		foreach (ICharacter visitor in characters)
 		{
 			if (SidesRelations.Instance.IsEnemies(character, visitor)) return visitor;
 		}

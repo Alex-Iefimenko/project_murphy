@@ -19,7 +19,7 @@ public class CharacterAIHandler : ICharacterAIHandler {
 		{
 			System.Reflection.MethodInfo method = typeof(CharacterAIHandler).GetMethod(priorities[i]);
 			aiPrioriteis[i] = (Func<Room, bool>) Delegate.CreateDelegate(typeof(Func<Room, bool>), this, method);
-			aiStates[i] = (IState)Activator.CreateInstance(Type.GetType(priorities[i] + "State")); 
+			aiStates[i] = (IState)Activator.CreateInstance(Type.GetType(priorities[i] + "State"), character); 
 		}
 	}
 
@@ -128,7 +128,7 @@ public class CharacterAIHandler : ICharacterAIHandler {
 	// Navigate to room condition
 	public bool Navigate (Room room)
 	{
-		return currentState.StateKind == 5;
+		return (currentState != null && currentState.StateKind == 5);
 	}
 
 	// Navigate to room condition
