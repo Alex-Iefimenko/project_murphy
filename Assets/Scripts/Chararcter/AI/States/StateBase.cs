@@ -15,7 +15,6 @@ public class StateBase : IState {
 
 	public virtual void Actualize () 
 	{
-		character.PurgeActions();
 		character.View.SetState(StateKind);
 	}
 

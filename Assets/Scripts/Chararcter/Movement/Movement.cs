@@ -18,22 +18,16 @@ public class Movement : MonoBehaviour, IMovement {
 
 	// Components
 	private Collider2D charColl; 
-	private Animator charAnim;
-	private RuntimeAnimatorController[] animContrs = new RuntimeAnimatorController[4];
+	private ICharacter character;
 
 	//
 	// Initializing
 	//
 	
 	void Awake () {
-		ICharacter currentCharater = (ICharacter)gameObject.GetComponent<CharacterMain>();
-		charColl   = gameObject.GetComponent<Collider2D>();
-		charAnim   = gameObject.GetComponent<Animator>();
-		string side = System.Enum.GetName (typeof(CharacterMain.CharacterSides), currentCharater.Side);
-		string type = System.Enum.GetName (typeof(CharacterMain.CharacterTypes), currentCharater.Type);
-		string path = "Characters/Controllers/" + side + "/" + type + "/" + Random.Range(1, 3).ToString() + "/";
-		animContrs = Resources.LoadAll (path).Cast<RuntimeAnimatorController>().ToArray();
-		speed = currentCharater.Stats.Speed;
+		character = (ICharacter)gameObject.GetComponent<CharacterMain>();
+		charColl = gameObject.GetComponent<Collider2D>();
+		speed = character.Stats.Speed;
 	}
 
 	//
@@ -48,6 +42,7 @@ public class Movement : MonoBehaviour, IMovement {
 	public void Navigate(Room room) 
 	{
 		movementPath = ShipState.GetStepsToRoom(currentRoom, room);
+		character.View.RotateTowards(movementPath[0]);
 	}
 
 	public void NavigateTo(Room room) 
@@ -59,7 +54,7 @@ public class Movement : MonoBehaviour, IMovement {
 	public void NavigateTo(Room room, Furniture item)
 	{
 		Navigate(room);
-		movementPath[-1] = item.gameObject.transform.position;
+		movementPath[movementPath.Count - 1] = item.gameObject.transform.position;
 	}
 
 	public void NavigateTo(ICharacter character) 
@@ -106,15 +101,15 @@ public class Movement : MonoBehaviour, IMovement {
 		nextPoint.z = transform.position.z;
 		transform.position = Vector3.MoveTowards(transform.position, nextPoint, speed * Time.deltaTime);
 		if (charColl.OverlapPoint(nextPoint)) UpdatePath();
-		//{	
-		//	if (movementPath.Count == 1) AdjustPostion();
-		//}
 	}
 
 	private void UpdatePath()
 	{
+		//{	
+		//	if (movementPath.Count == 1) AdjustPostion();
+		//}
 		movementPath.RemoveAt(0);
-		UpdateAnimator (movementPath[0]);
+		if (movementPath.Count > 0) character.View.RotateTowards (movementPath[0]);
 	}
 
 	private void AdjustPostion ()
@@ -122,22 +117,6 @@ public class Movement : MonoBehaviour, IMovement {
 //		Vector3 pos = (Vector3)movementPath[0];
 //		transform.position = new Vector3(pos.x, pos.y, transform.position.z);
 //		transform.rotation = endPointRotation;
-	}
-	
-	// Method for handle sprite Character representation update
-	private void UpdateAnimator (Vector3 nextPoint)
-	{
-//		Vector3 p1 = transform.position;
-//		Vector3 p2 = nextPoint;
-//		float angle = Mathf.Atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Mathf.PI;
-//		if ( 45f <= angle && angle <= 135f ) 
-//			charAnim.runtimeAnimatorController = animContrs [3];
-//		else if ( -135f <= angle && angle <= -45f )
-//			charAnim.runtimeAnimatorController = animContrs [0];
-//		else if ( -45f <= angle && angle <= 45f )
-//			charAnim.runtimeAnimatorController = animContrs [2];
-//		else if ( 135f <= angle || angle <= -135f )
-//			charAnim.runtimeAnimatorController = animContrs [1];
 	}
 
 }

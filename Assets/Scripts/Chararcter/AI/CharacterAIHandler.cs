@@ -45,6 +45,7 @@ public class CharacterAIHandler : ICharacterAIHandler {
 
 	private void ChageState(IState newState)
 	{
+		character.PurgeActions();
 		currentState = newState;
 		currentState.Actualize();
 	}
