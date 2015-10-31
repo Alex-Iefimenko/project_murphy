@@ -64,6 +64,7 @@ public class Movement : MonoBehaviour, IMovement {
 	
 	public bool IsMoving () 
 	{
+		Debug.Log (movementPath.Count != 0);
 		return movementPath.Count != 0;
 	}
 

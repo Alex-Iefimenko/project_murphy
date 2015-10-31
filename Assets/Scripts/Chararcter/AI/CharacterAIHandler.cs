@@ -52,10 +52,10 @@ public class CharacterAIHandler : ICharacterAIHandler {
 
 	private IState DetectState ()
 	{
-		int checksDepth = currentState == null ? aiPrioriteis.Length : Array.IndexOf(aiPrioriteis, currentState);
-		for (int i = 0; i < checksDepth; i++) 
+		for (int i = 0; i < aiPrioriteis.Length; i++) 
 		{
-			if (aiPrioriteis[i].Invoke(character.Movement.CurrentRoom)) return aiStates[i];
+			if (aiStates[i] == currentState || aiPrioriteis[i].Invoke(character.Movement.CurrentRoom)) 
+				return aiStates[i];
 		}
 		return currentState;
 	}

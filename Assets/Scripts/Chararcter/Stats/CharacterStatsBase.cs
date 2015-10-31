@@ -22,7 +22,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public override Room BasicRoom { get { return basicRoom; } }
 	// Health
 	public override float MaxHealth { get { return maxHealth; } }
-	public override float Health { get { return health; } }
+	public override float Health { get { return health; } set { health = value; }}
 	public override float HealthIncrease { get { return healthIncrease; } }
 	public override float HealthRegeneration { get { return healthRegeneration; } }
 	public override float HealthReduction { get { return healthReduction; } }

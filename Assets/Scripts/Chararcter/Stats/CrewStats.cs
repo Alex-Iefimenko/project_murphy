@@ -31,14 +31,14 @@ public class CrewStats : CharacterStatsBase {
 
 	// Fatigue
 	public override float MaxFatigue { get { return maxFatigue; } }
-	public override float Fatigue { get { return fatigue; } }
+	public override float Fatigue { get { return fatigue; } set { fatigue = value; } }
 	public override float FatigueIncrease { get { return fatigueIncrease; } }
 	public override float FatigueRegeneration { get { return fatigueRegeneration; } }
 	public override float FatigueReduction { get { return fatigueReduction; } }
 	public override float FatigueThreshold { get { return fatigueThreshold; } }
 	// Sanity 
 	public override float MaxSanity { get { return maxSanity; } }
-	public override float Sanity { get { return sanity; } }
+	public override float Sanity { get { return sanity; } set { sanity = value; } }
 	public override float SanityIncrease { get { return sanityIncrease; } }
 	public override float SanityRegeneration { get { return sanityRegeneration; } }
 	public override float SanityReduction { get { return sanityReduction; } }
