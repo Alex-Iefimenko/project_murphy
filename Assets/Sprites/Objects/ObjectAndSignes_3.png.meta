@@ -1,0 +1,125 @@
+fileFormatVersion: 2
+guid: 704e26de8a05b9a4a8d51b4b87be67ee
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ObjectAndSignes_3
+    21300002: ObjectAndSignes_3_0
+    21300004: ObjectAndSignes_3_1
+    21300006: ObjectAndSignes_3_2
+    21300008: ObjectAndSignes_3_3
+    21300010: ObjectAndSignes_3_4
+    21300012: ObjectAndSignes_3_5
+    21300014: ObjectAndSignes_3_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ObjectAndSignes_3_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 375
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 375
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_2
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 375
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 265
+        width: 124
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_4
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 265
+        width: 100
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_5
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 265
+        width: 95
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 145
+        width: 129
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
