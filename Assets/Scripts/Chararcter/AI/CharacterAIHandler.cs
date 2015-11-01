@@ -135,7 +135,8 @@ public class CharacterAIHandler : ICharacterAIHandler {
 	// Navigate to room condition
 	public bool Work (Room room)
 	{
-		return UnityEngine.Random.value > character.Stats.RestProbability;
+		bool restState = (currentState != null && currentState.StateKind == 14);
+		return (!restState && UnityEngine.Random.value > character.Stats.RestProbability);
 	}
 
 	// Navigate to room condition
