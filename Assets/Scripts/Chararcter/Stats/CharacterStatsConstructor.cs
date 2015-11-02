@@ -67,7 +67,6 @@ public class CharacterStatsConstructor {
 	{
 		Speed = Convert.ToSingle((double) json["Speed"]);
 		int roomEnum = (int)Enum.Parse(typeof(Room.RoomTypes), (string)json["BasicRoom"]);
-		UnityEngine.Debug.Log (roomEnum);
 		BasicRoom = ShipState.allRooms[roomEnum].GetComponent<Room>();
 	}
 

@@ -5,9 +5,15 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: DoorSprite
+  m_Name: DoorHorizontal2
   serializedVersion: 2
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: IsOpen
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -20,143 +26,143 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &110129348
+--- !u!1101 &110156296
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110258584}
-  m_DstState: {fileID: 110284072}
+  m_SrcState: {fileID: 110233370}
+  m_DstState: {fileID: 110233366}
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsOpen
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110140290
+--- !u!1101 &110168422
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110290792}
-  m_DstState: {fileID: 110258584}
+  m_SrcState: {fileID: 110233366}
+  m_DstState: {fileID: 110233372}
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: IsOpen
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110155146
+--- !u!1101 &110175924
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110254434}
-  m_DstState: {fileID: 110290792}
-  m_TransitionDuration: .25
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
-    m_ExitTime: .75
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
---- !u!1101 &110161968
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110284072}
-  m_DstState: {fileID: 110254434}
+  m_SrcState: {fileID: 110233368}
+  m_DstState: {fileID: 110233370}
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: IsOpen
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1102 &110254434
+--- !u!1101 &110192278
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110233372}
+  m_DstState: {fileID: 110233368}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsOpen
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1102 &110233366
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Doors1Closing
+  m_Name: Doors2Closing
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: a2753588cb751564599c9caa4bbd062b, type: 2}
+  - {fileID: 7400000, guid: c2b04f90cd8a4194582190c5935abb4b, type: 2}
   m_ParentStateMachine: {fileID: 110758584}
-  m_Position: {x: 12, y: -120, z: 0}
+  m_Position: {x: 204, y: -408, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110258584
+--- !u!1102 &110233368
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Doors1Opening
+  m_Name: Doors2Opening
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 2e1931accfe27e64ab2301b77fc2d20c, type: 2}
+  - {fileID: 7400000, guid: b1ad58368d4a26f4eb65ae3ff86a15b0, type: 2}
   m_ParentStateMachine: {fileID: 110758584}
-  m_Position: {x: -276, y: -12, z: 0}
+  m_Position: {x: -60, y: -300, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110284072
+--- !u!1102 &110233370
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Doors1Opened
+  m_Name: Doors2Opened
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 6a462df7bbee1244b96dc897d8eb2c2d, type: 2}
+  - {fileID: 7400000, guid: bde7d55f3078bf342a1c961cdd153745, type: 2}
   m_ParentStateMachine: {fileID: 110758584}
-  m_Position: {x: -264, y: -120, z: 0}
+  m_Position: {x: -60, y: -408, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110290792
+--- !u!1102 &110233372
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Doors1Closed
+  m_Name: Doors2Closed
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 6adfe1ff9c35f38449c28a329c6da764, type: 2}
+  - {fileID: 7400000, guid: 8a5a7f6f94d53f345a26371ef6a481c1, type: 2}
   m_ParentStateMachine: {fileID: 110758584}
-  m_Position: {x: 24, y: 0, z: 0}
+  m_Position: {x: 204, y: -300, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -167,31 +173,31 @@ StateMachine:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110290792}
+  m_DefaultState: {fileID: 110233366}
   m_States:
-  - {fileID: 110258584}
-  - {fileID: 110290792}
-  - {fileID: 110284072}
-  - {fileID: 110254434}
+  - {fileID: 110233366}
+  - {fileID: 110233368}
+  - {fileID: 110233370}
+  - {fileID: 110233372}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110254434}
+      first: {fileID: 110233366}
       second:
-      - {fileID: 110155146}
+      - {fileID: 110168422}
     data:
-      first: {fileID: 110284072}
+      first: {fileID: 110233368}
       second:
-      - {fileID: 110161968}
+      - {fileID: 110175924}
     data:
-      first: {fileID: 110290792}
+      first: {fileID: 110233370}
       second:
-      - {fileID: 110140290}
+      - {fileID: 110156296}
     data:
-      first: {fileID: 110258584}
+      first: {fileID: 110233372}
       second:
-      - {fileID: 110129348}
+      - {fileID: 110192278}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: 120, y: -168, z: 0}
+  m_AnyStatePosition: {x: 96, y: -516, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

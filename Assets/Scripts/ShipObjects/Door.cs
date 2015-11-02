@@ -5,14 +5,12 @@ public class Door : MonoBehaviour {
 
 	public Dictionary<Room, Vector3> linkedRooms = new Dictionary<Room, Vector3>();
 	//private Collider2D doorCollider;
-	private Animator[] doorsAnimators;
+	private Animator doorAnimator;
 	private int numberOfNPC = 0;
 
 	// Use this for initialization
 	void Awake () {
-		// Get Door collider object
-		//doorCollider = gameObject.GetComponent<Collider2D>();
-		doorsAnimators = GetComponentsInChildren<Animator>();
+		doorAnimator = GetComponentInChildren<Animator>();
 	}
 	
 	// Method returns Linked to door Room as key and closest to it point as value
@@ -35,7 +33,7 @@ public class Door : MonoBehaviour {
 	{
 		if (other.GetComponent<CharacterMain>() != null && numberOfNPC == 0)
 		{
-			foreach (Animator anim in doorsAnimators) anim.SetBool("IsOpen", true);
+			doorAnimator.SetBool("IsOpen", true);
 			numberOfNPC += 1;
 		}
 	}
@@ -44,7 +42,7 @@ public class Door : MonoBehaviour {
 	{
 		if (other.GetComponent<CharacterMain>() != null && numberOfNPC == 1)
 		{
-			foreach (Animator anim in doorsAnimators) anim.SetBool("IsOpen", false);
+			doorAnimator.SetBool("IsOpen", false);
 			numberOfNPC -= 1;
 		}
 	}
