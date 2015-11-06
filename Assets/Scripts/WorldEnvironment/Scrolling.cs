@@ -11,7 +11,7 @@ public class Scrolling : MonoBehaviour {
 	private Vector3 translation;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		sprites = GetComponentsInChildren<SpriteRenderer> ();
 
 		// set initial position

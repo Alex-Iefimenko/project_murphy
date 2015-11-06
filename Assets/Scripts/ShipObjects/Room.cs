@@ -14,8 +14,7 @@ public class Room : MonoBehaviour {
 	public RoomTypes roomType;
 
 	// Room objects
-	[HideInInspector] public List<Door> doors = new List<Door>();
-	[HideInInspector] public List<Room> neighbors = new List<Room>();
+	public Dictionary<Room, Neighbor> neighbors = new Dictionary<Room, Neighbor>();
 	private List<ICharacter> characters = new List<ICharacter>();
 	private Furniture[] furniture;
 	
@@ -28,24 +27,11 @@ public class Room : MonoBehaviour {
 		furniture = GetComponentsInChildren<Furniture>();
 		foreach (Furniture item in furniture) item.currentRoom = this;
 	}
-
-	// Get Attached doors to curent room
-	public void GetAttachedDoors ()
+	
+	public void AddNeighbor (Room newNeighbor, Door betweenDoor)
 	{
-		foreach (GameObject door in ShipState.allDoors)
-		{
-			Door currentDoor = door.GetComponent<Door>();
-			if (currentDoor.linkedRooms.ContainsKey(this)) doors.Add (currentDoor);
-		}
-	}
-
-	// Get all neighbors of current room
-	public void GetNeighbors ()
-	{
-		foreach (Door door in doors)
-		{
-			foreach (Room room in door.linkedRooms.Keys) if (room != this) neighbors.Add(room);		
-		}
+		if (!neighbors.ContainsKey(newNeighbor)) 
+			neighbors.Add (newNeighbor, new Neighbor(newNeighbor, this, betweenDoor));
 	}
 
 	// Add Character to Rooms Character List

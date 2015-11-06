@@ -28,19 +28,19 @@ public class CharacterAIHandler : ICharacterAIHandler {
 		currentState = null;
 	}
 
-	public void React()
-	{
-		IState newState = DetectState ();
-		if (currentState != newState) ChageState(newState);
-		currentState.ExecuteStateActions();
-	}
-
 	public void ForceState<T>()
 	{
 		for (int i = 0; i < aiStates.Length; i++) 
 		{ 
 			if (aiStates[i].GetType() == typeof(T)) { ChageState(aiStates[i]); }
 		}
+	}
+	
+	public void React()
+	{
+		IState newState = DetectState ();
+		if (currentState != newState) ChageState(newState);
+		currentState.ExecuteStateActions();
 	}
 
 	private void ChageState(IState newState)

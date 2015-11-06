@@ -26,17 +26,17 @@ public class WorldTime : MonoBehaviour {
 		if (day <= 0f) 
 		{
 			day = dayLength;
-			Broadcaster.BroadcastDay();
+			Broadcaster.Instance.BroadcastDay();
 		}
 		if (action <= 0f) 
 		{
 			action = actionLength;
-			Broadcaster.BroadcastAction();
+			Broadcaster.Instance.BroadcastAction();
 		}
 		if (tick <= 0f)
 		{
 			tick = tickLength;
-			Broadcaster.BroadcastTick();
+			Broadcaster.Instance.BroadcastTick();
 		}
 	}
 }

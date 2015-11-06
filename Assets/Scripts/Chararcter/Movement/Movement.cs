@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour, IMovement {
 
 	public void Navigate(Room room) 
 	{
-		movementPath = ShipState.GetStepsToRoom(currentRoom, room);
+		movementPath = ShipState.Inst.GetStepsToRoom(currentRoom, room);
 		character.View.RotateTowards(movementPath[0]);
 	}
 

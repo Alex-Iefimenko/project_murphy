@@ -11,12 +11,12 @@ public class SleepState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.allRooms[(int)Room.RoomTypes.LivingQuarters]);
+		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.allRooms[(int)Room.RoomTypes.LivingQuarters]) 
+		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]) 
 			character.Stats.Sanity += character.Stats.SanityIncrease;
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);

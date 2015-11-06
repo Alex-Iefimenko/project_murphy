@@ -29,6 +29,7 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		Movement = (IMovement)gameObject.AddComponent("Movement");
 		AiHandler = CharacterAIGenerator.GenerateAIHandler(this);
 		View = (ICharacterView)gameObject.AddComponent("CharacterView");
+		Broadcaster.Instance.tickEvent += Tick;
 	}
 
 	public void PurgeActions ()
@@ -44,7 +45,9 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		AiHandler.React();
 	}
 
+	//
 	// Facade implementations
+	//
 	public void Heal(float amount)
 	{
 		Stats.Health += amount;
@@ -55,4 +58,5 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		AiHandler.ForceState<NavigateState>();
 		Movement.Navigate(room);
 	}
+
 }

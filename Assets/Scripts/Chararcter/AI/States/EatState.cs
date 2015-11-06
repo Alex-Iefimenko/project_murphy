@@ -11,12 +11,12 @@ public class EatState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.allRooms[(int)Room.RoomTypes.Dinnery]);
+		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.Dinnery]);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.allRooms[(int)Room.RoomTypes.Dinnery]) 
+		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.Dinnery]) 
 			character.Stats.Fatigue += character.Stats.FatigueIncrease;
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);

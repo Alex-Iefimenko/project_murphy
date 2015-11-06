@@ -11,12 +11,12 @@ public class HealHimselfState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.allRooms[(int)Room.RoomTypes.MedBay]);
+		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.MedBay]);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.allRooms[(int)Room.RoomTypes.MedBay]) 
+		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.MedBay]) 
 			character.Stats.Health += character.Stats.HealthIncrease;
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);

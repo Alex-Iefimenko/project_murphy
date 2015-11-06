@@ -539,6 +539,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 08bd354995674974ebd5c8f4d5094e56, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 08bd354995674974ebd5c8f4d5094e56, type: 2}
+      propertyPath: m_TagString
+      value: Room
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08bd354995674974ebd5c8f4d5094e56, type: 2}
   m_RootGameObject: {fileID: 2088944197}
@@ -2174,8 +2182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 7
-  doors: []
-  neighbors: []
 --- !u!1 &148540058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5923,8 +5929,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  doors: []
-  neighbors: []
 --- !u!1 &388016735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6243,7 +6247,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: .140000001, y: 0}
 --- !u!4 &399554036
 Transform:
   m_ObjectHideFlags: 0
@@ -8622,8 +8626,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  doors: []
-  neighbors: []
 --- !u!1 &496607465
 GameObject:
   m_ObjectHideFlags: 0
@@ -8876,8 +8878,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  doors: []
-  neighbors: []
 --- !u!1001 &511700639
 Prefab:
   m_ObjectHideFlags: 0
@@ -11491,8 +11491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 10
-  doors: []
-  neighbors: []
 --- !u!1 &599384823
 GameObject:
   m_ObjectHideFlags: 0
@@ -11929,8 +11927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 5
-  doors: []
-  neighbors: []
 --- !u!1001 &623950046
 Prefab:
   m_ObjectHideFlags: 0
@@ -14962,8 +14958,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 2
-  doors: []
-  neighbors: []
 --- !u!1001 &888555275
 Prefab:
   m_ObjectHideFlags: 0
@@ -16117,9 +16111,10 @@ GameObject:
   - 4: {fileID: 964403754}
   - 212: {fileID: 964403753}
   - 61: {fileID: 964403752}
+  - 114: {fileID: 964403755}
   m_Layer: 0
   m_Name: EnemyShipRoom
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16181,6 +16176,18 @@ Transform:
   - {fileID: 151923159}
   m_Father: {fileID: 2088944199}
   m_RootOrder: 0
+--- !u!114 &964403755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964403751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3278a9bbfa77ff7499d6eab4642a9bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &967078545
 GameObject:
   m_ObjectHideFlags: 0
@@ -16404,8 +16411,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  doors: []
-  neighbors: []
 --- !u!1001 &992717454
 Prefab:
   m_ObjectHideFlags: 0
@@ -22166,8 +22171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 3
-  doors: []
-  neighbors: []
 --- !u!1001 &1189214418
 Prefab:
   m_ObjectHideFlags: 0
@@ -24054,8 +24057,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 6
-  doors: []
-  neighbors: []
 --- !u!1001 &1250558053
 Prefab:
   m_ObjectHideFlags: 0
@@ -24255,8 +24256,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 8
-  doors: []
-  neighbors: []
 --- !u!1 &1259469329
 GameObject:
   m_ObjectHideFlags: 0
@@ -24675,6 +24674,10 @@ Prefab:
     - target: {fileID: 21200000, guid: 951b7cebcf3f7a8438a23fc980c4b403, type: 2}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 951b7cebcf3f7a8438a23fc980c4b403, type: 2}
+      propertyPath: m_TagString
+      value: Room
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 951b7cebcf3f7a8438a23fc980c4b403, type: 2}
@@ -27363,8 +27366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 4
-  doors: []
-  neighbors: []
 --- !u!1 &1510707917
 GameObject:
   m_ObjectHideFlags: 0
@@ -27450,8 +27451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  doors: []
-  neighbors: []
 --- !u!1 &1510849458
 GameObject:
   m_ObjectHideFlags: 0
@@ -33803,8 +33802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 1
-  doors: []
-  neighbors: []
 --- !u!1 &1997466250
 GameObject:
   m_ObjectHideFlags: 0
@@ -33818,7 +33815,7 @@ GameObject:
   - 61: {fileID: 1997466253}
   m_Layer: 0
   m_Name: ShipAirLock
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33868,7 +33865,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2.47000003, y: 2.13000011}
+  m_Size: {x: 2.1099999, y: 2.13000011}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1997466254
 MonoBehaviour:
@@ -33882,8 +33879,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
-  doors: []
-  neighbors: []
 --- !u!1001 &1999112103
 Prefab:
   m_ObjectHideFlags: 0
@@ -34029,8 +34024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 9
-  doors: []
-  neighbors: []
 --- !u!1 &2003935780
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,7 +47,7 @@ public class WorkState : StateBase {
 
 	private void CheckRelatedEvents()
 	{
-		Room[] rooms = ShipState.allRooms.Values.ToArray();
+		Room[] rooms = ShipState.Inst.allRooms;
 		for (int i = 0; i < responsabilities.Length; i++)
 		{
 			for (int j = 0; j < rooms.Length; j++)

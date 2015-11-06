@@ -12,13 +12,13 @@ public class RestState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.allRooms[(int)Room.RoomTypes.LivingQuarters]);
+		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]);
 		tick = Random.Range(7, 10);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.allRooms[(int)Room.RoomTypes.LivingQuarters]) 
+		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]) 
 			tick -= 1;
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);

@@ -66,8 +66,8 @@ public class CharacterStatsConstructor {
 	private void ConstructBasic (JsonData json)
 	{
 		Speed = Convert.ToSingle((double) json["Speed"]);
-		int roomEnum = (int)Enum.Parse(typeof(Room.RoomTypes), (string)json["BasicRoom"]);
-		BasicRoom = ShipState.allRooms[roomEnum].GetComponent<Room>();
+		Room.RoomTypes roomEnum = (Room.RoomTypes)Enum.Parse(typeof(Room.RoomTypes), (string)json["BasicRoom"]);
+		BasicRoom = ShipState.Inst.specRooms[roomEnum].GetComponent<Room>();
 	}
 
 	private void ConstructHealth (JsonData json)

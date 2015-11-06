@@ -29,7 +29,7 @@ public class Navigation : MonoBehaviour
 	private string layerName = "Ship";
 	private int layer;
 
-	void Start ()
+	void Awake ()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		layer = 1 << LayerMask.NameToLayer(layerName);

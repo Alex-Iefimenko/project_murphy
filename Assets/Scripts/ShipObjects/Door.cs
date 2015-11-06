@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 public class Door : MonoBehaviour {
 
-	public Dictionary<Room, Vector3> linkedRooms = new Dictionary<Room, Vector3>();
-	//private Collider2D doorCollider;
 	private Animator doorAnimator;
 	private int numberOfNPC = 0;
 
@@ -13,20 +11,31 @@ public class Door : MonoBehaviour {
 		doorAnimator = GetComponentInChildren<Animator>();
 	}
 	
-	// Method returns Linked to door Room as key and closest to it point as value
-	public void GetLinkedRooms ()
+	// Method adds Neighbor object to each rooms connected to this door
+	public void ConnectNeighbors ()
 	{
-		Vector3 entranceOne = transform.position + transform.up * GetComponent<BoxCollider2D>().size.y / 2f * transform.localScale.y;
-		Vector3 entranceTwo = transform.position - transform.up * GetComponent<BoxCollider2D>().size.y / 2f * transform.localScale.y;
-
-		foreach (Room room in ShipState.allRooms.Values)
+		Vector3[] entrances = GetEntrancePoints ();
+		Vector3 entranceOne = entrances[0];
+		Vector3 entranceTwo = entrances[1];
+		Room neighborOne = null;
+		Room neighborTwo = null;
+		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++)
 		{
-			Room currentRoom = room;
-			if (room.collider2D.OverlapPoint(entranceOne) || room.collider2D.OverlapPoint(entranceTwo))
-			{
-				linkedRooms.Add (currentRoom, Helpers.GetClosestPointTo(currentRoom.transform.position, entranceOne, entranceTwo));
-			}
+			if (ShipState.Inst.allRooms[i].collider2D.OverlapPoint(entranceOne))
+			    neighborOne = ShipState.Inst.allRooms[i];
+			if (ShipState.Inst.allRooms[i].collider2D.OverlapPoint(entranceTwo))
+			    neighborTwo = ShipState.Inst.allRooms[i];
+			if (neighborOne != null && neighborTwo != null) break;
 		}
+		neighborOne.AddNeighbor(neighborTwo, this);
+		neighborTwo.AddNeighbor(neighborOne, this);
+	}
+
+	public Vector3[] GetEntrancePoints ()
+	{
+		BoxCollider2D coll = GetComponent<BoxCollider2D>();
+		Vector3 size = transform.up * coll.size.y / 2f * transform.localScale.y;
+		return new Vector3[2] { transform.position + size, transform.position - size };
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

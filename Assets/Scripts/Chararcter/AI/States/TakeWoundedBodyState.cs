@@ -24,7 +24,7 @@ public class TakeWoundedBodyState : StateBase {
 		{
 			character.View.SetSubState(1);
 			//dead.PullBy(character);
-			NavigateTo(ShipState.allRooms[(int)Room.RoomTypes.MedBay]);
+			NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.MedBay]);
 			pulling = true;
 		}
 		if (character.Movement.IsMoving() == false)
