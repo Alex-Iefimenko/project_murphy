@@ -10,6 +10,8 @@ TextureImporter:
     21300010: ObjectAndSignes_3_4
     21300012: ObjectAndSignes_3_5
     21300014: ObjectAndSignes_3_9
+    21300016: ObjectAndSignes_3_7
+    21300018: ObjectAndSignes_3_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,7 +61,7 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_3_1
       rect:
@@ -69,7 +71,7 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_3_2
       rect:
@@ -79,7 +81,7 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_3_3
       rect:
@@ -89,7 +91,7 @@ TextureImporter:
         width: 124
         height: 98
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_3_4
       rect:
@@ -99,7 +101,7 @@ TextureImporter:
         width: 100
         height: 98
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_3_5
       rect:
@@ -109,7 +111,7 @@ TextureImporter:
         width: 95
         height: 98
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_3_9
       rect:
@@ -118,6 +120,26 @@ TextureImporter:
         y: 145
         width: 129
         height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_7
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 90
+        width: 184
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_8
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 29
+        width: 175
+        height: 160
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

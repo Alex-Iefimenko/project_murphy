@@ -18,7 +18,7 @@ TagManager:
   Builtin Layer 6: 
   Builtin Layer 7: 
   User Layer 8: Ship
-  User Layer 9: 
+  User Layer 9: VFX
   User Layer 10: 
   User Layer 11: 
   User Layer 12: 
@@ -45,4 +45,12 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: MainShip
+    userID: 1
+    uniqueID: 1831335547
+    locked: 0
+  - name: VFX
+    userID: 2
+    uniqueID: 4242064401
     locked: 0
