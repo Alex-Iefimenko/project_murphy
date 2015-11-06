@@ -13,6 +13,11 @@ TextureImporter:
     21300016: ObjectAndSignes_4_7
     21300018: ObjectAndSignes_4_8
     21300020: ObjectAndSignes_4_9
+    21300022: ObjectAndSignes_4_10
+    21300024: ObjectAndSignes_4_11
+    21300026: ObjectAndSignes_4_12
+    21300028: ObjectAndSignes_4_13
+    21300030: ObjectAndSignes_4_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -151,6 +156,56 @@ TextureImporter:
         y: 143
         width: 115
         height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_4_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 140
+        width: 101
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_4_11
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 174
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_4_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7
+        width: 129
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_4_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 6
+        width: 129
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_4_14
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 28
+        width: 110
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
