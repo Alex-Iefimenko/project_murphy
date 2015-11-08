@@ -145,6 +145,9 @@ public class CharacterStatsConstructor {
 			else
 				ApplySpecificTrait (trait, traitData);
 		}
+		Health = MaxHealth;
+		Sanity = MaxSanity;
+		Fatigue = MaxFatigue;
 	}
 
 	private void ApplySpecificTrait (CharatcerStatsAbstract.Traits trait, JsonData traitData)

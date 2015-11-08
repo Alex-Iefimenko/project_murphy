@@ -71,7 +71,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 
 	public bool IsWounded ()
 	{
-		return (Health <= MaxHealth && !IsDead());
+		return (Health < MaxHealth && !IsDead());
 	}
 
 }
