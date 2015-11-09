@@ -15,6 +15,22 @@
       "EliminateDeadBody",
       "Work",
       "Rest"
+    ],
+    "Engineer":[
+      "Dead",
+      "Unconsitious",
+      "HealHimself",
+   	  "Attack",
+      "Navigate",
+      "Repair",
+      "Eat",
+      "Sleep",
+      "Extinguish",
+      "TakeWoundedBody",
+      "EliminateDeadBody",
+      "Work",
+      "Rest"
     ]
   }
 }
+
