@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: 62ba823925f4e0841ba6a067727a76ee
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DarkRooms
+    21300002: DarkRooms_0
+    21300004: DarkRooms_1
+    21300006: DarkRooms_2
+    21300008: DarkRooms_3
+    21300010: DarkRooms_4
+    21300012: DarkRooms_5
+    21300014: DarkRooms_6
+    21300016: DarkRooms_7
+    21300018: DarkRooms_8
+    21300020: DarkRooms_9
+    21300022: DarkRooms_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DarkRooms_0
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1355
+        width: 497
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_1
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1399
+        width: 491
+        height: 322
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 946
+        width: 508
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_3
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 826
+        width: 313
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_4
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 647
+        width: 372
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_5
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 664
+        width: 378
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_6
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 411
+        width: 341
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 216
+        width: 969
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_8
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 0
+        width: 341
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_9
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1217
+        width: 526
+        height: 632
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_10
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 995
+        width: 515
+        height: 360
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
