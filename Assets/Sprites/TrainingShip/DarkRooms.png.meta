@@ -14,6 +14,9 @@ TextureImporter:
     21300018: DarkRooms_8
     21300020: DarkRooms_9
     21300022: DarkRooms_10
+    21300024: DarkRooms_11
+    21300026: DarkRooms_12
+    21300028: DarkRooms_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,7 +66,7 @@ TextureImporter:
         width: 497
         height: 358
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_1
       rect:
@@ -83,7 +86,7 @@ TextureImporter:
         width: 508
         height: 362
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_3
       rect:
@@ -93,7 +96,7 @@ TextureImporter:
         width: 313
         height: 385
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_4
       rect:
@@ -103,7 +106,7 @@ TextureImporter:
         width: 372
         height: 262
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_5
       rect:
@@ -113,7 +116,7 @@ TextureImporter:
         width: 378
         height: 247
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_6
       rect:
@@ -123,7 +126,7 @@ TextureImporter:
         width: 341
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_7
       rect:
@@ -133,7 +136,7 @@ TextureImporter:
         width: 969
         height: 391
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_8
       rect:
@@ -143,7 +146,7 @@ TextureImporter:
         width: 341
         height: 384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: DarkRooms_9
       rect:
@@ -162,6 +165,36 @@ TextureImporter:
         y: 995
         width: 515
         height: 360
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_11
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 10
+        width: 147
+        height: 1004
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_12
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 26
+        width: 328
+        height: 155
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkRooms_13
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 44
+        width: 289
+        height: 153
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
