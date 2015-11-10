@@ -62,7 +62,7 @@ TextureImporter:
         width: 368
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_1
       rect:
@@ -72,7 +72,7 @@ TextureImporter:
         width: 621
         height: 950
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_2
       rect:
@@ -81,8 +81,8 @@ TextureImporter:
         y: 315
         width: 166
         height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_3
       rect:
@@ -91,8 +91,8 @@ TextureImporter:
         y: 330
         width: 65
         height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_4
       rect:
@@ -101,8 +101,8 @@ TextureImporter:
         y: 229
         width: 44
         height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_5
       rect:
@@ -111,8 +111,8 @@ TextureImporter:
         y: 227
         width: 38
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_6
       rect:
@@ -121,8 +121,8 @@ TextureImporter:
         y: 233
         width: 38
         height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_7
       rect:
@@ -131,8 +131,8 @@ TextureImporter:
         y: 232
         width: 41
         height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_8
       rect:
@@ -141,8 +141,8 @@ TextureImporter:
         y: 193
         width: 55
         height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: EnemyShip1_9
       rect:
@@ -151,8 +151,8 @@ TextureImporter:
         y: 123
         width: 219
         height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

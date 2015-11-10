@@ -40,7 +40,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -60,7 +60,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -85,8 +85,8 @@ TextureImporter:
         y: 773
         width: 295
         height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_1
       rect:
@@ -95,8 +95,8 @@ TextureImporter:
         y: 759
         width: 22
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_2
       rect:
@@ -105,8 +105,8 @@ TextureImporter:
         y: 784
         width: 37
         height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_3
       rect:
@@ -115,8 +115,8 @@ TextureImporter:
         y: 780
         width: 43
         height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_4
       rect:
@@ -125,8 +125,8 @@ TextureImporter:
         y: 773
         width: 61
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_5
       rect:
@@ -135,8 +135,8 @@ TextureImporter:
         y: 697
         width: 39
         height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_6
       rect:
@@ -145,8 +145,8 @@ TextureImporter:
         y: 426
         width: 113
         height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_7
       rect:
@@ -155,8 +155,8 @@ TextureImporter:
         y: 454
         width: 55
         height: 230
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_8
       rect:
@@ -165,8 +165,8 @@ TextureImporter:
         y: 462
         width: 91
         height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_9
       rect:
@@ -175,8 +175,8 @@ TextureImporter:
         y: 470
         width: 98
         height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_10
       rect:
@@ -185,8 +185,8 @@ TextureImporter:
         y: 627
         width: 25
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_11
       rect:
@@ -195,8 +195,8 @@ TextureImporter:
         y: 646
         width: 47
         height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_12
       rect:
@@ -205,8 +205,8 @@ TextureImporter:
         y: 615
         width: 164
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_13
       rect:
@@ -215,8 +215,8 @@ TextureImporter:
         y: 538
         width: 76
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_14
       rect:
@@ -225,8 +225,8 @@ TextureImporter:
         y: 526
         width: 46
         height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .561203659, y: .755941808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_15
       rect:
@@ -235,8 +235,8 @@ TextureImporter:
         y: 467
         width: 76
         height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_16
       rect:
@@ -245,8 +245,8 @@ TextureImporter:
         y: 320
         width: 62
         height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_17
       rect:
@@ -256,7 +256,7 @@ TextureImporter:
         width: 47
         height: 162
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_18
       rect:
@@ -265,8 +265,8 @@ TextureImporter:
         y: 340
         width: 38
         height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_19
       rect:
@@ -275,8 +275,8 @@ TextureImporter:
         y: 342
         width: 52
         height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_20
       rect:
@@ -285,8 +285,8 @@ TextureImporter:
         y: 335
         width: 78
         height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_21
       rect:
@@ -295,8 +295,8 @@ TextureImporter:
         y: 390
         width: 104
         height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_22
       rect:
@@ -305,8 +305,8 @@ TextureImporter:
         y: 224
         width: 66
         height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_23
       rect:
@@ -315,8 +315,8 @@ TextureImporter:
         y: 344
         width: 36
         height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_24
       rect:
@@ -325,8 +325,8 @@ TextureImporter:
         y: 222
         width: 355
         height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_25
       rect:
@@ -335,8 +335,8 @@ TextureImporter:
         y: 282
         width: 47
         height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_26
       rect:
@@ -345,8 +345,8 @@ TextureImporter:
         y: 130
         width: 32
         height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_27
       rect:
@@ -355,8 +355,8 @@ TextureImporter:
         y: 123
         width: 64
         height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .260585666}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_28
       rect:
@@ -365,8 +365,8 @@ TextureImporter:
         y: 127
         width: 43
         height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_29
       rect:
@@ -375,8 +375,8 @@ TextureImporter:
         y: 93
         width: 62
         height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_30
       rect:
@@ -385,8 +385,8 @@ TextureImporter:
         y: 109
         width: 128
         height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_31
       rect:
@@ -395,8 +395,8 @@ TextureImporter:
         y: 55
         width: 76
         height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_32
       rect:
@@ -405,8 +405,8 @@ TextureImporter:
         y: 98
         width: 99
         height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_33
       rect:
@@ -415,8 +415,8 @@ TextureImporter:
         y: 66
         width: 38
         height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Objects4_34
       rect:
@@ -425,8 +425,8 @@ TextureImporter:
         y: 21
         width: 95
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
