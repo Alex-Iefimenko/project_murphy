@@ -23,7 +23,7 @@ public class TakeWoundedBodyState : StateBase {
 		if (!pulling && character.Movement.IsNearObject(unconscious.GObject))
 		{
 			character.View.SetSubState(1);
-			//dead.PullBy(character);
+			character.Movement.Anchor(unconscious.GObject);
 			NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.MedBay]);
 			pulling = true;
 		}

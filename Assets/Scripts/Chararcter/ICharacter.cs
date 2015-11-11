@@ -28,7 +28,7 @@ public interface ICharacter {
 
 	// Outside Character Facade
 
-	void Navigate(Room room);
+	void Navigate(Room room, bool full);
 
 	void Heal(float amount);
 

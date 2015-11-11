@@ -23,6 +23,10 @@ public class HealOtherState : StateBase {
 			character.View.SetSubState(1);
 			wounded.Heal(character.Stats.HealOther);
 		}
+		if (character.Movement.IsMoving() == false && !character.Movement.IsNearObject(wounded.GObject))
+		{
+			character.PurgeActions();
+		}
 		if (wounded.Stats.IsWounded() == false)
 			character.PurgeActions();
 	}

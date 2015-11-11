@@ -13,7 +13,7 @@ public class UnconsitiousState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Stats.Health > character.Stats.HealthThreshold) character.PurgeActions();
+		if (character.Stats.Health >= character.Stats.MaxHealth) character.PurgeActions();
 	}
 	
 }

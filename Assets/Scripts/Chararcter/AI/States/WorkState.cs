@@ -21,13 +21,12 @@ public class WorkState : StateBase {
 
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == character.Stats.BasicRoom) 
+		if (character.Movement.IsMoving() == false)
 		{
+			character.View.SetSubState(1);
 			tick -= 1;
 			CheckRelatedEvents();
 		}
-		if (character.Movement.IsMoving() == false)
-			character.View.SetSubState(1);
 		if (tick <= 0)
 			character.PurgeActions();
 	}
@@ -52,7 +51,7 @@ public class WorkState : StateBase {
 		{
 			for (int j = 0; j < rooms.Length; j++)
 			{
-				if (responsabilities[i].Invoke(rooms[j])) character.Navigate(rooms[j]);
+				if (responsabilities[i].Invoke(rooms[j])) character.Navigate(rooms[j], false);
 			}
 		}
 	}

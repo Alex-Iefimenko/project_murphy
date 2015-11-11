@@ -16,10 +16,11 @@ public class SleepState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]) 
-			character.Stats.Sanity += character.Stats.SanityIncrease;
 		if (character.Movement.IsMoving() == false)
+		{
+			character.Stats.Sanity += character.Stats.SanityIncrease;
 			character.View.SetSubState(1);
+		}
 		if (character.Stats.Sanity >= character.Stats.MaxSanity)
 			character.PurgeActions();
 	}

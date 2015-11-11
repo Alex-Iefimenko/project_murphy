@@ -53,10 +53,10 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		Stats.Health += amount;
 	}
 
-	public void Navigate(Room room)
+	public void Navigate(Room room, bool full)
 	{
 		AiHandler.ForceState<NavigateState>();
-		Movement.Navigate(room);
+		Movement.Navigate(room, full);
 	}
 
 }

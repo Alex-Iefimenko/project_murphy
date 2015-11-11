@@ -16,10 +16,11 @@ public class EatState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.Dinnery]) 
-			character.Stats.Fatigue += character.Stats.FatigueIncrease;
 		if (character.Movement.IsMoving() == false)
+		{
+			character.Stats.Fatigue += character.Stats.FatigueIncrease;
 			character.View.SetSubState(1);
+		}
 		if (character.Stats.Fatigue >= character.Stats.MaxFatigue)
 			character.PurgeActions();
 	}

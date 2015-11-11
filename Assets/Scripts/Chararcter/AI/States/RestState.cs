@@ -18,10 +18,11 @@ public class RestState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]) 
-			tick -= 1;
 		if (character.Movement.IsMoving() == false)
+		{
+			tick -= 1;
 			character.View.SetSubState(1);
+		}
 		if (tick <= 0)
 			character.PurgeActions();
 	}

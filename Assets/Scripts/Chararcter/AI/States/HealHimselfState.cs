@@ -16,10 +16,11 @@ public class HealHimselfState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.CurrentRoom == ShipState.Inst.specRooms[Room.RoomTypes.MedBay]) 
-			character.Stats.Health += character.Stats.HealthIncrease;
 		if (character.Movement.IsMoving() == false)
+		{
+			character.Stats.Health += character.Stats.HealthIncrease;
 			character.View.SetSubState(1);
+		}
 		if (character.Stats.Health >= character.Stats.MaxHealth)
 			character.PurgeActions();
 	}

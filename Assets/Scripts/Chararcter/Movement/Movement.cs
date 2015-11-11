@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour, IMovement {
 	private Room currentRoom;
 	private bool isDynamic;
 	private GameObject target;
+	private GameObject anchoredObject;
+	private float pullingDistance;
 	
 	// Components
 	private Collider2D charColl; 
@@ -41,13 +43,14 @@ public class Movement : MonoBehaviour, IMovement {
 		get { return currentRoom; }
 	}
 	
-	public void Navigate(Room room) 
+	public void Navigate(Room room, bool full=true) 
 	{
+		StopCoroutine("Adjust");
 		isDynamic = false;
 		target = room.gameObject;
 		movementPath = ShipState.Inst.GetStepsToRoom(currentRoom, room);
+		if (!full) movementPath.RemoveAt(movementPath.Count - 1);
 		character.View.RotateTowards(movementPath[0]);
-		StopCoroutine("Adjust");
 	}
 	
 	public void NavigateTo(Room room, Furniture item)
@@ -81,10 +84,20 @@ public class Movement : MonoBehaviour, IMovement {
 	{
 		return (exactObject.collider2D != null && charColl.bounds.Intersects (exactObject.collider2D.bounds));
 	}
-	
+
+	public void Anchor(GameObject other)
+	{
+		anchoredObject = other;
+		StartCoroutine("Adjust", transform.position - (other.transform.position - transform.position));
+		pullingDistance = Vector2.Distance(transform.position, other.transform.position);
+	}
+
 	public void Purge ()
 	{
 		movementPath.Clear();
+		target = null;
+		isDynamic = false;
+		anchoredObject = null;
 	}
 	
 	//
@@ -94,6 +107,7 @@ public class Movement : MonoBehaviour, IMovement {
 	// Update is called once per frame
 	void Update () {
 		if (movementPath.Count != 0) Move ();
+		if (anchoredObject != null) Pull ();
 	}
 	
 	// Updates current room value
@@ -119,10 +133,20 @@ public class Movement : MonoBehaviour, IMovement {
 		if (movementPath.Count == 1) AdjustPostion();
 		movementPath.RemoveAt(0);
 	}
-	
+
+	private void Pull ()
+	{
+		Vector3 pointingVector = (anchoredObject.transform.position - transform.position).normalized;
+		anchoredObject.transform.position = Vector3.MoveTowards
+			(
+				anchoredObject.transform.position, 
+				transform.position + (pullingDistance * pointingVector), 
+				speed * Time.deltaTime
+			);
+	}
+
 	private void AdjustPostion ()
 	{
-		character.View.RotateTowards (target.transform.position);
 		StartCoroutine("Adjust", movementPath[0]);
 	}
 	
@@ -133,6 +157,7 @@ public class Movement : MonoBehaviour, IMovement {
 			transform.position = Vector3.MoveTowards(transform.position, endPoint, speed * Time.deltaTime);
 			yield return null;
 		}
+		if (target != null) character.View.RotateTowards (target.transform.position);
 	}
 }
 
