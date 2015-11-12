@@ -18,7 +18,6 @@ public class Movement : MonoBehaviour, IMovement {
 	private bool isDynamic;
 	private GameObject target;
 	private GameObject anchoredObject;
-	private float pullingDistance;
 	
 	// Components
 	private Collider2D charColl; 
@@ -89,7 +88,6 @@ public class Movement : MonoBehaviour, IMovement {
 	{
 		anchoredObject = other;
 		StartCoroutine("Adjust", transform.position - (other.transform.position - transform.position));
-		pullingDistance = Vector2.Distance(transform.position, other.transform.position);
 	}
 
 	public void Purge ()
@@ -136,13 +134,12 @@ public class Movement : MonoBehaviour, IMovement {
 
 	private void Pull ()
 	{
-		Vector3 pointingVector = (anchoredObject.transform.position - transform.position).normalized;
-		anchoredObject.transform.position = Vector3.MoveTowards
-			(
-				anchoredObject.transform.position, 
-				transform.position + (pullingDistance * pointingVector), 
-				speed * Time.deltaTime
-			);
+		Vector3 direction = (anchoredObject.transform.position - transform.position).normalized;
+		float dist1 = Mathf.Sqrt(charColl.bounds.SqrDistance(anchoredObject.transform.position + 10f * direction));
+		float dist2 = Vector3.Distance(transform.position, anchoredObject.transform.position + 10f * direction);
+		float size = dist2 - dist1;
+		Vector3 point = transform.position + size * direction;
+		anchoredObject.transform.position = Vector3.MoveTowards(anchoredObject.transform.position, point, speed * Time.deltaTime);
 	}
 
 	private void AdjustPostion ()
