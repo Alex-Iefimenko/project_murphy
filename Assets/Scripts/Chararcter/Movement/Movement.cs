@@ -96,6 +96,7 @@ public class Movement : MonoBehaviour, IMovement {
 		target = null;
 		isDynamic = false;
 		anchoredObject = null;
+		transform.rotation = Quaternion.identity;
 	}
 	
 	//
@@ -140,6 +141,12 @@ public class Movement : MonoBehaviour, IMovement {
 		float size = dist2 - dist1;
 		Vector3 point = transform.position + size * direction;
 		anchoredObject.transform.position = Vector3.MoveTowards(anchoredObject.transform.position, point, speed * Time.deltaTime);
+		float t = Mathf.Atan2((transform.position.y - anchoredObject.transform.position.y), 
+		                      (transform.position.x - anchoredObject.transform.position.x)) * Mathf.Rad2Deg + 90f;
+		anchoredObject.transform.eulerAngles = new Vector3 (anchoredObject.transform.eulerAngles.x, 
+		                                                    anchoredObject.transform.eulerAngles.y, 
+		                                                    t);
+			
 	}
 
 	private void AdjustPostion ()
