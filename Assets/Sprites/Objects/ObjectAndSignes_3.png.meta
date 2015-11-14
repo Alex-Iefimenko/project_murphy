@@ -123,23 +123,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ObjectAndSignes_3_7
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 90
-        width: 184
-        height: 168
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_3_8
       rect:
         serializedVersion: 2
-        x: 143
-        y: 29
-        width: 175
-        height: 160
+        x: 222
+        y: 54
+        width: 228
+        height: 189
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
