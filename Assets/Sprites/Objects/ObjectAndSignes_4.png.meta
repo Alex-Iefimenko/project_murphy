@@ -67,7 +67,7 @@ TextureImporter:
         width: 114
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_1
       rect:
@@ -77,7 +77,7 @@ TextureImporter:
         width: 115
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_2
       rect:
@@ -87,7 +87,7 @@ TextureImporter:
         width: 114
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_3
       rect:
@@ -97,7 +97,7 @@ TextureImporter:
         width: 114
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_4
       rect:
@@ -107,7 +107,7 @@ TextureImporter:
         width: 114
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_5
       rect:
@@ -117,7 +117,7 @@ TextureImporter:
         width: 115
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_6
       rect:
@@ -127,7 +127,7 @@ TextureImporter:
         width: 114
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_7
       rect:
@@ -137,7 +137,7 @@ TextureImporter:
         width: 114
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_8
       rect:
@@ -147,7 +147,7 @@ TextureImporter:
         width: 114
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_9
       rect:
@@ -157,27 +157,17 @@ TextureImporter:
         width: 115
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ObjectAndSignes_4_10
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 140
-        width: 101
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_11
       rect:
         serializedVersion: 2
-        x: 431
-        y: 174
+        x: 293
+        y: 229
         width: 12
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_12
       rect:
@@ -197,17 +187,17 @@ TextureImporter:
         width: 129
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_14
       rect:
         serializedVersion: 2
-        x: 290
-        y: 28
-        width: 110
-        height: 90
+        x: 282
+        y: 4
+        width: 226
+        height: 206
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
