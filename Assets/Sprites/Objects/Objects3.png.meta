@@ -311,9 +311,9 @@ TextureImporter:
     - name: Objects6_7
       rect:
         serializedVersion: 2
-        x: 590
+        x: 592
         y: 259
-        width: 185
+        width: 183
         height: 154
       alignment: 0
       pivot: {x: .5, y: .5}

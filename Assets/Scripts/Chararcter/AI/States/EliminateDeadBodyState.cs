@@ -23,14 +23,21 @@ public class EliminateDeadBodyState : StateBase {
 		if (!pulling && character.Movement.IsNearObject(dead.GObject))
 		{
 			character.View.SetSubState(1);
-			//dead.PullBy(character);
+			character.Movement.Anchor(dead.GObject);
 			NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.Disposal]);
 			pulling = true;
 		}
 		if (character.Movement.IsMoving() == false)
 		{
-			//dead.Movement.Transpose();
+			dead.Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
+			ShipState.Inst.specRooms[Room.RoomTypes.Disposal].Untrack(dead);
+			MonoBehaviour.Destroy(dead.GObject, 10f);
 			character.PurgeActions();
+			//Temporary
+			foreach (SpriteRenderer sprite in dead.GObject.GetComponentsInChildren<SpriteRenderer>())
+			{
+				sprite.sortingOrder = -5;
+			}
 		}
 
 	}

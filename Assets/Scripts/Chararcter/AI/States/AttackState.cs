@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AttackState : StateBase {
 	
-	private int stateIndex = 1;
+	private int stateIndex = 3;
 
 	public AttackState (CharacterMain character) : base(character) { }
 

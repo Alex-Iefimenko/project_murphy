@@ -72,12 +72,18 @@ public class CharacterAIHandler : ICharacterAIHandler {
 		return character.Stats.IsUnconscious();
 	}
 
-	//	 Fight conditions
+	//	 Attack conditions
 	public bool Attack (Room room)
 	{
 		return room.ContainsHostile(character) != null;
 	}
-	
+
+	//	 Defend conditions
+	public bool Defend (Room room)
+	{
+		return room.ContainsHostile(character) != null;
+	}
+
 	// Heal conditions
 	public bool HealHimself (Room room)
 	{

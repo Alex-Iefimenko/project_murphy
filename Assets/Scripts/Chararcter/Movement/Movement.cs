@@ -52,19 +52,14 @@ public class Movement : MonoBehaviour, IMovement {
 		character.View.RotateTowards(movementPath[0]);
 	}
 	
-	public void NavigateTo(Room room, Furniture item)
+	public void NavigateTo(Room room, Furniture item=null)
 	{
+		if (item == null) item = room.GetUnoccupiedRoomObject();
 		Navigate(room);
 		target = item.gameObject;
 		movementPath[movementPath.Count - 1] = item.GetComponent<SpriteRenderer>().bounds.center;
 	}
-	
-	public void NavigateTo(Room room) 
-	{
-		Furniture item = room.GetUnoccupiedRoomObject();
-		NavigateTo(room, item);
-	}
-	
+
 	public void NavigateTo(ICharacter character) 
 	{
 		Navigate(character.Movement.CurrentRoom);		
@@ -88,6 +83,11 @@ public class Movement : MonoBehaviour, IMovement {
 	{
 		anchoredObject = other;
 		StartCoroutine("Adjust", transform.position - (other.transform.position - transform.position));
+	}
+
+	public void AdjustPostion (Vector3 endPoint)
+	{
+		StartCoroutine("Adjust", endPoint);
 	}
 
 	public void Purge ()
@@ -129,7 +129,7 @@ public class Movement : MonoBehaviour, IMovement {
 	{
 		if (isDynamic) NavigateTo(target.GetComponent<CharacterMain>() as ICharacter);
 		if (movementPath.Count > 1) character.View.RotateTowards (movementPath[1]);
-		if (movementPath.Count == 1) AdjustPostion();
+		if (movementPath.Count == 1) AdjustPostion(movementPath[0]);
 		movementPath.RemoveAt(0);
 	}
 
@@ -148,13 +148,8 @@ public class Movement : MonoBehaviour, IMovement {
 		                                                    t);
 			
 	}
-
-	private void AdjustPostion ()
-	{
-		StartCoroutine("Adjust", movementPath[0]);
-	}
 	
-	IEnumerator Adjust (Vector3 endPoint)
+	private IEnumerator Adjust (Vector3 endPoint)
 	{
 		while(transform.position != endPoint)
 		{
@@ -163,5 +158,6 @@ public class Movement : MonoBehaviour, IMovement {
 		}
 		if (target != null) character.View.RotateTowards (target.transform.position);
 	}
+	
 }
 

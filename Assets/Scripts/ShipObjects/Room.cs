@@ -48,6 +48,7 @@ public class Room : MonoBehaviour {
 		if (otherCharacter != null && characters.Contains(otherCharacter)) characters.Remove(otherCharacter);
 	}
 
+
 	// Check if Room continse hostile Character
 	public ICharacter ContainsHostile (ICharacter character) 
 	{
@@ -88,17 +89,6 @@ public class Room : MonoBehaviour {
 		return null;
 	}
 
-//	// Check if some object in current room
-//	public bool HasObject (GameObject sObject)
-//	{
-//		bool result = false;
-//		if (sObject.GetComponent<CharacterTasks> () && Characters.Contains (sObject.GetComponent<CharacterTasks> ()))
-//			result = true;
-//		else if (sObject.GetComponent<Furniture> () && System.Array.IndexOf(furniture, sObject.GetComponent<Furniture> ()) != -1)
-//			result = true;
-//		return result;
-//	}
-
 	// Returns free room furniture object
 	public Furniture GetUnoccupiedRoomObject ()
 	{
@@ -121,4 +111,7 @@ public class Room : MonoBehaviour {
 		State.FireLevel -= amount;
 	}
 
+	public void Untrack (ICharacter character) {
+		characters.Remove(character);
+	}
 }

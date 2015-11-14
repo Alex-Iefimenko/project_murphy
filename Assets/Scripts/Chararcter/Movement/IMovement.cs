@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public interface IMovement {
 
@@ -6,10 +7,7 @@ public interface IMovement {
 
 	void Navigate(Room room, bool full=true);
 
-	// refactor to random in next object
-	void NavigateTo(Room room);
-
-	void NavigateTo(Room room, Furniture item);
+	void NavigateTo(Room room, Furniture item=null);
 
 	void NavigateTo(ICharacter character);
 
@@ -20,5 +18,7 @@ public interface IMovement {
 	bool IsNearObject(GameObject exactObject);
 
 	void Purge();
+
+	void AdjustPostion (Vector3 endPoint);
 
 }
