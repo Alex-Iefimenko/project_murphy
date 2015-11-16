@@ -15,6 +15,7 @@ public class EliminateDeadBodyState : StateBase {
 		base.Actualize (); 
 		pulling = false;
 		dead = character.Movement.CurrentRoom.ContainsDead();
+		dead.Lock = true;
 		NavigateTo(dead);
 	}
 	

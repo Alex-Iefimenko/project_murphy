@@ -64,7 +64,7 @@ public class Room : MonoBehaviour {
 	{
 		foreach (ICharacter character in characters)
 		{
-			if (character.Stats.IsUnconscious()) return character;
+			if (character.Stats.IsUnconscious() && !character.Lock) return character;
 		}
 		return null;
 	}
@@ -74,7 +74,7 @@ public class Room : MonoBehaviour {
 	{
 		foreach (ICharacter character in characters)
 		{
-			if (character.Stats.IsDead()) return character;
+			if (character.Stats.IsDead() && !character.Lock) return character;
 		}
 		return null;
 	}
@@ -84,7 +84,7 @@ public class Room : MonoBehaviour {
 	{
 		foreach (ICharacter visitor in characters)
 		{
-			if (visitor.Stats.IsWounded() && visitor != character) return visitor;
+			if (visitor.Stats.IsWounded() && visitor != character && !visitor.Lock) return visitor;
 		}
 		return null;
 	}

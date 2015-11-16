@@ -18,6 +18,8 @@ public interface ICharacter {
 
 	GameObject GObject { get; }
 
+	bool Lock { get; set; }
+
 	// System Character Actions
 
 	void Init ();

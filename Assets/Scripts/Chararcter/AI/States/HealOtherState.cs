@@ -13,6 +13,7 @@ public class HealOtherState : StateBase {
 	public override void Actualize () { 
 		base.Actualize (); 
 		wounded = character.Movement.CurrentRoom.ContainsWounded(character);
+		wounded.Lock = true;
 		NavigateTo(wounded);
 	}
 	

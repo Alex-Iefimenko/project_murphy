@@ -15,6 +15,7 @@ public class TakeWoundedBodyState : StateBase {
 		base.Actualize (); 
 		pulling = false;
 		unconscious = character.Movement.CurrentRoom.ContainsUnconscious();
+		unconscious.Lock = true;
 		NavigateTo(unconscious);
 	}
 	

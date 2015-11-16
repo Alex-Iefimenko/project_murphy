@@ -32,8 +32,8 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: SubSubState
-    m_Type: 3
+  - m_Name: AbleToShot
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -1150,14 +1150,10 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: .917187154
   - m_ConditionMode: 6
     m_ConditionEvent: SubState
-    m_EventTreshold: 9
-    m_ExitTime: .917187154
-  - m_ConditionMode: 6
-    m_ConditionEvent: SubSubState
     m_EventTreshold: 1
     m_ExitTime: .917187154
   m_Atomic: 1
@@ -1402,7 +1398,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: .876110792
   m_Atomic: 1
   m_Solo: 0
@@ -1582,11 +1578,15 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: .992906988
   - m_ConditionMode: 6
     m_ConditionEvent: SubState
-    m_EventTreshold: 10
+    m_EventTreshold: 0
+    m_ExitTime: .992906988
+  - m_ConditionMode: 1
+    m_ConditionEvent: AbleToShot
+    m_EventTreshold: 0
     m_ExitTime: .992906988
   m_Atomic: 1
   m_Solo: 0
@@ -1709,7 +1709,7 @@ Transition:
   m_TransitionOffset: .238808885
   m_Conditions:
   - m_ConditionMode: 7
-    m_ConditionEvent: SubSubState
+    m_ConditionEvent: State
     m_EventTreshold: 1
     m_ExitTime: .992906988
   m_Atomic: 1
@@ -1754,11 +1754,15 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: .911362588
   - m_ConditionMode: 6
     m_ConditionEvent: SubState
-    m_EventTreshold: 9
+    m_EventTreshold: 0
+    m_ExitTime: .911362588
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbleToShot
+    m_EventTreshold: 0
     m_ExitTime: .911362588
   m_Atomic: 1
   m_Solo: 0
@@ -1888,10 +1892,6 @@ Transition:
     m_ConditionEvent: SubState
     m_EventTreshold: 10
     m_ExitTime: 1.00455618
-  - m_ConditionMode: 6
-    m_ConditionEvent: SubSubState
-    m_EventTreshold: 2
-    m_ExitTime: 1.00455618
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -1930,7 +1930,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 7
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: 1.00455618
   m_Atomic: 1
   m_Solo: 0
@@ -1949,7 +1949,7 @@ Transition:
   m_TransitionOffset: .232984245
   m_Conditions:
   - m_ConditionMode: 7
-    m_ConditionEvent: SubSubState
+    m_ConditionEvent: State
     m_EventTreshold: 2
     m_ExitTime: .987082362
   m_Atomic: 1
@@ -1970,7 +1970,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 7
     m_ConditionEvent: SubState
-    m_EventTreshold: 10
+    m_EventTreshold: 0
     m_ExitTime: .975433171
   m_Atomic: 1
   m_Solo: 0
@@ -1990,7 +1990,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 7
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: .987082362
   m_Atomic: 1
   m_Solo: 0
@@ -2214,7 +2214,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 7
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: 1.00051653
   m_Atomic: 1
   m_Solo: 0
@@ -2255,11 +2255,7 @@ Transition:
   m_DstState: {fileID: 110215186}
   m_TransitionDuration: 0
   m_TransitionOffset: .151439711
-  m_Conditions:
-  - m_ConditionMode: 7
-    m_ConditionEvent: SubState
-    m_EventTreshold: 9
-    m_ExitTime: .905537963
+  m_Conditions: []
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -2478,7 +2474,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Attack
+  m_Name: Defend
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -2574,7 +2570,7 @@ State:
   m_Motions:
   - {fileID: 20630469}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -264, y: 408, z: 0}
+  m_Position: {x: -264, y: 420, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -2874,15 +2870,91 @@ StateMachine:
       - {fileID: 110158035}
       - {fileID: 110178820}
     data:
+      first: {fileID: 110241367}
+      second:
+      - {fileID: 110100000}
+    data:
+      first: {fileID: 110239683}
+      second:
+      - {fileID: 110188283}
+    data:
+      first: {fileID: 110277625}
+      second:
+      - {fileID: 110189411}
+      - {fileID: 110154460}
+    data:
       first: {fileID: 110200407}
       second:
       - {fileID: 110199964}
       - {fileID: 110185608}
     data:
+      first: {fileID: 110299004}
+      second:
+      - {fileID: 110105980}
+      - {fileID: 110117167}
+    data:
+      first: {fileID: 110226545}
+      second:
+      - {fileID: 110103945}
+      - {fileID: 110103073}
+    data:
+      first: {fileID: 110286050}
+      second:
+      - {fileID: 110157306}
+      - {fileID: 110102937}
+    data:
+      first: {fileID: 110234521}
+      second:
+      - {fileID: 110150590}
+      - {fileID: 110134554}
+    data:
+      first: {fileID: 110229743}
+      second:
+      - {fileID: 110170375}
+      - {fileID: 110121782}
+    data:
+      first: {fileID: 110296144}
+      second:
+      - {fileID: 110112672}
+      - {fileID: 110190933}
+    data:
+      first: {fileID: 110263747}
+      second:
+      - {fileID: 110193795}
+      - {fileID: 110152033}
+    data:
+      first: {fileID: 110248613}
+      second:
+      - {fileID: 110113378}
+      - {fileID: 110183405}
+    data:
+      first: {fileID: 110223758}
+      second:
+      - {fileID: 110123473}
+    data:
+      first: {fileID: 110234015}
+      second:
+      - {fileID: 110118622}
+      - {fileID: 110110383}
+    data:
+      first: {fileID: 110217501}
+      second:
+      - {fileID: 110142292}
+      - {fileID: 110139675}
+    data:
+      first: {fileID: 110225338}
+      second:
+      - {fileID: 110130761}
+      - {fileID: 110189666}
+    data:
       first: {fileID: 110210807}
       second:
       - {fileID: 110118377}
       - {fileID: 110173109}
+    data:
+      first: {fileID: 110264999}
+      second:
+      - {fileID: 110172477}
     data:
       first: {fileID: 110215186}
       second:
@@ -2890,88 +2962,11 @@ StateMachine:
       - {fileID: 110128609}
       - {fileID: 110184399}
     data:
-      first: {fileID: 110217501}
-      second:
-      - {fileID: 110142292}
-      - {fileID: 110139675}
-    data:
-      first: {fileID: 110223758}
-      second:
-      - {fileID: 110123473}
-    data:
-      first: {fileID: 110225338}
-      second:
-      - {fileID: 110130761}
-      - {fileID: 110189666}
-    data:
-      first: {fileID: 110226545}
-      second:
-      - {fileID: 110103945}
-      - {fileID: 110103073}
-    data:
-      first: {fileID: 110229743}
-      second:
-      - {fileID: 110170375}
-      - {fileID: 110121782}
-    data:
-      first: {fileID: 110230469}
-      second:
-      - {fileID: 110163132}
-      - {fileID: 110190357}
-      - {fileID: 110138462}
-    data:
-      first: {fileID: 110232963}
-      second:
-      - {fileID: 110172812}
-    data:
-      first: {fileID: 110234015}
-      second:
-      - {fileID: 110118622}
-      - {fileID: 110110383}
-    data:
-      first: {fileID: 110234521}
-      second:
-      - {fileID: 110150590}
-      - {fileID: 110134554}
-    data:
       first: {fileID: 110237521}
       second:
       - {fileID: 110186790}
       - {fileID: 110100656}
       - {fileID: 110161869}
-    data:
-      first: {fileID: 110239683}
-      second:
-      - {fileID: 110188283}
-    data:
-      first: {fileID: 110241367}
-      second:
-      - {fileID: 110100000}
-    data:
-      first: {fileID: 110248613}
-      second:
-      - {fileID: 110113378}
-      - {fileID: 110183405}
-    data:
-      first: {fileID: 110263747}
-      second:
-      - {fileID: 110193795}
-      - {fileID: 110152033}
-    data:
-      first: {fileID: 110264999}
-      second:
-      - {fileID: 110172477}
-    data:
-      first: {fileID: 110266526}
-      second:
-      - {fileID: 110141316}
-      - {fileID: 110121675}
-      - {fileID: 110108017}
-    data:
-      first: {fileID: 110277625}
-      second:
-      - {fileID: 110189411}
-      - {fileID: 110154460}
     data:
       first: {fileID: 110285731}
       second:
@@ -2979,24 +2974,25 @@ StateMachine:
       - {fileID: 110158334}
       - {fileID: 110165992}
     data:
-      first: {fileID: 110286050}
+      first: {fileID: 110266526}
       second:
-      - {fileID: 110157306}
-      - {fileID: 110102937}
+      - {fileID: 110141316}
+      - {fileID: 110121675}
+      - {fileID: 110108017}
+    data:
+      first: {fileID: 110230469}
+      second:
+      - {fileID: 110163132}
+      - {fileID: 110190357}
+      - {fileID: 110138462}
     data:
       first: {fileID: 110288886}
       second:
       - {fileID: 110161185}
     data:
-      first: {fileID: 110296144}
+      first: {fileID: 110232963}
       second:
-      - {fileID: 110112672}
-      - {fileID: 110190933}
-    data:
-      first: {fileID: 110299004}
-      second:
-      - {fileID: 110105980}
-      - {fileID: 110117167}
+      - {fileID: 110172812}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 468, y: 168, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

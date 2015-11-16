@@ -4,6 +4,7 @@ using System.Collections;
 public class DefendState : StateBase {
 	
 	private int stateIndex = 15;
+	private ICharacter enemy = null;
 	
 	public DefendState (CharacterMain character) : base(character) { }
 	
@@ -12,10 +13,15 @@ public class DefendState : StateBase {
 	public override void Actualize () 
 	{ 
 		base.Actualize (); 
+
+		enemy = character.Movement.CurrentRoom.ContainsHostile(character);
+		NavigateTo(enemy);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
+
+
 		Debug.Log ("SATE IS NOT IMPLEMENTED YET");
 	}
 	//	// Fight action

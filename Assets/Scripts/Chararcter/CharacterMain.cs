@@ -21,6 +21,7 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 
 	// GameObject
 	public GameObject GObject { get { return this.gameObject; } }
+	public bool Lock { get; set; }
 
 	// Initialize method
 	public void Init ()
