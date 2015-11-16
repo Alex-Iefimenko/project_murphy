@@ -23,7 +23,7 @@ public class SidesRelations {
 
 		sideEnemies = new Dictionary<Sides, Sides[]> ()
 		{
-			{ Sides.Crew,     new Sides[] { Sides.Pirate, Sides.Creature } },
+			{ Sides.Crew,     new Sides[] { Sides.Pirate, Sides.Creature, Sides.Crew } },
 			{ Sides.Pirate,   new Sides[] { Sides.Crew, Sides.Trader, Sides.Creature, Sides.Player } },
 			{ Sides.Trader,   new Sides[] { Sides.Pirate, Sides.Creature } },
 			{ Sides.Creature, new Sides[] { Sides.Crew, Sides.Trader, Sides.Pirate, Sides.Player } }, 

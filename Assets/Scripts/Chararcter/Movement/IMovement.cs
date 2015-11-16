@@ -19,6 +19,6 @@ public interface IMovement {
 
 	void Purge();
 
-	void AdjustPostion (Vector3 endPoint);
+	void AdjustPostion (Vector3 endPoint, bool stopOnTouch=false);
 
 }

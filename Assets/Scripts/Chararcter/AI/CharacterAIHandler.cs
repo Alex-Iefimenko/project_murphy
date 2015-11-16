@@ -75,13 +75,15 @@ public class CharacterAIHandler : ICharacterAIHandler {
 	//	 Attack conditions
 	public bool Attack (Room room)
 	{
-		return room.ContainsHostile(character) != null;
+		ICharacter hostile = room.ContainsHostile(character);
+		return (hostile != null && !hostile.Stats.IsDead() && !hostile.Stats.IsUnconscious());
 	}
 
 	//	 Defend conditions
 	public bool Defend (Room room)
 	{
-		return room.ContainsHostile(character) != null;
+		ICharacter hostile = room.ContainsHostile(character);
+		return (hostile != null && !hostile.Stats.IsDead() && !hostile.Stats.IsUnconscious());
 	}
 
 	// Heal conditions

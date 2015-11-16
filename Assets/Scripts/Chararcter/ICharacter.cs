@@ -30,8 +30,9 @@ public interface ICharacter {
 
 	// Outside Character Facade
 
-	void Navigate(Room room, bool full);
+	void Navigate (Room room, bool full);
 
-	void Heal(float amount);
+	void Heal (float amount);
 
+	void Hurt (float amount);
 }

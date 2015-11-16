@@ -28,7 +28,7 @@ public class TakeWoundedBodyState : StateBase {
 			NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.MedBay]);
 			pulling = true;
 		}
-		if (character.Movement.IsMoving() == false)
+		if (pulling && character.Movement.IsMoving() == false)
 		{
 			unconscious.Heal(character.Stats.HealOther);
 		}

@@ -28,7 +28,7 @@ public class EliminateDeadBodyState : StateBase {
 			NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.Disposal]);
 			pulling = true;
 		}
-		if (character.Movement.IsMoving() == false)
+		if (pulling && character.Movement.IsMoving() == false)
 		{
 			dead.Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
 			ShipState.Inst.specRooms[Room.RoomTypes.Disposal].Untrack(dead);

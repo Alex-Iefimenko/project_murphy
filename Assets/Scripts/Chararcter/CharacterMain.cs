@@ -38,6 +38,7 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		AiHandler.Purge();
 		Movement.Purge();
 		View.Purge();
+		Stats.Purge();
 	}
 
 	public void Tick ()
@@ -58,6 +59,11 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	{
 		AiHandler.ForceState<NavigateState>();
 		Movement.Navigate(room, full);
+	}
+
+	public void Hurt (float amount)
+	{
+		Stats.Health -= amount;
 	}
 
 }

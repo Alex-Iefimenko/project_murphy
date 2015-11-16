@@ -30,7 +30,7 @@
       "Fighting":{
       	"Damage": 5.0,
       	"AttackRate": 1.0,
-	  	"AbbleDistantAttack": false 
+	  	"AbbleDistantAttack": true 
 	  },
 	  "CharacterActivities":{
 	  	"HealOther": 2.0

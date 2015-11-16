@@ -29,6 +29,11 @@ public class CharacterView : MonoBehaviour, ICharacterView {
 		if (characterAnimator.GetInteger("SubState") != newSubState) characterAnimator.SetInteger("SubState", newSubState);
 	}
 
+	public void SetCustomBool (string name, bool param)
+	{
+		if (characterAnimator.GetBool(name) != param) characterAnimator.SetBool(name, param);
+	}
+
 	// Method for handle sprite Character representation update
 	public void RotateTowards (Vector3 nextPoint)
 	{

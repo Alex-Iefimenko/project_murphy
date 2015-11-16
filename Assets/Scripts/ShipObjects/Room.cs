@@ -54,7 +54,7 @@ public class Room : MonoBehaviour {
 	{
 		foreach (ICharacter visitor in characters)
 		{
-			if (SidesRelations.Instance.IsEnemies(character, visitor)) return visitor;
+			if (character != visitor && SidesRelations.Instance.IsEnemies(character, visitor)) return visitor;
 		}
 		return null;
 	}
