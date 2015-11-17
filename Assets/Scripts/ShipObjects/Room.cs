@@ -8,7 +8,7 @@ public class Room : MonoBehaviour {
 	public enum RoomTypes { 
 		Nothing, MedBay, Safety, 
 		Engine, Control, PowerSource, 
-		LiveSupport, Engineering, Dinnery, 
+		LifeSupport, Engineering, Dinnery, 
 		LivingQuarters, Disposal, Science
 	};
 	public RoomTypes roomType;
@@ -99,6 +99,15 @@ public class Room : MonoBehaviour {
 		if (unoccypiedObjects.Count > 0) 
 			resultObject = Helpers.GetRandomArrayValue<Furniture>(unoccypiedObjects);
 		return resultObject;
+	}
+
+	public Vector3 GetRandomRoomPoint ()
+	{
+		Vector3 collCenter = collider2D.bounds.center;
+		Vector3 collExt = collider2D.bounds.extents * 0.85f;
+		float x = Random.Range(collCenter.x - collExt.x, collCenter.x + collExt.x);
+		float y = Random.Range(collCenter.y - collExt.y, collCenter.y + collExt.y);
+		return new Vector3(x, y, gameObject.transform.position.z);
 	}
 
 	public void Repair (float amount)

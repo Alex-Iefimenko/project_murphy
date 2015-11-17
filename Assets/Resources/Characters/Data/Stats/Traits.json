@@ -79,7 +79,8 @@
 		"Stat": {
 			"Doctor": "HealOther",
 			"Engineer": "Repair",
-			"Safety": "FireExtinguish"
+			"LiveSupportEngineer": "Repair",
+			"Guard": "FireExtinguish"
 		},
 		"Coefficient": 1.5
 	}, 

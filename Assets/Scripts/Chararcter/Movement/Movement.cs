@@ -56,8 +56,17 @@ public class Movement : MonoBehaviour, IMovement {
 	{
 		if (item == null) item = room.GetUnoccupiedRoomObject();
 		Navigate(room);
-		target = item.gameObject;
-		movementPath[movementPath.Count - 1] = item.GetComponent<SpriteRenderer>().bounds.center;
+		if (item != null)
+		{
+			target = item.gameObject;
+			item.isFree = false;
+			movementPath[movementPath.Count - 1] = item.GetComponent<SpriteRenderer>().bounds.center;
+		}
+		else
+		{
+			target = null;
+			movementPath[movementPath.Count - 1] = room.GetRandomRoomPoint();
+		}
 	}
 
 	public void NavigateTo(ICharacter character) 

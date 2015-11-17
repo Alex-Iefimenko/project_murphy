@@ -9,7 +9,7 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	public CharacterSides Side { get { return characterSide; } }
 
 	//Profession
-	public enum CharacterTypes{ Engineer, Safety, Doctor, Scientist, Murphy };
+	public enum CharacterTypes{ Engineer, Guard, Doctor, Scientist, LifeSupportEngineer, Murphy };
 	public CharacterTypes characterType;
 	public CharacterTypes Type { get { return characterType; } }
 
@@ -50,12 +50,12 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	//
 	// Facade implementations
 	//
-	public void Heal(float amount)
+	public void Heal (float amount)
 	{
 		Stats.Health += amount;
 	}
 
-	public void Navigate(Room room, bool full)
+	public void Navigate (Room room, bool full)
 	{
 		AiHandler.ForceState<NavigateState>();
 		Movement.Navigate(room, full);
