@@ -22,6 +22,8 @@ public class CrewStats : CharacterStatsBase {
 	// Hardware Activities
 	public new float repair;
 	public new float fireExtinguish;
+	public new float cleanRadiation;
+	public new float cleanChemistry;
 	// Working and Resting
 	public new float restProbability;
 	public new string[] workTasks;
@@ -48,6 +50,8 @@ public class CrewStats : CharacterStatsBase {
 	// Hardware Activities
 	public override float Repair { get { return repair; } }
 	public override float FireExtinguish { get { return fireExtinguish; } }
+	public override float CleanRadiation { get { return cleanRadiation; } }
+	public override float CleanChemistry { get { return cleanChemistry; } }
 	// Working and Resting
 	public override float RestProbability { get { return restProbability; } }
 	public override string[] WorkTasks { get { return workTasks; } }
@@ -73,6 +77,8 @@ public class CrewStats : CharacterStatsBase {
 		healOther = constructor.HealOther;
 		repair = constructor.Repair;
 		fireExtinguish = constructor.FireExtinguish;
+		cleanRadiation = constructor.CleanRadiation;
+		cleanChemistry = constructor.CleanChemistry;
 		restProbability = constructor.RestProbability;
 		workTasks = constructor.WorkTasks.ToArray();
 		traitOne = constructor.TraitOne;

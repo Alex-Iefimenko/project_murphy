@@ -6,6 +6,8 @@ using System.Linq;
 using System.Reflection;
 
 public class CharacterStatsConstructor {
+
+	Random rnd = null;
 	// Type
 	public string characterType;
 	// Basic
@@ -41,6 +43,8 @@ public class CharacterStatsConstructor {
 	// Hardware Activities
 	public float Repair { get; set; }
 	public float FireExtinguish { get; set; }
+	public float CleanRadiation { get; set; }
+	public float CleanChemistry { get; set; }
 	// Working andResting
 	public float RestProbability { get; set; }
 	public List<string> WorkTasks { get; set; }
@@ -50,6 +54,7 @@ public class CharacterStatsConstructor {
 
 	public CharacterStatsConstructor (JsonData json, string type)
 	{
+		rnd = new Random();
 		characterType = type;
 		System.Collections.Generic.ICollection<string> keys = json.Keys;
 		ConstructBasic(json);
@@ -116,6 +121,8 @@ public class CharacterStatsConstructor {
 	{
 		Repair = Convert.ToSingle((double) json["Repair"]);
 		FireExtinguish = Convert.ToSingle((double) json["FireExtinguish"]);
+		CleanRadiation = Convert.ToSingle((double) json["CleanRadiation"]);
+		CleanChemistry = Convert.ToSingle((double) json["CleanChemistry"]);
 	}
 
 	private void ApplyRestProb (JsonData json)
@@ -174,7 +181,8 @@ public class CharacterStatsConstructor {
 
 	private float GetRandomFloatBetween(JsonData array)
 	{
-		return UnityEngine.Random.Range(Convert.ToSingle((double) array[0]), Convert.ToSingle((double) array[1]));
+		double d = (double) array[0] + rnd.NextDouble() * ((double) array[1] - (double) array[0]);
+		return Convert.ToSingle(Math.Round(d, 1));
 	}
 
 }

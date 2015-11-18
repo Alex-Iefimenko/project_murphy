@@ -27,4 +27,14 @@ public class RoomState {
 	{
 		return FireLevel > 0f;
 	}
+
+	public bool IsRadioactive ()
+	{
+		return RadiationLevel > 0f;
+	}
+
+	public bool IsHazardous ()
+	{
+		return ChemistryLevel > 0f;
+	}
 }

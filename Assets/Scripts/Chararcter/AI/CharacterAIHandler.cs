@@ -103,7 +103,19 @@ public class CharacterAIHandler : ICharacterAIHandler {
 	{
 		return room.State.IsOnFire();
 	}
-	
+
+	// Fire Extinguish conditions
+	public bool CleanRadiation (Room room)
+	{
+		return room.State.IsRadioactive();
+	}
+
+	// Fire Extinguish conditions
+	public bool CleanChemistry (Room room)
+	{
+		return room.State.IsHazardous();
+	}
+
 	// Take body away condition
 	public bool TakeWoundedBody (Room room)
 	{

@@ -46,6 +46,8 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	// Hardware Activities
 	[HideInInspector] public readonly float repair;
 	[HideInInspector] public readonly float fireExtinguish;
+	[HideInInspector] public readonly float cleanRadiation;
+	[HideInInspector] public readonly float cleanChemistry;
 	// Working and Resting
 	[HideInInspector] public readonly float restProbability;
 	[HideInInspector] public readonly string[] workTasks;
@@ -90,6 +92,8 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	// Hardware Activities
 	public virtual float Repair { get; set; }
 	public virtual float FireExtinguish { get; set; }
+	public virtual float CleanRadiation { get; set; }
+	public virtual float CleanChemistry { get; set; }
 	// Working and Resting
 	public virtual float RestProbability { get; set; }
 	public virtual string[] WorkTasks { get; set; }

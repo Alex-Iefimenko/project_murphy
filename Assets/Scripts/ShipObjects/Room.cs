@@ -120,6 +120,16 @@ public class Room : MonoBehaviour {
 		State.FireLevel -= amount;
 	}
 
+	public void Deactivate (float amount)
+	{
+		State.RadiationLevel -= amount;
+	}
+
+	public void ChemistryClearing (float amount)
+	{
+		State.RadiationLevel -= amount;
+	}
+
 	public void Untrack (ICharacter character) {
 		characters.Remove(character);
 	}
