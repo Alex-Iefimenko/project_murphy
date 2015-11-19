@@ -13,7 +13,13 @@ public class AttackState : StateBase {
 	}
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		ICharacter hostile = room.ContainsHostile(character);
+		return (hostile != null && !hostile.Stats.IsDead() && !hostile.Stats.IsUnconscious());
+	}
+
 	public override void Actualize () 
 	{ 
 		base.Actualize ();

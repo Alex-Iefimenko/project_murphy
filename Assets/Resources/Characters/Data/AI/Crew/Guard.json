@@ -1,0 +1,18 @@
+{
+  "AIFlow":[
+    "Dead",
+    "Unconsitious",
+    "HealHimself",
+   	"Attack",
+    "Navigate",
+    "EliminateDeadBody",
+    "Eat",
+    "Sleep",
+    "Extinguish",
+    "Repair",
+    "TakeWoundedBody",
+    "Work",
+    "Rest"
+  ]
+}
+

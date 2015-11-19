@@ -8,7 +8,12 @@ public class CleanChemistryState : StateBase {
 	public CleanChemistryState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		return room.State.IsHazardous();
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		NavigateTo(character.Movement.CurrentRoom);

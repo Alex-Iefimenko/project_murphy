@@ -11,7 +11,13 @@ public class WorkState : StateBase {
 	public WorkState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		bool restState = (character.AiHandler.CurrentState != null && character.AiHandler.CurrentState.StateKind == 14);
+		return (!restState && UnityEngine.Random.value > character.Stats.RestProbability);
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		if (responsabilities == null) CreateWorkDelegates ();
@@ -34,12 +40,18 @@ public class WorkState : StateBase {
 	private void CreateWorkDelegates ()
 	{
 		responsabilities = new System.Func<Room, bool>[character.Stats.WorkTasks.Length];
-		for (int i = 0; i < character.Stats.WorkTasks.Length; i++)
+		for (int i = 0; i < character.AiHandler.AiStates.Length; i++)
 		{
-			System.Reflection.MethodInfo method = typeof(CharacterAIHandler).GetMethod(character.Stats.WorkTasks[i]);
-			responsabilities[i] = (System.Func<Room, bool>) System.Delegate.CreateDelegate(
-				typeof(System.Func<Room, bool>), (CharacterAIHandler)character.AiHandler, method
-				);
+			string state = character.AiHandler.AiStates[i].GetType().ToString().Replace("State", "");
+			if (character.Stats.WorkTasks.Contains(state))
+			{
+				System.Reflection.MethodInfo method = System.Type.GetType(state + "State").GetMethod("CheckCondition");
+				responsabilities[System.Array.IndexOf(character.Stats.WorkTasks, state)] =
+					(System.Func<Room, bool>) System.Delegate.CreateDelegate(
+						typeof(System.Func<Room, bool>), 
+						character.AiHandler.AiStates[i],
+						method);
+			}
 		}
 
 	}

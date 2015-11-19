@@ -10,7 +10,12 @@ public class TakeWoundedBodyState : StateBase {
 	public TakeWoundedBodyState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		return room.ContainsUnconscious() != null;
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		pulling = false;

@@ -3,9 +3,12 @@ using System.Collections;
 
 public interface IState {
 
+	int StateKind { get; }
+
 	void Actualize();
 
 	void ExecuteStateActions();
 
-	int StateKind { get; }
+	bool CheckCondition(Room room);
+
 }

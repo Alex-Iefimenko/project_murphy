@@ -8,7 +8,12 @@ public class EatState : StateBase {
 	public EatState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		return character.Stats.Fatigue <= character.Stats.FatigueThreshold;
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.Dinnery]);

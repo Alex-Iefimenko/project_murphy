@@ -10,7 +10,12 @@ public class EliminateDeadBodyState : StateBase {
 	public EliminateDeadBodyState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		return room.ContainsDead() != null;
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		pulling = false;

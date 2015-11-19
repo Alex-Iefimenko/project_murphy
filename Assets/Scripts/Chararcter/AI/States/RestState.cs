@@ -9,7 +9,12 @@ public class RestState : StateBase {
 	public RestState (CharacterMain character) : base(character) { }
 
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		return true;
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]);

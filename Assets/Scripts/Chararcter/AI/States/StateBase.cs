@@ -18,6 +18,11 @@ public class StateBase : IState {
 		character.View.SetState(StateKind);
 	}
 
+	public virtual bool CheckCondition (Room room) 
+	{
+		return true;
+	}
+
 	public virtual void ExecuteStateActions () {}
 
 	public void NavigateTo (Room room)

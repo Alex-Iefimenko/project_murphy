@@ -8,7 +8,12 @@ public class RepairState : StateBase {
 	public RepairState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		return room.State.IsBroken();	
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		NavigateTo(character.Movement.CurrentRoom);

@@ -9,7 +9,12 @@ public class HealOtherState : StateBase {
 	public HealOtherState (CharacterMain character) : base(character) { }
 	
 	public override int StateKind { get { return stateIndex; } }
-	
+
+	public override bool CheckCondition (Room room) 
+	{
+		return room.ContainsWounded(character) != null;
+	}
+
 	public override void Actualize () { 
 		base.Actualize (); 
 		wounded = character.Movement.CurrentRoom.ContainsWounded(character);
