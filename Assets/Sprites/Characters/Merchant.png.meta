@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 122b85014af80ee42be8bf1ac26d77e1
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Merchant
+    21300002: Merchant_0
+    21300004: Merchant_1
+    21300006: Merchant_2
+    21300008: Merchant_3
+    21300010: Merchant_4
+    21300012: Merchant_5
+    21300014: Merchant_6
+    21300016: Merchant_7
+    21300018: Merchant_8
+    21300020: Merchant_9
+    21300022: Merchant_10
+    21300024: Merchant_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Merchant_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 356
+        width: 88
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 356
+        width: 88
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 357
+        width: 95
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_3
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 357
+        width: 95
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 165
+        width: 88
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_5
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 165
+        width: 88
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 166
+        width: 97
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_7
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 166
+        width: 96
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 87
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_9
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 8
+        width: 87
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_10
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 9
+        width: 95
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Merchant_11
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 9
+        width: 95
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

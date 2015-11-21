@@ -12,6 +12,7 @@ TextureImporter:
     21300014: ObjectAndSignes_3_9
     21300016: ObjectAndSignes_3_7
     21300018: ObjectAndSignes_3_8
+    21300020: ObjectAndSignes_3_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,7 +33,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 256
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
     aniso: 1
@@ -130,6 +131,16 @@ TextureImporter:
         y: 54
         width: 228
         height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes_3_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 22
+        width: 207
+        height: 114
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
