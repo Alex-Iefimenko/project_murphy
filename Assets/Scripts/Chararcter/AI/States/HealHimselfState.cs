@@ -16,7 +16,7 @@ public class HealHimselfState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.MedBay]);
+		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay]);
 	}
 	
 	public override void ExecuteStateActions () 

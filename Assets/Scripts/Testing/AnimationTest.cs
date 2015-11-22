@@ -4,8 +4,8 @@ using System.Linq;
 
 public class AnimationTest : MonoBehaviour {
 
-	public CharacterMain.CharacterSides side = CharacterMain.CharacterSides.Crew;
-	public CharacterMain.CharacterTypes type = CharacterMain.CharacterTypes.Doctor;
+	public Enums.CharacterSides side = Enums.CharacterSides.Crew;
+	public Enums.CharacterTypes type = Enums.CharacterTypes.Doctor;
 	public enum Sides{ Down = 0, Left = 1, Right = 2, Up = 3 };
 	public Sides currentProjection = Sides.Up;
 	private Animator cAnimator;
@@ -20,8 +20,8 @@ public class AnimationTest : MonoBehaviour {
 	void Awake ()  {
 		// Get Door collider object
 		cAnimator   = gameObject.GetComponent<Animator>();
-		string localSide = System.Enum.GetName (typeof(CharacterMain.CharacterSides), side);
-		string localType = System.Enum.GetName (typeof(CharacterMain.CharacterTypes), type);
+		string localSide = System.Enum.GetName (typeof(Enums.CharacterSides), side);
+		string localType = System.Enum.GetName (typeof(Enums.CharacterTypes), type);
 		string path = "Characters/Controllers/" + localSide + "/" + localType + "/Controller";
 		controller = Resources.Load (path) as RuntimeAnimatorController;
 		cAnimator.runtimeAnimatorController = controller;

@@ -4,9 +4,9 @@ public interface ICharacter {
 
 	// Character Components
 
-	CharacterMain.CharacterSides Side { get; }
+	Enums.CharacterSides Side { get; }
 
-	CharacterMain.CharacterTypes Type { get; }
+	Enums.CharacterTypes Type { get; }
 	
 	CharacterStatsBase Stats { get; }
 

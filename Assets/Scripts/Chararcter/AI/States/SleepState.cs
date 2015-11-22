@@ -16,7 +16,7 @@ public class SleepState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]);
+		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters]);
 	}
 	
 	public override void ExecuteStateActions () 

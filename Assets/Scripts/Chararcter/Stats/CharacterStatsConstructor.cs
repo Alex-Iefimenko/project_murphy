@@ -49,8 +49,8 @@ public class CharacterStatsConstructor {
 	public float RestProbability { get; set; }
 	public List<string> WorkTasks { get; set; }
 	// traits
-	public CharatcerStatsAbstract.Traits TraitOne { get; set; }
-	public CharatcerStatsAbstract.Traits TraitTwo { get; set; }
+	public Enums.Traits TraitOne { get; set; }
+	public Enums.Traits TraitTwo { get; set; }
 
 	public CharacterStatsConstructor (JsonData json, string type)
 	{
@@ -71,7 +71,7 @@ public class CharacterStatsConstructor {
 	private void ConstructBasic (JsonData json)
 	{
 		Speed = Convert.ToSingle((double) json["Speed"]);
-		Room.RoomTypes roomEnum = (Room.RoomTypes)Enum.Parse(typeof(Room.RoomTypes), (string)json["BasicRoom"]);
+		Enums.RoomTypes roomEnum = (Enums.RoomTypes)Enum.Parse(typeof(Enums.RoomTypes), (string)json["BasicRoom"]);
 		BasicRoom = ShipState.Inst.specRooms[roomEnum].GetComponent<Room>();
 	}
 
@@ -134,17 +134,16 @@ public class CharacterStatsConstructor {
 
 	private void GenerateTraits ()
 	{
-		System.Array traitsList = System.Enum.GetValues (typeof(CharatcerStatsAbstract.Traits));
-		List<CharatcerStatsAbstract.Traits> traitsValues = 
-			new List<CharatcerStatsAbstract.Traits>(traitsList.Cast<CharatcerStatsAbstract.Traits>());
-		TraitOne = Helpers.GetRandomArrayValue<CharatcerStatsAbstract.Traits>(traitsValues);
+		System.Array traitsList = System.Enum.GetValues (typeof(Enums.Traits));
+		List<Enums.Traits> traitsValues = new List<Enums.Traits>(traitsList.Cast<Enums.Traits>());
+		TraitOne = Helpers.GetRandomArrayValue<Enums.Traits>(traitsValues);
 		traitsValues.Remove (TraitOne);
-		TraitTwo = Helpers.GetRandomArrayValue<CharatcerStatsAbstract.Traits>(traitsValues);
-		List<CharatcerStatsAbstract.Traits> activeTraits = new List<CharatcerStatsAbstract.Traits>() {TraitOne, TraitTwo};  
+		TraitTwo = Helpers.GetRandomArrayValue<Enums.Traits>(traitsValues);
+		List<Enums.Traits> activeTraits = new List<Enums.Traits>() {TraitOne, TraitTwo};  
 		UnityEngine.TextAsset json = UnityEngine.Resources.Load("Characters/Data/Stats/Traits") as UnityEngine.TextAsset;
 		JsonData traitsData = JsonMapper.ToObject(json.text);
 
-		foreach (CharatcerStatsAbstract.Traits trait in activeTraits)
+		foreach (Enums.Traits trait in activeTraits)
 		{
 			JsonData traitData = traitsData[trait.ToString()];
 			if (!(bool)traitData["Specific"]) 
@@ -157,11 +156,11 @@ public class CharacterStatsConstructor {
 		Fatigue = MaxFatigue;
 	}
 
-	private void ApplySpecificTrait (CharatcerStatsAbstract.Traits trait, JsonData traitData)
+	private void ApplySpecificTrait (Enums.Traits trait, JsonData traitData)
 	{
 		switch (trait)
 		{
-			case CharatcerStatsAbstract.Traits.Proffi:
+			case Enums.Traits.Proffi:
 				ApplyProffi (traitData);
 				break;
 		}

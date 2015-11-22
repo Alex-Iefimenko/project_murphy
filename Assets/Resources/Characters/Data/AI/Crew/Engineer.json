@@ -9,6 +9,7 @@
     "Repair",
     "Eat",
     "Sleep",
+    "CleanRadiation",
     "TakeWoundedBody",
     "EliminateDeadBody",
     "Work",

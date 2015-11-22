@@ -28,8 +28,8 @@ public class CrewStats : CharacterStatsBase {
 	public new float restProbability;
 	public new string[] workTasks;
 	// traits
-	public new Traits traitOne;
-	public new Traits traitTwo;
+	public new Enums.Traits traitOne;
+	public new Enums.Traits traitTwo;
 
 	// Fatigue
 	public override float MaxFatigue { get { return maxFatigue; } }
@@ -56,8 +56,8 @@ public class CrewStats : CharacterStatsBase {
 	public override float RestProbability { get { return restProbability; } }
 	public override string[] WorkTasks { get { return workTasks; } }
 	// traits
-	public override Traits TraitOne { get { return traitOne; } }
-	public override Traits TraitTwo { get { return traitTwo; } }
+	public override Enums.Traits TraitOne { get { return traitOne; } }
+	public override Enums.Traits TraitTwo { get { return traitTwo; } }
 
 	public override void Init(CharacterStatsConstructor constructor)
 	{

@@ -17,7 +17,7 @@ public class RestState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.LivingQuarters]);
+		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters]);
 		tick = Random.Range(7, 10);
 	}
 	

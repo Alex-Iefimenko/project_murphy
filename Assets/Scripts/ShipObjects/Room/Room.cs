@@ -1,17 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using E = Enums;
 
 public class Room : MonoBehaviour {
-
-	// Room type
-	public enum RoomTypes { 
-		Nothing, MedBay, Safety, 
-		Engine, Control, PowerSource, 
-		LifeSupport, Engineering, Dinnery, 
-		LivingQuarters, Disposal, Science
-	};
-	public RoomTypes roomType;
+	
+	public E.RoomTypes roomType;
 
 	// Room objects
 	public Dictionary<Room, Neighbor> neighbors = new Dictionary<Room, Neighbor>();
@@ -19,11 +13,11 @@ public class Room : MonoBehaviour {
 	private Furniture[] furniture;
 	
 	// Room state
-	public RoomState State { get; set; } 
+	public RoomStats State { get; set; } 
 	
 	// Use this for initialization
 	void Awake () {
-		State = new RoomState();
+		State = new RoomStats();
 		furniture = GetComponentsInChildren<Furniture>();
 		foreach (Furniture item in furniture) item.currentRoom = this;
 	}
@@ -47,7 +41,6 @@ public class Room : MonoBehaviour {
 		ICharacter otherCharacter = otherCollider.GetComponent<CharacterMain>();
 		if (otherCharacter != null && characters.Contains(otherCharacter)) characters.Remove(otherCharacter);
 	}
-
 
 	// Check if Room continse hostile Character
 	public ICharacter ContainsHostile (ICharacter character) 

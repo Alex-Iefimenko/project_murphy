@@ -1,14 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using E = Enums;
 
 public abstract class CharatcerStatsAbstract : MonoBehaviour {
-
-	public enum Traits { 
-		Hungry, Pessimist, IronWill, Puny, Big, SlowRecovery, 
-		Depresive, Bully, Dweeb, KungFu, Muff, Lazy, 
-		HardWorker, Slowpoke, Fast, Psychopath, Proffi, Masochist 
-	};
-
 	//
 	// Fields
 	//
@@ -52,8 +46,8 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	[HideInInspector] public readonly float restProbability;
 	[HideInInspector] public readonly string[] workTasks;
 	// traits
-	[HideInInspector] public readonly Traits traitOne;
-	[HideInInspector] public readonly Traits traitTwo;
+	[HideInInspector] public readonly E.Traits traitOne;
+	[HideInInspector] public readonly E.Traits traitTwo;
 
 	//
 	// Properties 
@@ -98,7 +92,7 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	public virtual float RestProbability { get; set; }
 	public virtual string[] WorkTasks { get; set; }
 	// traits
-	public virtual Traits TraitOne { get; set; }
-	public virtual Traits TraitTwo { get; set; }
+	public virtual E.Traits TraitOne { get; set; }
+	public virtual E.Traits TraitTwo { get; set; }
 
 }

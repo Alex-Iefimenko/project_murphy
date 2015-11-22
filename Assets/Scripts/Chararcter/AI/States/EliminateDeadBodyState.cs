@@ -30,13 +30,13 @@ public class EliminateDeadBodyState : StateBase {
 		{
 			character.View.SetSubState(1);
 			character.Movement.Anchor(dead.GObject);
-			NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.Disposal]);
+			NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.Disposal]);
 			pulling = true;
 		}
 		if (pulling && character.Movement.IsMoving() == false)
 		{
 			dead.Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
-			ShipState.Inst.specRooms[Room.RoomTypes.Disposal].Untrack(dead);
+			ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].Untrack(dead);
 			MonoBehaviour.Destroy(dead.GObject, 10f);
 			character.PurgeActions();
 			//Temporary

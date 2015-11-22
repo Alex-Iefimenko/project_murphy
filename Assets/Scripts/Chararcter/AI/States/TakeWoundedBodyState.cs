@@ -30,7 +30,7 @@ public class TakeWoundedBodyState : StateBase {
 		{
 			character.View.SetSubState(1);
 			character.Movement.Anchor(unconscious.GObject);
-			NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.MedBay]);
+			NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay]);
 			pulling = true;
 		}
 		if (pulling && character.Movement.IsMoving() == false)

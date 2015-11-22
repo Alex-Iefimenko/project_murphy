@@ -16,7 +16,7 @@ public class EatState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Room.RoomTypes.Dinnery]);
+		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery]);
 	}
 	
 	public override void ExecuteStateActions () 

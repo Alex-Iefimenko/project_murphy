@@ -11,8 +11,8 @@ public class CharacterView : MonoBehaviour, ICharacterView {
 	void Awake () {
 		character = (ICharacter)gameObject.GetComponent<CharacterMain>();
 		characterAnimator = gameObject.GetComponent<Animator>();
-		string localSide = System.Enum.GetName (typeof(CharacterMain.CharacterSides), character.Side);
-		string localType = System.Enum.GetName (typeof(CharacterMain.CharacterTypes), character.Type);
+		string localSide = System.Enum.GetName (typeof(Enums.CharacterSides), character.Side);
+		string localType = System.Enum.GetName (typeof(Enums.CharacterTypes), character.Type);
 		string path = "Characters/Controllers/" + localSide + "/" + localType + "/Controller";
 		RuntimeAnimatorController controller = Resources.Load (path) as RuntimeAnimatorController;
 		characterAnimator.runtimeAnimatorController = controller;

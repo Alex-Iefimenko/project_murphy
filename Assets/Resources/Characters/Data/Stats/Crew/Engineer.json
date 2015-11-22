@@ -2,7 +2,7 @@
   "Stats":{
     "Speed": 0.5,
     "BasicRoom":"Engineering",
-    "WorkTasks": ["Repair", "Extinguish"],
+    "WorkTasks": ["Extinguish", "Repair"],
     "RestProbability": 0.25,
     "Traits": true,
     "Health":{

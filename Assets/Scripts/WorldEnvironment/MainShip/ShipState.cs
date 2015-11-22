@@ -10,7 +10,7 @@ public class ShipState {
 	public Door[] allDoors;
 	public Room[] allRooms;
 	public CharacterMain[] allCharacters;
-	public Dictionary<Room.RoomTypes, Room> specRooms;
+	public Dictionary<Enums.RoomTypes, Room> specRooms;
 	private ShipStructure shipStructure;
 
 	private ShipState () { }
@@ -70,10 +70,10 @@ public class ShipState {
 
 	private void AddSpecRooms ()
 	{
-		specRooms = new Dictionary<Room.RoomTypes, Room> ();
+		specRooms = new Dictionary<Enums.RoomTypes, Room> ();
 		for (int i = 0; i < allRooms.Length; i++)
 		{
-			if (allRooms[i].roomType != Room.RoomTypes.Nothing) specRooms.Add (allRooms[i].roomType, allRooms[i]);
+			if (allRooms[i].roomType != Enums.RoomTypes.Nothing) specRooms.Add (allRooms[i].roomType, allRooms[i]);
 		} 
 	}
 }

@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using E = Enums;
 
 public class CharacterMain : MonoBehaviour, ICharacter {
 
 	//Side
-	public enum CharacterSides{ Crew, Pirate, Trader, Creature, Player };
-	public CharacterSides characterSide;
-	public CharacterSides Side { get { return characterSide; } }
+	public E.CharacterSides characterSide;
+	public E.CharacterSides Side { get { return characterSide; } }
 
 	//Profession
-	public enum CharacterTypes{ Engineer, Guard, Doctor, Scientist, LifeSupportEngineer, Murphy };
-	public CharacterTypes characterType;
-	public CharacterTypes Type { get { return characterType; } }
+	public E.CharacterTypes characterType;
+	public E.CharacterTypes Type { get { return characterType; } }
 
 	// Character Components
 	public CharacterStatsBase Stats { get; private set; }

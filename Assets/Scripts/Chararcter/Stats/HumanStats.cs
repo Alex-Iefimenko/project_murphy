@@ -13,8 +13,8 @@ public class HumanStats : CharacterStatsBase {
 	// Character Activities
 	public new float healOther;
 	// traits
-	public new Traits traitOne;
-	public new Traits traitTwo;
+	public new Enums.Traits traitOne;
+	public new Enums.Traits traitTwo;
 	
 	// Sanity 
 	public override float MaxSanity { get { return maxSanity; } }
@@ -26,8 +26,8 @@ public class HumanStats : CharacterStatsBase {
 	// Character Activities
 	public override float HealOther { get { return healOther; } }
 	// traits
-	public override Traits TraitOne { get { return traitOne; } }
-	public override Traits TraitTwo { get { return traitTwo; } }
+	public override Enums.Traits TraitOne { get { return traitOne; } }
+	public override Enums.Traits TraitTwo { get { return traitTwo; } }
 	
 	public override void Init(CharacterStatsConstructor constructor)
 	{

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Sides = CharacterMain.CharacterSides;
+using Sides = Enums.CharacterSides;
 
 public class SidesRelations {
 
@@ -12,7 +12,7 @@ public class SidesRelations {
 
 	private SidesRelations()
 	{
-		sideStatTyping = new Dictionary<CharacterMain.CharacterSides, string> ()
+		sideStatTyping = new Dictionary<Enums.CharacterSides, string> ()
 		{
 			{ Sides.Crew,     "CrewStats" },
 			{ Sides.Pirate,   "HumanStats" },
@@ -43,7 +43,7 @@ public class SidesRelations {
 		}
 	}
 
-	public string GetStatsType(CharacterMain.CharacterSides side)
+	public string GetStatsType(Enums.CharacterSides side)
 	{
 		return sideStatTyping[side];
 	}
