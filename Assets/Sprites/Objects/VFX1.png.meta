@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 2bc6f3ad62c59ff4488bae51675091c0
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: VFX1
+    21300002: VFX1_0
+    21300004: VFX1_1
+    21300006: VFX1_2
+    21300008: VFX1_3
+    21300010: VFX1_4
+    21300012: VFX1_5
+    21300014: VFX1_6
+    21300016: VFX1_8
+    21300018: VFX1_11
+    21300020: VFX1_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: VFX1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 407
+        width: 92
+        height: 81
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 407
+        width: 109
+        height: 97
+      alignment: 9
+      pivot: {x: .459931254, y: .454974294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_2
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 381
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_4
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 210
+        width: 142
+        height: 152
+      alignment: 9
+      pivot: {x: .509227037, y: .557466984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 238
+        width: 161
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_8
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 209
+        width: 132
+        height: 153
+      alignment: 9
+      pivot: {x: .417281866, y: .574218929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 99
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_9
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 369
+        width: 155
+        height: 143
+      alignment: 9
+      pivot: {x: .43800953, y: .509162545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
