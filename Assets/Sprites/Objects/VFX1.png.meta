@@ -13,6 +13,9 @@ TextureImporter:
     21300016: VFX1_8
     21300018: VFX1_11
     21300020: VFX1_9
+    21300022: VFX1_8
+    21300024: VFX1_9
+    21300026: VFX1_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,7 +60,7 @@ TextureImporter:
     - name: VFX1_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 5
         y: 407
         width: 92
         height: 81
@@ -69,7 +72,7 @@ TextureImporter:
         serializedVersion: 2
         x: 110
         y: 407
-        width: 109
+        width: 97
         height: 97
       alignment: 9
       pivot: {x: .459931254, y: .454974294}
@@ -77,9 +80,9 @@ TextureImporter:
     - name: VFX1_2
       rect:
         serializedVersion: 2
-        x: 382
+        x: 356
         y: 381
-        width: 128
+        width: 126
         height: 120
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -87,19 +90,19 @@ TextureImporter:
     - name: VFX1_4
       rect:
         serializedVersion: 2
-        x: 183
-        y: 210
-        width: 142
-        height: 152
-      alignment: 9
-      pivot: {x: .509227037, y: .557466984}
+        x: 168
+        y: 200
+        width: 187
+        height: 162
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: VFX1_6
       rect:
         serializedVersion: 2
         x: 5
-        y: 238
-        width: 161
+        y: 225
+        width: 148
         height: 146
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -109,30 +112,60 @@ TextureImporter:
         serializedVersion: 2
         x: 364
         y: 209
-        width: 132
-        height: 153
+        width: 147
+        height: 155
       alignment: 9
-      pivot: {x: .417281866, y: .574218929}
+      pivot: {x: .511309564, y: .574218929}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: VFX1_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 79
-        width: 99
-        height: 91
+        x: 327
+        y: 62
+        width: 103
+        height: 99
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: VFX1_9
       rect:
         serializedVersion: 2
-        x: 220
+        x: 207
         y: 369
-        width: 155
+        width: 145
         height: 143
       alignment: 9
       pivot: {x: .43800953, y: .509162545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 140
+        height: 152
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_9
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 39
+        width: 156
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX1_10
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 111
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
