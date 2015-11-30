@@ -11,7 +11,7 @@ public class ExtinguishState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		return room.State.IsOnFire();
+		return room.Stats.IsOnFire();
 	}
 
 	public override void Actualize () { 
@@ -24,7 +24,7 @@ public class ExtinguishState : StateBase {
 		character.Movement.CurrentRoom.Extinguish(character.Stats.FireExtinguish);
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);
-		if (character.Movement.CurrentRoom.State.IsOnFire() == false)
+		if (character.Movement.CurrentRoom.Stats.IsOnFire() == false)
 			character.PurgeActions();
 	}
 	

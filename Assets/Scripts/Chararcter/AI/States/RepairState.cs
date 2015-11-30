@@ -11,7 +11,7 @@ public class RepairState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		return room.State.IsBroken();	
+		return room.Stats.IsBroken();	
 	}
 
 	public override void Actualize () { 
@@ -24,7 +24,7 @@ public class RepairState : StateBase {
 		character.Movement.CurrentRoom.Repair(character.Stats.Repair);
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);
-		if (character.Movement.CurrentRoom.State.IsBroken() == false)
+		if (character.Movement.CurrentRoom.Stats.IsBroken() == false)
 			character.PurgeActions();
 	}
 

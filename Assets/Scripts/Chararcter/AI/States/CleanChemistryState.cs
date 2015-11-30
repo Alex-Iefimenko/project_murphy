@@ -11,7 +11,7 @@ public class CleanChemistryState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		return room.State.IsHazardous();
+		return room.Stats.IsHazardous();
 	}
 
 	public override void Actualize () { 
@@ -24,7 +24,7 @@ public class CleanChemistryState : StateBase {
 		character.Movement.CurrentRoom.ChemistryClearing(character.Stats.CleanChemistry);
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);
-		if (character.Movement.CurrentRoom.State.IsHazardous() == false)
+		if (character.Movement.CurrentRoom.Stats.IsHazardous() == false)
 			character.PurgeActions();
 	}
 	

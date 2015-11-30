@@ -11,7 +11,7 @@ public class CleanRadiationState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		return room.State.IsRadioactive();
+		return room.Stats.IsRadioactive();
 	}
 
 	public override void Actualize () { 
@@ -24,7 +24,7 @@ public class CleanRadiationState : StateBase {
 		character.Movement.CurrentRoom.Deactivate(character.Stats.CleanRadiation);
 		if (character.Movement.IsMoving() == false)
 			character.View.SetSubState(1);
-		if (character.Movement.CurrentRoom.State.IsRadioactive() == false)
+		if (character.Movement.CurrentRoom.Stats.IsRadioactive() == false)
 			character.PurgeActions();
 	}
 	

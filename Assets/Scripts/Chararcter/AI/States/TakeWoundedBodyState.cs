@@ -13,13 +13,13 @@ public class TakeWoundedBodyState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		return room.ContainsUnconscious() != null;
+		return room.Objects.ContainsUnconscious() != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
 		pulling = false;
-		unconscious = character.Movement.CurrentRoom.ContainsUnconscious();
+		unconscious = character.Movement.CurrentRoom.Objects.ContainsUnconscious();
 		unconscious.Lock = true;
 		NavigateTo(unconscious);
 	}

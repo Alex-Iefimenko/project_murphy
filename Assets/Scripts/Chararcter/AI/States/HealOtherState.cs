@@ -12,12 +12,12 @@ public class HealOtherState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		return room.ContainsWounded(character) != null;
+		return room.Objects.ContainsWounded(character) != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		wounded = character.Movement.CurrentRoom.ContainsWounded(character);
+		wounded = character.Movement.CurrentRoom.Objects.ContainsWounded(character);
 		wounded.Lock = true;
 		NavigateTo(wounded);
 	}

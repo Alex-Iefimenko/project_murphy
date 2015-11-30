@@ -1,0 +1,69 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Linq;
+
+public class FireRoomState : RoomStateBase {
+
+	public override bool EnableCondition ()
+	{ 
+		bool result = !DisableCondition() && CurrentRoom.Stats.IsOnFire();
+		return result; 
+	} 
+	
+	public override bool DisableCondition ()
+	{ 
+		bool broken = CurrentRoom.Stats.Durability <= 50f; 
+		bool weather = CurrentRoom.Stats.WeatherThreat; 
+		bool extinguished = CurrentRoom.Stats.FireLevel <= 0f;
+		return broken || weather || extinguished;
+	}
+
+	public override void StateEnable () 
+	{ 
+		base.StateEnable ();
+		CurrentRoom.Stats.FireLevel += Mathf.Ceil(CurrentRoom.Stats.ChemistryLevel / 3f);
+		CurrentRoom.Stats.FireLevel += Mathf.Ceil(CurrentRoom.Stats.PlantsLevel / 3f);
+		CurrentRoom.Stats.ChemistryLevel = 0f;
+		CurrentRoom.Stats.PlantsLevel = 0f;
+	}
+
+	public override bool AutoEnable () 
+	{
+		bool result = !Enabled && !DisableCondition () && EnableCondition ();
+		if (result) StateEnable ();
+		return result;
+	}
+
+	public override bool InitiatedEnable (float amount) 
+	{ 
+		CurrentRoom.Stats.FireLevel = amount;
+		return AutoEnable (); 
+	}
+	
+	public override void StateDisable () 
+	{ 
+		base.StateDisable ();
+		CurrentRoom.Stats.FireLevel = 0f;
+		CurrentAnimator.SetFloat("FireLevel", 0f);
+	}
+	
+	public override void Tick () 
+	{ 
+		if (DisableCondition ()) 
+		{
+			StateDisable (); 
+			return;
+		}
+		CurrentAnimator.SetFloat("FireLevel", CurrentRoom.Stats.FireLevel);
+		float damage = Mathf.Ceil(CurrentRoom.Stats.FireLevel / 10f);
+		CurrentRoom.Stats.FireLevel += damage;
+		CurrentRoom.Stats.Durability -= damage;
+		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) CurrentRoom.Objects.Characters[i].Hurt(damage);
+		for (int i = 0; i < CurrentRoom.neighbors.Count; i++ ) 
+		{
+			if (CurrentRoom.Stats.FireLevel > 75f && UnityEngine.Random.value > 0.2f) 
+				CurrentRoom.neighbors.Keys.ElementAt(i).SatesHandler.ForceState<FireRoomState>(10f);
+		}
+	}
+
+}

@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour, IMovement {
 	
 	public void NavigateTo(Room room, Furniture item=null)
 	{
-		if (item == null) item = room.GetUnoccupiedRoomObject();
+		if (item == null) item = room.Objects.GetUnoccupiedRoomObject();
 		Navigate(room);
 		if (item != null)
 		{
@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour, IMovement {
 		else
 		{
 			target = null;
-			movementPath[movementPath.Count - 1] = room.GetRandomRoomPoint();
+			movementPath[movementPath.Count - 1] = room.Objects.GetRandomRoomPoint();
 		}
 	}
 

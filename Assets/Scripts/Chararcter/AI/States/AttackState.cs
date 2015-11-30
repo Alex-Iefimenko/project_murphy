@@ -16,7 +16,7 @@ public class AttackState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		ICharacter hostile = room.ContainsHostile(character);
+		ICharacter hostile = room.Objects.ContainsHostile(character);
 		return (hostile != null && !hostile.Stats.IsDead() && !hostile.Stats.IsUnconscious());
 	}
 
@@ -24,7 +24,7 @@ public class AttackState : StateBase {
 	{ 
 		base.Actualize ();
 		character.View.SetCustomBool("AbleToShot", character.Stats.AbbleDistantAttack);
-		enemy = character.Movement.CurrentRoom.ContainsHostile(character);
+		enemy = character.Movement.CurrentRoom.Objects.ContainsHostile(character);
 		if (character.Stats.AbbleDistantAttack)
 		{
 			NavigateTo(character.Movement.CurrentRoom);

@@ -13,13 +13,13 @@ public class EliminateDeadBodyState : StateBase {
 
 	public override bool CheckCondition (Room room) 
 	{
-		return room.ContainsDead() != null;
+		return room.Objects.ContainsDead() != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
 		pulling = false;
-		dead = character.Movement.CurrentRoom.ContainsDead();
+		dead = character.Movement.CurrentRoom.Objects.ContainsDead();
 		dead.Lock = true;
 		NavigateTo(dead);
 	}
@@ -36,7 +36,7 @@ public class EliminateDeadBodyState : StateBase {
 		if (pulling && character.Movement.IsMoving() == false)
 		{
 			dead.Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
-			ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].Untrack(dead);
+			ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].Objects.Untrack(dead);
 			MonoBehaviour.Destroy(dead.GObject, 10f);
 			character.PurgeActions();
 			//Temporary
