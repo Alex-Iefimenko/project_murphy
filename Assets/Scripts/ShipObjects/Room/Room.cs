@@ -17,7 +17,7 @@ public class Room : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		Stats = new RoomStats();
+		Stats = (RoomStats)gameObject.AddComponent("RoomStats");
 		Objects = new RoomObjects(this.gameObject);
 		SatesHandler = new RoomStatesHandler(this);
 	}

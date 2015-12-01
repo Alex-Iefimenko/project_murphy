@@ -44,7 +44,7 @@ public class FireRoomState : RoomStateBase {
 	{ 
 		base.StateDisable ();
 		CurrentRoom.Stats.FireLevel = 0f;
-		CurrentAnimator.SetFloat("FireLevel", 0f);
+		CurrentAnimator.SetFloat("FireLevel", -1f);
 	}
 	
 	public override void Tick () 

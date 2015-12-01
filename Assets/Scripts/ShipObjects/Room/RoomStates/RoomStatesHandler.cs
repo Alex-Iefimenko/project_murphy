@@ -21,8 +21,7 @@ public class RoomStatesHandler {
 	public bool ForceState<T> (float amount) where T : RoomStateBase
 	{
 		T state = room.gameObject.GetComponentInChildren<T>();
-//		return state == null ? false : state.InitiatedEnable(amount);
-		return state.InitiatedEnable(amount);
+		return state == null ? false : state.InitiatedEnable(amount);
 	}
 
 }

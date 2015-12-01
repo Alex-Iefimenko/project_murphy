@@ -1,19 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RoomStats {
+public class RoomStats : MonoBehaviour {
 
-	private float MaxDurability { get; set; }
-	public float Durability { get; set; } 
-	public float FireLevel { get; set; }
-	public float RadiationLevel { get; set; }
-	public float ChemistryLevel { get; set; }
-	public float PlantsLevel { get; set; }
-	public bool Unelectryfied { get; set; }
-	public bool WeatherThreat { get; set; }
-	public bool NoGravity { get; set; }
+	private float maxDurability;
+	private float durability;
+	private float fireLevel;
+	private float radiationLevel;
+	private float chemistryLevel;
+	private float plantsLevel;
+	private bool unelectryfied;
+	private bool weatherThreat;
+	private bool noGravity;
 
-	public RoomStats ()
+	private float MaxDurability { get { return maxDurability; } set { maxDurability = value; } }
+	public float Durability { get { return durability; } set { durability = value; } }
+	public float FireLevel { get { return fireLevel; } set { fireLevel = value; } }
+	public float RadiationLevel { get { return radiationLevel; } set { radiationLevel = value; } }
+	public float ChemistryLevel { get { return chemistryLevel; } set { chemistryLevel = value; } }
+	public float PlantsLevel { get { return plantsLevel; } set { plantsLevel = value; } }
+	public bool Unelectryfied { get { return unelectryfied; } set { unelectryfied = value; } }
+	public bool WeatherThreat { get { return weatherThreat; } set { weatherThreat = value; } }
+	public bool NoGravity { get { return noGravity; } set { noGravity = value; } }
+
+	public void Awake ()
 	{
 		MaxDurability = 200f;
 		Durability = MaxDurability;
@@ -24,6 +34,15 @@ public class RoomStats {
 		Unelectryfied = false; 
 		WeatherThreat = false; 
 		NoGravity = false;
+	}
+
+	private void Update ()
+	{
+		Mathf.Clamp(durability, -1f, maxDurability);
+		Mathf.Clamp(fireLevel, -1f, 100f);
+		Mathf.Clamp(radiationLevel, -1f, 100f);
+		Mathf.Clamp(chemistryLevel, -1f, 100f);
+		Mathf.Clamp(plantsLevel, -1f, 100f);
 	}
 
 	public bool IsBroken ()
