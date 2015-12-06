@@ -8,9 +8,9 @@ AnimatorController:
   m_Name: RoomBrokenVFX
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: FireLevel
+  - m_Name: Breaking
     m_Type: 1
-    m_DefaultFloat: 0
+    m_DefaultFloat: 200
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
@@ -38,9 +38,9 @@ Transition:
   m_TransitionDuration: .0171741862
   m_TransitionOffset: .23282598
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 200
     m_ExitTime: .982825816
   m_Atomic: 1
   m_Solo: 0
@@ -58,9 +58,9 @@ Transition:
   m_TransitionDuration: .0206430573
   m_TransitionOffset: .170304686
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 60
     m_ExitTime: .920304775
   m_Atomic: 1
   m_Solo: 0
@@ -78,9 +78,9 @@ Transition:
   m_TransitionDuration: .0229272265
   m_TransitionOffset: .227072939
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 140
     m_ExitTime: .977072775
   m_Atomic: 1
   m_Solo: 0
@@ -98,9 +98,9 @@ Transition:
   m_TransitionDuration: .0384094752
   m_TransitionOffset: .211590677
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 60
     m_ExitTime: .961590528
   m_Atomic: 1
   m_Solo: 0
@@ -118,9 +118,9 @@ Transition:
   m_TransitionDuration: .0229272265
   m_TransitionOffset: .227072939
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 140
     m_ExitTime: .977072775
   m_Atomic: 1
   m_Solo: 0
@@ -138,9 +138,9 @@ Transition:
   m_TransitionDuration: .0198815484
   m_TransitionOffset: .230118677
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 200
     m_ExitTime: .963874876
   m_Atomic: 1
   m_Solo: 0
@@ -158,9 +158,9 @@ Transition:
   m_TransitionDuration: 0
   m_TransitionOffset: .278680414
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 200
     m_ExitTime: 1.02820992
   m_Atomic: 1
   m_Solo: 0
@@ -198,9 +198,9 @@ Transition:
   m_TransitionDuration: 0
   m_TransitionOffset: .265313268
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Breaking
+    m_EventTreshold: 200
     m_ExitTime: 1.01531315
   m_Atomic: 1
   m_Solo: 0
@@ -299,13 +299,13 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110288059}
-      second:
-      - {fileID: 110172130}
+      first: {fileID: 0}
+      second: []
     data:
-      first: {fileID: 110296976}
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110182015}
+      - {fileID: 110196540}
+      - {fileID: 110131520}
     data:
       first: {fileID: 110205271}
       second:
@@ -318,31 +318,13 @@ StateMachine:
       - {fileID: 110133014}
       - {fileID: 110132101}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110288059}
       second:
-      - {fileID: 110196540}
-      - {fileID: 110131520}
+      - {fileID: 110172130}
     data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110296976}
+      second:
+      - {fileID: 110182015}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 324, y: 228, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

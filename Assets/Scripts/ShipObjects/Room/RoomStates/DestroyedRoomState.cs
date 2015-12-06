@@ -37,6 +37,7 @@ public class DestroyedRoomState : RoomStateBase {
 	{ 
 		base.StateDisable ();
 		CurrentRoom.gameObject.tag = "Untagged";
+		ShipState.Inst.Init();
 		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) 
 		{
 			CurrentRoom.Objects.Characters[i].Hurt(999f);
