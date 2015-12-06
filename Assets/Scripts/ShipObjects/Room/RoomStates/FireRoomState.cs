@@ -27,16 +27,9 @@ public class FireRoomState : RoomStateBase {
 		CurrentRoom.Stats.PlantsLevel = 0f;
 	}
 
-	public override bool AutoEnable () 
-	{
-		bool result = !Enabled && !DisableCondition () && EnableCondition ();
-		if (result) StateEnable ();
-		return result;
-	}
-
 	public override bool InitiatedEnable (float amount) 
 	{ 
-		CurrentRoom.Stats.FireLevel = amount;
+		if (!CurrentRoom.Stats.IsOnFire()) CurrentRoom.Stats.FireLevel = amount;
 		return AutoEnable (); 
 	}
 	
@@ -55,13 +48,13 @@ public class FireRoomState : RoomStateBase {
 			return;
 		}
 		CurrentAnimator.SetFloat("FireLevel", CurrentRoom.Stats.FireLevel);
-		float damage = Mathf.Ceil(CurrentRoom.Stats.FireLevel / 10f);
+		float damage = Mathf.Ceil(CurrentRoom.Stats.FireLevel / 20f);
 		CurrentRoom.Stats.FireLevel += damage;
 		CurrentRoom.Stats.Durability -= damage;
 		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) CurrentRoom.Objects.Characters[i].Hurt(damage);
 		for (int i = 0; i < CurrentRoom.neighbors.Count; i++ ) 
 		{
-			if (CurrentRoom.Stats.FireLevel > 75f && UnityEngine.Random.value > 0.2f) 
+			if (CurrentRoom.Stats.FireLevel > 75f && UnityEngine.Random.value > 0.8f) 
 				CurrentRoom.neighbors.Keys.ElementAt(i).SatesHandler.ForceState<FireRoomState>(10f);
 		}
 	}

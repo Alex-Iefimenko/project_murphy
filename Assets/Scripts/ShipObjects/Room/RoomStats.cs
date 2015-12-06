@@ -4,16 +4,16 @@ using System.Collections;
 public class RoomStats : MonoBehaviour {
 
 	private float maxDurability;
-	private float durability;
-	private float fireLevel;
-	private float radiationLevel;
-	private float chemistryLevel;
-	private float plantsLevel;
-	private bool unelectryfied;
-	private bool weatherThreat;
-	private bool noGravity;
+	public float durability;
+	public float fireLevel;
+	public float radiationLevel;
+	public float chemistryLevel;
+	public float plantsLevel;
+	public bool unelectryfied;
+	public bool weatherThreat;
+	public bool noGravity;
 
-	private float MaxDurability { get { return maxDurability; } set { maxDurability = value; } }
+	public float MaxDurability { get { return maxDurability; } set { maxDurability = value; } }
 	public float Durability { get { return durability; } set { durability = value; } }
 	public float FireLevel { get { return fireLevel; } set { fireLevel = value; } }
 	public float RadiationLevel { get { return radiationLevel; } set { radiationLevel = value; } }

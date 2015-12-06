@@ -60,4 +60,9 @@ public class Room : MonoBehaviour {
 		Stats.RadiationLevel -= amount;
 	}
 
+	public void Damage (float amount)
+	{
+		Stats.Durability -= amount;
+	}
+
 }

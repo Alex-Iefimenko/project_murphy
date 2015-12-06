@@ -36,7 +36,7 @@
 	},
 	"HardwareActivities":{
 	  "Repair": 1.0,
-	  "FireExtinguish": 1.0,
+	  "FireExtinguish": 3.0,
 	  "CleanRadiation": 0.0,
 	  "CleanChemistry": 0.0
 	}

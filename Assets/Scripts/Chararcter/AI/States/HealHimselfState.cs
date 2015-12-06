@@ -24,6 +24,7 @@ public class HealHimselfState : StateBase {
 		if (character.Movement.IsMoving() == false)
 		{
 			character.Stats.Health += character.Stats.HealthIncrease;
+			character.Stats.HealthReduction = 0f;
 			character.View.SetSubState(1);
 		}
 		if (character.Stats.Health >= character.Stats.MaxHealth)

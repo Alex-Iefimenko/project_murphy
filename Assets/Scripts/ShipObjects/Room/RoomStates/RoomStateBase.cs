@@ -30,7 +30,12 @@ public class RoomStateBase : MonoBehaviour {
 		Broadcaster.Instance.tickEvent -= Tick;
 	}
 
-	public virtual bool AutoEnable () { return false; } 
+	public virtual bool AutoEnable () 
+	{ 
+		bool result = !Enabled && EnableCondition();
+		if (result) StateEnable ();
+		return result;
+	} 
 
 	public virtual bool InitiatedEnable (float amount) { return false; } 
 
