@@ -14,12 +14,14 @@ public class Room : MonoBehaviour {
 	public RoomStats Stats { get;  private set; } 
 	public RoomObjects Objects { get; private set; } 
 	public RoomStatesHandler SatesHandler { get; private set; } 
+	public RoomTransition Flier { get; private set; } 
 
 	// Use this for initialization
 	void Awake () {
 		Stats = (RoomStats)gameObject.AddComponent("RoomStats");
 		Objects = new RoomObjects(this.gameObject);
 		SatesHandler = new RoomStatesHandler(this);
+		Flier = (RoomTransition)gameObject.AddComponent("RoomTransition");
 	}
 	
 	public void AddNeighbor (Room newNeighbor, Door betweenDoor)

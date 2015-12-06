@@ -27,8 +27,11 @@ public class Door : MonoBehaviour {
 			    neighborTwo = ShipState.Inst.allRooms[i];
 			if (neighborOne != null && neighborTwo != null) break;
 		}
-		neighborOne.AddNeighbor(neighborTwo, this);
-		neighborTwo.AddNeighbor(neighborOne, this);
+		if (neighborOne != null && neighborTwo != null)
+		{
+			neighborOne.AddNeighbor(neighborTwo, this);
+			neighborTwo.AddNeighbor(neighborOne, this);
+		}
 	}
 
 	public Vector3[] GetEntrancePoints ()
