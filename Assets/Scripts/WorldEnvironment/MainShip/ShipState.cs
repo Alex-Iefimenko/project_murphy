@@ -33,6 +33,11 @@ public class ShipState {
 		CreateShipStructureGraph ();
 	}
 
+	public void CountCharacters ()
+	{
+		allCharacters = StoreComponent<CharacterMain>(GameObject.FindGameObjectsWithTag("Character"));
+	}
+
 	// Returns list of world points for NPC traveling
 	public List<Vector3> GetStepsToRoom (Room initialRoom, Room targetRoom) {
 		if (initialRoom == targetRoom) 
@@ -52,7 +57,6 @@ public class ShipState {
 	{	
 		allDoors = StoreComponent<Door>(GameObject.FindGameObjectsWithTag("Door"));
 		allRooms = StoreComponent<Room>(GameObject.FindGameObjectsWithTag("Room"));
-		allCharacters = StoreComponent<CharacterMain>(GameObject.FindGameObjectsWithTag("Character"));
 		AddSpecRooms();
 		allDoors[0].ConnectNeighbors();
 		for (int i = 0; i < allDoors.Length; i++ ) allDoors[i].ConnectNeighbors();

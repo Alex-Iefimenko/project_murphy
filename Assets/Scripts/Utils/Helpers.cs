@@ -10,4 +10,11 @@ public class Helpers : MonoBehaviour {
 		T value = array[Random.Range (0, array.Count)];
 		return value;
 	}
+
+	public static T GetRandomArrayValue<T> (T[] array)
+	{
+		T value = array[Random.Range (0, array.Length)];
+		return value;
+	}
+
 }

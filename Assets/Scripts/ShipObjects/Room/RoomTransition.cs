@@ -17,5 +17,9 @@ public class RoomTransition : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, endPoint, speed * Time.deltaTime);
 			yield return null;
 		}
+		ShipState.Inst.Init();
+		CharacterCreater[] characters = GetComponentsInChildren<CharacterCreater>();
+		for (int i = 0; i < characters.Length; i++) characters[i].CreateCharacter();
+		ShipState.Inst.CountCharacters();
 	}
 }
