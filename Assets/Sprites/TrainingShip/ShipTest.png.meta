@@ -21,6 +21,7 @@ TextureImporter:
     21300032: ShipTest_16
     21300034: ShipTest_17
     21300036: ShipTest_18
+    21300038: ShipTest_19
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -249,6 +250,16 @@ TextureImporter:
         y: 1581
         width: 232
         height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_19
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 1698
+        width: 290
+        height: 367
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
