@@ -42,11 +42,7 @@ public class FireRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 		CurrentAnimator.SetFloat("FireLevel", CurrentRoom.Stats.FireLevel);
 		float damage = Mathf.Ceil(CurrentRoom.Stats.FireLevel / 20f);
 		CurrentRoom.Stats.FireLevel += damage;

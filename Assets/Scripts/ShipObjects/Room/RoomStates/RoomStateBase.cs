@@ -39,6 +39,13 @@ public class RoomStateBase : MonoBehaviour {
 
 	public virtual bool InitiatedEnable (float amount) { return false; } 
 
-	public virtual void Tick () { }
+	public virtual void Tick () 
+	{
+		if (DisableCondition ()) 
+		{
+			StateDisable (); 
+			return;
+		}
+	}
 
 }

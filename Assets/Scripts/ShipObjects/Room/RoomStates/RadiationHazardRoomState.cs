@@ -39,11 +39,7 @@ public class RadiationHazardRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 		CurrentAnimator.SetFloat("RadiationLevel", CurrentRoom.Stats.RadiationLevel);
 		CurrentRoom.Stats.RadiationLevel += Mathf.Ceil(CurrentRoom.Stats.RadiationLevel / 20f);
 		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) 

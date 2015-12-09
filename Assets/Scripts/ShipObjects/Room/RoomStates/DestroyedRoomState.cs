@@ -53,10 +53,6 @@ public class DestroyedRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 	}
 }

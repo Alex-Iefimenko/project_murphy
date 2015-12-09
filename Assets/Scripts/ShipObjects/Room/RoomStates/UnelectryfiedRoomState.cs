@@ -12,9 +12,9 @@ public class UnelectryfiedRoomState : RoomStateBase {
 	
 	public override bool DisableCondition ()
 	{ 
-		bool repaired = CurrentRoom.Stats.Durability >= CurrentRoom.Stats.MaxDurability;
+//		bool repaired = CurrentRoom.Stats.Durability >= CurrentRoom.Stats.MaxDurability;
 		bool depress = CurrentRoom.Stats.Durability <= 0f;
-		return repaired || depress;
+		return depress;// || depress;
 	}
 	
 	public override void StateEnable () 
@@ -39,11 +39,7 @@ public class UnelectryfiedRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 	}
 	
 }

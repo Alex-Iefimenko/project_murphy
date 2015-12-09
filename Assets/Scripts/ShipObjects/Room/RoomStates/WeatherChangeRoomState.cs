@@ -42,11 +42,7 @@ public class WeatherChangeRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) CurrentRoom.Objects.Characters[i].Hurt(2.5f);
 		for (int i = 0; i < CurrentRoom.neighbors.Count; i++ ) 
 		{

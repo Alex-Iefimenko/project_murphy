@@ -40,11 +40,7 @@ public class DepressurizationRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 		CurrentAnimator.SetFloat("Durability", CurrentRoom.Stats.Durability);
 		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) CurrentRoom.Objects.Characters[i].Hurt(2.5f);
 		for (int i = 0; i < CurrentRoom.neighbors.Count; i++ ) 

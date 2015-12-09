@@ -38,11 +38,7 @@ public class PlantsMutationRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 		CurrentAnimator.SetFloat("PlantsLevel", CurrentRoom.Stats.PlantsLevel);
 		float damage = Mathf.Ceil(CurrentRoom.Stats.PlantsLevel / 20f);
 		CurrentRoom.Stats.PlantsLevel += damage;

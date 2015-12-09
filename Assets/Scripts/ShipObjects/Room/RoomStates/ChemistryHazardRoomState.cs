@@ -41,11 +41,7 @@ public class ChemistryHazardRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 		CurrentAnimator.SetFloat("ChemistryLevel", CurrentRoom.Stats.ChemistryLevel);
 		float damage = Mathf.Ceil(CurrentRoom.Stats.ChemistryLevel / 20f);
 		CurrentRoom.Stats.ChemistryLevel += damage;

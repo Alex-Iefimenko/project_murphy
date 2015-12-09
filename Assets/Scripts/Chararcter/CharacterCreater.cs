@@ -9,7 +9,6 @@ public class CharacterCreater : MonoBehaviour {
 
 	public void CreateCharacter ()
 	{
-		Debug.Log ("sadasdasdas");
 		GameObject character = (GameObject)Instantiate(Helpers.GetRandomArrayValue(prefabs), 
 		                                               transform.position, 
 		                                               transform.rotation);

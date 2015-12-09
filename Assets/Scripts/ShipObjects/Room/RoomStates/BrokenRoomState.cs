@@ -36,11 +36,7 @@ public class BrokenRoomState : RoomStateBase {
 	
 	public override void Tick () 
 	{ 
-		if (DisableCondition ()) 
-		{
-			StateDisable (); 
-			return;
-		}
+		base.Tick ();
 		CurrentAnimator.SetFloat("Breaking", CurrentRoom.Stats.Durability);
 	}
 	
