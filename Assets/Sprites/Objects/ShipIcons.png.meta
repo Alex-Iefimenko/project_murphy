@@ -14,6 +14,7 @@ TextureImporter:
     21300018: ShipIcons_9
     21300020: ShipIcons_10
     21300022: ShipIcons_11
+    21300024: ShipIcons_12
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,7 +64,7 @@ TextureImporter:
         width: 106
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_1
       rect:
@@ -73,7 +74,7 @@ TextureImporter:
         width: 105
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_2
       rect:
@@ -83,7 +84,7 @@ TextureImporter:
         width: 107
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_3
       rect:
@@ -93,7 +94,7 @@ TextureImporter:
         width: 106
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_4
       rect:
@@ -103,7 +104,7 @@ TextureImporter:
         width: 105
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_5
       rect:
@@ -113,7 +114,7 @@ TextureImporter:
         width: 106
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_6
       rect:
@@ -123,7 +124,7 @@ TextureImporter:
         width: 106
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_7
       rect:
@@ -133,7 +134,7 @@ TextureImporter:
         width: 105
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_8
       rect:
@@ -143,7 +144,7 @@ TextureImporter:
         width: 106
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_9
       rect:
@@ -153,7 +154,7 @@ TextureImporter:
         width: 106
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_10
       rect:
@@ -163,7 +164,7 @@ TextureImporter:
         width: 105
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ShipIcons_11
       rect:
@@ -173,7 +174,17 @@ TextureImporter:
         width: 105
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipIcons_12
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 432
+        width: 107
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
