@@ -7,7 +7,13 @@ AnimatorController:
   m_PrefabInternal: {fileID: 0}
   m_Name: RoomUnelectrifiedVFX
   serializedVersion: 2
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: Unelectryfied
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -32,8 +38,8 @@ Transition:
   m_TransitionDuration: 0
   m_TransitionOffset: .142428085
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: Unelectryfied
     m_EventTreshold: 0
     m_ExitTime: 1.03428459
   m_Atomic: 1
@@ -53,7 +59,7 @@ Transition:
   m_TransitionOffset: .241035149
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Unelectryfied
     m_EventTreshold: 0
     m_ExitTime: .999534726
   m_Atomic: 1
@@ -72,8 +78,8 @@ Transition:
   m_TransitionDuration: .00777806109
   m_TransitionOffset: .21668306
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: Unelectryfied
     m_EventTreshold: 0
     m_ExitTime: .992221951
   m_Atomic: 1
@@ -93,7 +99,7 @@ Transition:
   m_TransitionOffset: .232587263
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Unelectryfied
     m_EventTreshold: 0
     m_ExitTime: .987877727
   m_Atomic: 1
@@ -111,7 +117,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 9ee46af522b40834d9e6d17910732ccd, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -48, y: 36, z: 0}
+  m_Position: {x: -60, y: 96, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -126,7 +132,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 18c85e643179272468dd3f2b867b67d1, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 192, y: 36, z: 0}
+  m_Position: {x: 192, y: 96, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -156,7 +162,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 0aeca29b344c812448d76638aa816339, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 456, y: 36, z: 0}
+  m_Position: {x: 456, y: 96, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -177,21 +183,21 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110247175}
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110100000}
+      - {fileID: 110102012}
     data:
       first: {fileID: 110231744}
       second:
       - {fileID: 110111477}
     data:
+      first: {fileID: 110247175}
+      second:
+      - {fileID: 110100000}
+    data:
       first: {fileID: 110264342}
       second:
       - {fileID: 110119399}
-    data:
-      first: {fileID: 110200000}
-      second:
-      - {fileID: 110102012}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

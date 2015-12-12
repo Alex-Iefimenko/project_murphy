@@ -7,7 +7,13 @@ AnimatorController:
   m_PrefabInternal: {fileID: 0}
   m_Name: RoomAcidVFX
   serializedVersion: 2
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: ChemistryLevel
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -32,9 +38,9 @@ Transition:
   m_TransitionDuration: .245901644
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: ChemistryLevel
+    m_EventTreshold: 33
     m_ExitTime: .754098356
   m_Atomic: 1
   m_Solo: 0
@@ -52,9 +58,9 @@ Transition:
   m_TransitionDuration: .241935492
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: ChemistryLevel
+    m_EventTreshold: 66
     m_ExitTime: .758064508
   m_Atomic: 1
   m_Solo: 0
@@ -72,9 +78,9 @@ Transition:
   m_TransitionDuration: .245901644
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: ChemistryLevel
+    m_EventTreshold: 33
     m_ExitTime: .754098356
   m_Atomic: 1
   m_Solo: 0
@@ -92,8 +98,8 @@ Transition:
   m_TransitionDuration: .245901644
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 4
+    m_ConditionEvent: ChemistryLevel
     m_EventTreshold: 0
     m_ExitTime: .754098356
   m_Atomic: 1
@@ -112,8 +118,8 @@ Transition:
   m_TransitionDuration: .245901644
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 4
+    m_ConditionEvent: ChemistryLevel
     m_EventTreshold: 0
     m_ExitTime: .754098356
   m_Atomic: 1
@@ -132,9 +138,9 @@ Transition:
   m_TransitionDuration: .245901644
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: ChemistryLevel
+    m_EventTreshold: 66
     m_ExitTime: .754098356
   m_Atomic: 1
   m_Solo: 0
@@ -152,8 +158,8 @@ Transition:
   m_TransitionDuration: .245901644
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 3
+    m_ConditionEvent: ChemistryLevel
     m_EventTreshold: 0
     m_ExitTime: .754098356
   m_Atomic: 1
@@ -172,8 +178,8 @@ Transition:
   m_TransitionDuration: .241935492
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 4
+    m_ConditionEvent: ChemistryLevel
     m_EventTreshold: 0
     m_ExitTime: .758064508
   m_Atomic: 1
@@ -206,7 +212,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 27c6f0bda4d6a544b901eebb44cc5387, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 132, y: 204, z: 0}
+  m_Position: {x: 36, y: 204, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -221,7 +227,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: a86266fa2e15dcb40bdc8ea2728dc8ba, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -600, y: 468, z: 0}
+  m_Position: {x: -384, y: 348, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -236,7 +242,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 6d3ec71a2ccf89942b3a3d62fe2e9371, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -144, y: 204, z: 0}
+  m_Position: {x: -288, y: 204, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -265,12 +271,6 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110175964}
     data:
-      first: {fileID: 110278129}
-      second:
-      - {fileID: 110190141}
-      - {fileID: 110154849}
-      - {fileID: 110182161}
-    data:
       first: {fileID: 110221390}
       second:
       - {fileID: 110145145}
@@ -279,6 +279,12 @@ StateMachine:
       first: {fileID: 110244835}
       second:
       - {fileID: 110193627}
+    data:
+      first: {fileID: 110278129}
+      second:
+      - {fileID: 110190141}
+      - {fileID: 110154849}
+      - {fileID: 110182161}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
