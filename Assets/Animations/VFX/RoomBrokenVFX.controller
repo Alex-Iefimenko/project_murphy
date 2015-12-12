@@ -40,7 +40,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Breaking
-    m_EventTreshold: 200
+    m_EventTreshold: 199
     m_ExitTime: .75
   m_Atomic: 1
   m_Solo: 0
@@ -60,7 +60,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Breaking
-    m_EventTreshold: 200
+    m_EventTreshold: 199
     m_ExitTime: .75
   m_Atomic: 1
   m_Solo: 0
@@ -220,7 +220,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Breaking
-    m_EventTreshold: 200
+    m_EventTreshold: 199
     m_ExitTime: .75
   m_Atomic: 1
   m_Solo: 0

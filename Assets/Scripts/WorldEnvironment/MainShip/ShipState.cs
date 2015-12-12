@@ -62,7 +62,7 @@ public class ShipState {
 		allDoors = StoreComponent<Door>(GameObject.FindGameObjectsWithTag("Door"));
 		allRooms = StoreComponent<Room>(GameObject.FindGameObjectsWithTag("Room"));
 		AddSpecRooms();
-		allDoors[0].ConnectNeighbors();
+		for (int i = 0; i < allRooms.Length; i++ ) allRooms[i].neighbors.Clear();
 		for (int i = 0; i < allDoors.Length; i++ ) allDoors[i].ConnectNeighbors();
 	}
 

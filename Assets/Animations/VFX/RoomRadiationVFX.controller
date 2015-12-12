@@ -60,7 +60,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: RadiationLevel
-    m_EventTreshold: 0
+    m_EventTreshold: 1
     m_ExitTime: .754098356
   m_Atomic: 1
   m_Solo: 0
@@ -100,7 +100,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: RadiationLevel
-    m_EventTreshold: 0
+    m_EventTreshold: 1
     m_ExitTime: .741379261
   m_Atomic: 1
   m_Solo: 0
@@ -260,7 +260,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: RadiationLevel
-    m_EventTreshold: 0
+    m_EventTreshold: 1
     m_ExitTime: .754098356
   m_Atomic: 1
   m_Solo: 0
