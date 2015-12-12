@@ -73,7 +73,8 @@ public class RoomObjects {
 	// Check if Room continse wounded Character
 	public ICharacter ContainsWounded (ICharacter character)
 	{
-		return characters.Find(v => v.Stats.IsWounded() && v != character && !v.Lock);
+		return characters.
+			Find(v => v.Stats.IsWounded() && v != character && !v.Lock && SidesRelations.Instance.IsEnemies(character, v));
 	}
 	
 }

@@ -49,15 +49,15 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	//
 	// Facade implementations
 	//
-	public void Heal (float amount)
-	{
-		Stats.Health += amount;
-	}
-
 	public void Navigate (Room room, bool full)
 	{
 		AiHandler.ForceState<NavigateState>();
 		Movement.Navigate(room, full);
+	}
+
+	public void Heal (float amount)
+	{
+		Stats.Health += amount;
 	}
 
 	public void Hurt (float amount)

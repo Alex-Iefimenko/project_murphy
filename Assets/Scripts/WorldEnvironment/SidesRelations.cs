@@ -9,6 +9,7 @@ public class SidesRelations {
 	private static readonly object locker = new object();
 	private Dictionary<Sides, string> sideStatTyping;
 	private Dictionary<Sides, Sides[]> sideEnemies;
+	private Dictionary<Sides, Sides[]> sideFriends;
 
 	private SidesRelations()
 	{
@@ -28,6 +29,15 @@ public class SidesRelations {
 			{ Sides.Trader,   new Sides[] { Sides.Pirate, Sides.Creature } },
 			{ Sides.Creature, new Sides[] { Sides.Crew, Sides.Trader, Sides.Pirate, Sides.Player } }, 
 			{ Sides.Player,   new Sides[] { Sides.Pirate, Sides.Creature } }
+		}; 
+
+		sideFriends = new Dictionary<Sides, Sides[]> ()
+		{
+			{ Sides.Crew,     new Sides[] { Sides.Crew, Sides.Player } },
+			{ Sides.Pirate,   new Sides[] { Sides.Pirate } },
+			{ Sides.Trader,   new Sides[] { Sides.Trader } },
+			{ Sides.Creature, new Sides[] { Sides.Creature } }, 
+			{ Sides.Player,   new Sides[] { Sides.Player, Sides.Crew } }
 		}; 
 	}
 
@@ -51,5 +61,10 @@ public class SidesRelations {
 	public bool IsEnemies(ICharacter characterOne, ICharacter characterTwo)
 	{
 		return sideEnemies[characterOne.Side].Contains(characterTwo.Side);
+	}
+
+	public bool IsFriends(ICharacter characterOne, ICharacter characterTwo)
+	{
+		return sideFriends[characterOne.Side].Contains(characterTwo.Side);
 	}
 }

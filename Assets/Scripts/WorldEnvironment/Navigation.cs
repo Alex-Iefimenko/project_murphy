@@ -24,14 +24,13 @@ public class Navigation : MonoBehaviour
 	//private Room initialRoom;
 
 	// Player object
-	private GameObject player;
+	public CharacterMain player;
 	// Mask for filtering depth of raycast
 	private string layerName = "Ship";
 	private int layer;
 
 	void Awake ()
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
 		layer = 1 << LayerMask.NameToLayer(layerName);
 		ship = GameObject.FindGameObjectWithTag("Ship");
 	}
@@ -125,68 +124,64 @@ public class Navigation : MonoBehaviour
 	// Dublicates functionality of TouchControl for mouse
 	void MouseControl ()
 	{
-//		if (Input.GetMouseButtonDown(0))
-//		{
-//			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-//		}
-//		else if (Input.GetMouseButton(0))
-//		{
-//			Camera.main.transform.position += (Camera.main.ScreenToWorldPoint(Input.mousePosition) - touchPosition) * speed;
-//			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-//		}
-//		else if (Input.GetMouseButtonUp(0))
-//		{
-//			Vector3 worldTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-//			RaycastHit2D hit;
-//			hit = Physics2D.Raycast (new Vector2(worldTouch.x,worldTouch.y), Vector2.zero, 20, layer);
-//			if (hit && player) 
-//			{
-//				Movement playerMovement = player.GetComponent<Movement>();
-//				playerMovement.NewMovementPath(hit.collider.GetComponent<Room>(), false);
-//			}
-//		}
-//
-//		if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward
-//		{
-//			Camera.main.orthographicSize += speed;
-//		}
-//		if (Input.GetAxis("Mouse ScrollWheel") < 0) // back
-//		{
-//			Camera.main.orthographicSize -= speed;
-//		}
+		if (Input.GetMouseButtonDown(0))
+		{
+			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		}
+		else if (Input.GetMouseButton(0))
+		{
+			Camera.main.transform.position += (Camera.main.ScreenToWorldPoint(Input.mousePosition) - touchPosition) * speed;
+			touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		}
+		else if (Input.GetMouseButtonUp(0))
+		{
+			Vector3 worldTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			RaycastHit2D hit;
+			hit = Physics2D.Raycast (new Vector2(worldTouch.x,worldTouch.y), Vector2.zero, 20, layer);
+			if (hit && player) player.Navigate(hit.collider.GetComponent<Room>(), true);
+		}
+
+		if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward
+		{
+			Camera.main.orthographicSize += speed;
+		}
+		if (Input.GetAxis("Mouse ScrollWheel") < 0) // back
+		{
+			Camera.main.orthographicSize -= speed;
+		}
 
 	}
 
 	// Updates  camera resize
 	void CameraSizeUpdate ()
 	{
-		Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, cameraSizeMin, cameraSizeMax);
-		if (Camera.main.orthographicSize <= cameraSizeMin + 0.5f && isResetPreviously)
-		{
-			Camera.main.orthographicSize += 2 * speed * Time.deltaTime;
-		}
-		else if (Camera.main.orthographicSize >= cameraSizeMax - 1f && isResetPreviously)
-		{
-			Camera.main.orthographicSize -= 2 * speed * Time.deltaTime;
-		}
-
-		// Block far camera movement
-		Vector3 v3Camera = Camera.main.transform.position;
-		Vector2 cameraSize = new Vector2 (
-			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).x - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).x, 
-			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).y - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).y
-			);
-
-		// OX
-		float xMin = ship.transform.position.x - ship.renderer.bounds.size.x / 2f - 0.45f * cameraSize.x;
-		float xMax = ship.transform.position.x + ship.renderer.bounds.size.x / 2f + 0.45f * cameraSize.x;
-		v3Camera.x = Mathf.Clamp (v3Camera.x, xMin, xMax);
-		
-		// OY
-		float yMin = ship.transform.position.y - ship.renderer.bounds.size.y / 2f - 0.45f * cameraSize.y;
-		float yMax = ship.transform.position.y + ship.renderer.bounds.size.y / 2f + 0.45f * cameraSize.y;
-		v3Camera.y = Mathf.Clamp (v3Camera.y, yMin, yMax);
-
-		Camera.main.transform.position = v3Camera;
+//		Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, cameraSizeMin, cameraSizeMax);
+//		if (Camera.main.orthographicSize <= cameraSizeMin + 0.5f && isResetPreviously)
+//		{
+//			Camera.main.orthographicSize += 2 * speed * Time.deltaTime;
+//		}
+//		else if (Camera.main.orthographicSize >= cameraSizeMax - 1f && isResetPreviously)
+//		{
+//			Camera.main.orthographicSize -= 2 * speed * Time.deltaTime;
+//		}
+//
+//		// Block far camera movement
+//		Vector3 v3Camera = Camera.main.transform.position;
+//		Vector2 cameraSize = new Vector2 (
+//			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).x - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).x, 
+//			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).y - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).y
+//			);
+//
+//		// OX
+//		float xMin = ship.transform.position.x - ship.renderer.bounds.size.x / 2f - 0.45f * cameraSize.x;
+//		float xMax = ship.transform.position.x + ship.renderer.bounds.size.x / 2f + 0.45f * cameraSize.x;
+//		v3Camera.x = Mathf.Clamp (v3Camera.x, xMin, xMax);
+//		
+//		// OY
+//		float yMin = ship.transform.position.y - ship.renderer.bounds.size.y / 2f - 0.45f * cameraSize.y;
+//		float yMax = ship.transform.position.y + ship.renderer.bounds.size.y / 2f + 0.45f * cameraSize.y;
+//		v3Camera.y = Mathf.Clamp (v3Camera.y, yMin, yMax);
+//
+//		Camera.main.transform.position = v3Camera;
 	}
 }

@@ -1,0 +1,14 @@
+{
+  "AIFlow":[
+    "Dead",
+    "Navigate",
+   	"Defend",
+   	"Extinguish",
+   	"Repair",
+    "CleanChemistry",
+    "CleanRadiation",
+    "TakeWoundedBody",
+    "EliminateDeadBody"
+  ]
+}
+

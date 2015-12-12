@@ -22,3 +22,4 @@ public class Initializer : MonoBehaviour {
 		for (int i = 0; i < allCreators.Length; i++) allCreators[i].GetComponent<CharacterCreater>().CreateCharacter();
 	}
 }
+		                                 

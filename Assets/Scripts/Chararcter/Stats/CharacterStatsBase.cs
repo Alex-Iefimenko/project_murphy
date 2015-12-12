@@ -54,6 +54,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public virtual void StatsUpdate()
 	{
 		health = health + healthRegeneration - healthReduction;
+		health = Mathf.Clamp(Health, -10f, MaxHealth);
 	}
 
 	public virtual void Purge ()

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ShipState {
 
@@ -10,6 +11,7 @@ public class ShipState {
 	public Door[] allDoors;
 	public Room[] allRooms;
 	public CharacterMain[] allCharacters;
+	public CharacterMain player;
 	public Dictionary<Enums.RoomTypes, Room> specRooms;
 	private ShipStructure shipStructure;
 
@@ -36,6 +38,8 @@ public class ShipState {
 	public void CountCharacters ()
 	{
 		allCharacters = StoreComponent<CharacterMain>(GameObject.FindGameObjectsWithTag("Character"));
+		player = System.Array.Find(allCharacters, v => v.Type == Enums.CharacterTypes.Murphy);
+		if (player) GameObject.FindGameObjectWithTag("GameController").GetComponent<Navigation>().player = player;
 	}
 
 	// Returns list of world points for NPC traveling

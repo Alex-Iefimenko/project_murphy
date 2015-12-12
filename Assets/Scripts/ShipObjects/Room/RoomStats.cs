@@ -38,11 +38,11 @@ public class RoomStats : MonoBehaviour {
 
 	private void Update ()
 	{
-		Mathf.Clamp(durability, -1f, maxDurability);
-		Mathf.Clamp(fireLevel, -1f, 100f);
-		Mathf.Clamp(radiationLevel, -1f, 100f);
-		Mathf.Clamp(chemistryLevel, -1f, 100f);
-		Mathf.Clamp(plantsLevel, -1f, 100f);
+		durability = Mathf.Clamp(durability, -1f, maxDurability);
+		fireLevel = Mathf.Clamp(fireLevel, -1f, 100f);
+		radiationLevel = Mathf.Clamp(radiationLevel, -1f, 100f);
+		chemistryLevel = Mathf.Clamp(chemistryLevel, -1f, 100f);
+		plantsLevel = Mathf.Clamp(plantsLevel, -1f, 100f);
 	}
 
 	public bool IsBroken ()
