@@ -3,12 +3,14 @@
     "Dead",
     "Navigate",
    	"Defend",
+   	"FirstAid",
    	"Extinguish",
    	"Repair",
     "CleanChemistry",
     "CleanRadiation",
     "TakeWoundedBody",
-    "EliminateDeadBody"
+    "EliminateDeadBody",
+    "Idle"
   ]
 }
 
