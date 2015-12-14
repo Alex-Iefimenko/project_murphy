@@ -17,6 +17,7 @@ TextureImporter:
     21300024: ObjectAndSignes2_11
     21300026: ObjectAndSignes2_12
     21300028: ObjectAndSignes2_13
+    21300030: ObjectAndSignes2_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -66,7 +67,7 @@ TextureImporter:
         width: 126
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_1
       rect:
@@ -76,7 +77,7 @@ TextureImporter:
         width: 76
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_2
       rect:
@@ -86,7 +87,7 @@ TextureImporter:
         width: 153
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_3
       rect:
@@ -96,7 +97,7 @@ TextureImporter:
         width: 106
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_4
       rect:
@@ -106,7 +107,7 @@ TextureImporter:
         width: 106
         height: 119
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_5
       rect:
@@ -116,7 +117,7 @@ TextureImporter:
         width: 108
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_6
       rect:
@@ -126,7 +127,7 @@ TextureImporter:
         width: 107
         height: 119
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_7
       rect:
@@ -136,7 +137,7 @@ TextureImporter:
         width: 145
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_8
       rect:
@@ -156,7 +157,7 @@ TextureImporter:
         width: 56
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_10
       rect:
@@ -166,7 +167,7 @@ TextureImporter:
         width: 56
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_11
       rect:
@@ -176,7 +177,7 @@ TextureImporter:
         width: 167
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_12
       rect:
@@ -186,7 +187,7 @@ TextureImporter:
         width: 60
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes2_13
       rect:
@@ -195,6 +196,16 @@ TextureImporter:
         y: 10
         width: 60
         height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes2_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 174
+        width: 78
+        height: 77
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
