@@ -6,6 +6,13 @@ TextureImporter:
     21300002: VFX2_0
     21300004: VFX2_1
     21300006: VFX2_2
+    21300008: VFX2_3
+    21300010: VFX2_5
+    21300012: VFX2_6
+    21300014: VFX2_8
+    21300016: VFX2_9
+    21300018: VFX2_7
+    21300020: VFX2_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,8 +61,8 @@ TextureImporter:
         y: 292
         width: 224
         height: 212
-      alignment: 9
-      pivot: {x: .561705887, y: .537746668}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: VFX2_1
       rect:
@@ -70,12 +77,62 @@ TextureImporter:
     - name: VFX2_2
       rect:
         serializedVersion: 2
-        x: 25
-        y: 156
+        x: 26
+        y: 157
         width: 171
         height: 128
-      alignment: 9
-      pivot: {x: .559559762, y: .52841723}
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX2_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 103
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 43
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX2_8
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 14
+        width: 49
+        height: 123
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX2_9
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 6
+        width: 79
+        height: 130
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: VFX2_10
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 2
+        width: 171
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
