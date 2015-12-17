@@ -39,7 +39,7 @@ public class ShipState {
 	{
 		allCharacters = StoreComponent<CharacterMain>(GameObject.FindGameObjectsWithTag("Character"));
 		player = System.Array.Find(allCharacters, v => v.Type == Enums.CharacterTypes.Murphy);
-		if (player) GameObject.FindGameObjectWithTag("GameController").GetComponent<Navigation>().player = player;
+		if (player) GameObject.FindGameObjectWithTag("GameController").GetComponent<Navigation>().Player = player;
 	}
 
 	// Returns list of world points for NPC traveling
