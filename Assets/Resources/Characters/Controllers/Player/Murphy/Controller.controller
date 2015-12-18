@@ -994,7 +994,7 @@ Transition:
     m_ExitTime: 1.00455618
   - m_ConditionMode: 6
     m_ConditionEvent: SubState
-    m_EventTreshold: 3
+    m_EventTreshold: 1
     m_ExitTime: 1.00455618
   m_Atomic: 1
   m_Solo: 0
