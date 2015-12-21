@@ -1821,11 +1821,11 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
-    m_EventTreshold: 3
+    m_EventTreshold: 15
     m_ExitTime: 1.00455618
   - m_ConditionMode: 6
     m_ConditionEvent: SubState
-    m_EventTreshold: 10
+    m_EventTreshold: 1
     m_ExitTime: 1.00455618
   m_Atomic: 1
   m_Solo: 0
@@ -2672,13 +2672,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110223758}
-      second:
-      - {fileID: 110123473}
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
       first: {fileID: 0}
       second: []
     data:
@@ -2756,6 +2749,10 @@ StateMachine:
       - {fileID: 110113378}
       - {fileID: 110183405}
     data:
+      first: {fileID: 110223758}
+      second:
+      - {fileID: 110123473}
+    data:
       first: {fileID: 110234015}
       second:
       - {fileID: 110118622}
@@ -2765,12 +2762,6 @@ StateMachine:
       second:
       - {fileID: 110142292}
       - {fileID: 110139675}
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
     data:
       first: {fileID: 110264999}
       second:
@@ -2805,15 +2796,6 @@ StateMachine:
       first: {fileID: 110288886}
       second:
       - {fileID: 110161185}
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
     data:
       first: {fileID: 110239916}
       second:

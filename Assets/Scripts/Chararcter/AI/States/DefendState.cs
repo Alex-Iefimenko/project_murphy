@@ -72,7 +72,7 @@ public class DefendState : StateBase {
 		thisShot.GetComponent<Shot>().Target = enemy.GObject;
 		enemy.Hurt(character.Stats.Damage);
 		character.Stats.AttackCoolDown = character.Stats.AttackRate;
-		character.View.SetSubState(0);
+//		character.View.SetSubState(0);
 	}
 
 }
