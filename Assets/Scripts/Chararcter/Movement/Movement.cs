@@ -157,8 +157,9 @@ public class Movement : MonoBehaviour, IMovement {
 	{
 		while(transform.position != endPoint)
 		{
+			endPoint.z = transform.position.z;
 			transform.position = Vector3.MoveTowards(transform.position, endPoint, speed * Time.deltaTime);
-			if (stopOnTargetTouch && charColl.bounds.Intersects (target.collider2D.bounds)) yield break;
+			if (stopOnTargetTouch && IsNearObject(target)) yield break;
 			yield return null;
 		}
 		if (target != null) character.View.RotateTowards (target.transform.position);

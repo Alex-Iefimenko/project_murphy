@@ -43,7 +43,7 @@ public class DefendState : StateBase {
 		if (character.Movement.IsMoving() == false 
 		    && character.Stats.AbbleDistantAttack == false
 		    && character.Movement.IsNearObject(enemy.GObject) == false)
-			character.PurgeActions();
+			NavigateTo(enemy);
 		if (enemy.Movement.CurrentRoom != character.Movement.CurrentRoom)
 			character.PurgeActions();
 		if (enemy.Stats.IsDead() || enemy.Stats.IsUnconscious())
@@ -57,7 +57,7 @@ public class DefendState : StateBase {
 			character.View.SetSubState(1);
 			enemy.Hurt(character.Stats.Damage);
 			character.Stats.AttackCoolDown = character.Stats.AttackRate;
-			character.View.SetSubState(0);
+//			character.View.SetSubState(0);
 		}
 	}
 

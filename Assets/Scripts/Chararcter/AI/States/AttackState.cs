@@ -57,7 +57,7 @@ public class AttackState : StateBase {
 			character.View.SetSubState(1);
 			enemy.Hurt(character.Stats.Damage);
 			character.Stats.AttackCoolDown = character.Stats.AttackRate;
-			character.View.SetSubState(0);
+//			character.View.SetSubState(0);
 		}
 	}
 	
