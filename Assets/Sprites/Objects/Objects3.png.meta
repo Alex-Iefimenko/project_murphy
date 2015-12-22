@@ -30,6 +30,9 @@ TextureImporter:
     21300050: Objects3_25
     21300052: Objects3_26
     21300054: Objects3_27
+    21300056: Objects3_28
+    21300058: Objects3_29
+    21300060: Objects3_30
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -348,6 +351,36 @@ TextureImporter:
         y: 107
         width: 113
         height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Objects3_28
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 219
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Objects3_29
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 165
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Objects3_30
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 72
+        width: 89
+        height: 87
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
