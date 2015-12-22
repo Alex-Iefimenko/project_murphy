@@ -1370,8 +1370,8 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110215186}
   m_DstState: {fileID: 110285731}
-  m_TransitionDuration: .00709299091
-  m_TransitionOffset: .238808885
+  m_TransitionDuration: .0297206044
+  m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
@@ -1626,8 +1626,8 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110285731}
   m_DstState: {fileID: 110230469}
-  m_TransitionDuration: 0
-  m_TransitionOffset: .250458062
+  m_TransitionDuration: .00658398867
+  m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: State
@@ -1635,7 +1635,7 @@ Transition:
     m_ExitTime: 1.00455618
   - m_ConditionMode: 6
     m_ConditionEvent: SubState
-    m_EventTreshold: 10
+    m_EventTreshold: 1
     m_ExitTime: 1.00455618
   m_Atomic: 1
   m_Solo: 0
@@ -2454,15 +2454,8 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110264905}
-      second:
-      - {fileID: 110155851}
-      - {fileID: 110143546}
-    data:
-      first: {fileID: 110275796}
-      second:
-      - {fileID: 110194540}
-      - {fileID: 110116881}
+      first: {fileID: 0}
+      second: []
     data:
       first: {fileID: 110200000}
       second:
@@ -2541,18 +2534,6 @@ StateMachine:
       second:
       - {fileID: 110123473}
     data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
       first: {fileID: 110264999}
       second:
       - {fileID: 110172477}
@@ -2587,8 +2568,15 @@ StateMachine:
       second:
       - {fileID: 110161185}
     data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110275796}
+      second:
+      - {fileID: 110194540}
+      - {fileID: 110116881}
+    data:
+      first: {fileID: 110264905}
+      second:
+      - {fileID: 110155851}
+      - {fileID: 110143546}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 384, y: -24, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

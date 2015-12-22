@@ -11,6 +11,10 @@ TextureImporter:
     21300012: Captain_5
     21300014: Captain_6
     21300016: Captain_7
+    21300018: Captain_8
+    21300020: Captain_9
+    21300022: Captain_10
+    21300024: Captain_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -129,6 +133,46 @@ TextureImporter:
         y: 166
         width: 90
         height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Captain_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1
+        width: 85
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Captain_9
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1
+        width: 85
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Captain_10
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1
+        width: 82
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Captain_11
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 3
+        width: 82
+        height: 158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
