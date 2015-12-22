@@ -18,6 +18,9 @@ TextureImporter:
     21300026: ObjectAndSignes2_12
     21300028: ObjectAndSignes2_13
     21300030: ObjectAndSignes2_14
+    21300032: ObjectAndSignes2_15
+    21300034: ObjectAndSignes2_16
+    21300036: ObjectAndSignes2_17
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -202,10 +205,40 @@ TextureImporter:
     - name: ObjectAndSignes2_14
       rect:
         serializedVersion: 2
-        x: 188
-        y: 174
-        width: 78
-        height: 77
+        x: 175
+        y: 186
+        width: 113
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes2_15
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 383
+        width: 119
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes2_16
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 381
+        width: 116
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ObjectAndSignes2_17
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 217
+        width: 114
+        height: 24
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
