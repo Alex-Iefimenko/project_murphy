@@ -30,6 +30,9 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		AiHandler = CharacterAIGenerator.GenerateAIHandler(this);
 		View = (ICharacterView)gameObject.AddComponent("CharacterView");
 		Broadcaster.Instance.tickEvent += Tick;
+		Component[] sprites = GetComponentsInChildren(typeof(SpriteRenderer), true);
+		int layer = Random.Range(100, 32766);
+		foreach (SpriteRenderer sprite in sprites) sprite.sortingOrder = layer;
 	}
 
 	public void PurgeActions ()
