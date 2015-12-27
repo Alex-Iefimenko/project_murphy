@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &6352844
 GameObject:
@@ -87,7 +86,7 @@ GameObject:
   - 50: {fileID: 6352849}
   - 61: {fileID: 6352848}
   - 114: {fileID: 6352847}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,11 +210,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: dfc1fdf60889aeb498ee7f4eb3589b1b, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 196252, guid: dfc1fdf60889aeb498ee7f4eb3589b1b, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfc1fdf60889aeb498ee7f4eb3589b1b, type: 2}
@@ -302,7 +301,7 @@ GameObject:
   - 50: {fileID: 18793701}
   - 61: {fileID: 18793700}
   - 114: {fileID: 18793702}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,11 +481,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -505,7 +504,7 @@ GameObject:
   - 50: {fileID: 20034592}
   - 61: {fileID: 20034591}
   - 114: {fileID: 20034593}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SuitWardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +596,7 @@ GameObject:
   - 4: {fileID: 23010634}
   - 212: {fileID: 23010636}
   - 95: {fileID: 23010635}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152672, guid: 46cb6a1ca2c07ef42b43b6abb1230a04, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46cb6a1ca2c07ef42b43b6abb1230a04, type: 2}
@@ -757,7 +756,7 @@ GameObject:
   - 4: {fileID: 25926973}
   - 198: {fileID: 25926975}
   - 199: {fileID: 25926974}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1903,7 +1902,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114682, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
@@ -1920,7 +1919,7 @@ GameObject:
   - 4: {fileID: 32001892}
   - 212: {fileID: 32001894}
   - 95: {fileID: 32001893}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2023,7 +2022,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114912, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
@@ -2041,7 +2040,7 @@ GameObject:
   - 212: {fileID: 35522331}
   - 61: {fileID: 35522334}
   - 50: {fileID: 35522333}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2318,7 +2317,7 @@ GameObject:
   - 212: {fileID: 38905068}
   - 61: {fileID: 38905071}
   - 50: {fileID: 38905070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2437,11 +2436,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -2464,7 +2463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &44613149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2563,7 +2562,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -2580,7 +2579,7 @@ GameObject:
   - 4: {fileID: 46448754}
   - 212: {fileID: 46448756}
   - 95: {fileID: 46448755}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2687,11 +2686,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -2743,7 +2742,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185596, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
@@ -2847,7 +2846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 184746, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
@@ -2907,7 +2906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -2925,7 +2924,7 @@ GameObject:
   - 212: {fileID: 58918626}
   - 50: {fileID: 58918629}
   - 61: {fileID: 58918628}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3007,7 +3006,7 @@ GameObject:
   - 50: {fileID: 66996126}
   - 61: {fileID: 66996125}
   - 114: {fileID: 66996127}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SuitWardrobe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3146,7 +3145,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -3231,7 +3230,7 @@ GameObject:
   - 4: {fileID: 75744487}
   - 95: {fileID: 75744489}
   - 114: {fileID: 75744488}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RoomFireVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3324,7 +3323,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 129602, guid: e5685f2608a86714b95e850f714bd219, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5685f2608a86714b95e850f714bd219, type: 2}
@@ -3380,7 +3379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -3397,7 +3396,7 @@ GameObject:
   - 4: {fileID: 79170616}
   - 212: {fileID: 79170618}
   - 95: {fileID: 79170617}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DarkDisposal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3464,7 +3463,7 @@ GameObject:
   - 212: {fileID: 80431514}
   - 50: {fileID: 80431517}
   - 61: {fileID: 80431516}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3583,15 +3582,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -3608,7 +3607,7 @@ GameObject:
   - 4: {fileID: 83959059}
   - 114: {fileID: 83959060}
   - 95: {fileID: 83959061}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RoomRadiationVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3818,7 +3817,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 91308421}
   - 212: {fileID: 91308420}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LivingQuartersIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3870,7 +3869,7 @@ GameObject:
   - 4: {fileID: 94972883}
   - 114: {fileID: 94972885}
   - 95: {fileID: 94972884}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RoomDestroyedVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3927,7 +3926,7 @@ GameObject:
   - 4: {fileID: 96124770}
   - 212: {fileID: 96124772}
   - 95: {fileID: 96124771}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3995,7 +3994,7 @@ GameObject:
   - 4: {fileID: 99919969}
   - 212: {fileID: 99919971}
   - 95: {fileID: 99919970}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4098,7 +4097,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 104058, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
@@ -4115,7 +4114,7 @@ GameObject:
   - 4: {fileID: 102085124}
   - 212: {fileID: 102085126}
   - 95: {fileID: 102085125}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4251,7 +4250,7 @@ GameObject:
   - 4: {fileID: 103661749}
   - 212: {fileID: 103661751}
   - 95: {fileID: 103661750}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4319,7 +4318,7 @@ GameObject:
   - 4: {fileID: 105800409}
   - 198: {fileID: 105800411}
   - 199: {fileID: 105800410}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5435,7 +5434,7 @@ GameObject:
   - 212: {fileID: 105856445}
   - 50: {fileID: 105856448}
   - 61: {fileID: 105856447}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SecurityMonitor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5554,7 +5553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 102392, guid: c4f81504e05d10a47af008b4c35b7e3d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4f81504e05d10a47af008b4c35b7e3d, type: 2}
@@ -5623,7 +5622,7 @@ GameObject:
   - 4: {fileID: 108923158}
   - 198: {fileID: 108923160}
   - 199: {fileID: 108923159}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6855,7 +6854,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 117471437}
   - 212: {fileID: 117471438}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6997,7 +6996,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -7117,7 +7116,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 104058, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
@@ -7135,7 +7134,7 @@ GameObject:
   - 212: {fileID: 125883844}
   - 61: {fileID: 125883847}
   - 50: {fileID: 125883846}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MedCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7254,11 +7253,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -7310,7 +7309,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152304, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
       propertyPath: m_Center.y
@@ -7335,7 +7334,7 @@ GameObject:
   - 4: {fileID: 138336318}
   - 198: {fileID: 138336320}
   - 199: {fileID: 138336319}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8497,7 +8496,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -8557,7 +8556,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -8572,7 +8571,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 141630706}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EndState2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8807,7 +8806,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 152159808}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8878,7 +8877,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
@@ -9083,7 +9082,7 @@ GameObject:
   - 4: {fileID: 159955867}
   - 212: {fileID: 159955869}
   - 95: {fileID: 159955868}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9206,7 +9205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 107538, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
@@ -9221,7 +9220,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 161164252}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: StartState2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9289,7 +9288,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -9358,7 +9357,7 @@ GameObject:
   - 4: {fileID: 166319115}
   - 198: {fileID: 166319117}
   - 199: {fileID: 166319116}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10540,11 +10539,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -10561,7 +10560,7 @@ GameObject:
   - 4: {fileID: 171947427}
   - 198: {fileID: 171947429}
   - 199: {fileID: 171947428}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11628,7 +11627,7 @@ GameObject:
   - 50: {fileID: 173416750}
   - 61: {fileID: 173416749}
   - 114: {fileID: 173416748}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11720,7 +11719,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 175663522}
   - 212: {fileID: 175663523}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11773,7 +11772,7 @@ GameObject:
   - 4: {fileID: 177757102}
   - 198: {fileID: 177757104}
   - 199: {fileID: 177757103}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12887,7 +12886,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 181206515}
   - 212: {fileID: 181206516}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12975,7 +12974,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114682, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
@@ -13035,11 +13034,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -13143,7 +13142,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -13162,7 +13161,7 @@ GameObject:
   - 50: {fileID: 186755916}
   - 61: {fileID: 186755915}
   - 114: {fileID: 186755914}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13286,7 +13285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100926, guid: dbd00de322b367b4184f6411143c96c2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbd00de322b367b4184f6411143c96c2, type: 2}
@@ -13302,7 +13301,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 192507271}
   - 212: {fileID: 192507272}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13354,7 +13353,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 192583215}
   - 212: {fileID: 192583216}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13406,7 +13405,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 195088974}
   - 212: {fileID: 195088975}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13457,7 +13456,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 197610993}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13490,7 +13489,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 199223362}
   - 212: {fileID: 199223363}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13750,7 +13749,7 @@ GameObject:
   - 61: {fileID: 214930883}
   - 50: {fileID: 214930882}
   - 114: {fileID: 214930881}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13939,7 +13938,7 @@ GameObject:
   - 4: {fileID: 231076449}
   - 212: {fileID: 231076451}
   - 95: {fileID: 231076450}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14005,7 +14004,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 237994698}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: StartState3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14038,7 +14037,7 @@ GameObject:
   - 4: {fileID: 243310242}
   - 212: {fileID: 243310244}
   - 95: {fileID: 243310243}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14104,7 +14103,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 246582642}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireFinishState3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14181,7 +14180,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
@@ -14229,7 +14228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 127320, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
@@ -14246,7 +14245,7 @@ GameObject:
   - 4: {fileID: 254045854}
   - 212: {fileID: 254045856}
   - 95: {fileID: 254045855}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14384,7 +14383,7 @@ GameObject:
   - 4: {fileID: 260019350}
   - 198: {fileID: 260019352}
   - 199: {fileID: 260019351}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15499,7 +15498,7 @@ GameObject:
   - 4: {fileID: 260297037}
   - 212: {fileID: 260297039}
   - 95: {fileID: 260297038}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15620,7 +15619,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 262652260}
   - 212: {fileID: 262652261}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SmallCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15755,15 +15754,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -15824,7 +15823,7 @@ GameObject:
   - 4: {fileID: 285569917}
   - 212: {fileID: 285569919}
   - 95: {fileID: 285569918}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ExplotionsVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15927,11 +15926,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -15950,7 +15949,7 @@ GameObject:
   - 50: {fileID: 288223256}
   - 61: {fileID: 288223255}
   - 114: {fileID: 288223254}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16044,7 +16043,7 @@ GameObject:
   - 212: {fileID: 289511430}
   - 61: {fileID: 289511433}
   - 50: {fileID: 289511432}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16126,7 +16125,7 @@ GameObject:
   - 50: {fileID: 290156282}
   - 61: {fileID: 290156281}
   - 114: {fileID: 290156280}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16218,7 +16217,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 291413250}
   - 212: {fileID: 291413251}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16271,7 +16270,7 @@ GameObject:
   - 4: {fileID: 295095167}
   - 212: {fileID: 295095169}
   - 95: {fileID: 295095168}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16337,7 +16336,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 299642166}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16419,7 +16418,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -16467,7 +16466,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 148796, guid: 03ccc408e62b9ef42bbe29ff8c46d405, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03ccc408e62b9ef42bbe29ff8c46d405, type: 2}
@@ -16485,7 +16484,7 @@ GameObject:
   - 212: {fileID: 308552160}
   - 50: {fileID: 308552163}
   - 61: {fileID: 308552162}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16608,7 +16607,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -17923,7 +17922,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 153160, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
@@ -17992,7 +17991,7 @@ GameObject:
   - 4: {fileID: 321268025}
   - 212: {fileID: 321268027}
   - 95: {fileID: 321268026}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18060,7 +18059,7 @@ GameObject:
   - 4: {fileID: 327458037}
   - 212: {fileID: 327458039}
   - 95: {fileID: 327458038}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ExplotionsVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18130,7 +18129,7 @@ GameObject:
   - 114: {fileID: 328407344}
   - 50: {fileID: 328407343}
   - 61: {fileID: 328407342}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18258,7 +18257,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 104058, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
@@ -18275,7 +18274,7 @@ GameObject:
   - 4: {fileID: 334254700}
   - 198: {fileID: 334254702}
   - 199: {fileID: 334254701}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19390,7 +19389,7 @@ GameObject:
   - 4: {fileID: 334600004}
   - 198: {fileID: 334600006}
   - 199: {fileID: 334600005}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20506,7 +20505,7 @@ GameObject:
   - 212: {fileID: 336350696}
   - 50: {fileID: 336350699}
   - 61: {fileID: 336350698}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20660,7 +20659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &336810530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20723,7 +20722,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 346821266}
   - 212: {fileID: 346821267}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21891,7 +21890,7 @@ GameObject:
   - 4: {fileID: 348944536}
   - 198: {fileID: 348944538}
   - 199: {fileID: 348944537}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23074,7 +23073,7 @@ GameObject:
   - 4: {fileID: 352924859}
   - 212: {fileID: 352924861}
   - 95: {fileID: 352924860}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23142,7 +23141,7 @@ GameObject:
   - 4: {fileID: 354494990}
   - 212: {fileID: 354494992}
   - 95: {fileID: 354494991}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23245,7 +23244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123386, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
@@ -23297,7 +23296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 194672, guid: a5c52def832bf04498d3b97fe5753ecb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: a5c52def832bf04498d3b97fe5753ecb, type: 2}
       propertyPath: m_Center.y
@@ -23318,7 +23317,7 @@ GameObject:
   - 4: {fileID: 361430066}
   - 198: {fileID: 361430068}
   - 199: {fileID: 361430067}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24434,7 +24433,7 @@ GameObject:
   - 212: {fileID: 387372160}
   - 50: {fileID: 387372163}
   - 61: {fileID: 387372162}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24587,7 +24586,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 388016736}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Rooms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24702,7 +24701,7 @@ GameObject:
   - 212: {fileID: 394421007}
   - 50: {fileID: 394421010}
   - 61: {fileID: 394421009}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24781,7 +24780,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 398268291}
   - 212: {fileID: 398268290}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: KitchenIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24924,7 +24923,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -24980,15 +24979,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -25005,7 +25004,7 @@ GameObject:
   - 4: {fileID: 408021054}
   - 212: {fileID: 408021056}
   - 95: {fileID: 408021055}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25071,7 +25070,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 408174803}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25109,7 +25108,7 @@ GameObject:
   - 50: {fileID: 409618742}
   - 61: {fileID: 409618741}
   - 114: {fileID: 409618740}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25237,7 +25236,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -25297,7 +25296,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -25313,7 +25312,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 415881621}
   - 212: {fileID: 415881620}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DisposalIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25363,7 +25362,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419610830}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireFinishState2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25436,11 +25435,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -25496,7 +25495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 104058, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
@@ -25512,7 +25511,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428906153}
   - 212: {fileID: 428906152}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArilockIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25603,7 +25602,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
@@ -25619,7 +25618,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 434210139}
   - 212: {fileID: 434210140}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25672,7 +25671,7 @@ GameObject:
   - 4: {fileID: 436929163}
   - 198: {fileID: 436929165}
   - 199: {fileID: 436929164}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26921,7 +26920,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443652847}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26951,7 +26950,7 @@ GameObject:
   - 4: {fileID: 445895390}
   - 212: {fileID: 445895392}
   - 95: {fileID: 445895391}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27058,7 +27057,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -27076,7 +27075,7 @@ GameObject:
   - 212: {fileID: 446375478}
   - 50: {fileID: 446375481}
   - 61: {fileID: 446375480}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27195,7 +27194,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -27214,7 +27213,7 @@ GameObject:
   - 61: {fileID: 458679765}
   - 50: {fileID: 458679764}
   - 114: {fileID: 458679763}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EngineerRoomComp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27342,7 +27341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 153652, guid: 2771c718206923440bd0f76426fa6ace, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 2771c718206923440bd0f76426fa6ace, type: 2}
       propertyPath: m_Center.y
@@ -27362,7 +27361,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460035710}
   - 212: {fileID: 460035709}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ShipAirLockRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27570,7 +27569,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114912, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
@@ -27630,11 +27629,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -27651,7 +27650,7 @@ GameObject:
   - 4: {fileID: 472860839}
   - 198: {fileID: 472860841}
   - 199: {fileID: 472860840}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28827,7 +28826,7 @@ GameObject:
   - 212: {fileID: 473739803}
   - 50: {fileID: 473739806}
   - 61: {fileID: 473739805}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28938,7 +28937,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 171446, guid: 0a30aebaf8951404f811ba8820e55ac9, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a30aebaf8951404f811ba8820e55ac9, type: 2}
@@ -28955,7 +28954,7 @@ GameObject:
   - 4: {fileID: 483435259}
   - 198: {fileID: 483435261}
   - 199: {fileID: 483435260}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30191,7 +30190,7 @@ GameObject:
   - 50: {fileID: 496607469}
   - 61: {fileID: 496607468}
   - 114: {fileID: 496607470}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SuitWardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30333,7 +30332,7 @@ GameObject:
   - 4: {fileID: 499145681}
   - 212: {fileID: 499145683}
   - 95: {fileID: 499145682}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30432,7 +30431,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -30451,7 +30450,7 @@ GameObject:
   - 50: {fileID: 503309628}
   - 61: {fileID: 503309627}
   - 114: {fileID: 503309626}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30544,7 +30543,7 @@ GameObject:
   - 4: {fileID: 505824148}
   - 198: {fileID: 505824150}
   - 199: {fileID: 505824149}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31803,7 +31802,7 @@ GameObject:
   - 212: {fileID: 512504897}
   - 61: {fileID: 512504900}
   - 50: {fileID: 512504899}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MedEquip1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31883,7 +31882,7 @@ GameObject:
   - 4: {fileID: 516014891}
   - 212: {fileID: 516014893}
   - 95: {fileID: 516014892}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32003,7 +32002,7 @@ GameObject:
   - 4: {fileID: 519872735}
   - 212: {fileID: 519872737}
   - 95: {fileID: 519872736}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32071,7 +32070,7 @@ GameObject:
   - 4: {fileID: 521676685}
   - 212: {fileID: 521676687}
   - 95: {fileID: 521676686}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33344,7 +33343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -33361,7 +33360,7 @@ GameObject:
   - 4: {fileID: 534798488}
   - 198: {fileID: 534798490}
   - 199: {fileID: 534798489}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34477,7 +34476,7 @@ GameObject:
   - 212: {fileID: 547700074}
   - 61: {fileID: 547700077}
   - 50: {fileID: 547700076}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34557,7 +34556,7 @@ GameObject:
   - 4: {fileID: 550883147}
   - 198: {fileID: 550883149}
   - 199: {fileID: 550883148}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35623,7 +35622,7 @@ GameObject:
   - 212: {fileID: 560214424}
   - 61: {fileID: 560214427}
   - 50: {fileID: 560214426}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MedCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35806,7 +35805,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -35822,7 +35821,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 576849937}
   - 212: {fileID: 576849938}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BigCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35913,7 +35912,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 68d38ae9e3dddec408bb9928d2afcb83, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68d38ae9e3dddec408bb9928d2afcb83, type: 2}
@@ -35965,7 +35964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 198380, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
@@ -35983,7 +35982,7 @@ GameObject:
   - 212: {fileID: 579640930}
   - 50: {fileID: 579640933}
   - 61: {fileID: 579640932}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36114,7 +36113,7 @@ GameObject:
   - 50: {fileID: 586437839}
   - 61: {fileID: 586437838}
   - 114: {fileID: 586437837}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36258,7 +36257,7 @@ GameObject:
   - 212: {fileID: 587977456}
   - 50: {fileID: 587977459}
   - 61: {fileID: 587977458}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36339,7 +36338,7 @@ GameObject:
   - 212: {fileID: 588864180}
   - 61: {fileID: 588864183}
   - 50: {fileID: 588864182}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EngineerEquip1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36419,7 +36418,7 @@ GameObject:
   - 4: {fileID: 588878063}
   - 212: {fileID: 588878065}
   - 95: {fileID: 588878064}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36524,7 +36523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123386, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
@@ -36580,7 +36579,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -37896,7 +37895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 118932, guid: c219381ce8e78c74ab4c83641f0f5ac4, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c219381ce8e78c74ab4c83641f0f5ac4, type: 2}
@@ -37913,7 +37912,7 @@ GameObject:
   - 4: {fileID: 598332663}
   - 198: {fileID: 598332665}
   - 199: {fileID: 598332664}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39073,7 +39072,7 @@ GameObject:
   - 212: {fileID: 599384824}
   - 61: {fileID: 599384827}
   - 50: {fileID: 599384826}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39184,7 +39183,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123024, guid: ebed8e7c235f42d46b10558110de019d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebed8e7c235f42d46b10558110de019d, type: 2}
@@ -39203,7 +39202,7 @@ GameObject:
   - 61: {fileID: 601408077}
   - 50: {fileID: 601408076}
   - 114: {fileID: 601408075}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39327,7 +39326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 198380, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
@@ -39383,7 +39382,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 101924, guid: 5587052429668ad4eaad9e655ba44d20, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 5587052429668ad4eaad9e655ba44d20, type: 2}
       propertyPath: m_Center.y
@@ -39405,7 +39404,7 @@ GameObject:
   - 212: {fileID: 608785284}
   - 50: {fileID: 608785287}
   - 61: {fileID: 608785286}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39520,7 +39519,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 153160, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
@@ -39572,11 +39571,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -39671,7 +39670,7 @@ GameObject:
   - 4: {fileID: 619988369}
   - 212: {fileID: 619988371}
   - 95: {fileID: 619988370}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39741,7 +39740,7 @@ GameObject:
   - 50: {fileID: 624472386}
   - 61: {fileID: 624472385}
   - 114: {fileID: 624472384}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39836,7 +39835,7 @@ GameObject:
   - 50: {fileID: 625964290}
   - 61: {fileID: 625964289}
   - 114: {fileID: 625964291}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SuitWardrobe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39927,7 +39926,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 626191674}
   - 212: {fileID: 626191675}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ShipAirLockRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40062,7 +40061,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 626675730}
   - 212: {fileID: 626675731}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40154,11 +40153,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -40224,7 +40223,7 @@ GameObject:
   - 4: {fileID: 637561014}
   - 198: {fileID: 637561016}
   - 199: {fileID: 637561015}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41340,7 +41339,7 @@ GameObject:
   - 212: {fileID: 639354805}
   - 50: {fileID: 639354808}
   - 61: {fileID: 639354807}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41418,7 +41417,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 639944644}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41453,7 +41452,7 @@ GameObject:
   - 4: {fileID: 640849474}
   - 198: {fileID: 640849476}
   - 199: {fileID: 640849475}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42568,7 +42567,7 @@ GameObject:
   - 4: {fileID: 646101276}
   - 212: {fileID: 646101278}
   - 95: {fileID: 646101277}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42671,7 +42670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -42719,7 +42718,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 153652, guid: 2771c718206923440bd0f76426fa6ace, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2771c718206923440bd0f76426fa6ace, type: 2}
@@ -42736,7 +42735,7 @@ GameObject:
   - 4: {fileID: 661084699}
   - 212: {fileID: 661084701}
   - 95: {fileID: 661084700}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42899,7 +42898,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -42951,7 +42950,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -43011,7 +43010,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -43028,7 +43027,7 @@ GameObject:
   - 4: {fileID: 683020612}
   - 198: {fileID: 683020614}
   - 199: {fileID: 683020613}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44316,11 +44315,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -44337,7 +44336,7 @@ GameObject:
   - 4: {fileID: 691305187}
   - 212: {fileID: 691305189}
   - 95: {fileID: 691305188}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44440,7 +44439,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 110992, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
@@ -44500,7 +44499,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -44552,7 +44551,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123386, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
@@ -44567,7 +44566,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 697334237}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44765,7 +44764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 107538, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
@@ -44873,15 +44872,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -44897,7 +44896,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 719381266}
   - 212: {fileID: 719381267}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44985,7 +44984,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 110992, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
@@ -45041,11 +45040,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -45062,7 +45061,7 @@ GameObject:
   - 4: {fileID: 735547327}
   - 212: {fileID: 735547329}
   - 95: {fileID: 735547328}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45130,7 +45129,7 @@ GameObject:
   - 4: {fileID: 736359133}
   - 212: {fileID: 736359135}
   - 95: {fileID: 736359134}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45198,7 +45197,7 @@ GameObject:
   - 4: {fileID: 736453084}
   - 212: {fileID: 736453086}
   - 95: {fileID: 736453085}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45265,7 +45264,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 739722591}
   - 212: {fileID: 739722592}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45370,7 +45369,7 @@ GameObject:
   - 4: {fileID: 747257153}
   - 198: {fileID: 747257155}
   - 199: {fileID: 747257154}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46486,7 +46485,7 @@ GameObject:
   - 212: {fileID: 748772812}
   - 50: {fileID: 748772815}
   - 61: {fileID: 748772814}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Core1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46565,7 +46564,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 750185630}
   - 212: {fileID: 750185631}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BigCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46617,7 +46616,7 @@ GameObject:
   - 4: {fileID: 751593417}
   - 198: {fileID: 751593419}
   - 199: {fileID: 751593418}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47771,11 +47770,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -47831,7 +47830,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -47849,7 +47848,7 @@ GameObject:
   - 212: {fileID: 759875960}
   - 50: {fileID: 759875963}
   - 61: {fileID: 759875962}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47928,7 +47927,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 764128796}
   - 212: {fileID: 764128797}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47980,7 +47979,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 764547391}
   - 212: {fileID: 764547392}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48033,7 +48032,7 @@ GameObject:
   - 4: {fileID: 772003277}
   - 212: {fileID: 772003279}
   - 95: {fileID: 772003278}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48100,7 +48099,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 773633322}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48165,7 +48164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 161970, guid: 405f779c60de354469a6e52257262485, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 405f779c60de354469a6e52257262485, type: 2}
@@ -48182,7 +48181,7 @@ GameObject:
   - 4: {fileID: 777545327}
   - 198: {fileID: 777545329}
   - 199: {fileID: 777545328}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49295,7 +49294,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 780678240}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EndState3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49377,7 +49376,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 784300260}
   - 212: {fileID: 784300261}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49430,7 +49429,7 @@ GameObject:
   - 4: {fileID: 785590146}
   - 212: {fileID: 785590148}
   - 95: {fileID: 785590147}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49497,7 +49496,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 788112593}
   - 212: {fileID: 788112594}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49551,7 +49550,7 @@ GameObject:
   - 212: {fileID: 795581878}
   - 50: {fileID: 795581881}
   - 61: {fileID: 795581880}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49674,7 +49673,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -49691,7 +49690,7 @@ GameObject:
   - 4: {fileID: 798205561}
   - 198: {fileID: 798205563}
   - 199: {fileID: 798205562}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50787,11 +50786,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -50808,7 +50807,7 @@ GameObject:
   - 4: {fileID: 800699786}
   - 212: {fileID: 800699788}
   - 95: {fileID: 800699787}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50876,7 +50875,7 @@ GameObject:
   - 4: {fileID: 800986675}
   - 198: {fileID: 800986677}
   - 199: {fileID: 800986676}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51991,7 +51990,7 @@ GameObject:
   - 4: {fileID: 801254139}
   - 212: {fileID: 801254141}
   - 95: {fileID: 801254140}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52111,7 +52110,7 @@ GameObject:
   - 4: {fileID: 803304915}
   - 198: {fileID: 803304917}
   - 199: {fileID: 803304916}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53265,11 +53264,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -53317,7 +53316,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152304, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
@@ -53369,7 +53368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -53413,7 +53412,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 810738897}
   - 212: {fileID: 810738898}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53465,7 +53464,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 814384121}
   - 212: {fileID: 814384120}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ControlRoonIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53519,7 +53518,7 @@ GameObject:
   - 61: {fileID: 818199577}
   - 50: {fileID: 818199576}
   - 114: {fileID: 818199575}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53647,7 +53646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123386, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
@@ -53699,7 +53698,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187350, guid: 64d67699722252d4ca6326e845074c82, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64d67699722252d4ca6326e845074c82, type: 2}
@@ -53717,7 +53716,7 @@ GameObject:
   - 212: {fileID: 825847817}
   - 50: {fileID: 825847816}
   - 61: {fileID: 825847815}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53797,7 +53796,7 @@ GameObject:
   - 4: {fileID: 826145620}
   - 212: {fileID: 826145622}
   - 95: {fileID: 826145621}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53917,7 +53916,7 @@ GameObject:
   - 4: {fileID: 829365471}
   - 198: {fileID: 829365473}
   - 199: {fileID: 829365472}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55021,7 +55020,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -55038,7 +55037,7 @@ GameObject:
   - 4: {fileID: 832923608}
   - 212: {fileID: 832923610}
   - 95: {fileID: 832923609}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55108,7 +55107,7 @@ GameObject:
   - 4: {fileID: 838418753}
   - 212: {fileID: 838418755}
   - 95: {fileID: 838418754}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55261,11 +55260,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -55373,7 +55372,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -55429,7 +55428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -55481,7 +55480,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -55686,7 +55685,7 @@ GameObject:
   - 4: {fileID: 862456380}
   - 212: {fileID: 862456382}
   - 95: {fileID: 862456381}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55754,7 +55753,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 863591242}
   - 212: {fileID: 863591243}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55861,7 +55860,7 @@ GameObject:
   - 61: {fileID: 865642396}
   - 114: {fileID: 865642395}
   - 50: {fileID: 865642394}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56003,7 +56002,7 @@ GameObject:
   - 4: {fileID: 875587557}
   - 212: {fileID: 875587559}
   - 95: {fileID: 875587558}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56072,7 +56071,7 @@ GameObject:
   - 4: {fileID: 875870602}
   - 198: {fileID: 875870604}
   - 199: {fileID: 875870603}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57135,7 +57134,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 876007611}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57186,7 +57185,7 @@ GameObject:
   - 4: {fileID: 876107916}
   - 198: {fileID: 876107918}
   - 199: {fileID: 876107917}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58302,7 +58301,7 @@ GameObject:
   - 212: {fileID: 878287962}
   - 50: {fileID: 878287965}
   - 61: {fileID: 878287964}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58521,7 +58520,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114912, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
@@ -58539,7 +58538,7 @@ GameObject:
   - 212: {fileID: 887186018}
   - 50: {fileID: 887186021}
   - 61: {fileID: 887186020}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58705,7 +58704,7 @@ GameObject:
   - 212: {fileID: 889354121}
   - 61: {fileID: 889354124}
   - 50: {fileID: 889354123}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58854,7 +58853,7 @@ GameObject:
   - 212: {fileID: 896459925}
   - 61: {fileID: 896459928}
   - 50: {fileID: 896459927}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58973,11 +58972,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -59037,11 +59036,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -59093,7 +59092,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -59110,7 +59109,7 @@ GameObject:
   - 4: {fileID: 903792147}
   - 212: {fileID: 903792149}
   - 95: {fileID: 903792148}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59217,11 +59216,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -59285,7 +59284,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -59386,7 +59385,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 180932, guid: e538a576542145149aa3558c78e077f7, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: e538a576542145149aa3558c78e077f7, type: 2}
       propertyPath: m_IsTrigger
@@ -59494,7 +59493,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -59579,7 +59578,7 @@ GameObject:
   - 4: {fileID: 925253015}
   - 212: {fileID: 925253017}
   - 95: {fileID: 925253016}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59647,7 +59646,7 @@ GameObject:
   - 4: {fileID: 925407211}
   - 212: {fileID: 925407213}
   - 95: {fileID: 925407212}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60915,7 +60914,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114682, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
@@ -60933,7 +60932,7 @@ GameObject:
   - 212: {fileID: 932161054}
   - 61: {fileID: 932161057}
   - 50: {fileID: 932161056}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SecurityMonitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61052,7 +61051,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -61070,7 +61069,7 @@ GameObject:
   - 212: {fileID: 933810404}
   - 50: {fileID: 933810407}
   - 61: {fileID: 933810406}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Core2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61193,7 +61192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -61278,7 +61277,7 @@ GameObject:
   - 4: {fileID: 939265100}
   - 212: {fileID: 939265102}
   - 95: {fileID: 939265101}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61385,11 +61384,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -61445,11 +61444,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -61466,7 +61465,7 @@ GameObject:
   - 4: {fileID: 944353215}
   - 212: {fileID: 944353217}
   - 95: {fileID: 944353216}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61579,7 +61578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -61596,7 +61595,7 @@ GameObject:
   - 4: {fileID: 952553777}
   - 198: {fileID: 952553779}
   - 199: {fileID: 952553778}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62660,7 +62659,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 954012899}
   - 212: {fileID: 954012900}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62712,7 +62711,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 954168492}
   - 212: {fileID: 954168493}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62832,7 +62831,7 @@ GameObject:
   - 4: {fileID: 957928390}
   - 212: {fileID: 957928392}
   - 95: {fileID: 957928391}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62993,7 +62992,7 @@ GameObject:
   - 4: {fileID: 969644241}
   - 198: {fileID: 969644243}
   - 199: {fileID: 969644242}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64160,7 +64159,7 @@ GameObject:
   - 4: {fileID: 977231870}
   - 212: {fileID: 977231872}
   - 95: {fileID: 977231871}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64229,7 +64228,7 @@ GameObject:
   - 4: {fileID: 978357106}
   - 198: {fileID: 978357108}
   - 199: {fileID: 978357107}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65343,7 +65342,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 981263758}
   - 212: {fileID: 981263759}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65439,7 +65438,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -66730,11 +66729,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -66752,7 +66751,7 @@ GameObject:
   - 212: {fileID: 1003539451}
   - 61: {fileID: 1003539454}
   - 50: {fileID: 1003539453}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MedEquip3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66924,7 +66923,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -67011,7 +67010,7 @@ GameObject:
   - 61: {fileID: 1006872591}
   - 50: {fileID: 1006872590}
   - 114: {fileID: 1006872589}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67139,7 +67138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 153160, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
@@ -67156,7 +67155,7 @@ GameObject:
   - 4: {fileID: 1007587750}
   - 212: {fileID: 1007587752}
   - 95: {fileID: 1007587751}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67225,7 +67224,7 @@ GameObject:
   - 212: {fileID: 1010643984}
   - 61: {fileID: 1010643987}
   - 50: {fileID: 1010643986}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67344,11 +67343,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -67417,7 +67416,7 @@ GameObject:
   - 4: {fileID: 1020834151}
   - 198: {fileID: 1020834153}
   - 199: {fileID: 1020834152}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68575,7 +68574,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -68592,7 +68591,7 @@ GameObject:
   - 4: {fileID: 1023213772}
   - 212: {fileID: 1023213774}
   - 95: {fileID: 1023213773}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68660,7 +68659,7 @@ GameObject:
   - 4: {fileID: 1029137272}
   - 198: {fileID: 1029137274}
   - 199: {fileID: 1029137273}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69775,7 +69774,7 @@ GameObject:
   - 4: {fileID: 1029435209}
   - 198: {fileID: 1029435211}
   - 199: {fileID: 1029435210}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70889,7 +70888,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1030141099}
   - 212: {fileID: 1030141100}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70977,7 +70976,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 172262, guid: 3484d8256639b944c99f340e1fa6d47b, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 3484d8256639b944c99f340e1fa6d47b, type: 2}
       propertyPath: m_Center.y
@@ -71033,7 +71032,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185596, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
@@ -71050,7 +71049,7 @@ GameObject:
   - 4: {fileID: 1032760008}
   - 198: {fileID: 1032760010}
   - 199: {fileID: 1032760009}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72189,7 +72188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1039381435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72255,7 +72254,7 @@ GameObject:
   - 212: {fileID: 1042667318}
   - 50: {fileID: 1042667321}
   - 61: {fileID: 1042667320}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72467,7 +72466,7 @@ GameObject:
   - 4: {fileID: 1051379409}
   - 198: {fileID: 1051379411}
   - 199: {fileID: 1051379410}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73584,7 +73583,7 @@ GameObject:
   - 61: {fileID: 1054919122}
   - 50: {fileID: 1054919121}
   - 114: {fileID: 1054919120}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73679,7 +73678,7 @@ GameObject:
   - 61: {fileID: 1059965140}
   - 50: {fileID: 1059965139}
   - 114: {fileID: 1059965138}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73811,15 +73810,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -73838,7 +73837,7 @@ GameObject:
   - 61: {fileID: 1068270611}
   - 50: {fileID: 1068270610}
   - 114: {fileID: 1068270609}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73966,7 +73965,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 146734, guid: b42229c883172d44997b136ee755088d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b42229c883172d44997b136ee755088d, type: 2}
@@ -73984,7 +73983,7 @@ GameObject:
   - 212: {fileID: 1073967290}
   - 61: {fileID: 1073967293}
   - 50: {fileID: 1073967292}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74070,7 +74069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1074124916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74133,7 +74132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1078835652}
   - 212: {fileID: 1078835653}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SmallCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74228,11 +74227,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -74337,11 +74336,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -74404,7 +74403,7 @@ GameObject:
   - 114: {fileID: 1087073095}
   - 50: {fileID: 1087073094}
   - 61: {fileID: 1087073093}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74497,7 +74496,7 @@ GameObject:
   - 4: {fileID: 1091837032}
   - 212: {fileID: 1091837034}
   - 95: {fileID: 1091837033}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74616,7 +74615,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1097751424}
   - 212: {fileID: 1097751423}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CoreIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74711,7 +74710,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -74727,7 +74726,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1100773722}
   - 212: {fileID: 1100773723}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BigCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74781,7 +74780,7 @@ GameObject:
   - 61: {fileID: 1104157516}
   - 50: {fileID: 1104157515}
   - 114: {fileID: 1104157514}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74873,7 +74872,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1115621102}
   - 212: {fileID: 1115621103}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74925,7 +74924,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1124468168}
   - 212: {fileID: 1124468169}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75013,7 +75012,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123024, guid: ebed8e7c235f42d46b10558110de019d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebed8e7c235f42d46b10558110de019d, type: 2}
@@ -75065,11 +75064,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -75085,7 +75084,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1127500781}
   - 212: {fileID: 1127500782}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75136,7 +75135,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1135702595}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75362,7 +75361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f624f45641216ae448162a7cc0c43ff2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f624f45641216ae448162a7cc0c43ff2, type: 2}
@@ -75378,7 +75377,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1151552602}
   - 212: {fileID: 1151552603}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75470,7 +75469,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
@@ -75489,7 +75488,7 @@ GameObject:
   - 50: {fileID: 1153573762}
   - 61: {fileID: 1153573761}
   - 114: {fileID: 1153573763}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SuitWardrobe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75616,7 +75615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114682, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
@@ -75664,11 +75663,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -75686,7 +75685,7 @@ GameObject:
   - 212: {fileID: 1172000620}
   - 61: {fileID: 1172000623}
   - 50: {fileID: 1172000622}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75766,7 +75765,7 @@ GameObject:
   - 4: {fileID: 1176436362}
   - 198: {fileID: 1176436364}
   - 199: {fileID: 1176436363}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76880,7 +76879,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1182606132}
   - 212: {fileID: 1182606133}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SmallCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77101,11 +77100,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -77157,7 +77156,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 184746, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
@@ -77213,7 +77212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
@@ -77265,11 +77264,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -77340,7 +77339,7 @@ GameObject:
   - 50: {fileID: 1196618269}
   - 61: {fileID: 1196618268}
   - 114: {fileID: 1196618267}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77434,7 +77433,7 @@ GameObject:
   - 212: {fileID: 1198407472}
   - 50: {fileID: 1198407475}
   - 61: {fileID: 1198407474}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77514,7 +77513,7 @@ GameObject:
   - 4: {fileID: 1199166277}
   - 212: {fileID: 1199166279}
   - 95: {fileID: 1199166278}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77582,7 +77581,7 @@ GameObject:
   - 4: {fileID: 1200252164}
   - 212: {fileID: 1200252166}
   - 95: {fileID: 1200252165}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78768,7 +78767,7 @@ GameObject:
   - 212: {fileID: 1203052356}
   - 61: {fileID: 1203052359}
   - 50: {fileID: 1203052358}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78848,7 +78847,7 @@ GameObject:
   - 4: {fileID: 1216212413}
   - 198: {fileID: 1216212415}
   - 199: {fileID: 1216212414}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80002,15 +80001,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -80027,7 +80026,7 @@ GameObject:
   - 4: {fileID: 1218175493}
   - 198: {fileID: 1218175495}
   - 199: {fileID: 1218175494}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81177,7 +81176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 184746, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
@@ -81194,7 +81193,7 @@ GameObject:
   - 4: {fileID: 1219850791}
   - 198: {fileID: 1219850793}
   - 199: {fileID: 1219850792}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82340,7 +82339,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 102392, guid: c4f81504e05d10a47af008b4c35b7e3d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4f81504e05d10a47af008b4c35b7e3d, type: 2}
@@ -82355,7 +82354,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1228239848}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EndState1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82428,11 +82427,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -82484,7 +82483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -82633,7 +82632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -82649,7 +82648,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1239604977}
   - 212: {fileID: 1239604978}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82704,7 +82703,7 @@ GameObject:
   - 50: {fileID: 1240922054}
   - 61: {fileID: 1240922053}
   - 114: {fileID: 1240922055}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SuitWardrobe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82796,7 +82795,7 @@ GameObject:
   - 4: {fileID: 1241921247}
   - 212: {fileID: 1241921249}
   - 95: {fileID: 1241921248}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82900,7 +82899,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 184746, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
@@ -83040,7 +83039,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 102392, guid: c4f81504e05d10a47af008b4c35b7e3d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4f81504e05d10a47af008b4c35b7e3d, type: 2}
@@ -83162,7 +83161,7 @@ GameObject:
   - 50: {fileID: 1259469334}
   - 61: {fileID: 1259469333}
   - 114: {fileID: 1259469332}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EngineComputer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83290,7 +83289,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -83342,7 +83341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -83357,7 +83356,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1262425349}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83389,7 +83388,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1264080839}
   - 212: {fileID: 1264080840}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83593,7 +83592,7 @@ GameObject:
   - 212: {fileID: 1274643057}
   - 61: {fileID: 1274643060}
   - 50: {fileID: 1274643059}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83712,7 +83711,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -83729,7 +83728,7 @@ GameObject:
   - 4: {fileID: 1278117395}
   - 212: {fileID: 1278117397}
   - 95: {fileID: 1278117396}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83797,7 +83796,7 @@ GameObject:
   - 4: {fileID: 1279315068}
   - 212: {fileID: 1279315070}
   - 95: {fileID: 1279315069}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83904,15 +83903,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -83972,7 +83971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 951b7cebcf3f7a8438a23fc980c4b403, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 951b7cebcf3f7a8438a23fc980c4b403, type: 2}
       propertyPath: m_Layer
@@ -84028,7 +84027,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114912, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5263f73ab3f26d1459659802fa16dbea, type: 2}
@@ -84080,7 +84079,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 129602, guid: e5685f2608a86714b95e850f714bd219, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5685f2608a86714b95e850f714bd219, type: 2}
@@ -84132,11 +84131,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -84200,7 +84199,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -84248,7 +84247,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 184746, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a02cdf0988df774c9331951e3545a25, type: 2}
@@ -84267,7 +84266,7 @@ GameObject:
   - 61: {fileID: 1293466296}
   - 114: {fileID: 1293466295}
   - 50: {fileID: 1293466294}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84362,7 +84361,7 @@ GameObject:
   - 61: {fileID: 1294385435}
   - 50: {fileID: 1294385434}
   - 114: {fileID: 1294385433}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84454,7 +84453,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1295957048}
   - 212: {fileID: 1295957049}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SmallCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84506,7 +84505,7 @@ GameObject:
   - 4: {fileID: 1297213420}
   - 212: {fileID: 1297213422}
   - 95: {fileID: 1297213421}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ExplotionsVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84609,7 +84608,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -84624,7 +84623,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1298570790}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84706,7 +84705,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1307582787}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84744,7 +84743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1310778581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84899,7 +84898,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -84959,7 +84958,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -84976,7 +84975,7 @@ GameObject:
   - 4: {fileID: 1320654026}
   - 212: {fileID: 1320654028}
   - 95: {fileID: 1320654027}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85087,7 +85086,7 @@ GameObject:
   - 4: {fileID: 1327958827}
   - 212: {fileID: 1327958829}
   - 95: {fileID: 1327958828}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85157,7 +85156,7 @@ GameObject:
   - 61: {fileID: 1329541046}
   - 114: {fileID: 1329541045}
   - 50: {fileID: 1329541044}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85250,7 +85249,7 @@ GameObject:
   - 4: {fileID: 1329564964}
   - 114: {fileID: 1329564965}
   - 95: {fileID: 1329564966}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RoomUnelectrifiedVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85309,7 +85308,7 @@ GameObject:
   - 212: {fileID: 1329580274}
   - 50: {fileID: 1329580277}
   - 61: {fileID: 1329580276}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85389,7 +85388,7 @@ GameObject:
   - 4: {fileID: 1329886117}
   - 198: {fileID: 1329886119}
   - 199: {fileID: 1329886118}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86543,7 +86542,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -86559,7 +86558,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1334515806}
   - 212: {fileID: 1334515807}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86655,7 +86654,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -86673,7 +86672,7 @@ GameObject:
   - 212: {fileID: 1341863899}
   - 50: {fileID: 1341863902}
   - 61: {fileID: 1341863901}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86821,7 +86820,7 @@ GameObject:
   - 4: {fileID: 1351742171}
   - 198: {fileID: 1351742173}
   - 199: {fileID: 1351742172}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87967,7 +87966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -87983,7 +87982,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1356258985}
   - 212: {fileID: 1356258986}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BigCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88034,7 +88033,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1359091680}
   - 212: {fileID: 1359091681}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88130,7 +88129,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -88250,7 +88249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114682, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3edd448972ea6a4294f3d0fe3e4fcc6, type: 2}
@@ -88267,7 +88266,7 @@ GameObject:
   - 4: {fileID: 1372135781}
   - 212: {fileID: 1372135783}
   - 95: {fileID: 1372135782}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88336,7 +88335,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1373091201}
   - 212: {fileID: 1373091202}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88472,7 +88471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152304, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
       propertyPath: m_Size.x
@@ -88505,7 +88504,7 @@ GameObject:
   - 4: {fileID: 1375893864}
   - 212: {fileID: 1375893866}
   - 95: {fileID: 1375893865}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88574,7 +88573,7 @@ GameObject:
   - 212: {fileID: 1376227037}
   - 50: {fileID: 1376227040}
   - 61: {fileID: 1376227039}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88655,7 +88654,7 @@ GameObject:
   - 212: {fileID: 1377397340}
   - 50: {fileID: 1377397343}
   - 61: {fileID: 1377397342}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88736,7 +88735,7 @@ GameObject:
   - 212: {fileID: 1383725150}
   - 50: {fileID: 1383725153}
   - 61: {fileID: 1383725152}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88910,7 +88909,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1386942806}
   - 212: {fileID: 1386942807}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88994,7 +88993,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185246, guid: 4eb47ce162bd38f4d9ab96a62f6db5d8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4eb47ce162bd38f4d9ab96a62f6db5d8, type: 2}
@@ -89009,7 +89008,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1388052313}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89158,7 +89157,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
@@ -89266,7 +89265,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -89281,7 +89280,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1397920696}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireFinishState1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89313,7 +89312,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1399338581}
   - 212: {fileID: 1399338582}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89405,11 +89404,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -89465,11 +89464,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -89486,7 +89485,7 @@ GameObject:
   - 4: {fileID: 1403816013}
   - 198: {fileID: 1403816015}
   - 199: {fileID: 1403816014}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90551,7 +90550,7 @@ GameObject:
   - 4: {fileID: 1408032820}
   - 198: {fileID: 1408032822}
   - 199: {fileID: 1408032821}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91717,7 +91716,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1410721282}
   - 212: {fileID: 1410721281}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SecurityIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91769,7 +91768,7 @@ GameObject:
   - 4: {fileID: 1414411510}
   - 212: {fileID: 1414411512}
   - 95: {fileID: 1414411511}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91838,7 +91837,7 @@ GameObject:
   - 212: {fileID: 1415432805}
   - 50: {fileID: 1415432808}
   - 61: {fileID: 1415432807}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91953,7 +91952,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123386, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
@@ -92005,11 +92004,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -92081,7 +92080,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 107538, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
@@ -92133,7 +92132,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185596, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
@@ -92150,7 +92149,7 @@ GameObject:
   - 4: {fileID: 1425813463}
   - 212: {fileID: 1425813465}
   - 95: {fileID: 1425813464}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92219,7 +92218,7 @@ GameObject:
   - 4: {fileID: 1426688769}
   - 212: {fileID: 1426688771}
   - 95: {fileID: 1426688770}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92286,7 +92285,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1426702421}
   - 212: {fileID: 1426702422}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92340,7 +92339,7 @@ GameObject:
   - 212: {fileID: 1428846017}
   - 61: {fileID: 1428846020}
   - 50: {fileID: 1428846019}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EngineerEquip2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92419,7 +92418,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1432057829}
   - 212: {fileID: 1432057830}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92544,7 +92543,7 @@ GameObject:
   - 61: {fileID: 1436471328}
   - 50: {fileID: 1436471327}
   - 114: {fileID: 1436471329}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MedEquip2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92671,7 +92670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130770, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0530a43a2ea4f4f8f36a3aaed43dfb, type: 2}
@@ -92689,7 +92688,7 @@ GameObject:
   - 212: {fileID: 1447892507}
   - 50: {fileID: 1447892510}
   - 61: {fileID: 1447892509}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92771,7 +92770,7 @@ GameObject:
   - 61: {fileID: 1449151186}
   - 50: {fileID: 1449151185}
   - 114: {fileID: 1449151184}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmChair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92899,11 +92898,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -92920,7 +92919,7 @@ GameObject:
   - 4: {fileID: 1452777802}
   - 212: {fileID: 1452777804}
   - 95: {fileID: 1452777803}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93020,7 +93019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 192214, guid: 59d34e1f6f1969849bc13c9b0adb1bdd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59d34e1f6f1969849bc13c9b0adb1bdd, type: 2}
@@ -93140,7 +93139,7 @@ GameObject:
   - 50: {fileID: 1457848029}
   - 61: {fileID: 1457848028}
   - 114: {fileID: 1457848027}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93272,11 +93271,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -93386,7 +93385,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -93491,11 +93490,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -93547,11 +93546,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -93652,7 +93651,7 @@ GameObject:
   - 4: {fileID: 1492565556}
   - 198: {fileID: 1492565558}
   - 199: {fileID: 1492565557}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94806,7 +94805,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1503234785}
   - 212: {fileID: 1503234786}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DarkDisposal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94900,7 +94899,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -94917,7 +94916,7 @@ GameObject:
   - 4: {fileID: 1505023672}
   - 198: {fileID: 1505023674}
   - 199: {fileID: 1505023673}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96030,7 +96029,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1507353024}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96094,7 +96093,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 110992, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
@@ -96264,7 +96263,7 @@ GameObject:
   - 4: {fileID: 1513654635}
   - 212: {fileID: 1513654637}
   - 95: {fileID: 1513654636}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96332,7 +96331,7 @@ GameObject:
   - 4: {fileID: 1516786799}
   - 212: {fileID: 1516786801}
   - 95: {fileID: 1516786800}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96400,7 +96399,7 @@ GameObject:
   - 4: {fileID: 1518538050}
   - 212: {fileID: 1518538052}
   - 95: {fileID: 1518538051}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96469,7 +96468,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1521049620}
   - 212: {fileID: 1521049621}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96687,7 +96686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 107538, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
@@ -96705,7 +96704,7 @@ GameObject:
   - 212: {fileID: 1534713715}
   - 50: {fileID: 1534713718}
   - 61: {fileID: 1534713717}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96888,11 +96887,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -96957,7 +96956,7 @@ GameObject:
   - 212: {fileID: 1543874899}
   - 50: {fileID: 1543874902}
   - 61: {fileID: 1543874901}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97035,7 +97034,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1548604862}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97067,7 +97066,7 @@ GameObject:
   - 61: {fileID: 1554486772}
   - 114: {fileID: 1554486771}
   - 50: {fileID: 1554486770}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97161,7 +97160,7 @@ GameObject:
   - 212: {fileID: 1556016273}
   - 50: {fileID: 1556016276}
   - 61: {fileID: 1556016275}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97276,7 +97275,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123386, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
@@ -97292,7 +97291,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1561234815}
   - 212: {fileID: 1561234816}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97384,7 +97383,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
@@ -97436,7 +97435,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 110992, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
@@ -97454,7 +97453,7 @@ GameObject:
   - 212: {fileID: 1569850229}
   - 50: {fileID: 1569850232}
   - 61: {fileID: 1569850231}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97535,7 +97534,7 @@ GameObject:
   - 212: {fileID: 1571437561}
   - 50: {fileID: 1571437564}
   - 61: {fileID: 1571437563}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97614,7 +97613,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1572799715}
   - 212: {fileID: 1572799716}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97766,7 +97765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 107538, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
@@ -97814,7 +97813,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 104058, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
@@ -97837,7 +97836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1588667459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97937,7 +97936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 198380, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
@@ -98061,11 +98060,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -98121,7 +98120,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -98138,7 +98137,7 @@ GameObject:
   - 4: {fileID: 1600553622}
   - 212: {fileID: 1600553624}
   - 95: {fileID: 1600553623}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98206,7 +98205,7 @@ GameObject:
   - 4: {fileID: 1600866940}
   - 198: {fileID: 1600866942}
   - 199: {fileID: 1600866941}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99321,7 +99320,7 @@ GameObject:
   - 4: {fileID: 1608521770}
   - 212: {fileID: 1608521772}
   - 95: {fileID: 1608521771}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99390,7 +99389,7 @@ GameObject:
   - 212: {fileID: 1609413594}
   - 61: {fileID: 1609413597}
   - 50: {fileID: 1609413596}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99599,7 +99598,7 @@ GameObject:
   - 4: {fileID: 1625226280}
   - 114: {fileID: 1625226282}
   - 95: {fileID: 1625226281}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RoomAcidVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99696,7 +99695,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 68d38ae9e3dddec408bb9928d2afcb83, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68d38ae9e3dddec408bb9928d2afcb83, type: 2}
@@ -99713,7 +99712,7 @@ GameObject:
   - 4: {fileID: 1634584672}
   - 212: {fileID: 1634584674}
   - 95: {fileID: 1634584673}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99780,7 +99779,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1634921040}
   - 212: {fileID: 1634921041}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SmallCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99871,7 +99870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
@@ -99887,7 +99886,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1639858790}
   - 212: {fileID: 1639858791}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SmallCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99978,7 +99977,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -100038,7 +100037,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -100094,11 +100093,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -100154,7 +100153,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27758c18f0cab8244acafecb959a9a90, type: 2}
@@ -100171,7 +100170,7 @@ GameObject:
   - 4: {fileID: 1657921426}
   - 198: {fileID: 1657921428}
   - 199: {fileID: 1657921427}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101286,7 +101285,7 @@ GameObject:
   - 4: {fileID: 1661211995}
   - 212: {fileID: 1661211997}
   - 95: {fileID: 1661211996}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101354,7 +101353,7 @@ GameObject:
   - 4: {fileID: 1661647479}
   - 212: {fileID: 1661647481}
   - 95: {fileID: 1661647480}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101474,7 +101473,7 @@ GameObject:
   - 212: {fileID: 1668129796}
   - 50: {fileID: 1668129799}
   - 61: {fileID: 1668129798}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101553,7 +101552,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1668209369}
   - 212: {fileID: 1668209370}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101649,7 +101648,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -101668,7 +101667,7 @@ GameObject:
   - 50: {fileID: 1671751327}
   - 61: {fileID: 1671751326}
   - 114: {fileID: 1671751325}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101761,7 +101760,7 @@ GameObject:
   - 4: {fileID: 1673226603}
   - 198: {fileID: 1673226605}
   - 199: {fileID: 1673226604}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102907,7 +102906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123386, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0863cf9bc5cae41937183cf09fb964, type: 2}
@@ -102924,7 +102923,7 @@ GameObject:
   - 4: {fileID: 1678397337}
   - 212: {fileID: 1678397339}
   - 95: {fileID: 1678397338}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102991,7 +102990,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1678909675}
   - 212: {fileID: 1678909676}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103044,7 +103043,7 @@ GameObject:
   - 4: {fileID: 1679075693}
   - 198: {fileID: 1679075695}
   - 199: {fileID: 1679075694}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104110,7 +104109,7 @@ GameObject:
   - 212: {fileID: 1681432689}
   - 61: {fileID: 1681432692}
   - 50: {fileID: 1681432691}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MedBayComp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104188,7 +104187,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1683422670}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104220,7 +104219,7 @@ GameObject:
   - 50: {fileID: 1685292252}
   - 61: {fileID: 1685292251}
   - 114: {fileID: 1685292250}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104348,7 +104347,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -104404,11 +104403,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -104464,11 +104463,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -105631,7 +105630,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
@@ -105737,7 +105736,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1702198803}
   - 212: {fileID: 1702198804}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105789,7 +105788,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1702354881}
   - 212: {fileID: 1702354882}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105844,7 +105843,7 @@ GameObject:
   - 114: {fileID: 1708720703}
   - 50: {fileID: 1708720702}
   - 61: {fileID: 1708720701}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105976,11 +105975,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -106002,7 +106001,7 @@ GameObject:
   - 212: {fileID: 1716322149}
   - 95: {fileID: 1716322150}
   - 61: {fileID: 1716322151}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DoorDisposal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106219,7 +106218,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 198380, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3170a77704b58f14595d962b5728e8f4, type: 2}
@@ -106235,7 +106234,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1720552422}
   - 212: {fileID: 1720552423}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106421,7 +106420,7 @@ GameObject:
   - 4: {fileID: 1724575424}
   - 198: {fileID: 1724575426}
   - 199: {fileID: 1724575425}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107585,7 +107584,7 @@ GameObject:
   - 4: {fileID: 1728317535}
   - 212: {fileID: 1728317537}
   - 95: {fileID: 1728317536}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107652,7 +107651,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1729448880}
   - 212: {fileID: 1729448879}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GreenRoonIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107743,11 +107742,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -107764,7 +107763,7 @@ GameObject:
   - 4: {fileID: 1730959698}
   - 212: {fileID: 1730959700}
   - 95: {fileID: 1730959699}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107832,7 +107831,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1733607912}
   - 212: {fileID: 1733607913}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107953,7 +107952,7 @@ GameObject:
   - 4: {fileID: 1737515606}
   - 198: {fileID: 1737515608}
   - 199: {fileID: 1737515607}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109099,7 +109098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 123534, guid: 60fa96f99953bf64d87f647f5b58f859, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60fa96f99953bf64d87f647f5b58f859, type: 2}
@@ -109204,11 +109203,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -109260,7 +109259,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -109277,7 +109276,7 @@ GameObject:
   - 4: {fileID: 1750066916}
   - 212: {fileID: 1750066918}
   - 95: {fileID: 1750066917}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109394,7 +109393,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -109413,7 +109412,7 @@ GameObject:
   - 61: {fileID: 1752677658}
   - 50: {fileID: 1752677657}
   - 114: {fileID: 1752677656}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ControlRoomComp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109506,7 +109505,7 @@ GameObject:
   - 4: {fileID: 1753427410}
   - 198: {fileID: 1753427412}
   - 199: {fileID: 1753427411}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110571,7 +110570,7 @@ GameObject:
   - 4: {fileID: 1758120863}
   - 212: {fileID: 1758120865}
   - 95: {fileID: 1758120864}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110674,7 +110673,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 127320, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
@@ -110692,7 +110691,7 @@ GameObject:
   - 212: {fileID: 1761641689}
   - 50: {fileID: 1761641692}
   - 61: {fileID: 1761641691}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110774,7 +110773,7 @@ GameObject:
   - 114: {fileID: 1762999572}
   - 50: {fileID: 1762999571}
   - 61: {fileID: 1762999570}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110867,7 +110866,7 @@ GameObject:
   - 4: {fileID: 1767039685}
   - 198: {fileID: 1767039687}
   - 199: {fileID: 1767039686}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112025,7 +112024,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -112042,7 +112041,7 @@ GameObject:
   - 4: {fileID: 1769866680}
   - 212: {fileID: 1769866682}
   - 95: {fileID: 1769866681}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112149,11 +112148,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -112216,7 +112215,7 @@ GameObject:
   - 50: {fileID: 1777319362}
   - 61: {fileID: 1777319361}
   - 114: {fileID: 1777319360}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112309,7 +112308,7 @@ GameObject:
   - 4: {fileID: 1777932938}
   - 198: {fileID: 1777932940}
   - 199: {fileID: 1777932939}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113476,7 +113475,7 @@ GameObject:
   - 50: {fileID: 1784956934}
   - 61: {fileID: 1784956933}
   - 114: {fileID: 1784956932}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GreenRoomComp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113571,7 +113570,7 @@ GameObject:
   - 61: {fileID: 1789989802}
   - 114: {fileID: 1789989801}
   - 50: {fileID: 1789989800}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113664,7 +113663,7 @@ GameObject:
   - 4: {fileID: 1790064767}
   - 212: {fileID: 1790064769}
   - 95: {fileID: 1790064768}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ExplotionsVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113827,7 +113826,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -113844,7 +113843,7 @@ GameObject:
   - 4: {fileID: 1807866382}
   - 212: {fileID: 1807866384}
   - 95: {fileID: 1807866383}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113912,7 +113911,7 @@ GameObject:
   - 4: {fileID: 1809211116}
   - 198: {fileID: 1809211118}
   - 199: {fileID: 1809211117}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115066,15 +115065,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -115126,7 +115125,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 180932, guid: e538a576542145149aa3558c78e077f7, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e538a576542145149aa3558c78e077f7, type: 2}
@@ -115143,7 +115142,7 @@ GameObject:
   - 4: {fileID: 1813718805}
   - 198: {fileID: 1813718807}
   - 199: {fileID: 1813718806}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116206,7 +116205,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1818767741}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: StartState1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116359,7 +116358,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -116411,7 +116410,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152304, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9aeaea68218aad498f500be33a70e86, type: 2}
@@ -116467,7 +116466,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -116484,7 +116483,7 @@ GameObject:
   - 4: {fileID: 1828879480}
   - 198: {fileID: 1828879482}
   - 199: {fileID: 1828879481}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118875,7 +118874,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1838826509}
   - 212: {fileID: 1838826510}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118971,7 +118970,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -119023,7 +119022,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 189586, guid: 4ab0858477847fc478c0d4ae865041ae, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 4ab0858477847fc478c0d4ae865041ae, type: 2}
       propertyPath: m_IsTrigger
@@ -119044,7 +119043,7 @@ GameObject:
   - 4: {fileID: 1841571872}
   - 212: {fileID: 1841571874}
   - 95: {fileID: 1841571873}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119110,7 +119109,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1842794576}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EndState3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119188,11 +119187,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -119244,7 +119243,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185596, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61d6a0c831da02f44ae528d2664aa0d9, type: 2}
@@ -119300,11 +119299,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ff7279c9d92494c88761875540ee4a, type: 2}
@@ -119444,11 +119443,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -119508,7 +119507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -120640,7 +120639,7 @@ GameObject:
   - 4: {fileID: 1865676801}
   - 198: {fileID: 1865676803}
   - 199: {fileID: 1865676802}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121705,7 +121704,7 @@ GameObject:
   - 4: {fileID: 1866578586}
   - 198: {fileID: 1866578588}
   - 199: {fileID: 1866578587}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122820,7 +122819,7 @@ GameObject:
   - 4: {fileID: 1875240605}
   - 212: {fileID: 1875240607}
   - 95: {fileID: 1875240606}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122887,7 +122886,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1877699310}
   - 212: {fileID: 1877699311}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122979,11 +122978,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49310413d8ffa4b08a9c192063489dd2, type: 2}
@@ -123047,7 +123046,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -123099,11 +123098,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -123172,7 +123171,7 @@ GameObject:
   - 4: {fileID: 1881930932}
   - 198: {fileID: 1881930934}
   - 199: {fileID: 1881930933}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124428,15 +124427,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -124496,7 +124495,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -124552,15 +124551,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634cd30bec876d347bba714e60d45da2, type: 2}
@@ -124579,7 +124578,7 @@ GameObject:
   - 114: {fileID: 1901025646}
   - 50: {fileID: 1901025645}
   - 61: {fileID: 1901025644}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SecutiryComp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124707,7 +124706,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 110992, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40cf2c9aee0df5c40ac9c31c490193d6, type: 2}
@@ -124815,7 +124814,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -124871,7 +124870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f624f45641216ae448162a7cc0c43ff2, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f624f45641216ae448162a7cc0c43ff2, type: 2}
@@ -124923,7 +124922,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 127320, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
@@ -124942,7 +124941,7 @@ GameObject:
   - 114: {fileID: 1910242804}
   - 50: {fileID: 1910242803}
   - 61: {fileID: 1910242802}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Chair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125037,7 +125036,7 @@ GameObject:
   - 50: {fileID: 1912343127}
   - 61: {fileID: 1912343126}
   - 114: {fileID: 1912343125}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125263,6 +125262,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 112216, guid: 4bf0af17062c712478bfda2ea1a878a0, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bf0af17062c712478bfda2ea1a878a0, type: 2}
   m_RootGameObject: {fileID: 1104157511}
@@ -125365,11 +125368,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa5fd78f8c4e1b4b876a97cacb6caca, type: 2}
@@ -125425,7 +125428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -125442,7 +125445,7 @@ GameObject:
   - 4: {fileID: 1945274665}
   - 198: {fileID: 1945274667}
   - 199: {fileID: 1945274666}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126604,7 +126607,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 27e62f62efd47c34eb341ab34b5c3a58, type: 2}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
@@ -126668,7 +126671,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -126684,7 +126687,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1954262501}
   - 212: {fileID: 1954262502}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AcidFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126780,7 +126783,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -126797,7 +126800,7 @@ GameObject:
   - 4: {fileID: 1955981430}
   - 212: {fileID: 1955981432}
   - 95: {fileID: 1955981431}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126912,7 +126915,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 107538, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f145be28652742a6ac60e3b55053310, type: 2}
@@ -127028,7 +127031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 127320, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6107978e09f54fc49b645966b0ed0396, type: 2}
@@ -127084,11 +127087,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -127196,7 +127199,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -127214,7 +127217,7 @@ GameObject:
   - 212: {fileID: 1980225155}
   - 50: {fileID: 1980225158}
   - 61: {fileID: 1980225157}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127397,7 +127400,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1984678349}
   - 212: {fileID: 1984678348}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MedBayIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127488,7 +127491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd54fcdcb11aae44b2eaf39d081a206, type: 2}
@@ -127505,7 +127508,7 @@ GameObject:
   - 4: {fileID: 1990687797}
   - 212: {fileID: 1990687799}
   - 95: {fileID: 1990687798}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127575,7 +127578,7 @@ GameObject:
   - 50: {fileID: 1991395991}
   - 61: {fileID: 1991395990}
   - 114: {fileID: 1991395989}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127749,7 +127752,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1993825757}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EndState2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127825,11 +127828,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -127966,7 +127969,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -128086,7 +128089,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162404, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08cffda451ec60249ac948f0c0d11aa6, type: 2}
@@ -128239,7 +128242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -128256,7 +128259,7 @@ GameObject:
   - 4: {fileID: 2014211011}
   - 212: {fileID: 2014211013}
   - 95: {fileID: 2014211012}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128324,7 +128327,7 @@ GameObject:
   - 4: {fileID: 2028434380}
   - 212: {fileID: 2028434382}
   - 95: {fileID: 2028434381}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BurnVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128473,7 +128476,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 153160, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88b356a0ec372c84784b0b781540985d, type: 2}
@@ -128541,7 +128544,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2053779012}
   - 212: {fileID: 2053779013}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128593,7 +128596,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2059376458}
   - 212: {fileID: 2059376459}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BigCrackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128645,7 +128648,7 @@ GameObject:
   - 4: {fileID: 2060243081}
   - 212: {fileID: 2060243083}
   - 95: {fileID: 2060243082}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128752,11 +128755,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ad3d5d9361b2c45ad399272aeff9fc, type: 2}
@@ -128773,7 +128776,7 @@ GameObject:
   - 4: {fileID: 2063925965}
   - 212: {fileID: 2063925967}
   - 95: {fileID: 2063925966}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128841,7 +128844,7 @@ GameObject:
   - 4: {fileID: 2064228054}
   - 212: {fileID: 2064228056}
   - 95: {fileID: 2064228055}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RadiationVFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128952,7 +128955,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -129012,7 +129015,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 090de484f0b2ba74a97c0cc3a39e5a4c, type: 2}
@@ -129031,7 +129034,7 @@ GameObject:
   - 50: {fileID: 2070693387}
   - 61: {fileID: 2070693386}
   - 114: {fileID: 2070693385}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129124,7 +129127,7 @@ GameObject:
   - 4: {fileID: 2072019031}
   - 198: {fileID: 2072019033}
   - 199: {fileID: 2072019032}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130239,7 +130242,7 @@ GameObject:
   - 4: {fileID: 2073787038}
   - 212: {fileID: 2073787040}
   - 95: {fileID: 2073787039}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DarkDisposal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130340,7 +130343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 104058, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f533f0dc8a01d4d82f8358d49e2d4c, type: 2}
@@ -130358,7 +130361,7 @@ GameObject:
   - 212: {fileID: 2076053414}
   - 50: {fileID: 2076053417}
   - 61: {fileID: 2076053416}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Computer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130438,7 +130441,7 @@ GameObject:
   - 4: {fileID: 2077275360}
   - 198: {fileID: 2077275362}
   - 199: {fileID: 2077275361}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SparksVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131552,7 +131555,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2084071642}
   - 212: {fileID: 2084071641}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EngineerRoomIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131670,7 +131673,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2113573003}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: State3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131756,7 +131759,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 951b7cebcf3f7a8438a23fc980c4b403, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 951b7cebcf3f7a8438a23fc980c4b403, type: 2}
       propertyPath: m_Layer
@@ -131798,7 +131801,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2117042893}
   - 212: {fileID: 2117042892}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EngineIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131850,7 +131853,7 @@ GameObject:
   - 4: {fileID: 2117990985}
   - 95: {fileID: 2117990987}
   - 114: {fileID: 2117990986}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RoomBrokenVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131957,7 +131960,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 57e5f3d58ac392245afd3199c18ab15f, type: 2}
     - target: {fileID: 100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad271098695d3ec4781d18b5bed82ac8, type: 2}
@@ -132065,7 +132068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106168, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9836e347e67784fb85367b1a85d46c, type: 2}
@@ -132083,7 +132086,7 @@ GameObject:
   - 212: {fileID: 2136305636}
   - 50: {fileID: 2136305639}
   - 61: {fileID: 2136305638}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wardrobe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132322,7 +132325,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d82fabbceca658245b8393f660a8c9fd, type: 2}

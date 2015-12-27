@@ -49,8 +49,7 @@ public class Navigation : MonoBehaviour
 		TouchControl ();
 
 		// Editor debug
-		//if (Application.platform == RuntimePlatform.WindowsEditor) 
-		MouseControl ();
+		if (Application.platform == RuntimePlatform.WindowsEditor) MouseControl ();
 		if (!moved && !scaled) CameraSizeUpdate ();
 		if (player && currentPoint && player.collider2D.bounds.Intersects(currentPoint.renderer.bounds)) 
 			Destroy(currentPoint);
@@ -69,53 +68,62 @@ public class Navigation : MonoBehaviour
 	void TouchControl () 
 	{
 		int touchCount  = Input.touchCount;
-		// Touch control
-		if (touchCount > 0)
-		{
-			isResetPreviously = false;
-			Touch touch1 = Input.GetTouch(0);
-			Touch touch2 = Input.GetTouch(1);
-			touchPosition = Camera.main.ScreenToWorldPoint(touch1.position);
-			
-			if (touch1.phase == TouchPhase.Began && lastFingerId == -1 )
-			{ 	 
-				lastFingerId = touch1.fingerId;
-			} 
-			else if (touchCount == 2 && touch2.phase == TouchPhase.Began)
-			{
-				scaled = true;
-				touchDistance = Vector2.Distance(touch1.position, touch2.position);
-			}
-			else if (touchCount == 2 && (touch1.phase == TouchPhase.Moved || touch2.phase == TouchPhase.Moved))
-			{
-				Scale(Vector2.Distance(touch1.position, touch2.position));
-				touchDistance = Vector2.Distance(touch1.position, touch2.position);
-			}
-			else if (touch1.phase == TouchPhase.Moved && lastFingerId == touch1.fingerId && !scaled)
-			{
-				moved = true;
-				Move(Camera.main.ScreenToWorldPoint(touch1.position));
-			}
-			else if (touchCount == 1 && touch1.phase == TouchPhase.Ended && !moved && !scaled)
-			{
-				RaycastHit2D hit;
-				hit = Physics2D.Raycast (new Vector2(touchPosition.x, touchPosition.y), Vector2.zero, 20, layer);
-				if (hit)  NavigatePlayerTo(hit);
-				Reset ();
-			}
-		}
+		if (touchCount == 1) OneTouch ();
+		else if (touchCount == 2) TwoTouches ();
 		else
 		{
 			if (!isResetPreviously) Reset ();
 		}
 	}
 
+	void OneTouch () 
+	{
+		isResetPreviously = false;
+		Touch touch1 = Input.GetTouch(0);
+		if (touch1.phase == TouchPhase.Began && lastFingerId == -1)
+		{ 	 
+			touchPosition = Camera.main.ScreenToWorldPoint(touch1.position);
+			lastFingerId = touch1.fingerId;
+		} 
+		else if (touch1.phase == TouchPhase.Moved && lastFingerId == touch1.fingerId && !scaled)
+		{
+			moved = true;
+			Move(Camera.main.ScreenToWorldPoint(touch1.position));
+			touchPosition = Camera.main.ScreenToWorldPoint(touch1.position);
+		}
+		else if (touch1.phase == TouchPhase.Ended && !moved && !scaled)
+		{
+			RaycastHit2D hit;
+			hit = Physics2D.Raycast (new Vector2(touchPosition.x, touchPosition.y), Vector2.zero, 20, layer);
+			if (hit)  NavigatePlayerTo(hit);
+			Reset ();
+		}
+	}
+
+	void TwoTouches () 
+	{
+		isResetPreviously = false;
+		Touch touch1 = Input.GetTouch(0);
+		Touch touch2 = Input.GetTouch(1);
+		if (touch2.phase == TouchPhase.Began)
+		{
+			scaled = true;
+			touchDistance = Vector2.Distance(touch1.position, touch2.position);
+		}
+		else if (touch1.phase == TouchPhase.Moved || touch2.phase == TouchPhase.Moved)
+		{
+			Scale(Vector2.Distance(touch1.position, touch2.position));
+			touchDistance = Vector2.Distance(touch1.position, touch2.position);
+		}
+
+	}
 
 	void NavigatePlayerTo(RaycastHit2D hit)
 	{
 		player.Navigate(hit.collider.GetComponent<Room>(), true);
 		if (currentPoint) Destroy(currentPoint);
-		currentPoint = (GameObject)Instantiate(pointer, hit.collider.transform.position, Quaternion.identity);
+		Vector3 position = new Vector3 (hit.collider.transform.position.x, hit.collider.transform.position.y, player.GObject.transform.position.z);
+		currentPoint = (GameObject)Instantiate(pointer, position, Quaternion.identity);
 	}
 
 	void Scale (float newDistance)
@@ -126,20 +134,11 @@ public class Navigation : MonoBehaviour
 
 	void Move (Vector3 newPosition)
 	{
-		Vector3 result = (newPosition - touchPosition) * speed;
+		Vector3 result = (touchPosition - newPosition) * speed;
 		// Block far camera movement
-		Vector2 cameraSize = new Vector2 (
-			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).x - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).x, 
-			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).y - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).y
-			);
-		// OX
-		float xMin = ship.transform.position.x - ship.renderer.bounds.size.x / 2f - 0.35f * cameraSize.x;
-		float xMax = ship.transform.position.x + ship.renderer.bounds.size.x / 2f + 0.35f * cameraSize.x;
-		result.x = Mathf.Clamp (Camera.main.transform.position.x + result.x, xMin, xMax);
-		// OY
-		float yMin = ship.transform.position.y - ship.renderer.bounds.size.y / 2f - 0.35f * cameraSize.y;
-		float yMax = ship.transform.position.y + ship.renderer.bounds.size.y / 2f + 0.345f * cameraSize.y;
-		result.y = Mathf.Clamp (Camera.main.transform.position.y + result.y, yMin, yMax);
+		Bounds cameraBound = CameraPositionBounds ();
+		result.x = Mathf.Clamp (Camera.main.transform.position.x + result.x, cameraBound.min.x, cameraBound.max.x);
+		result.y = Mathf.Clamp (Camera.main.transform.position.y + result.y, cameraBound.min.y, cameraBound.max.y);
 		result.z = Camera.main.transform.position.z;
 		Camera.main.transform.position = result;
 	}
@@ -185,5 +184,44 @@ public class Navigation : MonoBehaviour
 		{
 			Camera.main.orthographicSize -= 2 * speed * Time.deltaTime;
 		}
+		Bounds cameraBounds = CameraPositionBounds ();
+		Vector3 position = Camera.main.transform.position;
+		if (Camera.main.transform.position.x <= cameraBounds.min.x * 0.8f && isResetPreviously)
+		{
+			position.x += 10f * speed * Time.deltaTime;
+		}
+		else if (Camera.main.transform.position.x >= cameraBounds.max.x * 0.8f && isResetPreviously)
+		{
+			position.x -= 10f * speed * Time.deltaTime;
+		}
+		if (Camera.main.transform.position.y <= cameraBounds.min.y * 0.8f && isResetPreviously)
+		{
+			position.y += 10f * speed * Time.deltaTime;
+		}
+		else if (Camera.main.transform.position.y >= cameraBounds.max.y * 0.8f && isResetPreviously)
+		{
+			position.y -= 10f * speed * Time.deltaTime;
+		}
+		Camera.main.transform.position = position;
+	}
+
+
+	Vector2 CameraSize ()
+	{
+		Vector2 cameraSize = new Vector2 (
+			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).x - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).x, 
+			Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth, Camera.main.pixelHeight)).y - Camera.main.ScreenToWorldPoint(new Vector3 (0,0)).y
+			);
+		return cameraSize;
+	}
+
+	Bounds CameraPositionBounds ()
+	{
+		Vector2 cameraSize = CameraSize ();
+		Vector3 size = new Vector3(2 * (ship.renderer.bounds.extents.x + cameraSize.x * 0.4f), 
+		                           2 * (ship.renderer.bounds.extents.y + cameraSize.y * 0.4f), 
+		                           0);
+		Bounds result = new Bounds(ship.transform.position, size);
+		return result;
 	}
 }
