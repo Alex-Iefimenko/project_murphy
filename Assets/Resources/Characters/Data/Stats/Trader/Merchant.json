@@ -1,0 +1,28 @@
+{
+  "Stats":{
+    "Speed": 0.5,
+    "BasicRoom": "Current",
+    "Health":{
+      "Max": [60.0, 80.0],
+      "Treshhold": [15.0, 25.0],
+      "Reduction": 0.0,
+      "Regeneration": 0.5,
+      "Increase": [4.0, 6.0]
+    },
+    "Fighting":{
+      "Damage": 2.0,
+      "AttackRate": 1.0,
+	  "AbbleDistantAttack": false 
+	},
+    "Sanity":{
+      "Max": [60.0, 80.0],
+      "Treshhold": [10.0, 25.0],
+      "Reduction": [0.3, 0.6],
+      "Regeneration": 0.0,
+      "Increase": [4.0, 6.0]
+    },
+    "CharacterActivities":{
+	  "HealOther": 0.0
+	}
+  }
+}

@@ -102,6 +102,7 @@ public class Movement : MonoBehaviour, IMovement {
 	public void Purge ()
 	{
 		movementPath.Clear();
+		StopAllCoroutines();
 		target = null;
 		isDynamic = false;
 		anchoredObject = null;

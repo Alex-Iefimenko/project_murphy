@@ -6,7 +6,7 @@ public class DepressurizationRoomState : RoomStateBase {
 	
 	public override bool EnableCondition ()
 	{ 
-		bool result = !DisableCondition() && CurrentRoom.Stats.Durability <= 50f;
+		bool result = !DisableCondition() && CurrentRoom.Stats.IsDepressurized();
 		return result; 
 	} 
 	

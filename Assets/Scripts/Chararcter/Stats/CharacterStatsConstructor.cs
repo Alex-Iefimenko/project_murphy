@@ -9,7 +9,7 @@ public class CharacterStatsConstructor {
 
 	Random rnd = null;
 	// Type
-	public string characterType;
+	public ICharacter character;
 	// Basic
 	public float Speed { get; set; }
 	public Room BasicRoom { get; set; }
@@ -52,10 +52,10 @@ public class CharacterStatsConstructor {
 	public Enums.Traits TraitOne { get; set; }
 	public Enums.Traits TraitTwo { get; set; }
 
-	public CharacterStatsConstructor (JsonData json, string type)
+	public CharacterStatsConstructor (JsonData json, ICharacter thisCharacter)
 	{
 		rnd = new Random();
-		characterType = type;
+		character = thisCharacter;
 		System.Collections.Generic.ICollection<string> keys = json.Keys;
 		ConstructBasic(json);
 		ConstructHealth(json["Health"]);
@@ -71,8 +71,7 @@ public class CharacterStatsConstructor {
 	private void ConstructBasic (JsonData json)
 	{
 		Speed = Convert.ToSingle((double) json["Speed"]);
-		Enums.RoomTypes roomEnum = (Enums.RoomTypes)Enum.Parse(typeof(Enums.RoomTypes), (string)json["BasicRoom"]);
-		BasicRoom = ShipState.Inst.specRooms[roomEnum].GetComponent<Room>();
+		BasicRoom = GetBasicRoom((string)json["BasicRoom"]);
 	}
 
 	private void ConstructHealth (JsonData json)
@@ -168,7 +167,7 @@ public class CharacterStatsConstructor {
 
 	private void ApplyProffi (JsonData traitData)
 	{
-		UpdateProperty ((string)traitData["Stat"][characterType], Convert.ToSingle((double)traitData["Coefficient"]));
+		UpdateProperty ((string)traitData["Stat"][character.Type.ToString()], Convert.ToSingle((double)traitData["Coefficient"]));
 	}
 
 	private void UpdateProperty (string propertyName, float coefficient)
@@ -184,4 +183,25 @@ public class CharacterStatsConstructor {
 		return Convert.ToSingle(Math.Round(d, 1));
 	}
 
+	private Room GetBasicRoom (string name)
+	{
+		Room room = null;
+		switch (name)
+		{
+			case "Random":
+				room = Helpers.GetRandomArrayValue<Room>(ShipState.Inst.allRooms);
+				break;
+			case "None":
+				room = null;
+				break;
+			case "Current":
+			room = ShipState.Inst.allRooms.Single(v => v.collider2D.OverlapPoint(character.GObject.transform.position));
+				break;
+			default:
+				Enums.RoomTypes roomEnum = (Enums.RoomTypes)Enum.Parse(typeof(Enums.RoomTypes), name);
+				room = ShipState.Inst.specRooms[roomEnum].GetComponent<Room>();
+				break;
+		}
+		return room;
+	}
 }

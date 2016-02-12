@@ -13,7 +13,7 @@ public static class CharacterStatsGenerator {
 	public static CharacterStatsBase GenerateCharacterStats (CharacterMain character)
 	{
 		JsonData rawData = GetStatsConstructor(character.Side.ToString(), character.Type.ToString())["Stats"];
-		CharacterStatsConstructor contsr = new CharacterStatsConstructor(rawData, character.Type.ToString());
+		CharacterStatsConstructor contsr = new CharacterStatsConstructor(rawData, character);
 		CharacterStatsBase stats = 
 			(CharacterStatsBase)character.gameObject.AddComponent(SidesRelations.Instance.GetStatsType(character.Side));
 		stats.Init(contsr);

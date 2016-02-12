@@ -50,6 +50,11 @@ public class RoomStats : MonoBehaviour {
 		return Durability < MaxDurability;
 	}
 
+	public bool IsDepressurized ()
+	{
+		return Durability < Durability;
+	}
+
 	public bool IsOnFire ()
 	{
 		return FireLevel > 0f;
@@ -68,6 +73,19 @@ public class RoomStats : MonoBehaviour {
 	public bool IsPlantMutated ()
 	{
 		return PlantsLevel > 0f; 
+	}
+
+	public bool IsDangerous ()
+	{
+		bool result = 
+			IsOnFire() || 
+			IsRadioactive() || 
+			IsHazardous() || 
+			IsPlantMutated() ||
+			IsDepressurized() ||
+			WeatherThreat;
+
+		return result;
 	}
 
 }

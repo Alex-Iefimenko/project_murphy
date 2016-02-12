@@ -5,7 +5,7 @@ public class Enums {
 
 	// CHARACTERS
 	public enum CharacterSides{ Crew, Pirate, Trader, Creature, Player, Alien };
-	public enum CharacterTypes{ Engineer, Guard, Doctor, Scientist, LifeSupportEngineer, Murphy };
+	public enum CharacterTypes{ Engineer, Guard, Doctor, Scientist, LifeSupportEngineer, Murphy, Merchant };
 
 	public enum Traits { 
 		Hungry, Pessimist, IronWill, Puny, Big, SlowRecovery, 

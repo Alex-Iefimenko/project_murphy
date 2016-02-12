@@ -14,7 +14,7 @@ public class OtherShip : MonoBehaviour {
 			start = false;
 			GameObject ship = (GameObject)Instantiate(prefab, new Vector3(22f, -10f, 0f), transform.rotation);
 			Room room = ship.GetComponent<Room>();
-			room.Flier.Fly(GameObject.FindGameObjectWithTag("Beacon").transform.position, false);
+			room.Flier.FlyUp(GameObject.FindGameObjectWithTag("Beacon").transform.position);
 		}
 	}
 }
