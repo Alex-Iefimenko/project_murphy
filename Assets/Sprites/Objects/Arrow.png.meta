@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 08069c7c84acbc54bb8f9b10e902246c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Arrow
+    21300002: Arrow_0
+    21300004: Arrow_1
+    21300006: Arrow_2
+    21300008: Arrow_4
+    21300010: Arrow_17
+    21300012: Arrow_5
+    21300014: Arrow_6
+    21300016: Arrow_7
+    21300018: Arrow_8
+    21300020: Arrow_9
+    21300022: Arrow_10
+    21300024: Arrow_11
+    21300026: Arrow_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Arrow_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 5
+        width: 64
+        height: 171
+      alignment: 9
+      pivot: {x: .49999994, y: .607770801}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 4
+        width: 54
+        height: 171
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 6
+        width: 63
+        height: 170
+      alignment: 9
+      pivot: {x: .478175074, y: .435295522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_4
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 5
+        width: 63
+        height: 171
+      alignment: 9
+      pivot: {x: .463624984, y: .253416598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 4
+        width: 56
+        height: 172
+      alignment: 9
+      pivot: {x: .483631134, y: .345449001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 6
+        width: 60
+        height: 170
+      alignment: 9
+      pivot: {x: .461806238, y: .176477551}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_6
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 6
+        width: 62
+        height: 170
+      alignment: 9
+      pivot: {x: .485215217, y: .152213365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_7
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 7
+        width: 71
+        height: 170
+      alignment: 9
+      pivot: {x: .493544459, y: .16299741}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_8
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 7
+        width: 84
+        height: 170
+      alignment: 9
+      pivot: {x: .5, y: .21422179}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_9
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 8
+        width: 93
+        height: 169
+      alignment: 9
+      pivot: {x: .49014315, y: .291178048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 8
+        width: 103
+        height: 168
+      alignment: 9
+      pivot: {x: .495549768, y: .371778488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_11
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 8
+        width: 110
+        height: 169
+      alignment: 9
+      pivot: {x: .504166484, y: .445760518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arrow_12
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 8
+        width: 116
+        height: 169
+      alignment: 9
+      pivot: {x: .507222652, y: .614024639}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
