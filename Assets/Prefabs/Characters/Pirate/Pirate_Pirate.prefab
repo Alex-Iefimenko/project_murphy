@@ -43,7 +43,7 @@ MonoBehaviour:
   characterSide: 1
   characterType: 7
   prefabs:
-  - {fileID: 143770}
+  - {fileID: 100008, guid: 2c681082303469a42910531524080d7d, type: 2}
   - {fileID: 100008, guid: 5f594f6536d0355429c623216f94c6d1, type: 2}
   - {fileID: 100008, guid: 984c0a6172fb1144cb947d0499f3fa1f, type: 2}
 --- !u!212 &21243770

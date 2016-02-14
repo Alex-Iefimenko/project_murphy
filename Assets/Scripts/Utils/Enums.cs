@@ -25,7 +25,8 @@ public class Enums {
 		// Trader
 		Merchant,
 		// Pirate
-		Terrorist
+		Terrorist,
+		Pirate
 	};
 	
 	public enum Traits { 
