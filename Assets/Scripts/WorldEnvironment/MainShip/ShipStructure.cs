@@ -72,7 +72,7 @@ public class ShipStructure  {
 			nextStepRoom = predecessors[stepRoom];
 			if (nextStepRoom != null) 
 			{ 
-				result.Add (stepRoom.neighbors[nextStepRoom].ExistPoint);
+				result.Add (stepRoom.neighbors[nextStepRoom].ExitPoint);
 				result.Add (stepRoom.neighbors[nextStepRoom].EntrancePoint);
 			}
 			stepRoom = nextStepRoom;

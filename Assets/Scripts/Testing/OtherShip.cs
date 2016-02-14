@@ -3,16 +3,25 @@ using System.Collections;
 
 public class OtherShip : MonoBehaviour {
 
-	public GameObject prefab;
-	public bool start = false;
-
+	public GameObject traderShip;
+	public bool startTrader = false;
+	public GameObject pirateShip;
+	public bool startPirate = false;
 
 	// Update is called once per frame
 	void Update () {
-		if (start)
+		if (startTrader)
 		{
-			start = false;
-			GameObject ship = (GameObject)Instantiate(prefab, new Vector3(22f, -10f, 0f), transform.rotation);
+			startTrader = false;
+			GameObject ship = (GameObject)Instantiate(traderShip, new Vector3(22f, -10f, 0f), transform.rotation);
+			Room room = ship.GetComponent<Room>();
+			room.Flier.FlyUp(GameObject.FindGameObjectWithTag("Beacon").transform.position);
+		}
+
+		if (startPirate)
+		{
+			startPirate = false;
+			GameObject ship = (GameObject)Instantiate(pirateShip, new Vector3(22f, -10f, 0f), transform.rotation);
 			Room room = ship.GetComponent<Room>();
 			room.Flier.FlyUp(GameObject.FindGameObjectWithTag("Beacon").transform.position);
 		}

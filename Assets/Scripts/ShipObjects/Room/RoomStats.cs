@@ -12,6 +12,7 @@ public class RoomStats : MonoBehaviour {
 	public bool unelectryfied;
 	public bool weatherThreat;
 	public bool noGravity;
+	public bool locked;
 
 	public float MaxDurability { get { return maxDurability; } set { maxDurability = value; } }
 	public float Durability { get { return durability; } set { durability = value; } }
@@ -22,6 +23,7 @@ public class RoomStats : MonoBehaviour {
 	public bool Unelectryfied { get { return unelectryfied; } set { unelectryfied = value; } }
 	public bool WeatherThreat { get { return weatherThreat; } set { weatherThreat = value; } }
 	public bool NoGravity { get { return noGravity; } set { noGravity = value; } }
+	public bool Locked { get { return locked; } set { locked = value; } }
 
 	public void Awake ()
 	{

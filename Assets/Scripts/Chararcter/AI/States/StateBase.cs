@@ -40,4 +40,8 @@ public class StateBase : IState {
 		character.Movement.NavigateTo(room, item);
 	}
 
+	public void NavigateTo (Vector3 point)
+	{
+		character.Movement.NavigateTo(point);
+	}
 }

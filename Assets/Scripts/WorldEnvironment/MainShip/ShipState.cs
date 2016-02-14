@@ -50,6 +50,18 @@ public class ShipState {
 			return shipStructure.GetStepsToRoom(initialRoom, targetRoom);
 	}
 
+	public Room RandomRoom ()
+	{
+		return Helpers.GetRandomArrayValue<Room>(allRooms);
+	}
+
+	public Room RoomByPoint(Vector3 point)
+	{
+		Room room = null;
+		room = allRooms.Single(v => v.collider2D.OverlapPoint(point));
+		return room;
+	}
+
 	// Initialize method for creating ship structure as graph
 	private void CreateShipStructureGraph ()
 	{
@@ -84,4 +96,5 @@ public class ShipState {
 			if (allRooms[i].roomType != Enums.RoomTypes.Nothing) specRooms.Add (allRooms[i].roomType, allRooms[i]);
 		} 
 	}
+	
 }

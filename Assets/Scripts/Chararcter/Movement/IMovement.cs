@@ -11,6 +11,8 @@ public interface IMovement {
 
 	void NavigateTo(ICharacter character);
 
+	void NavigateTo(Vector3 point);
+
 	void Anchor(GameObject other);
 
 	bool IsMoving();

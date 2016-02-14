@@ -7,7 +7,7 @@ public class Neighbor {
 	public float Distance { get; set; }
 	public Door LinkingDoor { get; set; }
 	public Vector3 EntrancePoint { get; set; }
-	public Vector3 ExistPoint { get; set; }
+	public Vector3 ExitPoint { get; set; }
 
 	public Neighbor (Room neighbor, Room targetRoom, Door betweenDoor)
 	{
@@ -24,12 +24,12 @@ public class Neighbor {
 		if (distance1 < distance2)
 		{
 			EntrancePoint = entrances[0];
-			ExistPoint = entrances[1];
+			ExitPoint = entrances[1];
 		}
 		else
 		{
 			EntrancePoint = entrances[1];
-			ExistPoint = entrances[0];
+			ExitPoint = entrances[0];
 		}
 	}
 

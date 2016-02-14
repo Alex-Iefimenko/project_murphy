@@ -189,13 +189,13 @@ public class CharacterStatsConstructor {
 		switch (name)
 		{
 			case "Random":
-				room = Helpers.GetRandomArrayValue<Room>(ShipState.Inst.allRooms);
+				room = ShipState.Inst.RandomRoom();
 				break;
 			case "None":
 				room = null;
 				break;
 			case "Current":
-			room = ShipState.Inst.allRooms.Single(v => v.collider2D.OverlapPoint(character.GObject.transform.position));
+			room = ShipState.Inst.RoomByPoint(character.GObject.transform.position);
 				break;
 			default:
 				Enums.RoomTypes roomEnum = (Enums.RoomTypes)Enum.Parse(typeof(Enums.RoomTypes), name);

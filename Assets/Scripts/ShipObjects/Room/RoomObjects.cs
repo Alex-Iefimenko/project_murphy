@@ -52,6 +52,12 @@ public class RoomObjects {
 		return new Vector3(x, y, room.transform.position.z);
 	}
 
+	public Vector3 DoorExitPoint ()
+	{
+		Neighbor neighbor = Helpers.GetRandomArrayValue<Neighbor>(room.GetComponent<Room>().neighbors.Values.ToArray());
+		return neighbor.ExitPoint;
+	}
+
 	// Check if Room continse hostile Character
 	public ICharacter ContainsHostile (ICharacter character) 
 	{

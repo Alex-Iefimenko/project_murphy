@@ -76,7 +76,13 @@ public class Movement : MonoBehaviour, IMovement {
 		isDynamic = !(character.Stats.IsDead() || character.Stats.IsUnconscious());
 		movementPath[movementPath.Count - 1] = GetClosestCollPoint(target, gameObject);
 	}
-	
+
+	public void NavigateTo(Vector3 point) 
+	{
+		Navigate(ShipState.Inst.RoomByPoint(point));		
+		movementPath[movementPath.Count - 1] = point;
+	}
+
 	public bool IsMoving () 
 	{
 		return movementPath.Count != 0;
