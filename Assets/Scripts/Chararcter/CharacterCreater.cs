@@ -9,8 +9,9 @@ public class CharacterCreater : MonoBehaviour {
 
 	public void CreateCharacter ()
 	{
+		Vector3 place = new Vector3(transform.position.x, transform.position.y, -0.2f);
 		GameObject character = (GameObject)Instantiate(Helpers.GetRandomArrayValue(prefabs), 
-		                                               transform.position, 
+		                                               place, 
 		                                               transform.rotation);
 		CharacterMain newCharacter = character.GetComponent<CharacterMain>();
 		newCharacter.characterSide = characterSide;
