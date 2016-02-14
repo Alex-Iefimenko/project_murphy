@@ -16,6 +16,8 @@ public interface ICharacter {
 
 	ICharacterView View { get; }
 
+	Coordinator Coordinator { get; set; }
+
 	GameObject GObject { get; }
 
 	bool Lock { get; set; }
@@ -23,6 +25,8 @@ public interface ICharacter {
 	// System Character Actions
 
 	void Init ();
+
+	void Mutate (Enums.CharacterTypes newtype);
 
 	void PurgeActions ();
 

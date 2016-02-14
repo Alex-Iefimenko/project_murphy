@@ -17,6 +17,7 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	public ICharacterAIHandler AiHandler { get; private set; }
 	public IMovement Movement { get; private set; }
 	public ICharacterView View { get; private set; }
+	public Coordinator Coordinator { get; set; }
 
 	// GameObject
 	public GameObject GObject { get { return this.gameObject; } }
@@ -33,6 +34,12 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 		Component[] sprites = GetComponentsInChildren(typeof(SpriteRenderer), true);
 		int layer = Random.Range(100, 32766);
 		foreach (SpriteRenderer sprite in sprites) sprite.sortingOrder = layer;
+	}
+
+	public void Mutate (E.CharacterTypes newtype)
+	{
+		characterType = newtype;
+		AiHandler = CharacterAIGenerator.GenerateAIHandler(this);
 	}
 
 	public void PurgeActions ()

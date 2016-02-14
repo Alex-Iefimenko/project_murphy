@@ -41,7 +41,12 @@ public class Movement : MonoBehaviour, IMovement {
 	{
 		get { return currentRoom; }
 	}
-	
+
+	public GameObject Target
+	{
+		get { return target; }
+	}
+
 	public void Navigate(Room room, bool full=true) 
 	{
 		StopAllCoroutines();

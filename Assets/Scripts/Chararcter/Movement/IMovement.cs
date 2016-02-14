@@ -5,6 +5,8 @@ public interface IMovement {
 
 	Room CurrentRoom { get; }
 
+	GameObject Target { get; }
+
 	void Navigate(Room room, bool full=true);
 
 	void NavigateTo(Room room, Furniture item=null);

@@ -7,7 +7,7 @@ public class CharacterCreater : MonoBehaviour {
 	public Enums.CharacterTypes characterType;
 	public GameObject[] prefabs;
 
-	public void CreateCharacter ()
+	public CharacterMain CreateCharacter ()
 	{
 		Vector3 place = new Vector3(transform.position.x, transform.position.y, -0.2f);
 		GameObject character = (GameObject)Instantiate(Helpers.GetRandomArrayValue(prefabs), 
@@ -18,6 +18,7 @@ public class CharacterCreater : MonoBehaviour {
 		newCharacter.characterType = characterType;
 		newCharacter.Init();
 		Destroy(this.gameObject);
+		return newCharacter;
 	}
 
 }

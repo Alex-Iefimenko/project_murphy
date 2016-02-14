@@ -15,6 +15,8 @@ public class RoomTransition : MonoBehaviour {
 
 	public void FlyAway (Vector3 point)
 	{
+		System.Collections.Generic.List<ICharacter> characters = GetComponent<Room>().Objects.Characters;
+		for (int i = 0; i < characters.Count; i++) characters[i].GObject.transform.parent = transform;
 		flyEnd = Vanish;
 		StartCoroutine(RunTransition(point));
 	}
@@ -34,6 +36,8 @@ public class RoomTransition : MonoBehaviour {
 		ShipState.Inst.Init();
 		CharacterCreater[] characters = GetComponentsInChildren<CharacterCreater>();
 		for (int i = 0; i < characters.Length; i++) characters[i].CreateCharacter();
+		CharacterGroupCreater[] characterGroups = GetComponentsInChildren<CharacterGroupCreater>();
+		for (int i = 0; i < characterGroups.Length; i++) characterGroups[i].CreateCharacters();
 		ShipState.Inst.CountCharacters();
 	}
 

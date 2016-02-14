@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21243770}
   - 114: {fileID: 11443770}
   m_Layer: 0
-  m_Name: Pirate_Terrorist
+  m_Name: Pirate_Pirate
   m_TagString: CharacterCreater
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,9 +41,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSide: 1
-  characterType: 7
+  characterType: 8
   prefabs:
-  - {fileID: 100008, guid: 2c681082303469a42910531524080d7d, type: 2}
+  - {fileID: 100008, guid: b114aa74e324f484ea759101c865d9f6, type: 2}
   - {fileID: 100008, guid: 5f594f6536d0355429c623216f94c6d1, type: 2}
   - {fileID: 100008, guid: 984c0a6172fb1144cb947d0499f3fa1f, type: 2}
 --- !u!212 &21243770

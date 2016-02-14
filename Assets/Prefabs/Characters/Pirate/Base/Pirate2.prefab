@@ -478,6 +478,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11402044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSide: 1
-  characterType: 7
+  characterType: 8
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

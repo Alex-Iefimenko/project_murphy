@@ -11,8 +11,6 @@ public class PutExplosiveState : StateBase {
 	
 	public PutExplosiveState (CharacterMain character) : base(character) 
 	{
-		// TODO: Updated to for shared aim
-		target = ShipState.Inst.RandomRoom();
 		bomb = Resources.Load ("DynamicPrefabs/Bomb") as GameObject;
 	}
 	
@@ -20,11 +18,15 @@ public class PutExplosiveState : StateBase {
 	
 	public override bool CheckCondition (Room room) 
 	{
-		return !deployed;
+		bool condition = 
+			(!deployed && character.Coordinator == null) 
+			|| (character.Coordinator != null && !deployed && !character.Coordinator.Done);
+		return condition;
 	}
 	
 	public override void Actualize () { 
 		base.Actualize ();
+		if (character.Coordinator != null) target = FetchSharedGoal ();
 		NavigateTo(target);
 		tick = Random.Range(7, 10);
 	}
@@ -42,7 +44,15 @@ public class PutExplosiveState : StateBase {
 			GameObject newBomb = GameObject.Instantiate(bomb, place, Quaternion.identity) as GameObject;
 			newBomb.GetComponent<Bomb>().Room = target;	
 			deployed = true;
+			character.Coordinator.Done = true;
 			character.PurgeActions();
 		}
+	}
+
+	private Room FetchSharedGoal ()
+	{
+//		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.RandomRoom().gameObject;
+		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].gameObject;
+		return character.Coordinator.Target.GetComponent<Room>();
 	}
 }
