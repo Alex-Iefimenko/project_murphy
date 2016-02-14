@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: a3b37fc3c353e094ab07d4519cd4e09c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Monster
+    21300002: Monster_0
+    21300004: Monster_1
+    21300006: Monster_2
+    21300008: Monster_3
+    21300010: Monster_4
+    21300012: Monster_5
+    21300014: Monster_6
+    21300016: Monster_7
+    21300018: Monster_8
+    21300020: Monster_9
+    21300022: Monster_10
+    21300024: Monster_11
+    21300026: Monster_12
+    21300028: Monster_13
+    21300030: Monster_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Monster_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 336
+        width: 86
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 372
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 334
+        width: 87
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_3
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 329
+        width: 91
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 329
+        width: 90
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 189
+        width: 92
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_6
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 231
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 185
+        width: 91
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_8
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 181
+        width: 92
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_9
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 181
+        width: 91
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 10
+        width: 73
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_11
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 53
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 12
+        width: 73
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_13
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 6
+        width: 80
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_14
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 5
+        width: 81
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

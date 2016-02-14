@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21273560}
   - 114: {fileID: 11473560}
   m_Layer: 0
-  m_Name: Trader_Merchant
+  m_Name: Monster_Creature
   m_TagString: CharacterCreater
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
