@@ -140,7 +140,11 @@ public class Movement : MonoBehaviour, IMovement {
 	// Move character towards next movements point. Delete it if reached
 	private void Move ()
 	{
-		if (isDynamic && movementPath.Count == 1) movementPath[movementPath.Count - 1] = GetClosestCollPoint(target, gameObject);
+		if (isDynamic && movementPath.Count == 1) 
+		{
+			movementPath[movementPath.Count - 1] = GetClosestCollPoint(target, gameObject);
+			character.View.RotateTowards (movementPath[0]);
+		}
 		Vector3 nextPoint = movementPath[0];
 		nextPoint.z = transform.position.z;
 		transform.position = Vector3.MoveTowards(transform.position, nextPoint, speed * Time.deltaTime);

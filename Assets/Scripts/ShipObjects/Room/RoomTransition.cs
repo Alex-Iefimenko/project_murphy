@@ -4,8 +4,16 @@ using System.Collections;
 public class RoomTransition : MonoBehaviour {
 
 	private float speed = 2.5f;
+	private Engines engines;
+	private Roof roof;
 	private delegate void FlyEnd();
 	private FlyEnd flyEnd;
+
+	void Start ()
+	{
+		roof = GetComponentInChildren<Roof>();
+		engines = GetComponentInChildren<Engines>();
+	}
 
 	public void FlyUp (Vector3 point)
 	{
@@ -15,6 +23,8 @@ public class RoomTransition : MonoBehaviour {
 
 	public void FlyAway (Vector3 point)
 	{
+		if (roof) roof.HideRoof();
+		if (engines) engines.SwitchOn();
 		System.Collections.Generic.List<ICharacter> characters = GetComponent<Room>().Objects.Characters;
 		for (int i = 0; i < characters.Count; i++) characters[i].GObject.transform.parent = transform;
 		flyEnd = Vanish;
@@ -39,6 +49,8 @@ public class RoomTransition : MonoBehaviour {
 		CharacterGroupCreater[] characterGroups = GetComponentsInChildren<CharacterGroupCreater>();
 		for (int i = 0; i < characterGroups.Length; i++) characterGroups[i].CreateCharacters();
 		ShipState.Inst.CountCharacters();
+		if (roof) roof.ShowRoof();
+		if (engines) engines.SwitchOff();
 	}
 
 	private void Vanish ()
