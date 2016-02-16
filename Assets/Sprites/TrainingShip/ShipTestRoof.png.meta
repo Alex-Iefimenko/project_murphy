@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: 87d55315bc895489fa1021512da2d6c8
+guid: de33b58a1491f1c4d8477f6c8bd04eb3
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bomb
+    21300000: ShipTestRoof
+    21300002: ShipTestRoof_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,8 +23,8 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 1024
+  textureFormat: -3
+  maxTextureSize: 2048
   textureSettings:
     filterMode: -1
     aniso: 1
@@ -32,7 +33,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -43,6 +44,16 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ShipTestRoof_0
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 206
+        width: 1298
+        height: 2794
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
