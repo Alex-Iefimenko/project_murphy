@@ -15,11 +15,11 @@ public class Roof : MonoBehaviour {
 	
 	public void ShowRoof()
 	{
-		roofAnimator.SetBool("RoofEnabled", true);
+		if (!roofAnimator.GetBool("RoofEnabled")) roofAnimator.SetBool("RoofEnabled", true);
 	}
 
 	public void HideRoof()
 	{
-		roofAnimator.SetBool("RoofEnabled", false);
+		if (roofAnimator.GetBool("RoofEnabled")) roofAnimator.SetBool("RoofEnabled", false);
 	}
 }

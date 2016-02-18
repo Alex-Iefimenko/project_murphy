@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &199502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 499502}
+  - 114: {fileID: 11499502}
+  m_Layer: 0
+  m_Name: EventSource
+  m_TagString: EventSource
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499502
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11499502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e3be6cb313c4b629e313da999cb3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easyEvents:
+  - {fileID: 11472144, guid: ca42cae2ee35a41559410925dae3d703, type: 2}
+  - {fileID: 11499376, guid: 77fe06b5492294768bfaa3d1920b3c7b, type: 2}
+  - {fileID: 11473964, guid: 15cdd2951f94f4fbd944901e1d370eb9, type: 2}
+  - {fileID: 11443122, guid: 9972e73cc7f1441148fe38ed3f10b965, type: 2}
+  mediumEvents:
+  - {fileID: 11443914, guid: 954f561071d8e47f394663846bde94ad, type: 2}
+  - {fileID: 11459742, guid: f5c044d47e2d44783ad9676de7b3d996, type: 2}
+  - {fileID: 11431290, guid: 4c75d228c4bf3490387e6f2dcea878b8, type: 2}
+  - {fileID: 11479088, guid: bfa87f136160244e79daba51ad7fab6a, type: 2}
+  hardEvents:
+  - {fileID: 11474688, guid: 9539e1308f8b547d08c6487a2e1215ed, type: 2}
+  - {fileID: 11427092, guid: 3c2c402e306ce4778992eb7e94ae2394, type: 2}
+  - {fileID: 11487932, guid: b221e47e6c7d04a72bcb1e80ff91905c, type: 2}
+  - {fileID: 11468540, guid: df246c5ddb2064df3b0833a395e929f3, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 199502}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

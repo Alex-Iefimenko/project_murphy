@@ -33,6 +33,8 @@ public class Navigation : MonoBehaviour
 	private bool moved = false;
 	// is touch control is in reset state
 	private bool isResetPreviously  = true;
+	// if ship was hidden by roof
+	private bool hidden = true;
 	// Mask for filtering depth of raycast
 	private int layer;
 
@@ -47,12 +49,13 @@ public class Navigation : MonoBehaviour
 	void Update () 
 	{
 		TouchControl ();
-
-		// Editor debug
-		if (Application.platform == RuntimePlatform.WindowsEditor) MouseControl ();
 		if (!moved && !scaled) CameraSizeUpdate ();
 		if (player && currentPoint && player.collider2D.bounds.Intersects(currentPoint.renderer.bounds)) 
 			Destroy(currentPoint);
+
+		// Editor debug
+		if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor) 
+			MouseControl ();
 	}
 
 	// Reset state of touch control
@@ -183,7 +186,13 @@ public class Navigation : MonoBehaviour
 		else if (Camera.main.orthographicSize >= cameraSizeMax - 1f && isResetPreviously)
 		{
 			Camera.main.orthographicSize -= 2 * speed * Time.deltaTime;
+			if (!hidden) HideShip ();
 		}
+		else if (hidden)
+		{
+			ShowShip ();
+		}
+
 		Bounds cameraBounds = CameraPositionBounds ();
 		Vector3 position = Camera.main.transform.position;
 		if (Camera.main.transform.position.x <= cameraBounds.min.x * 0.8f && isResetPreviously)
@@ -223,5 +232,17 @@ public class Navigation : MonoBehaviour
 		                           0);
 		Bounds result = new Bounds(ship.transform.position, size);
 		return result;
+	}
+
+	void HideShip ()
+	{
+		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].Flier.HideRoof();
+		hidden = true;
+	}
+
+	void ShowShip ()
+	{
+		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].Flier.ShowRoof();
+		hidden = false;
 	}
 }
