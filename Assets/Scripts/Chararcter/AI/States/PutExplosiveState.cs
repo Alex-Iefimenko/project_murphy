@@ -26,7 +26,7 @@ public class PutExplosiveState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		if (character.Coordinator != null) target = FetchSharedGoal ();
+		target = (character.Coordinator != null) ? FetchSharedGoal () : ShipState.Inst.RandomRoom();
 		NavigateTo(target);
 		tick = Random.Range(7, 10);
 	}
@@ -44,7 +44,7 @@ public class PutExplosiveState : StateBase {
 			GameObject newBomb = GameObject.Instantiate(bomb, place, Quaternion.identity) as GameObject;
 			newBomb.GetComponent<Bomb>().Room = target;	
 			deployed = true;
-			character.Coordinator.Done = true;
+			if (character.Coordinator != null) character.Coordinator.Done = true;
 			character.PurgeActions();
 		}
 	}
