@@ -6,7 +6,7 @@ public class Engines : MonoBehaviour {
 	private ParticleSystem[] particalSystem;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		particalSystem = GetComponentsInChildren<ParticleSystem>();
 		SwitchOff ();
 	}

@@ -44,16 +44,20 @@ MonoBehaviour:
   - {fileID: 11499376, guid: 77fe06b5492294768bfaa3d1920b3c7b, type: 2}
   - {fileID: 11473964, guid: 15cdd2951f94f4fbd944901e1d370eb9, type: 2}
   - {fileID: 11443122, guid: 9972e73cc7f1441148fe38ed3f10b965, type: 2}
+  - {fileID: 11483426, guid: a769955f032ba48bd9ad9f51f442e713, type: 2}
+  - {fileID: 11474110, guid: df58b5d1a4dd748e789eab49fa41a6d4, type: 2}
   mediumEvents:
   - {fileID: 11443914, guid: 954f561071d8e47f394663846bde94ad, type: 2}
   - {fileID: 11459742, guid: f5c044d47e2d44783ad9676de7b3d996, type: 2}
   - {fileID: 11431290, guid: 4c75d228c4bf3490387e6f2dcea878b8, type: 2}
   - {fileID: 11479088, guid: bfa87f136160244e79daba51ad7fab6a, type: 2}
+  - {fileID: 11436346, guid: 52a53db1f1f484815bebbc2a5cb893af, type: 2}
   hardEvents:
   - {fileID: 11474688, guid: 9539e1308f8b547d08c6487a2e1215ed, type: 2}
   - {fileID: 11427092, guid: 3c2c402e306ce4778992eb7e94ae2394, type: 2}
   - {fileID: 11487932, guid: b221e47e6c7d04a72bcb1e80ff91905c, type: 2}
   - {fileID: 11468540, guid: df246c5ddb2064df3b0833a395e929f3, type: 2}
+  - {fileID: 11475100, guid: ef685a47244fa4c0c8e985a561296d93, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

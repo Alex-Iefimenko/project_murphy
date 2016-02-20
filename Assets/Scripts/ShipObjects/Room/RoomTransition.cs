@@ -6,17 +6,23 @@ public class RoomTransition : MonoBehaviour {
 	private float speed = 2.5f;
 	private Engines engines;
 	private Roof roof;
+	private Transform dockingObject;
 	private delegate void FlyEnd();
 	private FlyEnd flyEnd;
 
-	void Start ()
+	public Beacon Gateway { get; set; }
+
+	void Awake ()
 	{
 		roof = GetComponentInChildren<Roof>();
 		engines = GetComponentInChildren<Engines>();
+		DockPoint dockingPoint = GetComponentInChildren<DockPoint>();
+		dockingObject = dockingPoint == null ? this.transform : dockingPoint.transform;
 	}
 
 	public void FlyUp (Vector3 point)
 	{
+		engines.SwitchOn ();
 		flyEnd = Dock;
 		StartCoroutine(RunTransition(point));
 	}
@@ -24,6 +30,7 @@ public class RoomTransition : MonoBehaviour {
 	public void FlyAway (Vector3 point)
 	{
 		HideRoof();
+		roof = null;
 		if (engines) engines.SwitchOn();
 		System.Collections.Generic.List<ICharacter> characters = GetComponent<Room>().Objects.Characters;
 		for (int i = 0; i < characters.Count; i++) characters[i].GObject.transform.parent = transform;
@@ -43,9 +50,10 @@ public class RoomTransition : MonoBehaviour {
 
 	private IEnumerator RunTransition (Vector3 endPoint)
 	{
-		while (transform.position != endPoint)
+		Vector3 point = endPoint - dockingObject.position + transform.position;
+		while (transform.position != point)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, endPoint, speed * Time.deltaTime);
+			transform.position = Vector3.MoveTowards(transform.position, point, speed * Time.deltaTime);
 			yield return null;
 		}
 		flyEnd();
@@ -61,10 +69,12 @@ public class RoomTransition : MonoBehaviour {
 		ShipState.Inst.CountCharacters();
 		ShowRoof();
 		if (engines) engines.SwitchOff();
+		if (Gateway) Gateway.OnDock();
 	}
 
 	private void Vanish ()
 	{
 		Destroy(gameObject);
+		if (Gateway) Gateway.OnUnDock();
 	}
 }

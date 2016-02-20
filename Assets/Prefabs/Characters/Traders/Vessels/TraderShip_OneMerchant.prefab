@@ -368,6 +368,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &128474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 428474}
+  - 114: {fileID: 11428474}
+  m_Layer: 0
+  m_Name: DockPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &415212
 Transform:
   m_ObjectHideFlags: 1
@@ -465,7 +481,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.8277292, y: -5.91642189, z: 0}
+  m_LocalPosition: {x: 10.4899998, y: -6.34000015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 415228}
@@ -482,6 +498,7 @@ Transform:
   - {fileID: 415250}
   - {fileID: 415224}
   - {fileID: 415252}
+  - {fileID: 428474}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &415228
@@ -640,6 +657,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 415226}
   m_RootOrder: 13
+--- !u!4 &428474
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.699999988, y: .469999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 415226}
+  m_RootOrder: 14
 --- !u!50 &5015234
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -1037,6 +1066,17 @@ MonoBehaviour:
   - {fileID: 100008, guid: 893ebc1d79ac01c45ac3d5621ce41241, type: 2}
   - {fileID: 100008, guid: 45124661b33a51d4f90e05060a2bc929, type: 2}
   - {fileID: 100008, guid: 5046e7546044d084bb8dfec803f97a71, type: 2}
+--- !u!114 &11428474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a6aa1ba22f8480b9d5a481bb368c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19815246
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -14,7 +14,7 @@ public class EventSource : MonoBehaviour {
 		allEvents = new EventBase[easyEvents.Length + mediumEvents.Length + hardEvents.Length];
 		easyEvents.CopyTo(allEvents, 0);
 		mediumEvents.CopyTo(allEvents, easyEvents.Length);
-		hardEvents.CopyTo(allEvents, mediumEvents.Length);
+		hardEvents.CopyTo(allEvents, mediumEvents.Length + easyEvents.Length);
 	}
 	
 	public void SelectEvent () {
@@ -30,8 +30,8 @@ public class EventSource : MonoBehaviour {
 		}
 	}
 
-	public void ForceState<T> ()
+	public void ForceState (string name)
 	{
-		allEvents.Single(v => typeof(T) == v.GetType()).StartEvent();
+		allEvents.Single(v => v.gameObject.name == name).StartEvent();
 	}
 }
