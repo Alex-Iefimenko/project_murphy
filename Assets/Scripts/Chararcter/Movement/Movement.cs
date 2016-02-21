@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour, IMovement {
 		target = room.gameObject;
 		movementPath = ShipState.Inst.GetStepsToRoom(currentRoom, room);
 		if (!full) movementPath.RemoveAt(movementPath.Count - 1);
-		character.View.RotateTowards(movementPath[0]);
+		if (movementPath.Count != 0) character.View.RotateTowards(movementPath[0]);
 	}
 	
 	public void NavigateTo(Room room, Furniture item=null)
@@ -107,6 +107,7 @@ public class Movement : MonoBehaviour, IMovement {
 
 	public void AdjustPostion (Vector3 endPoint, bool stopOnTouch=false)
 	{
+		character.View.RotateTowards (endPoint);
 		StartCoroutine(Adjust(endPoint, stopOnTouch));
 	}
 
@@ -116,6 +117,7 @@ public class Movement : MonoBehaviour, IMovement {
 		StopAllCoroutines();
 		target = null;
 		isDynamic = false;
+		if (anchoredObject != null) anchoredObject.GetComponent<CharacterMain>().Lock = false;
 		anchoredObject = null;
 		transform.rotation = Quaternion.identity;
 	}

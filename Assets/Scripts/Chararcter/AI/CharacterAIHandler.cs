@@ -27,6 +27,15 @@ public class CharacterAIHandler : ICharacterAIHandler {
 		currentState = null;
 	}
 
+	public T GetState<T> ()
+	{
+		for (int i = 0; i < aiStates.Length; i++) 
+		{ 
+			if (aiStates[i].GetType() == typeof(T)) return (T)aiStates[i];
+		}
+		return default (T);
+	}
+
 	public void ForceState<T>()
 	{
 		for (int i = 0; i < aiStates.Length; i++) 
@@ -34,7 +43,12 @@ public class CharacterAIHandler : ICharacterAIHandler {
 			if (aiStates[i].GetType() == typeof(T)) { ChageState(aiStates[i]); }
 		}
 	}
-	
+
+	public void ForceState(IState state)
+	{
+		ChageState(state);
+	}
+
 	public void React()
 	{
 		IState newState = DetectState ();

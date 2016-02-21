@@ -10,5 +10,10 @@ public interface ICharacterAIHandler {
 
 	void Purge ();
 
+	T GetState<T> ();
+
 	void ForceState<T>();
+
+	void ForceState (IState state);
+
 }

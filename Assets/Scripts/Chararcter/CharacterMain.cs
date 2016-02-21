@@ -61,8 +61,10 @@ public class CharacterMain : MonoBehaviour, ICharacter {
 	//
 	public void Navigate (Room room, bool full)
 	{
-		AiHandler.ForceState<NavigateState>();
-		Movement.Navigate(room, full);
+		NavigateState state = AiHandler.GetState<NavigateState>();
+		state.TargetRoom = room;
+		state.Full = full;
+		AiHandler.ForceState(state);
 	}
 
 	public void Heal (float amount)
