@@ -6,12 +6,17 @@ public class RoomStateBase : MonoBehaviour {
 	public virtual Animator CurrentAnimator { get; set; }
 	public virtual Room CurrentRoom { get; set; } 
 	public virtual bool Enabled { get; set; } 
+	public GameObject Warning { get { return warning; } } 
+	private GameObject warning;
+	
 
 	// Use this for initialization
 	void Start () {
 		CurrentRoom = GetComponentInParent<Room>();
 		CurrentAnimator = gameObject.GetComponent<Animator>();
 		Enabled = false;
+		warning = GetComponentInChildren<Warning>().gameObject;
+		warning.renderer.enabled = false;
 	}
 
 	public virtual bool EnableCondition () { return false; } 
@@ -21,12 +26,14 @@ public class RoomStateBase : MonoBehaviour {
 	public virtual void StateEnable () 
 	{
 		Enabled = true;
+		warning.renderer.enabled = true;
 		Broadcaster.Instance.tickEvent += Tick;
 	} 
 
 	public virtual void StateDisable () 
 	{ 
 		Enabled = false;
+		warning.renderer.enabled = false;
 		Broadcaster.Instance.tickEvent -= Tick;
 	}
 

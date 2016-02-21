@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DockPoint : MonoBehaviour {
+public class Warning : MonoBehaviour {
 
 	// Used for indexing
 

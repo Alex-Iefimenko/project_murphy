@@ -117,6 +117,8 @@ public class Navigation : MonoBehaviour
 		{
 			Scale(Vector2.Distance(touch1.position, touch2.position));
 			touchDistance = Vector2.Distance(touch1.position, touch2.position);
+			if (!hidden && Camera.main.orthographicSize >= cameraSizeMax - 1f) HideShip ();
+			else if (hidden) ShowShip ();
 		}
 
 	}
@@ -173,6 +175,8 @@ public class Navigation : MonoBehaviour
 		if (Input.GetAxis("Mouse ScrollWheel") < 0) // back
 		{
 			Scale(-speed / Time.deltaTime);
+			if (!hidden && Camera.main.orthographicSize >= cameraSizeMax - 1f) HideShip ();
+			else if (hidden) ShowShip ();
 		}
 	}
 
@@ -186,7 +190,6 @@ public class Navigation : MonoBehaviour
 		else if (Camera.main.orthographicSize >= cameraSizeMax - 1f && isResetPreviously)
 		{
 			Camera.main.orthographicSize -= 2 * speed * Time.deltaTime;
-			if (!hidden) HideShip ();
 		}
 		else if (hidden)
 		{
