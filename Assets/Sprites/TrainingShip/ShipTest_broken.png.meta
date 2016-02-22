@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: ffd6360c7c929bc49952f7c3c8a71c79
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ShipTest_broken
+    21300002: ShipTest_broken_0
+    21300004: ShipTest_broken_1
+    21300006: ShipTest_broken_2
+    21300008: ShipTest_broken_3
+    21300010: ShipTest_broken_4
+    21300012: ShipTest_broken_5
+    21300014: ShipTest_broken_6
+    21300016: ShipTest_broken_7
+    21300018: ShipTest_broken_8
+    21300020: ShipTest_broken_9
+    21300022: ShipTest_broken_10
+    21300024: ShipTest_broken_11
+    21300026: ShipTest_broken_12
+    21300028: ShipTest_broken_13
+    21300030: ShipTest_broken_14
+    21300032: ShipTest_broken_15
+    21300034: ShipTest_broken_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ShipTest_broken_0
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 2553
+        width: 482
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_1
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 2364
+        width: 504
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_2
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 2150
+        width: 482
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_3
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 2301
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_4
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 2224
+        width: 292
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_5
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 1704
+        width: 484
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_6
+      rect:
+        serializedVersion: 2
+        x: 2642
+        y: 1786
+        width: 300
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_7
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 1372
+        width: 362
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_8
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 1373
+        width: 327
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_9
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 915
+        width: 108
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_10
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 959
+        width: 361
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_11
+      rect:
+        serializedVersion: 2
+        x: 2638
+        y: 959
+        width: 326
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_12
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 554
+        width: 113
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_13
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 538
+        width: 496
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_14
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 528
+        width: 115
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_15
+      rect:
+        serializedVersion: 2
+        x: 2903
+        y: 405
+        width: 27
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShipTest_broken_16
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 18
+        width: 953
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
