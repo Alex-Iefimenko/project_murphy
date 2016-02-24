@@ -42,7 +42,7 @@ public class EliminateDeadBodyState : StateBase {
 			//Temporary
 			foreach (SpriteRenderer sprite in dead.GObject.GetComponentsInChildren<SpriteRenderer>())
 			{
-				sprite.sortingOrder = -5;
+				sprite.sortingOrder = -100;
 			}
 		}
 

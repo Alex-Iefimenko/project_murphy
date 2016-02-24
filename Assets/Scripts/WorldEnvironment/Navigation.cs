@@ -166,7 +166,8 @@ public class Navigation : MonoBehaviour
 			Vector3 worldTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			RaycastHit2D hit;
 			hit = Physics2D.Raycast (new Vector2(worldTouch.x, worldTouch.y), Vector2.zero, 20, layer);
-			if (hit && player) NavigatePlayerTo (hit);
+			bool walks = hit && player && !player.Stats.IsDead() && !player.Stats.IsUnconscious();
+			if (walks) NavigatePlayerTo (hit);
 		}
 		if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward
 		{
