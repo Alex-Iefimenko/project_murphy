@@ -50,6 +50,11 @@ public class ShipState {
 			return shipStructure.GetStepsToRoom(initialRoom, targetRoom);
 	}
 
+	public Room RandomNamedRoom ()
+	{
+		return Helpers.GetRandomArrayValue<Room>(specRooms.Values.ToArray());
+	}
+
 	public Room RandomRoom ()
 	{
 		return Helpers.GetRandomArrayValue<Room>(allRooms);

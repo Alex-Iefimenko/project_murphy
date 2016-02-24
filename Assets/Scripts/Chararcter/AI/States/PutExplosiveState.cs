@@ -26,7 +26,7 @@ public class PutExplosiveState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		target = (character.Coordinator != null) ? FetchSharedGoal () : ShipState.Inst.RandomRoom();
+		target = (character.Coordinator != null) ? FetchSharedGoal () : ShipState.Inst.RandomNamedRoom();
 		NavigateTo(target);
 		tick = Random.Range(7, 10);
 	}
@@ -51,7 +51,7 @@ public class PutExplosiveState : StateBase {
 
 	private Room FetchSharedGoal ()
 	{
-		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.RandomRoom().gameObject;
+		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.RandomNamedRoom().gameObject;
 //		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].gameObject;
 		return character.Coordinator.Target.GetComponent<Room>();
 	}

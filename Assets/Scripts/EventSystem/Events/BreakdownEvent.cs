@@ -10,7 +10,7 @@ public class BreakdownEvent : EventBase {
 
 	public override bool TryEvent ()
 	{
-		Room room = ShipState.Inst.RandomRoom();
+		Room room = ShipState.Inst.RandomNamedRoom();
 		return room.SatesHandler.ForceState<BrokenRoomState>(amount);
 	}
 
