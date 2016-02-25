@@ -173,6 +173,7 @@ public class Movement : MonoBehaviour, IMovement {
 	
 	private IEnumerator Adjust (Vector3 endPoint, bool stopOnTargetTouch)
 	{
+		character.View.RotateTowards (endPoint);
 		while(transform.position != endPoint)
 		{
 			endPoint.z = transform.position.z;
@@ -180,7 +181,6 @@ public class Movement : MonoBehaviour, IMovement {
 			if (stopOnTargetTouch && IsNearObject(target)) yield break;
 			yield return null;
 		}
-		if (target != null) character.View.RotateTowards (target.transform.position);
 	}
 
 	private Vector3 GetClosestCollPoint (GameObject tObject, GameObject refObject)

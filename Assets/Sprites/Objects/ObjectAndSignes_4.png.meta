@@ -63,123 +63,123 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 391
-        width: 114
-        height: 103
+        y: 426
+        width: 89
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_1
       rect:
         serializedVersion: 2
-        x: 133
-        y: 391
-        width: 115
-        height: 103
+        x: 103
+        y: 426
+        width: 90
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_2
       rect:
         serializedVersion: 2
-        x: 264
-        y: 391
-        width: 114
-        height: 103
+        x: 205
+        y: 426
+        width: 89
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_3
       rect:
         serializedVersion: 2
-        x: 395
-        y: 391
-        width: 114
-        height: 103
+        x: 307
+        y: 426
+        width: 89
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_4
       rect:
         serializedVersion: 2
         x: 2
-        y: 267
-        width: 114
-        height: 103
+        y: 329
+        width: 89
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_5
       rect:
         serializedVersion: 2
-        x: 133
-        y: 267
-        width: 115
-        height: 103
+        x: 103
+        y: 329
+        width: 90
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_6
       rect:
         serializedVersion: 2
-        x: 264
-        y: 267
-        width: 114
-        height: 103
+        x: 205
+        y: 329
+        width: 89
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_7
       rect:
         serializedVersion: 2
-        x: 395
-        y: 267
-        width: 114
-        height: 103
+        x: 307
+        y: 329
+        width: 89
+        height: 80
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_8
       rect:
         serializedVersion: 2
         x: 2
-        y: 140
-        width: 114
-        height: 105
+        y: 216
+        width: 88
+        height: 81
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ObjectAndSignes_4_9
       rect:
         serializedVersion: 2
-        x: 133
-        y: 143
-        width: 115
-        height: 102
+        x: 102
+        y: 218
+        width: 90
+        height: 79
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ObjectAndSignes_4_11
+    - name: ObjectAndSignes_4_10
       rect:
         serializedVersion: 2
-        x: 293
+        x: 294
         y: 229
         width: 12
         height: 21
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ObjectAndSignes_4_12
+    - name: ObjectAndSignes_4_11
       rect:
         serializedVersion: 2
         x: 2
-        y: 7
+        y: 6
         width: 129
-        height: 111
+        height: 112
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ObjectAndSignes_4_13
+    - name: ObjectAndSignes_4_12
       rect:
         serializedVersion: 2
         x: 150
@@ -187,17 +187,17 @@ TextureImporter:
         width: 129
         height: 112
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ObjectAndSignes_4_14
+    - name: ObjectAndSignes_4_13
       rect:
         serializedVersion: 2
-        x: 282
-        y: 4
-        width: 226
-        height: 206
+        x: 283
+        y: 6
+        width: 216
+        height: 205
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
