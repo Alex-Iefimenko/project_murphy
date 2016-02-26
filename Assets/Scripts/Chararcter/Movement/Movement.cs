@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour, IMovement {
 		if (item != null)
 		{
 			target = item.gameObject;
-			item.isFree = false;
+			item.IsFree = false;
 			movementPath[movementPath.Count - 1] = item.GetComponent<SpriteRenderer>().bounds.center;
 		}
 		else

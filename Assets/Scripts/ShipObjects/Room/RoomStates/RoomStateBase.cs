@@ -15,8 +15,12 @@ public class RoomStateBase : MonoBehaviour {
 		CurrentRoom = GetComponentInParent<Room>();
 		CurrentAnimator = gameObject.GetComponent<Animator>();
 		Enabled = false;
-		warning = GetComponentInChildren<Warning>().gameObject;
-		warning.renderer.enabled = false;
+		Warning warnSign = GetComponentInChildren<Warning>();
+		if (warnSign != null) 
+		{
+			warning = warnSign.gameObject;
+			warning.renderer.enabled = false;
+		}
 	}
 
 	public virtual bool EnableCondition () { return false; } 

@@ -37,7 +37,7 @@ public class RoomObjects {
 	{
 		Furniture resultObject = null;
 		List<Furniture> unoccypiedObjects = new List<Furniture>();
-		unoccypiedObjects = furniture.Where(item => item.isFree).ToList<Furniture>();
+		unoccypiedObjects = furniture.Where(item => item.IsFree).ToList<Furniture>();
 		if (unoccypiedObjects.Count > 0) 
 			resultObject = Helpers.GetRandomArrayValue<Furniture>(unoccypiedObjects);
 		return resultObject;
