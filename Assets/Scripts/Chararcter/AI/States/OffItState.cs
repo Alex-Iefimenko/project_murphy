@@ -18,11 +18,16 @@ public class OffItState : StateBase {
 	public override void Actualize () { 
 		base.Actualize ();
 		Room room = Helpers.GetRandomArrayValue<Room>(character.Movement.CurrentRoom.neighbors.Keys.ToList());
-		NavigateTo(room);
+		character.Movement.Run().ToRoom(room);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false) character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return character.Movement.IsMoving == false;
 	}
 }

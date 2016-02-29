@@ -1,6 +1,7 @@
 {
   "Stats":{
-    "Speed": 0.5,
+    "WalkSpeed": 0.5,
+    "RunSpeed": 0.75,
     "BasicRoom":"MedBay",
     "WorkTasks": ["HealOther", "TakeWoundedBody"],
     "RestProbability": 0.25,

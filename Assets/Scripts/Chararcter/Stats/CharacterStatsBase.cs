@@ -3,7 +3,8 @@ using System.Collections;
 
 public class CharacterStatsBase : CharatcerStatsAbstract {
 
-	public new float speed;
+	public new float walkSpeed;
+	public new float runSpeed;
 	public new Room basicRoom;
 	// Health
 	public new float maxHealth;
@@ -18,7 +19,8 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public new float attackCoolDown;
 	public new bool abbleDistantAttack;
 
-	public override float Speed { get { return speed; } }
+	public override float WalkSpeed { get { return walkSpeed; } }
+	public override float RunSpeed { get { return runSpeed; } }
 	public override Room BasicRoom { get { return basicRoom; } }
 	// Health
 	public override float MaxHealth { get { return maxHealth; } }
@@ -37,7 +39,8 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 
 	public virtual void Init(CharacterStatsConstructor constructor)
 	{
-		speed = constructor.Speed;
+		walkSpeed = constructor.WalkSpeed;
+		runSpeed = constructor.RunSpeed;
 		basicRoom = constructor.BasicRoom;
 		maxHealth = constructor.MaxHealth;
 		health = constructor.Health;
@@ -89,4 +92,8 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 		return (Health < MaxHealth && !IsDead() && !IsUnconscious ());
 	}
 
+	public bool IsActive ()
+	{
+		return !(IsDead() || IsUnconscious());
+	}
 }

@@ -21,7 +21,7 @@ public class EliminateDeadBodyState : StateBase {
 		pulling = false;
 		dead = character.Movement.CurrentRoom.Objects.ContainsDead();
 		dead.Lock = true;
-		NavigateTo(dead);
+		character.Movement.Walk().ToCharacter(dead);
 	}
 	
 	public override void ExecuteStateActions () 
@@ -29,12 +29,14 @@ public class EliminateDeadBodyState : StateBase {
 		if (!pulling && character.Movement.IsNearObject(dead.GObject))
 		{
 			character.View.SetSubState(1);
-			character.Movement.Anchor(dead.GObject);
-			NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.Disposal]);
+			character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.Disposal], "DisposalPort");
+			character.Movement.Pull((IMovable)dead);
 			pulling = true;
+
 		}
-		if (pulling && character.Movement.IsMoving() == false)
+		if (pulling && character.Movement.IsMoving == false)
 		{
+
 			dead.Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
 			ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].Objects.Untrack(dead);
 			MonoBehaviour.Destroy(dead.GObject, 10f);

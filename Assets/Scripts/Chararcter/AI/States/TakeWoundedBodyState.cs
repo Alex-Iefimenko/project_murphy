@@ -21,7 +21,7 @@ public class TakeWoundedBodyState : StateBase {
 		pulling = false;
 		unconscious = character.Movement.CurrentRoom.Objects.ContainsUnconscious();
 		unconscious.Lock = true;
-		NavigateTo(unconscious);
+		character.Movement.Walk().ToCharacter(unconscious);
 	}
 	
 	public override void ExecuteStateActions () 
@@ -29,11 +29,11 @@ public class TakeWoundedBodyState : StateBase {
 		if (!pulling && character.Movement.IsNearObject(unconscious.GObject))
 		{
 			character.View.SetSubState(1);
-			character.Movement.Anchor(unconscious.GObject);
-			NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay]);
+			character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
+			character.Movement.Pull((IMovable)unconscious);
 			pulling = true;
 		}
-		if (pulling && character.Movement.IsMoving() == false)
+		if (pulling && character.Movement.IsMoving == false)
 		{
 			unconscious.Heal(character.Stats.HealOther);
 		}

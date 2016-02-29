@@ -14,7 +14,7 @@ public class Beacon : MonoBehaviour {
 
 	public bool Free { get { return !request && !docked; } }
 
-	void Start () 
+	void Awake () 
 	{
 		dockingAnimation = GetComponentInChildren<SpriteRenderer>();
 		dockingAnimation.enabled = false;

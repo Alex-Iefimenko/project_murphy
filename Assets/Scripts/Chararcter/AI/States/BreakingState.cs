@@ -17,13 +17,13 @@ public class BreakingState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		NavigateTo(character.Movement.CurrentRoom.Objects.DoorExitPoint());
+		character.Movement.Walk().ToPoint(character.Movement.CurrentRoom.Objects.DoorExitPoint());
 		tick = Random.Range(15, 20);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			tick -= 1;
 			character.View.SetSubState(1);

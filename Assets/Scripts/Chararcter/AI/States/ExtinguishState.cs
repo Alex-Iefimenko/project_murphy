@@ -16,16 +16,19 @@ public class ExtinguishState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(character.Movement.CurrentRoom);
+		character.Movement.Walk().ToPoint(character.Movement.CurrentRoom.Objects.GetRandomRoomPoint());
 	}
 	
 	public override void ExecuteStateActions () 
 	{
 		character.Movement.CurrentRoom.Extinguish(character.Stats.FireExtinguish);
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 			character.View.SetSubState(1);
-		if (character.Movement.CurrentRoom.Stats.IsOnFire() == false)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
 	}
 	
+	public override bool PurgeCondition () 
+	{
+		return character.Movement.CurrentRoom.Stats.IsOnFire() == false;
+	}
 }

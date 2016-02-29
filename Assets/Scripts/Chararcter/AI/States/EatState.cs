@@ -16,18 +16,22 @@ public class EatState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery]);
+		character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery], "Random");
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			character.Stats.Fatigue += character.Stats.FatigueIncrease;
 			character.View.SetSubState(1);
 		}
-		if (character.Stats.Fatigue >= character.Stats.MaxFatigue)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return character.Stats.Fatigue >= character.Stats.MaxFatigue;
 	}
 }
 

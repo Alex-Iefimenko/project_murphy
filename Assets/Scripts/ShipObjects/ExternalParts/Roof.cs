@@ -7,7 +7,7 @@ public class Roof : MonoBehaviour {
 	private SpriteRenderer roofRenderer;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		roofRenderer = GetComponent<SpriteRenderer>();
 		roofRenderer.sortingOrder = 32767;
 		roofAnimator = GetComponent<Animator>();

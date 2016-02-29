@@ -8,7 +8,7 @@ public class OtherShip : MonoBehaviour {
 
 	private EventSource eventSource;
 
-	void Start ()
+	void Awake ()
 	{
 		eventSource = GameObject.FindGameObjectWithTag("EventSource").GetComponent<EventSource>();
 	}

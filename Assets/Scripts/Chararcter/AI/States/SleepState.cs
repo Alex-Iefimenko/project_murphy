@@ -16,18 +16,22 @@ public class SleepState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters]);
+		character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters], "Random");
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			character.Stats.Sanity += character.Stats.SanityIncrease;
 			character.View.SetSubState(1);
 		}
-		if (character.Stats.Sanity >= character.Stats.MaxSanity)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return character.Stats.Sanity >= character.Stats.MaxSanity;
 	}
 }
 

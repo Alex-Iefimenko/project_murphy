@@ -66,7 +66,7 @@ public class ShipStructure  {
 		List<Vector3> result = new List<Vector3>();
 		Room stepRoom = tRoom;
 		Room nextStepRoom;
-		result.Add (tRoom.transform.position);
+//		result.Add (tRoom.transform.position);
 		while (stepRoom != null)
 		{
 			nextStepRoom = predecessors[stepRoom];

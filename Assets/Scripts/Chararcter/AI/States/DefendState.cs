@@ -17,22 +17,22 @@ public class DefendState : StateBase {
 	public override bool CheckCondition (Room room) 
 	{
 		ICharacter hostile = room.Objects.ContainsHostile(character);
-		return (hostile != null && !hostile.Stats.IsDead() && !hostile.Stats.IsUnconscious());
+		return (hostile != null && hostile.Stats.IsActive());
 	}
 
 	public override void Actualize () 
-	{ 
+	{
 		base.Actualize ();
 		character.View.SetCustomBool("AbleToShot", character.Stats.AbbleDistantAttack);
 		enemy = character.Movement.CurrentRoom.Objects.ContainsHostile(character);
 		if (character.Stats.AbbleDistantAttack)
 		{
-			NavigateTo(character.Movement.CurrentRoom);
+			character.Movement.Run().ToFurniture(character.Movement.CurrentRoom, "Random");
 			character.Stats.attackReady += DistantAttack;
 		}
 		else
 		{
-			NavigateTo(enemy);
+			character.Movement.Run().ToCharacter(enemy);
 			character.Stats.attackReady += CloseAttack;
 		}
 
@@ -40,14 +40,16 @@ public class DefendState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false 
+		if (character.Movement.IsMoving == false 
 		    && character.Stats.AbbleDistantAttack == false
 		    && character.Movement.IsNearObject(enemy.GObject) == false)
-			NavigateTo(enemy);
-		if (enemy.Movement.CurrentRoom != character.Movement.CurrentRoom)
-			character.PurgeActions();
-		if (enemy.Stats.IsDead() || enemy.Stats.IsUnconscious())
-			character.PurgeActions();
+			character.Movement.Run().ToCharacter(enemy);
+		base.ExecuteStateActions ();
+	}
+
+	public override bool PurgeCondition () 
+	{
+		return enemy.Movement.CurrentRoom != character.Movement.CurrentRoom || !enemy.Stats.IsActive();
 	}
 
 	private void CloseAttack ()

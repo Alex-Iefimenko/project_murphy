@@ -16,16 +16,20 @@ public class RepairState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(character.Movement.CurrentRoom);
+		character.Movement.Walk().ToFurniture(character.Movement.CurrentRoom, "Random");
 	}
 	
 	public override void ExecuteStateActions () 
 	{
 		character.Movement.CurrentRoom.Repair(character.Stats.Repair);
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 			character.View.SetSubState(1);
-		if (character.Movement.CurrentRoom.Stats.IsBroken() == false)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return character.Movement.CurrentRoom.Stats.IsBroken() == false;
 	}
 
 }

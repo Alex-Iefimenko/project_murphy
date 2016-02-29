@@ -11,7 +11,8 @@ public class CharacterStatsConstructor {
 	// Type
 	public ICharacter character;
 	// Basic
-	public float Speed { get; set; }
+	public float WalkSpeed { get; set; }
+	public float RunSpeed { get; set; }
 	public Room BasicRoom { get; set; }
 	// Health
 	public float MaxHealth { get; set; }
@@ -70,7 +71,8 @@ public class CharacterStatsConstructor {
 
 	private void ConstructBasic (JsonData json)
 	{
-		Speed = Convert.ToSingle((double) json["Speed"]);
+		WalkSpeed = Convert.ToSingle((double) json["WalkSpeed"]);
+		RunSpeed = Convert.ToSingle((double) json["RunSpeed"]);
 		BasicRoom = GetBasicRoom((string)json["BasicRoom"]);
 	}
 
@@ -161,6 +163,16 @@ public class CharacterStatsConstructor {
 		{
 			case Enums.Traits.Proffi:
 				ApplyProffi (traitData);
+				break;
+			case Enums.Traits.Slowpoke:
+				for (int i = 0; i < traitData["Stat"].Count; i++) { 
+					UpdateProperty ((string)traitData["Stat"][i], Convert.ToSingle((double)traitData["Coefficient"]));
+				}
+				break;
+			case Enums.Traits.Fast:
+				for (int i = 0; i < traitData["Stat"].Count; i++) { 
+					UpdateProperty ((string)traitData["Stat"][i], Convert.ToSingle((double)traitData["Coefficient"])); 
+				}
 				break;
 		}
 	}

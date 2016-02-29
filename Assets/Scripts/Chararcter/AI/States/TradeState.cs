@@ -18,13 +18,13 @@ public class TradeState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.PowerSource]);
+		character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery], "Random");
 		tick = Random.Range(10, 15);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			tick -= 1;
 			character.View.SetSubState(1);

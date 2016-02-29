@@ -19,22 +19,23 @@ public class HealOtherState : StateBase {
 		base.Actualize (); 
 		wounded = character.Movement.CurrentRoom.Objects.ContainsWounded(character);
 		wounded.Lock = true;
-		NavigateTo(wounded);
+		character.Movement.Run().ToCharacter(wounded);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false && character.Movement.IsNearObject(wounded.GObject))
+		if (character.Movement.IsMoving == false && character.Movement.IsNearObject(wounded.GObject))
 		{
 			character.View.SetSubState(1);
 			wounded.Heal(character.Stats.HealOther);
 		}
-		if (character.Movement.IsMoving() == false && !character.Movement.IsNearObject(wounded.GObject))
-		{
-			character.PurgeActions();
-		}
-		if (wounded.Stats.IsWounded() == false)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return wounded.Stats.IsWounded() == false || 
+			character.Movement.IsMoving == false && !character.Movement.IsNearObject(wounded.GObject);
 	}
 	
 }

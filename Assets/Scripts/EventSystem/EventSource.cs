@@ -9,7 +9,7 @@ public class EventSource : MonoBehaviour {
 	public EventBase[] hardEvents;
 	private EventBase[] allEvents;
 
-	void Start () {
+	void Awake () {
 		Broadcaster.Instance.dayEvent += SelectEvent;
 		allEvents = new EventBase[easyEvents.Length + mediumEvents.Length + hardEvents.Length];
 		easyEvents.CopyTo(allEvents, 0);

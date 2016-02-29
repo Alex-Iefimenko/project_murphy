@@ -2,7 +2,7 @@
 using System.Collections;
 using E = Enums;
 
-public class CharacterMain : MonoBehaviour, ICharacter {
+public class CharacterMain : MonoBehaviour, ICharacter, IMovable {
 
 	//Side
 	public E.CharacterSides characterSide;

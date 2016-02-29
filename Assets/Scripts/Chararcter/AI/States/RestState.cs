@@ -17,18 +17,22 @@ public class RestState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters]);
+		character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters], "Random");
 		tick = Random.Range(7, 10);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			tick -= 1;
 			character.View.SetSubState(1);
 		}
-		if (tick <= 0)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return tick <= 0;
 	}
 }

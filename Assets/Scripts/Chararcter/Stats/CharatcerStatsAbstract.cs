@@ -7,7 +7,8 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	// Fields
 	//
 	// Basic
-	[HideInInspector] public readonly float speed;
+	[HideInInspector] public readonly float walkSpeed;
+	[HideInInspector] public readonly float runSpeed;
 	[HideInInspector] public readonly Room basicRoom;
 	// Health
 	[HideInInspector] public readonly float maxHealth;
@@ -53,7 +54,8 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	// Properties 
 	//
 	// Basic
-	public virtual float Speed { get; set; }
+	public virtual float WalkSpeed { get; set; }
+	public virtual float RunSpeed { get; set; }
 	public virtual Room BasicRoom { get; set; }
 	// Health
 	public virtual float MaxHealth { get; set; }

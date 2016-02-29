@@ -11,7 +11,7 @@ public class RoomStateBase : MonoBehaviour {
 	
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		CurrentRoom = GetComponentInParent<Room>();
 		CurrentAnimator = gameObject.GetComponent<Animator>();
 		Enabled = false;
@@ -30,14 +30,14 @@ public class RoomStateBase : MonoBehaviour {
 	public virtual void StateEnable () 
 	{
 		Enabled = true;
-		warning.renderer.enabled = true;
+		if (warning != null) warning.renderer.enabled = true;
 		Broadcaster.Instance.tickEvent += Tick;
 	} 
 
 	public virtual void StateDisable () 
 	{ 
 		Enabled = false;
-		warning.renderer.enabled = false;
+		if (warning != null) warning.renderer.enabled = false;
 		Broadcaster.Instance.tickEvent -= Tick;
 	}
 

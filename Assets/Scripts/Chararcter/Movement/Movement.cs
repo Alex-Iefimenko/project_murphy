@@ -3,194 +3,215 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Movement : MonoBehaviour, IMovement {
-	
+public class Movement : MonoBehaviour, IMovement
+{
 	//
 	// Variables
 	//
 	
 	// Character speed
-	private float speed = 0.5f;
-	
+	private float walkSpeed;
+	private float runSpeed;
+	private float currentSpeed;
+
 	// Path components
-	private List<Vector3> movementPath = new List<Vector3>();
+	private List<Vector3> movementPath = new List<Vector3> ();
+	private MovementTarget target;
 	private Room currentRoom;
-	private bool isDynamic;
-	private GameObject target;
-	private GameObject anchoredObject;
+	private IMovable pulledObject;
 	
 	// Components
 	private Collider2D charColl; 
 	private ICharacter character;
-	
+
+	// Execution Delegate
+	delegate void MultiDelegate(); 
+	private MultiDelegate onMove;
+
 	//
 	// Initializing
 	//
 	
-	void Awake () {
-		character = (ICharacter)gameObject.GetComponent<CharacterMain>();
-		charColl = gameObject.GetComponent<Collider2D>();
-		speed = character.Stats.Speed;
+	void Awake ()
+	{
+		character = (ICharacter)gameObject.GetComponent<CharacterMain> ();
+		charColl = gameObject.GetComponent<Collider2D> ();
+		walkSpeed = character.Stats.WalkSpeed;
+		runSpeed = character.Stats.RunSpeed;
+		currentSpeed = walkSpeed;
 	}
 	
+	//
+	// Public Properties
+	//
+	
+	public Room CurrentRoom { get { return currentRoom; } }
+
+	public MovementTarget Target { get { return target; } }
+
+	public bool IsMoving { get { return movementPath.Count != 0; } }
+
 	//
 	// Public Methods
 	//
-	
-	public Room CurrentRoom
+
+	public IMovement Walk ()
 	{
-		get { return currentRoom; }
+		currentSpeed = walkSpeed;
+		return this;
 	}
 
-	public GameObject Target
+	public IMovement Run ()
 	{
-		get { return target; }
+		currentSpeed = runSpeed;
+		return this;
 	}
 
-	public void Navigate(Room room, bool full=true) 
+	public void ToRoom (Room room)
 	{
-		StopAllCoroutines();
-		isDynamic = false;
-		target = room.gameObject;
-		movementPath = ShipState.Inst.GetStepsToRoom(currentRoom, room);
-		if (!full) movementPath.RemoveAt(movementPath.Count - 1);
-		if (movementPath.Count != 0) character.View.RotateTowards(movementPath[0]);
-	}
-	
-	public void NavigateTo(Room room, Furniture item=null)
-	{
-		if (item == null) item = room.Objects.GetUnoccupiedRoomObject();
-		Navigate(room);
-		if (item != null)
-		{
-			target = item.gameObject;
-			item.IsFree = false;
-			movementPath[movementPath.Count - 1] = item.GetComponent<SpriteRenderer>().bounds.center;
-		}
-		else
-		{
-			target = null;
-			movementPath[movementPath.Count - 1] = room.Objects.GetRandomRoomPoint();
-		}
+		Navigate (new MovementTarget (character, room));
 	}
 
-	public void NavigateTo(ICharacter character) 
+	public void ToFurniture (Room room, string item)
 	{
-		Navigate(character.Movement.CurrentRoom);		
-		target = character.GObject;
-		isDynamic = !(character.Stats.IsDead() || character.Stats.IsUnconscious());
-		movementPath[movementPath.Count - 1] = GetClosestCollPoint(target, gameObject);
-	}
-
-	public void NavigateTo(Vector3 point) 
-	{
-		Navigate(ShipState.Inst.RoomByPoint(point));		
-		movementPath[movementPath.Count - 1] = point;
-	}
-
-	public bool IsMoving () 
-	{
-		return movementPath.Count != 0;
+		Navigate (new MovementTarget (room, item));
 	}
 	
-	// Check if current Char is near object
+	public void ToCharacter (ICharacter targetCharacter)
+	{
+		Navigate (new MovementTarget (character, targetCharacter));
+		onMove += UpdateDynamic;
+	}
+
+	public void ToItem (Item item)
+	{
+		Navigate (new MovementTarget (character, item));
+	}
+
+	public void ToPoint (Vector3 point)
+	{
+		Navigate (new MovementTarget (point));
+	}
+
 	public bool IsNearObject (GameObject exactObject)
 	{
 		return (exactObject.collider2D != null && charColl.bounds.Intersects (exactObject.collider2D.bounds));
 	}
 
-	public void Anchor(GameObject other)
+	public void Pull (IMovable other)
 	{
-		anchoredObject = other;
-		AdjustPostion(transform.position - (other.transform.position - transform.position), false);
-	}
-
-	public void AdjustPostion (Vector3 endPoint, bool stopOnTouch=false)
-	{
-		character.View.RotateTowards (endPoint);
-		StartCoroutine(Adjust(endPoint, stopOnTouch));
-	}
-
-	public void Purge ()
-	{
-		movementPath.Clear();
-		StopAllCoroutines();
-		target = null;
-		isDynamic = false;
-		if (anchoredObject != null) anchoredObject.GetComponent<CharacterMain>().Lock = false;
-		anchoredObject = null;
-		transform.rotation = Quaternion.identity;
+		pulledObject = other;
+		other.Lock = true;
+		onMove += Pull;
 	}
 	
+	public void AdjustPostion (Vector3 endPoint)
+	{
+		StartCoroutine (Adjust (endPoint));
+	}
+	
+	public void Purge ()
+	{
+		StopAllCoroutines ();
+		movementPath.Clear ();
+		target = null;
+		if (pulledObject != null) pulledObject.Lock = false;
+		pulledObject = null;
+		transform.rotation = Quaternion.identity;
+		onMove = null;
+	}
+
 	//
 	// Private Methods
 	//
 	
-	// Update is called once per frame
-	void Update () {
-		if (movementPath.Count != 0) Move ();
-		if (anchoredObject != null) Pull ();
-	}
-	
-	// Updates current room value
-	void OnTriggerEnter2D (Collider2D otherCollider) 
+	private void Navigate (MovementTarget newTarget)
 	{
-		Room room = otherCollider.GetComponent<Room>();
-		if (room != null && room != currentRoom) currentRoom = otherCollider.GetComponent<Room>();
+		Purge ();
+		target = newTarget;
+		movementPath = ShipState.Inst.GetStepsToRoom (currentRoom, target.Room);
+		movementPath.Add (target.Position);
+		character.View.RotateTowards (movementPath[0]);
+		onMove += Move;
 	}
-	
-	// Move character towards next movements point. Delete it if reached
+
+	// Updates current room value
+	private void OnTriggerEnter2D (Collider2D otherCollider)
+	{
+		Room room = otherCollider.GetComponent<Room> ();
+		if (room != null && room != currentRoom) currentRoom = room;
+	}
+
+	private void Update ()
+	{
+		if (onMove != null) onMove();
+	}
+
 	private void Move ()
 	{
-		if (isDynamic && movementPath.Count == 1) 
-		{
-			movementPath[movementPath.Count - 1] = GetClosestCollPoint(target, gameObject);
-			character.View.RotateTowards (movementPath[0]);
-		}
 		Vector3 nextPoint = movementPath[0];
 		nextPoint.z = transform.position.z;
-		transform.position = Vector3.MoveTowards(transform.position, nextPoint, speed * Time.deltaTime);
-		if (charColl.OverlapPoint(nextPoint)) UpdatePath();
+		transform.position = Vector3.MoveTowards (transform.position, nextPoint, currentSpeed * Time.deltaTime);
+		if (charColl.OverlapPoint (nextPoint)) UpdatePath ();
 	}
-	
-	private void UpdatePath()
+
+	private void UpdatePath ()
 	{
-		if (isDynamic && movementPath.Count > 1) NavigateTo(target.GetComponent<CharacterMain>() as ICharacter);
-		if (movementPath.Count > 1) character.View.RotateTowards (movementPath[1]);
-		if (movementPath.Count == 1) AdjustPostion(movementPath[0], isDynamic);
-		movementPath.RemoveAt(0);
+		movementPath.RemoveAt (0);
+		if (movementPath.Count > 0) 
+		{
+			if (target.IsDynamic) Navigate (target);
+			character.View.RotateTowards (movementPath[0]);
+		}
+		else 
+		{
+			AdjustPostion (target.Position);
+			onMove -= Move;
+			onMove -= UpdateDynamic;
+			character.View.RotateTowards (target.Center);
+		}
+	}
+
+	private void UpdateDynamic ()
+	{
+		if (movementPath.Count == 1)
+		{
+			movementPath[0] = target.Position;
+		}
 	}
 
 	private void Pull ()
 	{
-		Transform objTransf = anchoredObject.transform;
-		anchoredObject.transform.position = 
-			Vector3.MoveTowards(objTransf.position, GetClosestCollPoint(gameObject, anchoredObject), speed * Time.deltaTime);
-		float t = Mathf.Atan2((transform.position.y - objTransf.position.y), 
-		                      (transform.position.x - objTransf.position.x)) * Mathf.Rad2Deg + 90f;
-		anchoredObject.transform.eulerAngles = new Vector3 (objTransf.eulerAngles.x, objTransf.eulerAngles.y, t);
+		Transform pulledTransf = pulledObject.GObject.transform;
+		pulledTransf.position = Vector3.MoveTowards (pulledTransf.position, 
+		                                             GetClosestCollPoint(character.GObject, pulledTransf.gameObject), 
+		                                             currentSpeed * Time.deltaTime);
+		float t = Mathf.Atan2 ((transform.position.y - pulledTransf.position.y), 
+		                       (transform.position.x - pulledTransf.position.x)) * Mathf.Rad2Deg + 90f;
+		pulledTransf.eulerAngles = new Vector3 (pulledTransf.eulerAngles.x, pulledTransf.eulerAngles.y, t);
+
 	}
 	
-	private IEnumerator Adjust (Vector3 endPoint, bool stopOnTargetTouch)
+	private IEnumerator Adjust (Vector3 endPoint)
 	{
 		character.View.RotateTowards (endPoint);
-		while(transform.position != endPoint)
+		while (transform.position != endPoint) 
 		{
 			endPoint.z = transform.position.z;
-			transform.position = Vector3.MoveTowards(transform.position, endPoint, speed * Time.deltaTime);
-			if (stopOnTargetTouch && IsNearObject(target)) yield break;
+			transform.position = Vector3.MoveTowards (transform.position, endPoint, currentSpeed * Time.deltaTime);
 			yield return null;
 		}
 	}
-
+	
 	private Vector3 GetClosestCollPoint (GameObject tObject, GameObject refObject)
 	{
 		Vector3 direction = (refObject.transform.position - tObject.transform.position).normalized;
-		float dist1 = Mathf.Sqrt(tObject.collider2D.bounds.SqrDistance(refObject.transform.position + 10f * direction));
-		float dist2 = Vector3.Distance(tObject.transform.position, refObject.transform.position + 10f * direction);
+		float dist1 = Mathf.Sqrt (tObject.collider2D.bounds.SqrDistance (refObject.transform.position + 10f * direction));
+		float dist2 = Vector3.Distance (tObject.transform.position, refObject.transform.position + 10f * direction);
 		float size = dist2 - dist1;
 		Vector3 point = tObject.transform.position + size * direction;
 		return point;
 	}
+
 }
 

@@ -65,13 +65,13 @@
 		"Coefficient": 0.7	
 	}, 
 	"Slowpoke": {
-		"Specific": false,
-		"Stat": "Speed",
+		"Specific": true,
+		"Stat": ["WalkSpeed", "RunSpeed"],
 		"Coefficient": 0.7	
 	}, 
 	"Fast": {
-		"Specific": false,
-		"Stat": "Speed",
+		"Specific": true,
+		"Stat": ["WalkSpeed", "RunSpeed"],
 		"Coefficient": 1.3	
 	}, 
 	"Proffi": {

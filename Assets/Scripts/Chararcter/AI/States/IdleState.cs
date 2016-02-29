@@ -18,5 +18,9 @@ public class IdleState : StateBase {
 		base.Actualize (); 
 	}
 	
-	public override void ExecuteStateActions () { }
+	public override void ExecuteStateActions () 
+	{ 
+		if (character.Movement.IsMoving == false)
+			character.Movement.Walk().ToFurniture(character.Movement.CurrentRoom, "Random");
+	}
 }

@@ -18,7 +18,12 @@ public class UnconsitiousState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Stats.Health >= character.Stats.MaxHealth) character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return character.Stats.Health >= character.Stats.MaxHealth;
 	}
 	
 }

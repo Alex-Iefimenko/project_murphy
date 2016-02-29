@@ -23,25 +23,13 @@ public class StateBase : IState {
 		return true;
 	}
 
-	public virtual void ExecuteStateActions () {}
-
-	public void NavigateTo (Room room)
+	public virtual void ExecuteStateActions () 
 	{
-		character.Movement.NavigateTo(room);
+		if (PurgeCondition ()) character.PurgeActions ();
 	}
 
-	public void NavigateTo (ICharacter targetCharacter)
+	public virtual bool PurgeCondition () 
 	{
-		character.Movement.NavigateTo(targetCharacter);
-	}
-
-	public void NavigateTo (Room room, Furniture item)
-	{
-		character.Movement.NavigateTo(room, item);
-	}
-
-	public void NavigateTo (Vector3 point)
-	{
-		character.Movement.NavigateTo(point);
+		return false;
 	}
 }

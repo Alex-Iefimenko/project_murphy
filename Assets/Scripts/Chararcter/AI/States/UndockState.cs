@@ -17,12 +17,12 @@ public class UndockState : StateBase {
 	
 	public override void Actualize () {
 		base.Actualize ();
-		NavigateTo(character.Stats.BasicRoom);
+		character.Movement.Walk().ToFurniture(character.Stats.BasicRoom, "Random");
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false && GroupGathered ()) 
+		if (character.Movement.IsMoving == false && GroupGathered ()) 
 		{
 			character.Movement.Purge();
 			character.Stats.BasicRoom.Flier.FlyAway(new Vector3(22f, -10f, 0f));

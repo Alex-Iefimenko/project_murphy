@@ -1,6 +1,7 @@
 {
   "Stats":{
-    "Speed": 0.7,
+    "WalkSpeed": 0.75,
+    "RunSpeed": 0.75,
     "BasicRoom":"Control",
     "Health":{
       "Max": [60.0, 80.0],

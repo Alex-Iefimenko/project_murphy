@@ -1,28 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface IMovement {
-
+public interface IMovement
+{
 	Room CurrentRoom { get; }
 
-	GameObject Target { get; }
+	MovementTarget Target { get; }
 
-	void Navigate(Room room, bool full=true);
+	bool IsMoving { get; }
 
-	void NavigateTo(Room room, Furniture item=null);
+	IMovement Walk ();
 
-	void NavigateTo(ICharacter character);
+	IMovement Run ();
 
-	void NavigateTo(Vector3 point);
+	void ToRoom (Room room);
 
-	void Anchor(GameObject other);
+	void ToFurniture (Room room, string item);
 
-	bool IsMoving();
+	void ToCharacter (ICharacter character);
+	
+	void ToItem (Item item);
 
-	bool IsNearObject(GameObject exactObject);
+	void ToPoint (Vector3 point);
 
-	void Purge();
-
-	void AdjustPostion (Vector3 endPoint, bool stopOnTouch=false);
-
+	void Pull (IMovable other);
+	
+	bool IsNearObject (GameObject exactObject);
+	
+	void AdjustPostion (Vector3 endPoint);
+	
+	void Purge ();
 }

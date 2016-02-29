@@ -19,12 +19,17 @@ public class NavigateState : StateBase {
 	public override void Actualize () 
 	{ 
 		base.Actualize (); 
-		character.Movement.Navigate(TargetRoom, Full);
+		character.Movement.Run().ToRoom(TargetRoom);
 	}
 
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false) character.PurgeActions();
+		base.ExecuteStateActions ();
 	}
 	
+	public override bool PurgeCondition () 
+	{
+		return character.Movement.IsMoving == false;
+	}
+
 }

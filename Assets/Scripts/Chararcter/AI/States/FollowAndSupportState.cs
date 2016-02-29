@@ -20,27 +20,29 @@ public class FollowAndSupportState : StateBase {
 	public override void Actualize () { 
 		base.Actualize (); 
 		leader = character.Coordinator.leader;
-		NavigateTo(leader);
+		character.Movement.Walk().ToCharacter(leader);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (leader.Movement.IsMoving() && character.Movement.Target != leader.GObject)
+		if (leader.Movement.IsMoving && character.Movement.Target.GObject != leader.GObject)
 		{
-			NavigateTo(leader);
+			character.Movement.Walk().ToCharacter(leader);
 		}
-		else if (leader.Movement.IsMoving() && !character.Movement.IsMoving() && character.Movement.Target == leader.GObject)
+		else if (leader.Movement.IsMoving && !character.Movement.IsMoving && character.Movement.Target.GObject == leader.GObject)
 		{
-			NavigateTo(leader);
+			character.Movement.Walk().ToCharacter(leader);
 		}
-		else if (!leader.Movement.IsMoving() && !character.Movement.IsMoving())
+		else if (!leader.Movement.IsMoving && !character.Movement.IsMoving)
 		{
-			NavigateTo(leader.Movement.CurrentRoom);
+			character.Movement.Walk().ToPoint(character.Movement.CurrentRoom.Objects.GetRandomRoomPoint());
 		}
-		if (leader == null || leader.Stats.IsUnconscious() || leader.Stats.IsDead())
-		{
-			character.PurgeActions();
-		}
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return leader == null || !leader.Stats.IsActive();
 	}
 
 }

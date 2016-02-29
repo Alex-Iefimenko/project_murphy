@@ -33,7 +33,7 @@ public class RoomObjects {
 		characters.Remove(character);
 	}
 
-	public Furniture GetUnoccupiedRoomObject ()
+	public Furniture GetFreeRoomObject ()
 	{
 		Furniture resultObject = null;
 		List<Furniture> unoccypiedObjects = new List<Furniture>();
@@ -42,7 +42,14 @@ public class RoomObjects {
 			resultObject = Helpers.GetRandomArrayValue<Furniture>(unoccypiedObjects);
 		return resultObject;
 	}
-	
+
+	public Furniture GetRoomObject (string name)
+	{
+		Furniture resultObject = null;
+		resultObject = furniture.SingleOrDefault(item => item.Name == name);
+		return resultObject;
+	}
+
 	public Vector3 GetRandomRoomPoint ()
 	{
 		Vector3 collCenter = room.collider2D.bounds.center;
@@ -56,6 +63,12 @@ public class RoomObjects {
 	{
 		Neighbor neighbor = Helpers.GetRandomArrayValue<Neighbor>(room.GetComponent<Room>().neighbors.Values.ToArray());
 		return neighbor.ExitPoint;
+	}
+
+	public Vector3 ClosestDoorExit (Vector3 position)
+	{
+		Neighbor[] neighbor = room.GetComponent<Room>().neighbors.Values.ToArray();
+		return neighbor.OrderBy(v => Vector2.Distance(v.ExitPoint, position)).First().ExitPoint;
 	}
 
 	// Check if Room continse hostile Character

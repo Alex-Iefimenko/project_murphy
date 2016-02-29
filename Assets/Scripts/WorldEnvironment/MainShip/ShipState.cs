@@ -45,7 +45,7 @@ public class ShipState {
 	// Returns list of world points for NPC traveling
 	public List<Vector3> GetStepsToRoom (Room initialRoom, Room targetRoom) {
 		if (initialRoom == targetRoom) 
-			return new List<Vector3>() { targetRoom.gameObject.transform.position };
+			return new List<Vector3>() { };
 		else
 			return shipStructure.GetStepsToRoom(initialRoom, targetRoom);
 	}

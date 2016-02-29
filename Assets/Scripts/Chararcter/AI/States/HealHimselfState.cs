@@ -16,19 +16,23 @@ public class HealHimselfState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		NavigateTo(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay]);
+		character.Movement.Run().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			character.Stats.Health += character.Stats.HealthIncrease;
 			character.Stats.HealthReduction = 0f;
 			character.View.SetSubState(1);
 		}
-		if (character.Stats.Health >= character.Stats.MaxHealth)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return character.Stats.Health >= character.Stats.MaxHealth;
 	}
 	
 }

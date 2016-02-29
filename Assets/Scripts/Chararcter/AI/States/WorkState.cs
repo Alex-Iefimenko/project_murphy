@@ -21,20 +21,24 @@ public class WorkState : StateBase {
 	public override void Actualize () { 
 		base.Actualize (); 
 		if (responsabilities == null) CreateWorkDelegates ();
-		NavigateTo(character.Stats.BasicRoom);
+		character.Movement.Walk().ToFurniture(character.Stats.BasicRoom, "Random");
 		tick = Random.Range(7, 10);
 	}
 
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			character.View.SetSubState(1);
 			tick -= 1;
 			CheckRelatedEvents();
 		}
-		if (tick <= 0)
-			character.PurgeActions();
+		base.ExecuteStateActions ();
+	}
+	
+	public override bool PurgeCondition () 
+	{
+		return tick <= 0;
 	}
 
 	private void CreateWorkDelegates ()

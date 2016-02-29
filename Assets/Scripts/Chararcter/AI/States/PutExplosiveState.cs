@@ -27,13 +27,13 @@ public class PutExplosiveState : StateBase {
 	public override void Actualize () { 
 		base.Actualize ();
 		target = (character.Coordinator != null) ? FetchSharedGoal () : ShipState.Inst.RandomNamedRoom();
-		NavigateTo(target);
+		character.Movement.Walk().ToFurniture(target, "Random");
 		tick = Random.Range(7, 10);
 	}
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving() == false)
+		if (character.Movement.IsMoving == false)
 		{
 			tick -= 1;
 			character.View.SetSubState(1);

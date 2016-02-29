@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bomb : MonoBehaviour {
+public class Bomb : Item {
 
 	
 	public float roomDamage = 50f;
@@ -12,7 +12,7 @@ public class Bomb : MonoBehaviour {
 	private int tick = 40;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
 		Broadcaster.Instance.tickEvent += Tick;
 	}
