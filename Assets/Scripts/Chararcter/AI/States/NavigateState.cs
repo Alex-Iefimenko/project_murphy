@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class NavigateState : StateBase {
@@ -11,7 +11,7 @@ public class NavigateState : StateBase {
 	public Room TargetRoom { get; set; }
 	public bool Full { get; set; }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return (character.AiHandler.CurrentState != null && character.AiHandler.CurrentState.StateKind == 5);
 	}
@@ -27,7 +27,7 @@ public class NavigateState : StateBase {
 		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Movement.IsMoving == false;
 	}

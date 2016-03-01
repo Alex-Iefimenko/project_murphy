@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface IState {
-
+public interface IState
+{
 	int StateKind { get; }
 
-	void Actualize();
+	void Actualize ();
 
-	void ExecuteStateActions();
+	void ExecuteStateActions ();
 
-	bool CheckCondition(Room room);
-
+	bool EnableCondition (Room room);
+	
 }

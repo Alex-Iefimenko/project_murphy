@@ -67,7 +67,7 @@ public class CharacterAIHandler : ICharacterAIHandler {
 	{
 		for (int i = 0; i < aiStates.Length; i++) 
 		{
-			if (aiStates[i] == currentState || aiStates[i].CheckCondition(character.Movement.CurrentRoom)) 
+			if (aiStates[i] == currentState || aiStates[i].EnableCondition(character.Movement.CurrentRoom)) 
 				return aiStates[i];
 		}
 		return currentState;

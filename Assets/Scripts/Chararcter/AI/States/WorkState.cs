@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 
@@ -12,7 +12,7 @@ public class WorkState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		bool restState = (character.AiHandler.CurrentState != null && character.AiHandler.CurrentState.StateKind == 14);
 		return (!restState && UnityEngine.Random.value > character.Stats.RestProbability);
@@ -27,16 +27,16 @@ public class WorkState : StateBase {
 
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false)
 		{
 			character.View.SetSubState(1);
 			tick -= 1;
 			CheckRelatedEvents();
 		}
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return tick <= 0;
 	}
@@ -49,7 +49,7 @@ public class WorkState : StateBase {
 			string state = character.AiHandler.AiStates[i].GetType().ToString().Replace("State", "");
 			if (character.Stats.WorkTasks.Contains(state))
 			{
-				System.Reflection.MethodInfo method = System.Type.GetType(state + "State").GetMethod("CheckCondition");
+				System.Reflection.MethodInfo method = System.Type.GetType(state + "State").GetMethod("EnableCondition");
 				responsabilities[System.Array.IndexOf(character.Stats.WorkTasks, state)] =
 					(System.Func<Room, bool>) System.Delegate.CreateDelegate(
 						typeof(System.Func<Room, bool>), 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class UnconsitiousState : StateBase {
@@ -9,7 +9,7 @@ public class UnconsitiousState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return character.Stats.IsUnconscious();
 	}
@@ -21,7 +21,7 @@ public class UnconsitiousState : StateBase {
 		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Stats.Health >= character.Stats.MaxHealth;
 	}

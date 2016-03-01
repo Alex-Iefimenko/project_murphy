@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 
@@ -10,7 +10,7 @@ public class UndockState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 	
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return character.Stats.BasicRoom != null && character.Stats.BasicRoom != character.Movement.CurrentRoom;
 	}
@@ -22,12 +22,19 @@ public class UndockState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
-		if (character.Movement.IsMoving == false && GroupGathered ()) 
-		{
-			character.Movement.Purge();
-			character.Stats.BasicRoom.Flier.FlyAway(new Vector3(22f, -10f, 0f));
-			character.PurgeActions();
-		}
+		base.ExecuteStateActions ();
+	}
+
+	public override bool DisableCondition () 
+	{
+		return character.Movement.IsMoving == false && GroupGathered ();
+	}
+	
+	public override void Purge ()
+	{
+		character.Movement.Purge();
+		character.Stats.BasicRoom.Flier.FlyAway(new Vector3(22f, -10f, 0f));
+		character.PurgeActions();
 	}
 
 	private bool GroupGathered ()

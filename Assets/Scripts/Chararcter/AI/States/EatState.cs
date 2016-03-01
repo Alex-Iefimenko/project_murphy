@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EatState : StateBase {
@@ -9,7 +9,7 @@ public class EatState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return character.Stats.Fatigue <= character.Stats.FatigueThreshold;
 	}
@@ -21,15 +21,15 @@ public class EatState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false)
 		{
 			character.Stats.Fatigue += character.Stats.FatigueIncrease;
 			character.View.SetSubState(1);
 		}
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Stats.Fatigue >= character.Stats.MaxFatigue;
 	}

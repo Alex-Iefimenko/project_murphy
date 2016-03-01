@@ -11,25 +11,33 @@ public class StateBase : IState {
 		character = newCharacter;
 	}
 
-	public virtual int StateKind { get; set; }
+	public virtual int StateKind 
+	{ 
+		get; set; 
+	}
 
 	public virtual void Actualize () 
 	{
 		character.View.SetState(StateKind);
 	}
 
-	public virtual bool CheckCondition (Room room) 
+	public virtual bool EnableCondition (Room room) 
 	{
 		return true;
+	}
+	
+	public virtual bool DisableCondition () 
+	{
+		return false;
 	}
 
 	public virtual void ExecuteStateActions () 
 	{
-		if (PurgeCondition ()) character.PurgeActions ();
+		if (DisableCondition ()) Purge ();
 	}
 
-	public virtual bool PurgeCondition () 
+	public virtual void Purge ()
 	{
-		return false;
+		character.PurgeActions ();
 	}
 }

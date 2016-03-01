@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 
@@ -10,7 +10,7 @@ public class OffItState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 	
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return room.Stats.IsDangerous();
 	}
@@ -26,7 +26,7 @@ public class OffItState : StateBase {
 		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Movement.IsMoving == false;
 	}

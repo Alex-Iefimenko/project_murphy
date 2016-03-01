@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TakeWoundedBodyState : StateBase {
@@ -11,7 +11,7 @@ public class TakeWoundedBodyState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return room.Objects.ContainsUnconscious() != null;
 	}
@@ -26,6 +26,7 @@ public class TakeWoundedBodyState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (!pulling && character.Movement.IsNearObject(unconscious.GObject))
 		{
 			character.View.SetSubState(1);
@@ -37,10 +38,16 @@ public class TakeWoundedBodyState : StateBase {
 		{
 			unconscious.Heal(character.Stats.HealOther);
 		}
-		if (!unconscious.Stats.IsUnconscious())
-		{
-			unconscious.PurgeActions();
-			character.PurgeActions();
-		}
+	}
+	
+	public override bool DisableCondition () 
+	{
+		return !unconscious.Stats.IsUnconscious();
+	}
+	
+	public override void Purge ()
+	{
+		base.Purge ();
+		unconscious.PurgeActions();
 	}
 }

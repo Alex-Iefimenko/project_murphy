@@ -80,7 +80,6 @@ public class Movement : MonoBehaviour, IMovement
 	public void ToCharacter (ICharacter targetCharacter)
 	{
 		Navigate (new MovementTarget (character, targetCharacter));
-		onMove += UpdateDynamic;
 	}
 
 	public void ToItem (Item item)
@@ -107,6 +106,7 @@ public class Movement : MonoBehaviour, IMovement
 	
 	public void AdjustPostion (Vector3 endPoint)
 	{
+		character.View.RotateTowards (endPoint);
 		StartCoroutine (Adjust (endPoint));
 	}
 	
@@ -133,6 +133,7 @@ public class Movement : MonoBehaviour, IMovement
 		movementPath.Add (target.Position);
 		character.View.RotateTowards (movementPath[0]);
 		onMove += Move;
+		onMove += UpdateDynamic;
 	}
 
 	// Updates current room value
@@ -174,7 +175,7 @@ public class Movement : MonoBehaviour, IMovement
 
 	private void UpdateDynamic ()
 	{
-		if (movementPath.Count == 1)
+		if (target.IsDynamic && movementPath.Count == 1)
 		{
 			movementPath[0] = target.Position;
 		}
@@ -194,7 +195,6 @@ public class Movement : MonoBehaviour, IMovement
 	
 	private IEnumerator Adjust (Vector3 endPoint)
 	{
-		character.View.RotateTowards (endPoint);
 		while (transform.position != endPoint) 
 		{
 			endPoint.z = transform.position.z;

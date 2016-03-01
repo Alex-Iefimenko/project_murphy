@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FirstAidState : StateBase {
@@ -9,7 +9,7 @@ public class FirstAidState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 	
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		bool result = 
 			character.Stats.Health < character.Stats.HealthThreshold && 
@@ -24,16 +24,16 @@ public class FirstAidState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false)
 		{
 			character.Stats.Health += character.Stats.HealthIncrease;
 			character.Stats.HealthReduction = 0f;
 			character.View.SetSubState(1);
 		}
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Stats.Health >= character.Stats.MaxHealth;
 	}

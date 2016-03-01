@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PutExplosiveState : StateBase {
@@ -16,7 +16,7 @@ public class PutExplosiveState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 	
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		bool condition = 
 			(!deployed && character.Coordinator == null) 
@@ -33,20 +33,28 @@ public class PutExplosiveState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false)
 		{
 			tick -= 1;
 			character.View.SetSubState(1);
 		}
-		if (tick <= 0)
-		{
-			Vector3 place = character.GObject.transform.position;
-			GameObject newBomb = GameObject.Instantiate(bomb, place, Quaternion.identity) as GameObject;
-			newBomb.GetComponent<Bomb>().Room = target;	
-			deployed = true;
-			if (character.Coordinator != null) character.Coordinator.Done = true;
-			character.PurgeActions();
-		}
+	}
+
+	public override bool DisableCondition () 
+	{
+		return tick <= 0;
+	}
+
+	public override void Purge ()
+	{
+		base.Purge ();
+		Vector3 place = character.GObject.transform.position;
+		GameObject newBomb = GameObject.Instantiate(bomb, place, Quaternion.identity) as GameObject;
+		newBomb.GetComponent<Bomb>().Room = target;	
+		deployed = true;
+		if (character.Coordinator != null) character.Coordinator.Done = true;
+		character.PurgeActions();
 	}
 
 	private Room FetchSharedGoal ()

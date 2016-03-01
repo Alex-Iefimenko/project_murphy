@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FollowAndSupportState : StateBase {
@@ -10,7 +10,7 @@ public class FollowAndSupportState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 	
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return character.Coordinator != null 
 			&& character.Coordinator.leader != null
@@ -25,6 +25,7 @@ public class FollowAndSupportState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (leader.Movement.IsMoving && character.Movement.Target.GObject != leader.GObject)
 		{
 			character.Movement.Walk().ToCharacter(leader);
@@ -37,10 +38,9 @@ public class FollowAndSupportState : StateBase {
 		{
 			character.Movement.Walk().ToPoint(character.Movement.CurrentRoom.Objects.GetRandomRoomPoint());
 		}
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return leader == null || !leader.Stats.IsActive();
 	}

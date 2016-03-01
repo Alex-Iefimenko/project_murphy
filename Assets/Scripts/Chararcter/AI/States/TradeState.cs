@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TradeState : StateBase {
@@ -11,7 +11,7 @@ public class TradeState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 	
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return !traded;
 	}
@@ -24,15 +24,22 @@ public class TradeState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false)
 		{
 			tick -= 1;
 			character.View.SetSubState(1);
 		}
-		if (tick <= 0)
-		{
-			traded = true;
-			character.PurgeActions();
-		}
+	}
+	
+	public override bool DisableCondition () 
+	{
+		return tick <= 0;
+	}
+	
+	public override void Purge ()
+	{
+		base.Purge ();
+		traded = true;
 	}
 }

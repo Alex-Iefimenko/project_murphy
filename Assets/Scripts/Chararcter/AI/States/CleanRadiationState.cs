@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CleanRadiationState : StateBase {
@@ -9,7 +9,7 @@ public class CleanRadiationState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return room.Stats.IsRadioactive();
 	}
@@ -21,13 +21,13 @@ public class CleanRadiationState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		character.Movement.CurrentRoom.Deactivate(character.Stats.CleanRadiation);
 		if (character.Movement.IsMoving == false)
 			character.View.SetSubState(1);
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Movement.CurrentRoom.Stats.IsRadioactive() == false;
 	}

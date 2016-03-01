@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class SleepState : StateBase {
@@ -9,7 +9,7 @@ public class SleepState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return character.Stats.Sanity <= character.Stats.SanityThreshold;	
 	}
@@ -21,15 +21,15 @@ public class SleepState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false)
 		{
 			character.Stats.Sanity += character.Stats.SanityIncrease;
 			character.View.SetSubState(1);
 		}
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Stats.Sanity >= character.Stats.MaxSanity;
 	}

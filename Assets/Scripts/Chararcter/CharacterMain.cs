@@ -61,7 +61,7 @@ public class CharacterMain : MonoBehaviour, ICharacter, IMovable {
 	//
 	public void Navigate (Room room, bool full)
 	{
-		if (!Stats.IsDead() && !Stats.IsUnconscious())
+		if (Stats.IsActive())
 		{
 			NavigateState state = AiHandler.GetState<NavigateState>();
 			state.TargetRoom = room;

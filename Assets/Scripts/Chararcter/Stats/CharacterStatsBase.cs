@@ -27,7 +27,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public override float Health { get { return health; } set { health = value; } }
 	public override float HealthIncrease { get { return healthIncrease; } }
 	public override float HealthRegeneration { get { return healthRegeneration; } }
-	public override float HealthReduction { get { return healthReduction; } }
+	public override float HealthReduction { get { return healthReduction; } set { healthReduction = value; } }
 	public override float HealthThreshold { get { return healthThreshold; } }
 	// Fighting
 	public override float Damage { get { return damage; } }

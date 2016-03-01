@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ExtinguishState : StateBase {
@@ -9,7 +9,7 @@ public class ExtinguishState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return room.Stats.IsOnFire();
 	}
@@ -21,13 +21,13 @@ public class ExtinguishState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		character.Movement.CurrentRoom.Extinguish(character.Stats.FireExtinguish);
 		if (character.Movement.IsMoving == false)
 			character.View.SetSubState(1);
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return character.Movement.CurrentRoom.Stats.IsOnFire() == false;
 	}

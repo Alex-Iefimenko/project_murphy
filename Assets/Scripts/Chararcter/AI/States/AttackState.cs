@@ -14,7 +14,7 @@ public class AttackState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		ICharacter hostile = room.Objects.ContainsHostile(character);
 		return (hostile != null && hostile.Stats.IsActive());
@@ -39,16 +39,16 @@ public class AttackState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false 
 		    && character.Stats.AbbleDistantAttack == false
 		    && character.Movement.IsNearObject(enemy.GObject) == false)
 			character.Movement.Run().ToCharacter(enemy);
 		if (enemy.Movement.CurrentRoom != character.Movement.CurrentRoom)
 			character.Movement.Run().ToCharacter(enemy);
-		base.ExecuteStateActions ();
 	}
 
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return !enemy.Stats.IsActive();
 	}

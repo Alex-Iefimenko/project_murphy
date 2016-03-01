@@ -44,7 +44,7 @@ public class RadiationHazardRoomState : RoomStateBase {
 		CurrentRoom.Stats.RadiationLevel += Mathf.Ceil(CurrentRoom.Stats.RadiationLevel / 20f);
 		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) 
 		{
-			if (CurrentRoom.Stats.RadiationLevel > 75f && UnityEngine.Random.value > 0.2f) 
+			if (CurrentRoom.Stats.RadiationLevel > 25f && UnityEngine.Random.value > 0.2f) 
 				CurrentRoom.Objects.Characters[i].Stats.HealthReduction += 1f;
 		}
 		for (int i = 0; i < CurrentRoom.neighbors.Count; i++ ) 

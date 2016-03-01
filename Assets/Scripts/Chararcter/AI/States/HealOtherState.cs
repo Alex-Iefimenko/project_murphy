@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class HealOtherState : StateBase {
@@ -10,7 +10,7 @@ public class HealOtherState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return room.Objects.ContainsWounded(character) != null;
 	}
@@ -24,15 +24,15 @@ public class HealOtherState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (character.Movement.IsMoving == false && character.Movement.IsNearObject(wounded.GObject))
 		{
 			character.View.SetSubState(1);
 			wounded.Heal(character.Stats.HealOther);
 		}
-		base.ExecuteStateActions ();
 	}
 	
-	public override bool PurgeCondition () 
+	public override bool DisableCondition () 
 	{
 		return wounded.Stats.IsWounded() == false || 
 			character.Movement.IsMoving == false && !character.Movement.IsNearObject(wounded.GObject);

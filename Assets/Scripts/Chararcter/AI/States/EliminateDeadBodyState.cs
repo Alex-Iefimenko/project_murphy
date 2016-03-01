@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EliminateDeadBodyState : StateBase {
@@ -11,7 +11,7 @@ public class EliminateDeadBodyState : StateBase {
 	
 	public override int StateKind { get { return stateIndex; } }
 
-	public override bool CheckCondition (Room room) 
+	public override bool EnableCondition (Room room) 
 	{
 		return room.Objects.ContainsDead() != null;
 	}
@@ -26,6 +26,7 @@ public class EliminateDeadBodyState : StateBase {
 	
 	public override void ExecuteStateActions () 
 	{
+		base.ExecuteStateActions ();
 		if (!pulling && character.Movement.IsNearObject(dead.GObject))
 		{
 			character.View.SetSubState(1);
@@ -34,20 +35,25 @@ public class EliminateDeadBodyState : StateBase {
 			pulling = true;
 
 		}
-		if (pulling && character.Movement.IsMoving == false)
+	}
+
+	public override bool DisableCondition () 
+	{
+		return pulling && character.Movement.IsMoving == false;
+	}
+
+	public override void Purge ()
+	{
+		base.Purge ();
+		dead.Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
+		ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].Objects.Untrack(dead);
+		MonoBehaviour.Destroy(dead.GObject, 10f);
+		character.PurgeActions();
+		//Temporary
+		foreach (SpriteRenderer sprite in dead.GObject.GetComponentsInChildren<SpriteRenderer>())
 		{
-
-			dead.Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
-			ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].Objects.Untrack(dead);
-			MonoBehaviour.Destroy(dead.GObject, 10f);
-			character.PurgeActions();
-			//Temporary
-			foreach (SpriteRenderer sprite in dead.GObject.GetComponentsInChildren<SpriteRenderer>())
-			{
-				sprite.sortingOrder = -100;
-			}
+			sprite.sortingOrder = -100;
 		}
-
 	}
 	
 }

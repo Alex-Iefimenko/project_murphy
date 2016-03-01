@@ -29,7 +29,7 @@ public class Coordinator {
 
 	public void Tick ()
 	{
-		if (leader == null || leader.Stats.IsUnconscious() || leader.Stats.IsDead())
+		if (leader == null || !leader.Stats.IsActive())
 		{
 			GetNewLeader ();
 			if (leader != null) leader.Mutate(leaderType);
@@ -42,7 +42,7 @@ public class Coordinator {
 		for (int i = 0; i < followersCharacters.Length; i++)
 		{
 			ICharacter ch = followersCharacters[i];
-			if (ch != null && !ch.Stats.IsUnconscious() && !ch.Stats.IsDead())
+			if (ch != null && ch.Stats.IsActive())
 			{
 				newLeader = ch;
 				followersCharacters[i] = leader;
