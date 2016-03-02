@@ -29,24 +29,16 @@ public class HumanStats : CharacterStatsBase {
 	public override Enums.Traits TraitOne { get { return traitOne; } }
 	public override Enums.Traits TraitTwo { get { return traitTwo; } }
 	
-	public override void Init(CharacterStatsConstructor constructor)
+	public override void Init(CharacterMain character)
 	{
-		base.Init(constructor);
-		maxSanity = constructor.MaxSanity;
-		sanity = constructor.Sanity;
-		sanityIncrease = constructor.SanityIncrease;
-		sanityRegeneration = constructor.SanityRegeneration;
-		sanityReduction = constructor.SanityReduction;
-		sanityThreshold = constructor.SanityThreshold;
-		healOther = constructor.HealOther;
-		traitOne = constructor.TraitOne;
-		traitTwo = constructor.TraitTwo;
+		base.Init(character);
 	}
 
 	public override void StatsUpdate()
 	{
 		base.StatsUpdate();
 		sanity = sanity + sanityRegeneration - sanityReduction;
+		sanity = Mathf.Clamp(Sanity, -10f, MaxSanity);
 	}
 
 }

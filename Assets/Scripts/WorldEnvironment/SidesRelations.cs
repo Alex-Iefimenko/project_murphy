@@ -7,21 +7,11 @@ public class SidesRelations {
 
 	private static SidesRelations instance;
 	private static readonly object locker = new object();
-	private Dictionary<Sides, string> sideStatTyping;
 	private Dictionary<Sides, Sides[]> sideEnemies;
 	private Dictionary<Sides, Sides[]> sideFriends;
 
 	private SidesRelations()
 	{
-		sideStatTyping = new Dictionary<Enums.CharacterSides, string> ()
-		{
-			{ Sides.Crew,     "CrewStats" },
-			{ Sides.Pirate,   "HumanStats" },
-			{ Sides.Trader,   "HumanStats" },
-			{ Sides.Creature, "CreatureStats" }, 
-			{ Sides.Player,   "PlayerStats" }
-		}; 
-
 		sideEnemies = new Dictionary<Sides, Sides[]> ()
 		{
 			{ Sides.Crew,     new Sides[] { Sides.Pirate, Sides.Creature } },
@@ -51,11 +41,6 @@ public class SidesRelations {
 			}
 			return instance;
 		}
-	}
-
-	public string GetStatsType(Enums.CharacterSides side)
-	{
-		return sideStatTyping[side];
 	}
 
 	public bool IsEnemies(ICharacter characterOne, ICharacter characterTwo)

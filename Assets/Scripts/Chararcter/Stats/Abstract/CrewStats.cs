@@ -59,30 +59,9 @@ public class CrewStats : CharacterStatsBase {
 	public override Enums.Traits TraitOne { get { return traitOne; } }
 	public override Enums.Traits TraitTwo { get { return traitTwo; } }
 
-	public override void Init(CharacterStatsConstructor constructor)
+	public override void Init(CharacterMain character)
 	{
-		base.Init(constructor);
-		maxFatigue = constructor.MaxFatigue;
-		fatigue = constructor.Fatigue;
-		fatigueIncrease = constructor.FatigueIncrease;
-		fatigueRegeneration = constructor.FatigueRegeneration;
-		fatigueReduction = constructor.FatigueReduction;
-		fatigueThreshold = constructor.FatigueThreshold;
-		maxSanity = constructor.MaxSanity;
-		sanity = constructor.Sanity;
-		sanityIncrease = constructor.SanityIncrease;
-		sanityRegeneration = constructor.SanityRegeneration;
-		sanityReduction = constructor.SanityReduction;
-		sanityThreshold = constructor.SanityThreshold;
-		healOther = constructor.HealOther;
-		repair = constructor.Repair;
-		fireExtinguish = constructor.FireExtinguish;
-		cleanRadiation = constructor.CleanRadiation;
-		cleanChemistry = constructor.CleanChemistry;
-		restProbability = constructor.RestProbability;
-		workTasks = constructor.WorkTasks.ToArray();
-		traitOne = constructor.TraitOne;
-		traitTwo = constructor.TraitTwo;
+		base.Init(character);
 	}
 
 	public override void StatsUpdate()
@@ -90,6 +69,8 @@ public class CrewStats : CharacterStatsBase {
 		base.StatsUpdate();
 		fatigue = fatigue + fatigueRegeneration - fatigueReduction;
 		sanity = sanity + sanityRegeneration - sanityReduction;
+		fatigue = Mathf.Clamp(Fatigue, -10f, MaxFatigue);
+		sanity = Mathf.Clamp(Sanity, -10f, MaxSanity);
 	}
 
 }

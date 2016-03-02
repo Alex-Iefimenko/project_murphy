@@ -15,13 +15,9 @@ public class PlayerStats : CharacterStatsBase {
 	public override float CleanRadiation { get { return cleanRadiation; } }
 	public override float CleanChemistry { get { return cleanChemistry; } }
 
-	public override void Init(CharacterStatsConstructor constructor)
+	public override void Init(CharacterMain character)
 	{
-		base.Init(constructor);
-		repair = constructor.Repair;
-		fireExtinguish = constructor.FireExtinguish;
-		cleanRadiation = constructor.CleanRadiation;
-		cleanChemistry = constructor.CleanChemistry;
+		base.Init(character);
 	}
 
 	public override void StatsUpdate()

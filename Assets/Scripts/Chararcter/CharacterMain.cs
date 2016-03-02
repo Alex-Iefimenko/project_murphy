@@ -72,6 +72,7 @@ public class CharacterMain : MonoBehaviour, ICharacter, IMovable {
 
 	public void Heal (float amount)
 	{
+		Stats.HealthReduction = 0f;
 		Stats.Health += amount;
 	}
 

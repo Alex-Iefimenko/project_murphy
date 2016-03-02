@@ -18,7 +18,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public new float attackRate;
 	public new float attackCoolDown;
 	public new bool abbleDistantAttack;
-
+	
 	public override float WalkSpeed { get { return walkSpeed; } }
 	public override float RunSpeed { get { return runSpeed; } }
 	public override Room BasicRoom { get { return basicRoom; } }
@@ -36,35 +36,24 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public override bool AbbleDistantAttack { get { return abbleDistantAttack; } }
 	public delegate void AttackDelegate();
 	public event AttackDelegate attackReady;
-
-	public virtual void Init(CharacterStatsConstructor constructor)
+	
+	public virtual void Init(CharacterMain character)
 	{
-		walkSpeed = constructor.WalkSpeed;
-		runSpeed = constructor.RunSpeed;
-		basicRoom = constructor.BasicRoom;
-		maxHealth = constructor.MaxHealth;
-		health = constructor.Health;
-		healthIncrease = constructor.HealthIncrease;
-		healthRegeneration = constructor.HealthRegeneration;
-		healthReduction = constructor.HealthReduction;
-		healthThreshold = constructor.HealthThreshold;
-		damage = constructor.Damage;
-		attackRate = constructor.AttackRate;
 		attackCoolDown = 0f;
-		abbleDistantAttack = constructor.AbbleDistantAttack;
 	}
-
+	
 	public virtual void StatsUpdate()
 	{
 		if (health >= 10f) health = health + healthRegeneration - healthReduction;
 		health = Mathf.Clamp(Health, -10f, MaxHealth);
 	}
-
+	
 	public virtual void Purge ()
 	{
 		attackReady = null;
+		attackCoolDown = 0f;
 	}
-
+	
 	public void Update()
 	{
 		if (attackCoolDown > 0f) 
@@ -76,24 +65,25 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 			if (attackReady != null) attackReady();
 		}
 	}
-
+	
 	public bool IsDead ()
 	{
 		return Health <= 0f;
 	}
-
+	
 	public bool IsUnconscious ()
 	{
 		return (Health <= 10f && !IsDead());
 	}
-
+	
 	public bool IsWounded ()
 	{
 		return (Health < MaxHealth && !IsDead() && !IsUnconscious ());
 	}
-
+	
 	public bool IsActive ()
 	{
 		return !(IsDead() || IsUnconscious());
+
 	}
 }
