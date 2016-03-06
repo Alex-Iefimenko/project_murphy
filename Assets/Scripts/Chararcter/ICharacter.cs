@@ -26,7 +26,15 @@ public interface ICharacter {
 
 	void Init ();
 
-	void Mutate (Enums.CharacterTypes newtype);
+	void MuatateReaction (string currentReaction, string newReaction);
+
+	void MutateType (Enums.CharacterTypes newType);
+
+	void MutateSide (Enums.CharacterSides newSide);
+
+	void MutateSideAndType (Enums.CharacterSides newSide, Enums.CharacterTypes newType);
+
+	void MutateFully (Enums.CharacterSides newSide, Enums.CharacterTypes newType);
 
 	void PurgeActions ();
 

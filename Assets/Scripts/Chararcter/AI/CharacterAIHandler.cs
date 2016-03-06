@@ -4,6 +4,7 @@ using System;
 
 public class CharacterAIHandler : ICharacterAIHandler {
 
+	private string[] priorities;
 	private IState[] aiStates;
 	private IState currentState = null;
 	private ICharacter character;
@@ -12,14 +13,22 @@ public class CharacterAIHandler : ICharacterAIHandler {
 	public IState[] AiStates { get { return aiStates; } }
 
 	// Initialize
-	public CharacterAIHandler (CharacterMain actualChar, string[] priorities)
+	public CharacterAIHandler (CharacterMain actualChar, string[] newPriorities)
 	{
+		priorities = newPriorities;
 		character = actualChar;
 		aiStates = new IState[priorities.Length];
 		for (int i = 0; i < priorities.Length; i++)
 		{
 			aiStates[i] = (IState)Activator.CreateInstance(Type.GetType(priorities[i] + "State"), character); 
 		}
+	}
+
+	public void ChangeReaction (string currentReaction, string newReaction)
+	{
+		int index = Array.IndexOf(priorities, currentReaction);
+		priorities[index] = newReaction;
+		aiStates[index] = (IState)Activator.CreateInstance(Type.GetType(priorities[index] + "State"), character); 
 	}
 
 	public void Purge () 
@@ -72,4 +81,5 @@ public class CharacterAIHandler : ICharacterAIHandler {
 		}
 		return currentState;
 	}
+
 }

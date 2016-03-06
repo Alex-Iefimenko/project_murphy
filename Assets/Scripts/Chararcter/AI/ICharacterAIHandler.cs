@@ -6,6 +6,8 @@ public interface ICharacterAIHandler {
 
 	IState[] AiStates { get; }
 
+	void ChangeReaction (string currentReaction, string newReaction);
+
 	void React ();
 
 	void Purge ();

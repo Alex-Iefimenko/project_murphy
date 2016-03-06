@@ -32,7 +32,7 @@ public class Coordinator {
 		if (leader == null || !leader.Stats.IsActive())
 		{
 			GetNewLeader ();
-			if (leader != null) leader.Mutate(leaderType);
+			if (leader != null) leader.MutateType(leaderType);
 		}
 	}
 

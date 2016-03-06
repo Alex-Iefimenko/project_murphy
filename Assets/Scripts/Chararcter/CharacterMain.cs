@@ -36,10 +36,32 @@ public class CharacterMain : MonoBehaviour, ICharacter, IMovable {
 		foreach (SpriteRenderer sprite in sprites) sprite.sortingOrder = layer;
 	}
 
-	public void Mutate (E.CharacterTypes newtype)
+	public void MuatateReaction (string currentReaction, string newReaction)
 	{
-		characterType = newtype;
+		AiHandler.ChangeReaction (currentReaction, newReaction);
+	}
+
+	public void MutateType (E.CharacterTypes newType)
+	{
+		characterType = newType;
 		AiHandler = CharacterAIGenerator.GenerateAIHandler(this);
+	}
+
+	public void MutateSide (E.CharacterSides newSide)
+	{
+		characterSide = newSide;
+	}
+
+	public void MutateSideAndType (Enums.CharacterSides newSide, Enums.CharacterTypes newType)
+	{
+		MutateSide (newSide);
+		MutateType (newType);
+	}
+
+	public void MutateFully (Enums.CharacterSides newSide, Enums.CharacterTypes newType)
+	{
+		// Not Implemented
+		MutateSideAndType (newSide, newType);
 	}
 
 	public void PurgeActions ()
