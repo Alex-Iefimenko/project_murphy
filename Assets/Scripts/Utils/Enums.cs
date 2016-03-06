@@ -29,27 +29,6 @@ public class Enums {
 		Pirate
 	};
 	
-	public enum Traits { 
-		Hungry, 
-		Pessimist, 
-		IronWill, 
-		Puny, 
-		Big, 
-		SlowRecovery, 
-		Depresive, 
-		Bully, 
-		Dweeb, 
-		KungFu,
-		Muff, 
-		Lazy, 
-		HardWorker, 
-		Slowpoke, 
-		Fast, 
-		Psychopath, 
-		Proffi, 
-		Masochist 
-	};
-	
 	// ROOMS
 	public enum RoomTypes { 
 		Nothing, 

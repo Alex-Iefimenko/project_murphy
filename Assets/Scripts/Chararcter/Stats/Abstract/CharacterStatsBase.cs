@@ -19,33 +19,34 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public new float attackCoolDown;
 	public new bool abbleDistantAttack;
 	
-	public override float WalkSpeed { get { return walkSpeed; } }
-	public override float RunSpeed { get { return runSpeed; } }
-	public override Room BasicRoom { get { return basicRoom; } }
+	public override float WalkSpeed { get { return walkSpeed; } set { walkSpeed = value; } }
+	public override float RunSpeed { get { return runSpeed; } set { runSpeed = value; } }
+	public override Room BasicRoom { get { return basicRoom; } set { basicRoom = value; }  }
 	// Health
-	public override float MaxHealth { get { return maxHealth; } }
+	public override float MaxHealth { get { return maxHealth; } set { maxHealth = value; }  }
 	public override float Health { get { return health; } set { health = value; } }
-	public override float HealthIncrease { get { return healthIncrease; } }
-	public override float HealthRegeneration { get { return healthRegeneration; } }
+	public override float HealthIncrease { get { return healthIncrease; } set { healthIncrease = value; }  }
+	public override float HealthRegeneration { get { return healthRegeneration; } set { healthRegeneration = value; }  }
 	public override float HealthReduction { get { return healthReduction; } set { healthReduction = value; } }
-	public override float HealthThreshold { get { return healthThreshold; } }
+	public override float HealthThreshold { get { return healthThreshold; } set { healthThreshold = value; }  }
 	// Fighting
-	public override float Damage { get { return damage; } }
-	public override float AttackRate { get { return attackRate; } }
+	public override float Damage { get { return damage; } set { damage = value; }  }
+	public override float AttackRate { get { return attackRate; } set { attackRate = value; }  }
 	public override float AttackCoolDown { get { return attackCoolDown; } set { attackCoolDown = value; }  }
-	public override bool AbbleDistantAttack { get { return abbleDistantAttack; } }
+	public override bool AbbleDistantAttack { get { return abbleDistantAttack; } set { abbleDistantAttack = value; }  }
 	public delegate void AttackDelegate();
 	public event AttackDelegate attackReady;
-	
+
 	public virtual void Init(CharacterMain character)
 	{
-		attackCoolDown = 0f;
+		RelatedCharacter = character;
+		AttackCoolDown = 0f;
 	}
 	
 	public virtual void StatsUpdate()
 	{
-		if (health >= 10f) health = health + healthRegeneration - healthReduction;
-		health = Mathf.Clamp(Health, -10f, MaxHealth);
+		if (Health >= 10f) Health = Health + HealthRegeneration - HealthReduction;
+		Health = Mathf.Clamp(Health, -10f, MaxHealth);
 	}
 	
 	public virtual void Purge ()
@@ -53,12 +54,12 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 		attackReady = null;
 		attackCoolDown = 0f;
 	}
-	
+
 	public void Update()
 	{
-		if (attackCoolDown > 0f) 
+		if (AttackCoolDown > 0f) 
 		{
-			attackCoolDown -= Time.deltaTime;
+			AttackCoolDown -= Time.deltaTime;
 		}
 		else 
 		{

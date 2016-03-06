@@ -8,48 +8,46 @@ public class CrewLifeSupportEngineerStats : CrewStats {
 	{
 		base.Init(character);
 		// Common
-		walkSpeed			 	= 0.5f;
-		runSpeed 				= 0.7f;
-		basicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.LifeSupport];
+		WalkSpeed			 	= 0.5f;
+		RunSpeed 				= 0.7f;
+		BasicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.LifeSupport];
 		// Health
-		maxHealth 				= Random.Range(60, 80);
-		health 					= maxHealth;
-		healthIncrease 			= Random.Range(4, 6);
-		healthRegeneration 		= 0.0f;
-		healthReduction 		= 0.0f;
-		healthThreshold 		= Random.Range(15, 25);
+		MaxHealth 				= Random.Range(60, 80);
+		Health 					= maxHealth;
+		HealthIncrease 			= Random.Range(4, 6);
+		HealthRegeneration 		= 0.0f;
+		HealthReduction 		= 0.0f;
+		HealthThreshold 		= Random.Range(15, 25);
 		// Fatigue
-		maxFatigue 				= Random.Range(60, 80);
-		fatigue 				= maxFatigue;
-		fatigueIncrease 		= Random.Range(4, 6);
-		fatigueRegeneration		= 0.0f;
-		fatigueReduction		= Random.Range(0.3f, 0.6f);
-		fatigueThreshold		= Random.Range(15, 25);
+		MaxFatigue 				= Random.Range(60, 80);
+		Fatigue 				= maxFatigue;
+		FatigueIncrease 		= Random.Range(4, 6);
+		FatigueRegeneration		= 0.0f;
+		FatigueReduction		= Random.Range(0.3f, 0.6f);
+		FatigueThreshold		= Random.Range(15, 25);
 		// Sanity
-		maxSanity				= Random.Range(60, 80);
-		sanity					= maxSanity;
-		sanityIncrease			= Random.Range(4, 6);
-		sanityRegeneration		= 0.0f;
-		sanityReduction			= Random.Range(0.3f, 0.6f);
-		sanityThreshold			= Random.Range(15, 25);
+		MaxSanity				= Random.Range(60, 80);
+		Sanity					= maxSanity;
+		SanityIncrease			= Random.Range(4, 6);
+		SanityRegeneration		= 0.0f;
+		SanityReduction			= Random.Range(0.3f, 0.6f);
+		SanityThreshold			= Random.Range(15, 25);
 		// Character Activities
-		healOther				= 0.0f;
+		HealOther				= 0.0f;
 		// Hardware Activities
-		repair					= 1.0f;
-		fireExtinguish			= 1.0f;
-		cleanRadiation			= 3.0f;
-		cleanChemistry			= 3.0f;
+		Repair					= 1.0f;
+		FireExtinguish			= 1.0f;
+		CleanRadiation			= 3.0f;
+		CleanChemistry			= 3.0f;
 		// Attack
-		damage					= 5.0f;
-		attackRate				= 1.0f;	
-		abbleDistantAttack		= false;
+		Damage					= 5.0f;
+		AttackRate				= 1.0f;	
+		AbbleDistantAttack		= false;
 		// Working and Resting
-		restProbability 		= 0.25f;
-		workTasks 				= new string[] { "CleanChemistry", "CleanRadiation" };
+		RestProbability 		= 0.25f;
+		WorkTasks 				= new string[] { "CleanChemistry", "CleanRadiation" };
 		// Traits
-		//		traitOne;
-		//		traitTwo;
-		
+		ApplyCrewTraits (this);
 	}
 	
 }

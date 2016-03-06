@@ -8,29 +8,31 @@ public class TraderMerchantStats : HumanStats {
 	{
 		base.Init(character);
 		// Common
-		walkSpeed			 	= 0.5f;
-		runSpeed 				= 0.7f;
-		basicRoom 				= ShipState.Inst.RoomByPoint(character.GObject.transform.position);
+		WalkSpeed			 	= 0.5f;
+		RunSpeed 				= 0.7f;
+		BasicRoom 				= ShipState.Inst.RoomByPoint(character.GObject.transform.position);
 		// Health
-		maxHealth 				= Random.Range(60, 80);
-		health 					= maxHealth;
-		healthIncrease 			= Random.Range(4, 6);
-		healthRegeneration 		= 0.1f;
-		healthReduction 		= 0.0f;
-		healthThreshold 		= Random.Range(15, 25);
+		MaxHealth 				= Random.Range(60, 80);
+		Health 					= maxHealth;
+		HealthIncrease 			= Random.Range(4, 6);
+		HealthRegeneration 		= 0.1f;
+		HealthReduction 		= 0.0f;
+		HealthThreshold 		= Random.Range(15, 25);
 		// Sanity
-		maxSanity				= Random.Range(60, 80);
-		sanity					= maxSanity;
-		sanityIncrease			= Random.Range(4, 6);
-		sanityRegeneration		= 0.0f;
-		sanityReduction			= 0.0f;
-		sanityThreshold			= Random.Range(15, 25);
+		MaxSanity				= Random.Range(60, 80);
+		Sanity					= maxSanity;
+		SanityIncrease			= Random.Range(4, 6);
+		SanityRegeneration		= 0.0f;
+		SanityReduction			= 0.0f;
+		SanityThreshold			= Random.Range(15, 25);
 		// Character Activities
-		healOther				= 0.0f;
+		HealOther				= 0.0f;
 		// Attack
-		damage					= 2.0f;
-		attackRate				= 1.0f;	
-		abbleDistantAttack		= false;
+		Damage					= 2.0f;
+		AttackRate				= 1.0f;	
+		AbbleDistantAttack		= false;
+		// Traits
+		ApplyNonCrewTraits (this);
 	}
 
 }

@@ -8,25 +8,25 @@ public class PlayerMurphyStats : PlayerStats {
 	{
 		base.Init(character);
 		// Common
-		walkSpeed			 	= 0.75f;
-		runSpeed 				= 0.75f;
-		basicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.Control];
+		WalkSpeed			 	= 0.75f;
+		RunSpeed 				= 0.75f;
+		BasicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.Control];
 		// Health
-		maxHealth 				= Random.Range(70, 80);
-		health 					= maxHealth;
-		healthIncrease 			= Random.Range(4, 6);
-		healthRegeneration 		= 0.0f;
-		healthReduction 		= 0.0f;
-		healthThreshold 		= Random.Range(15, 25);
+		MaxHealth 				= Random.Range(70, 80);
+		Health 					= maxHealth;
+		HealthIncrease 			= Random.Range(4, 6);
+		HealthRegeneration 		= 0.0f;
+		HealthReduction 		= 0.0f;
+		HealthThreshold 		= Random.Range(15, 25);
 		// Hardware Activities
-		repair					= 1.0f;
-		fireExtinguish			= 1.0f;
-		cleanRadiation			= 1.0f;
-		cleanChemistry			= 0.0f;
+		Repair					= 1.0f;
+		FireExtinguish			= 1.0f;
+		CleanRadiation			= 1.0f;
+		CleanChemistry			= 0.0f;
 		// Attack
-		damage					= 5.0f;
-		attackRate				= 1.0f;	
-		abbleDistantAttack		= true;
+		Damage					= 5.0f;
+		AttackRate				= 1.0f;	
+		AbbleDistantAttack		= true;
 	}
 
 }

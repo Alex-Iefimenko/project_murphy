@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class HumanStats : CharacterStatsBase {
@@ -13,21 +13,21 @@ public class HumanStats : CharacterStatsBase {
 	// Character Activities
 	public new float healOther;
 	// traits
-	public new Enums.Traits traitOne;
-	public new Enums.Traits traitTwo;
+	public new TraitsProvider.Traits traitOne;
+	public new TraitsProvider.Traits traitTwo;
 	
 	// Sanity 
-	public override float MaxSanity { get { return maxSanity; } }
-	public override float Sanity { get { return sanity; } }
-	public override float SanityIncrease { get { return sanityIncrease; } }
-	public override float SanityRegeneration { get { return sanityRegeneration; } }
-	public override float SanityReduction { get { return sanityReduction; } }
-	public override float SanityThreshold { get { return sanityThreshold; } }
+	public override float MaxSanity { get { return maxSanity; } set { maxSanity = value; } }
+	public override float Sanity { get { return sanity; } set { sanity = value; } }
+	public override float SanityIncrease { get { return sanityIncrease; } set { sanityIncrease = value; } }
+	public override float SanityRegeneration { get { return sanityRegeneration; } set { sanityRegeneration = value; } }
+	public override float SanityReduction { get { return sanityReduction; } set { sanityReduction = value; } }
+	public override float SanityThreshold { get { return sanityThreshold; } set { sanityThreshold = value; } }
 	// Character Activities
-	public override float HealOther { get { return healOther; } }
+	public override float HealOther { get { return healOther; } set { healOther = value; } }
 	// traits
-	public override Enums.Traits TraitOne { get { return traitOne; } }
-	public override Enums.Traits TraitTwo { get { return traitTwo; } }
+	public override TraitsProvider.Traits TraitOne { get { return traitOne; } set { traitOne = value; } }
+	public override TraitsProvider.Traits TraitTwo { get { return traitTwo; } set { traitTwo = value; } }
 	
 	public override void Init(CharacterMain character)
 	{
@@ -37,8 +37,8 @@ public class HumanStats : CharacterStatsBase {
 	public override void StatsUpdate()
 	{
 		base.StatsUpdate();
-		sanity = sanity + sanityRegeneration - sanityReduction;
-		sanity = Mathf.Clamp(Sanity, -10f, MaxSanity);
+		Sanity = Sanity + SanityRegeneration - SanityReduction;
+		Sanity = Mathf.Clamp(Sanity, -10f, MaxSanity);
 	}
 
 }
