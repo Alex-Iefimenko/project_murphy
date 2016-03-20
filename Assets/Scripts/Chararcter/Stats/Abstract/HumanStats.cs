@@ -29,9 +29,9 @@ public class HumanStats : CharacterStatsBase {
 	public override TraitsProvider.Traits TraitOne { get { return traitOne; } set { traitOne = value; } }
 	public override TraitsProvider.Traits TraitTwo { get { return traitTwo; } set { traitTwo = value; } }
 	
-	public override void Init(CharacterMain character)
+	public override void Init()
 	{
-		base.Init(character);
+		base.Init();
 	}
 
 	public override void StatsUpdate()

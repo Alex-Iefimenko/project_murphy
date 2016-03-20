@@ -3,24 +3,45 @@ using System.Collections;
 
 public class StateBase : IState {
 
-	public ICharacter character;
-	private int stateIndex;
+	protected ICharacterAIHandler aiHandler;
+	protected ICharacterStatePrivate stats;
+	protected IMovement movement;
+	protected IndividualCoordinator coordinator;
+	protected int stateIndex;
 
-	public StateBase (ICharacter newCharacter) 
+	public virtual int StateKind { get { return this.stateIndex; } }
+
+	public event ViewStateHandler SubStateChange;
+	public event ViewBoolHandler SetCustomBool;
+
+	public StateBase (ICharacterAIHandler newHandler, AiStateParams param) 
 	{
-		character = newCharacter;
+		aiHandler = newHandler;
+		stats = param.Stats;
+		movement = param.Movement;
+		coordinator = param.Coordinator;
 	}
 
-	public virtual int StateKind 
-	{ 
-		get; set; 
+	protected void OnSubStateChange (int state)
+	{
+		if (SubStateChange != null) SubStateChange (state);
+	}
+	
+	protected void OnSetCustomBool (string name, bool state)
+	{
+		if (SetCustomBool != null) SetCustomBool (name, state);
 	}
 
 	public virtual void Actualize () 
 	{
-		character.View.SetState(StateKind);
+		OnSubStateChange (0);
 	}
 
+	public bool EnableCondition () 
+	{
+		return EnableCondition (movement.CurrentRoom);
+	}
+	
 	public virtual bool EnableCondition (Room room) 
 	{
 		return true;
@@ -31,13 +52,15 @@ public class StateBase : IState {
 		return false;
 	}
 
-	public virtual void ExecuteStateActions () 
+	public virtual void Execute () 
 	{
 		if (DisableCondition ()) Purge ();
 	}
 
 	public virtual void Purge ()
 	{
-		character.PurgeActions ();
+		movement.Purge ();
+		stats.Purge ();
+		aiHandler.PurgeState ();
 	}
 }

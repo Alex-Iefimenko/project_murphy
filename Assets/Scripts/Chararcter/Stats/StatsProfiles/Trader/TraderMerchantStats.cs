@@ -4,13 +4,15 @@ using System.Collections;
 public class TraderMerchantStats : HumanStats {
 
 	// Use this for initialization
-	public override void Init(CharacterMain character)
+	public override void Init()
 	{
-		base.Init(character);
+		base.Init();
 		// Common
+		Side 					= Enums.CharacterSides.Trader;
+		Type 					= Enums.CharacterTypes.Merchant;
 		WalkSpeed			 	= 0.5f;
 		RunSpeed 				= 0.7f;
-		BasicRoom 				= ShipState.Inst.RoomByPoint(character.GObject.transform.position);
+		BasicRoom 				= ShipState.Inst.RoomByPoint(gameObject.transform.position);
 		// Health
 		MaxHealth 				= Random.Range(60, 80);
 		Health 					= maxHealth;

@@ -3,31 +3,31 @@ using System.Collections;
 
 public class BreakingState : StateBase {
 	
-	private int stateIndex = 102;
+	private new int stateIndex = 102;
 	private int tick;
-	
-	public BreakingState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public BreakingState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
 	public override bool EnableCondition (Room room) 
 	{
-		return character.Movement.CurrentRoom.Stats.Locked;
+		return movement.CurrentRoom.Stats.Locked;
 	}
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		character.Movement.Walk().ToPoint(character.Movement.CurrentRoom.Objects.DoorExitPoint());
+		movement.Walk().ToPoint(movement.CurrentRoom.Objects.DoorExitPoint());
 		tick = Random.Range(15, 20);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false)
+		base.Execute ();
+		if (movement.IsMoving == false)
 		{
 			tick -= 1;
-			character.View.SetSubState(1);
+			OnSubStateChange (1);
 		}
 	}
 
@@ -39,6 +39,6 @@ public class BreakingState : StateBase {
 	public override void Purge ()
 	{
 		base.Purge ();
-		character.Movement.CurrentRoom.Stats.Locked = false;
+		movement.CurrentRoom.Stats.Locked = false;
 	}
 }

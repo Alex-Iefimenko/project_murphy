@@ -2,11 +2,13 @@
 using System.Collections;
 using E = Enums;
 
-public abstract class CharatcerStatsAbstract : MonoBehaviour {
+public abstract class CharatcerStatsAbstract : MonoBehaviour, ICharacterStatePrivate {
 	//
 	// Fields
 	//
 	// Basic
+	[HideInInspector] [System.NonSerialized] public Enums.CharacterSides side;
+	[HideInInspector] [System.NonSerialized] public Enums.CharacterTypes type;
 	[HideInInspector] [System.NonSerialized] public float walkSpeed;
 	[HideInInspector] [System.NonSerialized] public float runSpeed;
 	[HideInInspector] [System.NonSerialized] public Room basicRoom;
@@ -53,8 +55,9 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	//
 	// Properties 
 	//
-	public CharacterMain RelatedCharacter { get; set; }
 	// Basic
+	public virtual Enums.CharacterSides Side { get; set; }
+	public virtual Enums.CharacterTypes Type { get; set; }
 	public virtual float WalkSpeed { get; set; }
 	public virtual float RunSpeed { get; set; }
 	public virtual Room BasicRoom { get; set; }
@@ -79,11 +82,6 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	public virtual float SanityRegeneration { get; set; }
 	public virtual float SanityReduction { get; set; }
 	public virtual float SanityThreshold { get; set; }
-	// Fighting
-	public virtual float Damage { get; set; }
-	public virtual float AttackRate { get; set; }
-	public virtual float AttackCoolDown { get; set; }
-	public virtual bool AbbleDistantAttack { get; set; }
 	// Character Activities
 	public virtual float HealOther { get; set; }
 	// Hardware Activities
@@ -97,15 +95,61 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour {
 	// traits
 	public virtual TraitsProvider.Traits TraitOne { get; set; }
 	public virtual TraitsProvider.Traits TraitTwo { get; set; }
-	
+	// Fighting
+	public virtual float Damage { get; set; }
+	public virtual float AttackRate { get; set; }
+	public virtual float AttackCoolDown { get; set; }
+	public virtual bool AbbleDistantAttack { get; set; }
+	public event AttackDelegate attackReady;
+
+	public void Update()
+	{
+		if (AttackCoolDown > 0f) 
+		{
+			AttackCoolDown -= Time.deltaTime;
+		}
+		else 
+		{
+			if (attackReady != null) attackReady();
+		}
+	}
+
+	public virtual void Purge () 
+	{
+		attackReady = null;
+	}
+
 	public void ApplyCrewTraits (CharatcerStatsAbstract stats)
 	{
 		TraitsProvider.ProvideCrewTraits(stats);
 	}
-	
-	
+
 	public void ApplyNonCrewTraits (CharatcerStatsAbstract stats)
 	{
 		TraitsProvider.ProvideNonCrewTraits(stats);
 	}
+
+	//
+	// Interface implementation
+	//
+	public bool IsHealthy { get { return Health >= MaxHealth; } }
+	public bool IsDead { get { return Health <= 0f; } }
+	public bool IsUnconscious { get { return Health <= 10f && !IsDead; } }
+	public bool IsActive { get { return !IsDead && !IsUnconscious; } }
+	public bool IsWounded { get { return Health < MaxHealth && IsActive; } }
+	public bool IsHeavyWounded { get { return Health < HealthThreshold && IsActive; } }
+
+	public void Hurt (float amount) { Health -= amount; }
+	public void Infect (float amount) { HealthReduction += amount; }
+	public void Heal (float amount) { Health += amount; HealthReduction -= amount; }
+
+	public bool IsHungry { get { return Fatigue < FatigueThreshold; } }
+	public bool IsFull { get {return Fatigue >= MaxFatigue; } }
+	public void Eat () { Fatigue += FatigueIncrease; }
+
+	public bool IsExhaust { get { return Sanity < SanityThreshold; } }
+	public bool IsRested { get { return Sanity >= MaxSanity; } }
+	public void Sleep () { Sanity += SanityIncrease; }
+
+	public void StartAttackPrepare () { AttackCoolDown = AttackRate; }
 }

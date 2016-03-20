@@ -7,16 +7,13 @@ public class CharacterCreater : MonoBehaviour {
 	public Enums.CharacterTypes characterType;
 	public GameObject[] prefabs;
 
-	public CharacterMain CreateCharacter ()
+	public IGroupCharacter CreateCharacter ()
 	{
 		Vector3 place = new Vector3(transform.position.x, transform.position.y, -0.2f);
 		GameObject character = (GameObject)Instantiate(Helpers.GetRandomArrayValue(prefabs), 
 		                                               place, 
 		                                               transform.rotation);
-		CharacterMain newCharacter = character.GetComponent<CharacterMain>();
-		newCharacter.characterSide = characterSide;
-		newCharacter.characterType = characterType;
-		newCharacter.Init();
+		IGroupCharacter newCharacter = CharacterFactory.CreateCharacter (character, characterSide, characterType);
 		Destroy(this.gameObject);
 		return newCharacter;
 	}

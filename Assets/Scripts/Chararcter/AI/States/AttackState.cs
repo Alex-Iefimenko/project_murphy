@@ -1,81 +1,80 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class AttackState : StateBase {
 	
-	private int stateIndex = 3;
+	private new int stateIndex = 3;
 	private ICharacter enemy = null;
 	private GameObject shot = null;
-	
-	public AttackState (CharacterMain character) : base(character) 
+
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public AttackState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) 
 	{ 
-		shot = Resources.Load ("DynamicPrefabs/Shots/Shot") as GameObject;
+		GameObject[] shots = Resources.LoadAll ("DynamicPrefabs/Shots/", typeof(GameObject)).Cast<GameObject>().ToArray();
+		shot = Helpers.GetRandomArrayValue<GameObject>(shots);
 	}
 	
-	public override int StateKind { get { return stateIndex; } }
-
 	public override bool EnableCondition (Room room) 
 	{
-		ICharacter hostile = room.Objects.ContainsHostile(character);
-		return (hostile != null && hostile.Stats.IsActive());
+		enemy = room.Objects.ContainsHostile (stats.Side);
+		return (enemy != null && enemy.IsActive);
 	}
 
 	public override void Actualize () 
 	{ 		
 		base.Actualize ();
-		character.View.SetCustomBool("AbleToShot", character.Stats.AbbleDistantAttack);
-		enemy = character.Movement.CurrentRoom.Objects.ContainsHostile(character);
-		if (character.Stats.AbbleDistantAttack)
+		OnSetCustomBool("AbleToShot", stats.AbbleDistantAttack);
+		if (stats.AbbleDistantAttack)
 		{
-			character.Movement.Run().ToFurniture(character.Movement.CurrentRoom, "Random");
-			character.Stats.attackReady += DistantAttack;
+			movement.Run().ToFurniture(movement.CurrentRoom, "Random");
+			stats.attackReady += DistantAttack;
 		}
 		else
 		{
-			character.Movement.Run().ToCharacter(enemy);
-			character.Stats.attackReady += CloseAttack;
+			movement.Run().ToCharacter(enemy);
+			stats.attackReady += CloseAttack;
 		}
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false 
-		    && character.Stats.AbbleDistantAttack == false
-		    && character.Movement.IsNearObject(enemy.GObject) == false)
-			character.Movement.Run().ToCharacter(enemy);
-		if (enemy.Movement.CurrentRoom != character.Movement.CurrentRoom)
-			character.Movement.Run().ToCharacter(enemy);
+		base.Execute ();
+		if (movement.IsMoving == false 
+		    && stats.AbbleDistantAttack == false
+		    && movement.IsNearObject(enemy.GObject) == false)
+			movement.Run().ToCharacter(enemy);
+		if (movement.CurrentRoom != movement.CurrentRoom)
+			movement.Run().ToCharacter(enemy);
 	}
 
 	public override bool DisableCondition () 
 	{
-		return !enemy.Stats.IsActive();
+		return !enemy.IsActive;
 	}
 
 	private void CloseAttack ()
 	{
-		if (character.Movement.IsNearObject(enemy.GObject))
+		if (movement.IsNearObject(enemy.GObject))
 		{
-			character.View.SetSubState(1);
-			enemy.Hurt(character.Stats.Damage);
-			character.Stats.AttackCoolDown = character.Stats.AttackRate;
-//			character.View.SetSubState(0);
+			OnSubStateChange(1);
+			enemy.Hurt(stats.Damage);
+			stats.StartAttackPrepare ();
 		}
 	}
 	
 	private void DistantAttack ()
 	{
-		character.View.RotateTowards(enemy.GObject.transform.position);
-		character.View.SetSubState(1);
-		float t = Mathf.Atan2((enemy.GObject.transform.position.y - character.GObject.transform.position.y), 
-		                      (enemy.GObject.transform.position.x - character.GObject.transform.position.x)) * Mathf.Rad2Deg;
+		movement.LookAt(enemy.GObject.transform.position);
+		OnSubStateChange(1);
+		float t = Mathf.Atan2((enemy.GObject.transform.position.y - movement.GObject.transform.position.y), 
+		                      (enemy.GObject.transform.position.x - movement.GObject.transform.position.x)) * Mathf.Rad2Deg;
 		Quaternion rotat = Quaternion.Euler(0, 0, t);
-		GameObject thisShot = GameObject.Instantiate(shot, character.GObject.transform.position, rotat) as GameObject;
+		GameObject thisShot = GameObject.Instantiate(shot, movement.GObject.transform.position, rotat) as GameObject;
 		thisShot.GetComponent<Shot>().Target = enemy.GObject;
-		enemy.Hurt(character.Stats.Damage);
-		character.Stats.AttackCoolDown = character.Stats.AttackRate;
-//		character.View.SetSubState(0);
+		enemy.Hurt(stats.Damage);
+		stats.StartAttackPrepare ();
 	}
 	
 }

@@ -4,30 +4,30 @@ using System.Linq;
 
 public class OffItState : StateBase {
 	
-	private int stateIndex = 202;
-	
-	public OffItState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	private new int stateIndex = 202;
+
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public OffItState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
 	public override bool EnableCondition (Room room) 
 	{
-		return room.Stats.IsDangerous();
+		return room.Stats.IsDangerous ();
 	}
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		Room room = Helpers.GetRandomArrayValue<Room>(character.Movement.CurrentRoom.neighbors.Keys.ToList());
-		character.Movement.Run().ToRoom(room);
+		Room room = Helpers.GetRandomArrayValue<Room>(movement.CurrentRoom.neighbors.Keys.ToList());
+		movement.Run ().ToRoom (room);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
+		base.Execute ();
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Movement.IsMoving == false;
+		return movement.IsMoving == false;
 	}
 }

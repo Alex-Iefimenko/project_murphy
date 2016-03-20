@@ -3,27 +3,27 @@ using System.Collections;
 
 public class UnconsitiousState : StateBase {
 	
-	private int stateIndex = 2;
-	
-	public UnconsitiousState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	private new int stateIndex = 2;
 
+	public override int StateKind { get { return this.stateIndex; } }
+	
+	public UnconsitiousState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
-		return character.Stats.IsUnconscious();
+		return stats.IsUnconscious;
 	}
 
 	public override void Actualize () { base.Actualize (); }
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
+		base.Execute ();
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Stats.Health >= character.Stats.MaxHealth;
+		return stats.IsHealthy;
 	}
 	
 }

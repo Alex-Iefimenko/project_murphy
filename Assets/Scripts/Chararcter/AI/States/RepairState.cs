@@ -3,33 +3,32 @@ using System.Collections;
 
 public class RepairState : StateBase {
 
-	private int stateIndex = 6;
-	
-	public RepairState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	private new int stateIndex = 6;
 
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public RepairState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
-		return room.Stats.IsBroken();	
+		return room.Stats.IsBroken ();	
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		character.Movement.Walk().ToFurniture(character.Movement.CurrentRoom, "Random");
+		movement.Walk ().ToFurniture (movement.CurrentRoom, "Random");
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		character.Movement.CurrentRoom.Repair(character.Stats.Repair);
-		if (character.Movement.IsMoving == false)
-			character.View.SetSubState(1);
+		base.Execute ();
+		movement.CurrentRoom.Repair(stats.Repair);
+		if (movement.IsMoving == false) OnSubStateChange(1);
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Movement.CurrentRoom.Stats.IsBroken() == false;
+		return movement.CurrentRoom.Stats.IsBroken() == false;
 	}
 
 }

@@ -3,13 +3,13 @@ using System.Collections;
 
 public class TradeState : StateBase {
 	
-	private int stateIndex = 201;
+	private new int stateIndex = 201;
 	private int tick;
 	private bool traded = false;
-	
-	public TradeState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public TradeState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
 	public override bool EnableCondition (Room room) 
 	{
@@ -18,17 +18,17 @@ public class TradeState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery], "Random");
+		movement.Walk ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery], "Random");
 		tick = Random.Range(10, 15);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false)
+		base.Execute ();
+		if (movement.IsMoving == false)
 		{
 			tick -= 1;
-			character.View.SetSubState(1);
+			OnSubStateChange (1);
 		}
 	}
 	

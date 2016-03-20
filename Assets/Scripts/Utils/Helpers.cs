@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Helpers : MonoBehaviour {
+public class Helpers {
 
 	// Returns random array table
 	public static T GetRandomArrayValue<T> (List<T> array)

@@ -14,9 +14,6 @@ public class Initializer : MonoBehaviour {
 
 	void InitCharacters ()
 	{
-		// Predefined charcters
-		GameObject[] allCharacters = GameObject.FindGameObjectsWithTag("Character");
-		for (int i = 0; i < allCharacters.Length; i++) allCharacters[i].GetComponent<CharacterMain>().Init();
 		// Generated Characters
 		GameObject[] allCreators = GameObject.FindGameObjectsWithTag("CharacterCreater");
 		for (int i = 0; i < allCreators.Length; i++) allCreators[i].GetComponent<CharacterCreater>().CreateCharacter();

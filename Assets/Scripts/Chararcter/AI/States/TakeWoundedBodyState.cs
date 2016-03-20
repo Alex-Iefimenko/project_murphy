@@ -3,14 +3,14 @@ using System.Collections;
 
 public class TakeWoundedBodyState : StateBase {
 	
-	private int stateIndex = 12;
+	private new int stateIndex = 12;
 	private ICharacter unconscious = null;
 	private bool pulling = false;
-	
-	public TakeWoundedBodyState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
 
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public TakeWoundedBodyState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
 		return room.Objects.ContainsUnconscious() != null;
@@ -19,35 +19,34 @@ public class TakeWoundedBodyState : StateBase {
 	public override void Actualize () { 
 		base.Actualize (); 
 		pulling = false;
-		unconscious = character.Movement.CurrentRoom.Objects.ContainsUnconscious();
+		unconscious = movement.CurrentRoom.Objects.ContainsUnconscious();
 		unconscious.Lock = true;
-		character.Movement.Walk().ToCharacter(unconscious);
+		movement.Walk ().ToCharacter (unconscious);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (!pulling && character.Movement.IsNearObject(unconscious.GObject))
+		base.Execute ();
+		if (!pulling && movement.IsNearObject(unconscious.GObject))
 		{
-			character.View.SetSubState(1);
-			character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
-			character.Movement.Pull((IMovable)unconscious);
+			OnSubStateChange (1);
+			movement.Walk ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
+			movement.Pull ((IMovable)unconscious);
 			pulling = true;
 		}
-		if (pulling && character.Movement.IsMoving == false)
+		if (pulling && movement.IsMoving == false)
 		{
-			unconscious.Heal(character.Stats.HealOther);
+			unconscious.Heal(stats.HealOther);
 		}
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return !unconscious.Stats.IsUnconscious();
+		return !stats.IsUnconscious;
 	}
 	
 	public override void Purge ()
 	{
 		base.Purge ();
-		unconscious.PurgeActions();
 	}
 }

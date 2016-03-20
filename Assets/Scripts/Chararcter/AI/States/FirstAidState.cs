@@ -3,38 +3,35 @@ using System.Collections;
 
 public class FirstAidState : StateBase {
 	
-	private int stateIndex = 18;
+	private new int stateIndex = 18;
+
+	public override int StateKind { get { return this.stateIndex; } }
 	
-	public FirstAidState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	public FirstAidState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
 	public override bool EnableCondition (Room room) 
 	{
-		bool result = 
-			character.Stats.Health < character.Stats.HealthThreshold && 
-			character.Movement.CurrentRoom == ShipState.Inst.specRooms[Enums.RoomTypes.MedBay];
+		bool result = stats.IsWounded && movement.CurrentRoom == ShipState.Inst.specRooms[Enums.RoomTypes.MedBay];
 		return result;
 	}
 	
 	public override void Actualize () { 
 		base.Actualize (); 
-		character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
+		movement.Walk ().ToFurniture (movement.CurrentRoom, "Random");
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false)
+		base.Execute ();
+		if (movement.IsMoving == false)
 		{
-			character.Stats.Health += character.Stats.HealthIncrease;
-			character.Stats.HealthReduction = 0f;
-			character.View.SetSubState(1);
+			stats.Heal (stats.HealthIncrease);
+			OnSubStateChange(1);
 		}
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Stats.Health >= character.Stats.MaxHealth;
+		return stats.IsHealthy;
 	}
 }

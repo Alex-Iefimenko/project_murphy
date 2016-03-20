@@ -43,9 +43,9 @@ MonoBehaviour:
   characterSide: 0
   characterType: 0
   prefabs:
-  - {fileID: 100008, guid: 77b210596c492b84fb6f63ffb3660803, type: 2}
-  - {fileID: 100008, guid: 75665615d2649834099b91b84eeb8ef9, type: 2}
   - {fileID: 100008, guid: 184a5e345c3931249826d2d7fd9a035c, type: 2}
+  - {fileID: 100008, guid: 75665615d2649834099b91b84eeb8ef9, type: 2}
+  - {fileID: 100008, guid: 77b210596c492b84fb6f63ffb3660803, type: 2}
 --- !u!212 &21288940
 SpriteRenderer:
   m_ObjectHideFlags: 1

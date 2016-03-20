@@ -15,9 +15,9 @@ public class PlayerStats : CharacterStatsBase {
 	public override float CleanRadiation { get { return cleanRadiation; } set { cleanRadiation = value; } }
 	public override float CleanChemistry { get { return cleanChemistry; } set { cleanChemistry = value; } }
 
-	public override void Init(CharacterMain character)
+	public override void Init()
 	{
-		base.Init(character);
+		base.Init();
 	}
 
 	public override void StatsUpdate()

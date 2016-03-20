@@ -43,7 +43,7 @@ public class Door : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.GetComponent<CharacterMain>() != null)
+		if (other.GetComponent<Character>() != null)
 		{
 			if (numberOfNPC == 0) doorAnimator.SetBool("IsOpen", true);
 			numberOfNPC += 1;
@@ -52,7 +52,7 @@ public class Door : MonoBehaviour {
 	
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.GetComponent<CharacterMain>() != null)
+		if (other.GetComponent<Character>() != null)
 		{
 			if (numberOfNPC == 1) doorAnimator.SetBool("IsOpen", false);
 			numberOfNPC -= 1;

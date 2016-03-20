@@ -3,33 +3,38 @@ using System.Collections;
 
 public class NavigateState : StateBase {
 	
-	private int stateIndex = 5;
+	private new int stateIndex = 5;
+
+	public override int StateKind { get { return this.stateIndex; } }
 	
-	public NavigateState (CharacterMain character) : base(character) { }
+	public NavigateState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override int StateKind { get { return stateIndex; } }
 	public Room TargetRoom { get; set; }
-	public bool Full { get; set; }
 
 	public override bool EnableCondition (Room room) 
 	{
-		return (character.AiHandler.CurrentState != null && character.AiHandler.CurrentState.StateKind == 5);
+		return (aiHandler.CurrentState != null && aiHandler.CurrentState.StateKind == 5);
 	}
 
 	public override void Actualize () 
 	{ 
 		base.Actualize (); 
-		character.Movement.Run().ToRoom(TargetRoom);
+		movement.Run ().ToRoom (TargetRoom);
 	}
 
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
+
+		base.Execute ();
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Movement.IsMoving == false;
+		return movement.IsMoving == false;
 	}
 
+	public override void Purge ()
+	{
+		base.Purge ();
+	}
 }

@@ -18,12 +18,12 @@ public class MovementTarget
 	PositionDeleagte endPosition;
 	PositionDeleagte centerPosition;
 
-	public MovementTarget (ICharacter self, Room room)
+	public MovementTarget (GameObject self, Room room)
 	{
 		Room = room;
 		GObject = room.gameObject;
 		IsDynamic = false;
-		character = self.GObject;
+		character = self;
 		transform = room.gameObject.transform;
 		endPosition = ClosestEntrance;
 		centerPosition = TransformPositon;
@@ -50,23 +50,23 @@ public class MovementTarget
 		} 
 	}
 	
-	public MovementTarget (ICharacter self, ICharacter target)
+	public MovementTarget (GameObject self, ICharacter target)
 	{
-		Room = target.Movement.CurrentRoom;
+		Room = target.CurrentRoom;
 		GObject = target.GObject;
-		IsDynamic = target.Stats.IsActive();
-		character = self.GObject;
+		IsDynamic = target.IsActive;
+		character = self;
 		transform = target.GObject.transform;
 		endPosition = ClosestCollPoint;
 		centerPosition = TransformPositon;
 	}
 
-	public MovementTarget (ICharacter self, Item item)
+	public MovementTarget (GameObject self, Item item)
 	{
 		Room = ShipState.Inst.RoomByPoint(item.transform.position);
 		GObject = item.gameObject;
 		IsDynamic = false;
-		character = self.GObject;
+		character = self;
 		transform = item.gameObject.transform;
 		endPosition = ClosestCollPoint;
 		centerPosition = TransformPositon;

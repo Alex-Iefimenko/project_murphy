@@ -43,9 +43,9 @@ MonoBehaviour:
   characterSide: 2
   characterType: 6
   prefabs:
-  - {fileID: 100008, guid: 893ebc1d79ac01c45ac3d5621ce41241, type: 2}
-  - {fileID: 100008, guid: 45124661b33a51d4f90e05060a2bc929, type: 2}
-  - {fileID: 100008, guid: 5046e7546044d084bb8dfec803f97a71, type: 2}
+  - {fileID: 100018, guid: bc0e4bda9b1c4e04dbd66e5d0c79d642, type: 2}
+  - {fileID: 100018, guid: fff16dc2f96b989499d9fce58eda270a, type: 2}
+  - {fileID: 100018, guid: f4823c6539b93974cb05f5a1f72fd111, type: 2}
 --- !u!212 &21273560
 SpriteRenderer:
   m_ObjectHideFlags: 1

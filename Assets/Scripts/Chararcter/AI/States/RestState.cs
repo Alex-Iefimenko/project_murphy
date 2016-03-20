@@ -3,12 +3,12 @@ using System.Collections;
 
 public class RestState : StateBase {
 	
-	private int stateIndex = 14;
+	private new int stateIndex = 14;
 	private int tick;
 
-	public RestState (CharacterMain character) : base(character) { }
+	public override int StateKind { get { return this.stateIndex; } }
 
-	public override int StateKind { get { return stateIndex; } }
+	public RestState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 
 	public override bool EnableCondition (Room room) 
 	{
@@ -17,17 +17,17 @@ public class RestState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		character.Movement.Walk().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters], "Random");
+		movement.Walk ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters], "Random");
 		tick = Random.Range(7, 10);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false)
+		base.Execute ();
+		if (movement.IsMoving == false)
 		{
 			tick -= 1;
-			character.View.SetSubState(1);
+			OnSubStateChange(1);
 		}
 	}
 	

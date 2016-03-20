@@ -3,39 +3,38 @@ using System.Collections;
 
 public class HealOtherState : StateBase {
 
-	private int stateIndex = 8;
+	private new int stateIndex = 8;
 	private ICharacter wounded = null;
 
-	public HealOtherState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	public override int StateKind { get { return this.stateIndex; } }
 
+	public HealOtherState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
-		return room.Objects.ContainsWounded(character) != null;
+		return room.Objects.ContainsWounded(stats.Side) != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		wounded = character.Movement.CurrentRoom.Objects.ContainsWounded(character);
+		wounded = movement.CurrentRoom.Objects.ContainsWounded(stats.Side);
 		wounded.Lock = true;
-		character.Movement.Run().ToCharacter(wounded);
+		movement.Run ().ToCharacter (wounded);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false && character.Movement.IsNearObject(wounded.GObject))
+		base.Execute ();
+		if (movement.IsMoving == false && movement.IsNearObject(wounded.GObject))
 		{
-			character.View.SetSubState(1);
-			wounded.Heal(character.Stats.HealOther);
+			OnSubStateChange(1);
+			wounded.Heal(stats.HealOther);
 		}
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return wounded.Stats.IsWounded() == false || 
-			character.Movement.IsMoving == false && !character.Movement.IsNearObject(wounded.GObject);
+		return wounded.IsHealthy == false || (movement.IsMoving == false && !movement.IsNearObject(wounded.GObject));
 	}
 	
 }

@@ -3,12 +3,12 @@ using System.Collections;
 
 public class CleanChemistryState : StateBase {
 	
-	private int stateIndex = 17;
-	
-	public CleanChemistryState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	private new int stateIndex = 17;
 
+	public override int StateKind { get { return this.stateIndex; } }
+	
+	public CleanChemistryState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
 		return room.Stats.IsHazardous();
@@ -16,20 +16,19 @@ public class CleanChemistryState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		character.Movement.Walk().ToPoint(character.Movement.CurrentRoom.Objects.GetRandomRoomPoint());
+		movement.Walk ().ToPoint (movement.CurrentRoom.Objects.GetRandomRoomPoint());
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		character.Movement.CurrentRoom.ChemistryClearing(character.Stats.CleanChemistry);
-		if (character.Movement.IsMoving == false)
-			character.View.SetSubState(1);
+		base.Execute ();
+		movement.CurrentRoom.ChemistryClearing (stats.CleanChemistry);
+		if (movement.IsMoving == false) OnSubStateChange (1);
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Movement.CurrentRoom.Stats.IsHazardous() == false;
+		return movement.CurrentRoom.Stats.IsHazardous() == false;
 	}
 	
 }

@@ -4,53 +4,50 @@ using System.Linq;
 
 public class UndockState : StateBase {
 	
-	private int stateIndex = 203;
+	private new int stateIndex = 203;
 
-	public UndockState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
-	
-	public override bool EnableCondition (Room room) 
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public UndockState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param)
 	{
-		return character.Stats.BasicRoom != null && character.Stats.BasicRoom != character.Movement.CurrentRoom;
 	}
 	
-	public override void Actualize () {
+	public override bool EnableCondition (Room room)
+	{
+		return stats.BasicRoom != null && stats.BasicRoom != movement.CurrentRoom;
+	}
+	
+	public override void Actualize ()
+	{
 		base.Actualize ();
-		character.Movement.Walk().ToFurniture(character.Stats.BasicRoom, "Random");
+		movement.Walk ().ToFurniture (stats.BasicRoom, "Random");
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute ()
 	{
-		base.ExecuteStateActions ();
+		base.Execute ();
 	}
 
-	public override bool DisableCondition () 
+	public override bool DisableCondition ()
 	{
-		return character.Movement.IsMoving == false && GroupGathered ();
+		return movement.IsMoving == false && GroupGathered ();
 	}
 	
 	public override void Purge ()
 	{
-		character.Movement.Purge();
-		character.Stats.BasicRoom.Flier.FlyAway(new Vector3(22f, -10f, 0f));
-		character.PurgeActions();
+		base.Purge ();
+		stats.BasicRoom.Flier.FlyAway (new Vector3 (22f, -10f, 0f));
 	}
 
 	private bool GroupGathered ()
 	{
 		bool groupGathered = true;
-		if (character.Coordinator != null)
-		{
-			ICharacter[] followersCharacters = character.Coordinator.FollowersCharacters
-				.Where(v => v != null && !v.Stats.IsUnconscious() && !v.Stats.IsDead()).ToArray();
-			ICharacter[] supportCharacters = character.Coordinator.SupportCharacters
-				.Where(v => v != null && !v.Stats.IsUnconscious() && !v.Stats.IsDead()).ToArray();
-			for (int i = 0; i < followersCharacters.Length; i++) 
-				groupGathered = groupGathered && followersCharacters[i].Movement.CurrentRoom == character.Stats.BasicRoom;
-			for (int i = 0; i < supportCharacters.Length; i++) 
-				groupGathered = groupGathered && supportCharacters[i].Movement.CurrentRoom == character.Stats.BasicRoom;
-		}
+		ICharacter[] followersCharacters = coordinator.FollowersCharacters.Where (v => v != null && v.IsActive).ToArray ();
+		ICharacter[] supportCharacters = coordinator.SupportCharacters.Where (v => v != null && v.IsActive).ToArray ();
+		for (int i = 0; i < followersCharacters.Length; i++) 
+			groupGathered = groupGathered && followersCharacters [i].CurrentRoom == stats.BasicRoom;
+		for (int i = 0; i < supportCharacters.Length; i++) 
+			groupGathered = groupGathered && supportCharacters [i].CurrentRoom == stats.BasicRoom;
 		return groupGathered;
 	}
 }

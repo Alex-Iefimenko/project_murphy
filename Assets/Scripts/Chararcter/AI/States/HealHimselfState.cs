@@ -3,36 +3,35 @@ using System.Collections;
 
 public class HealHimselfState : StateBase {
 	
-	private int stateIndex = 4;
-	
-	public HealHimselfState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	private new int stateIndex = 4;
 
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public HealHimselfState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
-		return character.Stats.Health < character.Stats.HealthThreshold;
+		return stats.IsHeavyWounded;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		character.Movement.Run().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
+		movement.Run ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false)
+		base.Execute ();
+		if (movement.IsMoving == false)
 		{
-			character.Stats.Health += character.Stats.HealthIncrease;
-			character.Stats.HealthReduction = 0f;
-			character.View.SetSubState(1);
+			stats.Heal (stats.HealthIncrease);
+			OnSubStateChange (1);
 		}
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Stats.Health >= character.Stats.MaxHealth;
+		return stats.IsHealthy;
 	}
 	
 }

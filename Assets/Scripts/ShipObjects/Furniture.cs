@@ -24,14 +24,14 @@ public class Furniture : MonoBehaviour {
 	// Add NPC to Rooms NPC List
 	void OnTriggerEnter2D (Collider2D otherCollider) 
 	{
-		if (otherCollider.GetComponent<CharacterMain> () != null) 
+		if (otherCollider.GetComponent<Character> () != null) 
 			isFree = false;
 	}
 	
 	// Delete NPC from Rooms NPC List
 	void OnTriggerExit2D (Collider2D otherCollider) 
 	{
-		if (otherCollider.GetComponent<CharacterMain> () != null)
+		if (otherCollider.GetComponent<Character> () != null)
 			isFree = true;
 	}
 

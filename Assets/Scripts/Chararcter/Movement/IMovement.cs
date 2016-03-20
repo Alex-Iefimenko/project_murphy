@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public delegate void RotationHandler (Vector3 point);
+
 public interface IMovement
 {
 	Room CurrentRoom { get; }
@@ -8,6 +10,10 @@ public interface IMovement
 	MovementTarget Target { get; }
 
 	bool IsMoving { get; }
+
+	GameObject GObject { get; }
+
+	event RotationHandler LookOn;
 
 	IMovement Walk ();
 
@@ -22,6 +28,8 @@ public interface IMovement
 	void ToItem (Item item);
 
 	void ToPoint (Vector3 point);
+	 
+	void LookAt (Vector3 point);
 
 	void Pull (IMovable other);
 	

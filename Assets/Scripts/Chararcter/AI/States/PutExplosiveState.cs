@@ -3,41 +3,38 @@ using System.Collections;
 
 public class PutExplosiveState : StateBase {
 	
-	private int stateIndex = 103;
+	private new int stateIndex = 103;
 	private int tick;
 	private bool deployed = false;
 	private Room target = null;
 	private GameObject bomb = null;
-	
-	public PutExplosiveState (CharacterMain character) : base(character) 
+
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public PutExplosiveState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param)
 	{
 		bomb = Resources.Load ("DynamicPrefabs/Bomb") as GameObject;
 	}
 	
-	public override int StateKind { get { return stateIndex; } }
-	
 	public override bool EnableCondition (Room room) 
 	{
-		bool condition = 
-			(!deployed && character.Coordinator == null) 
-			|| (character.Coordinator != null && !deployed && !character.Coordinator.Done);
-		return condition;
+		return !deployed && !coordinator.Done;
 	}
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		target = (character.Coordinator != null) ? FetchSharedGoal () : ShipState.Inst.RandomNamedRoom();
-		character.Movement.Walk().ToFurniture(target, "Random");
+		target = FetchSharedGoal ();
+		movement.Walk ().ToFurniture (target, "Random");
 		tick = Random.Range(7, 10);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false)
+		base.Execute ();
+		if (movement.IsMoving == false)
 		{
 			tick -= 1;
-			character.View.SetSubState(1);
+			OnSubStateChange (1);
 		}
 	}
 
@@ -49,18 +46,17 @@ public class PutExplosiveState : StateBase {
 	public override void Purge ()
 	{
 		base.Purge ();
-		Vector3 place = character.GObject.transform.position;
+		Vector3 place = movement.GObject.transform.position;
 		GameObject newBomb = GameObject.Instantiate(bomb, place, Quaternion.identity) as GameObject;
 		newBomb.GetComponent<Bomb>().Room = target;	
 		deployed = true;
-		if (character.Coordinator != null) character.Coordinator.Done = true;
-		character.PurgeActions();
+		coordinator.Done = true;
 	}
 
 	private Room FetchSharedGoal ()
 	{
-		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.RandomNamedRoom().gameObject;
+		if (coordinator.Target == null) coordinator.Target = ShipState.Inst.RandomNamedRoom().gameObject;
 //		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].gameObject;
-		return character.Coordinator.Target.GetComponent<Room>();
+		return coordinator.Target.GetComponent<Room>();
 	}
 }

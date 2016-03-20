@@ -4,10 +4,12 @@ using System.Collections;
 public class CrewGuardStats : CrewStats {
 	
 	// Use this for initialization
-	public override void Init(CharacterMain character)
+	public override void Init()
 	{
-		base.Init(character);
+		base.Init();
 		// Common
+		Side 					= Enums.CharacterSides.Crew;
+		Type 					= Enums.CharacterTypes.Guard;
 		WalkSpeed			 	= 0.5f;
 		RunSpeed 				= 0.7f;
 		BasicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.Safety];

@@ -11,19 +11,18 @@ public class CharacterGroupCreater : MonoBehaviour {
 	{
 		Room room = ShipState.Inst.RoomByPoint(transform.position);
 		GameObject lead = Instantiate(leader, room.Objects.GetRandomRoomPoint(), transform.rotation) as GameObject;
-		ICharacter groupLeader = lead.GetComponent<CharacterCreater>().CreateCharacter();
-		ICharacter[] groupFollowers = CreateGroup(room, mainFollowers);
-		ICharacter[] groupSupport = CreateGroup(room, supportFollowers);
-		Coordinator groupCoordinator = new Coordinator(groupLeader, groupFollowers, groupSupport);
-		groupLeader.Coordinator = groupCoordinator;
-		for (int i = 0; i < groupFollowers.Length; i++) groupFollowers[i].Coordinator = groupCoordinator;
-		for (int i = 0; i < groupSupport.Length; i++) groupFollowers[i].Coordinator = groupCoordinator;
+
+
+		IGroupCharacter groupLeader = lead.GetComponent<CharacterCreater>().CreateCharacter();
+		IGroupCharacter[] groupFollowers = CreateGroup(room, mainFollowers);
+		IGroupCharacter[] groupSupport = CreateGroup(room, supportFollowers);
+		new TeamCoordinator(groupLeader, groupFollowers, groupSupport);
 		Destroy(this.gameObject);
 	}
 
-	private ICharacter[] CreateGroup (Room room, GameObject[] group)
+	private IGroupCharacter[] CreateGroup (Room room, GameObject[] group)
 	{
-		ICharacter[] createdGroup = new ICharacter[group.Length];
+		IGroupCharacter[] createdGroup = new IGroupCharacter[group.Length];
 		for (int i = 0; i < group.Length; i++)
 		{
 			GameObject character = Instantiate(group[i], room.Objects.GetRandomRoomPoint(), transform.rotation) as GameObject;

@@ -3,12 +3,12 @@ using System.Collections;
 
 public class IdleState : StateBase {
 	
-	private int stateIndex = 0;
+	private new int stateIndex = 0;
 	private int tick;
-	
-	public IdleState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public IdleState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
 	public override bool EnableCondition (Room room) 
 	{
@@ -20,15 +20,16 @@ public class IdleState : StateBase {
 		tick = Random.Range(3, 7);
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{ 
-		if (character.Movement.IsMoving == false && tick > 0)
+		base.Execute ();
+		if (movement.IsMoving == false && tick > 0)
 		{
 			tick -= 1;
 		}
-		else if (character.Movement.IsMoving == false && tick <= 0)
+		else if (movement.IsMoving == false && tick <= 0)
 		{
-			character.Movement.Walk().ToFurniture(character.Movement.CurrentRoom, "Random");
+			movement.Walk().ToFurniture(movement.CurrentRoom, "Random");
 			tick = Random.Range(3, 7);
 		}
 	}

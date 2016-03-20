@@ -3,33 +3,32 @@ using System.Collections;
 
 public class CleanRadiationState : StateBase {
 	
-	private int stateIndex = 16;
-	
-	public CleanRadiationState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
+	private new int stateIndex = 16;
 
+	public override int StateKind { get { return this.stateIndex; } }
+	
+	public CleanRadiationState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
-		return room.Stats.IsRadioactive();
+		return room.Stats.IsRadioactive ();
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		character.Movement.Walk().ToPoint(character.Movement.CurrentRoom.Objects.GetRandomRoomPoint());
+		movement.Walk ().ToPoint (movement.CurrentRoom.Objects.GetRandomRoomPoint());
 	}
 	
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		character.Movement.CurrentRoom.Deactivate(character.Stats.CleanRadiation);
-		if (character.Movement.IsMoving == false)
-			character.View.SetSubState(1);
+		base.Execute ();
+		movement.CurrentRoom.Deactivate(stats.CleanRadiation);
+		if (movement.IsMoving == false) OnSubStateChange (1);
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return character.Movement.CurrentRoom.Stats.IsRadioactive() == false;
+		return movement.CurrentRoom.Stats.IsRadioactive() == false;
 	}
 	
 }

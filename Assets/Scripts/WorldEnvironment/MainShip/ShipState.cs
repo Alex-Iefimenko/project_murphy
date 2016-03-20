@@ -10,8 +10,8 @@ public class ShipState {
 
 	public Door[] allDoors;
 	public Room[] allRooms;
-	public CharacterMain[] allCharacters;
-	public CharacterMain player;
+	public ICharacter[] allCharacters;
+	public ICharacter player;
 	public Dictionary<Enums.RoomTypes, Room> specRooms;
 	private ShipStructure shipStructure;
 
@@ -37,9 +37,9 @@ public class ShipState {
 
 	public void CountCharacters ()
 	{
-		allCharacters = StoreComponent<CharacterMain>(GameObject.FindGameObjectsWithTag("Character"));
+		allCharacters = StoreComponent<Character>(GameObject.FindGameObjectsWithTag("Character"));
 		player = System.Array.Find(allCharacters, v => v.Type == Enums.CharacterTypes.Murphy);
-		if (player) GameObject.FindGameObjectWithTag("GameController").GetComponent<Navigation>().Player = player;
+		if (player != null) GameObject.FindGameObjectWithTag("GameController").GetComponent<Navigation>().Player = player;
 	}
 
 	// Returns list of world points for NPC traveling

@@ -1,50 +1,27 @@
 ﻿using UnityEngine;
 
-public interface ICharacter {
-
-	// Character Components
+public interface ICharacter : IMovable {
+	
+	void Init (ICharacterAIHandler newAiHandler, AiStateParams param);
 
 	Enums.CharacterSides Side { get; }
-
 	Enums.CharacterTypes Type { get; }
-	
-	CharacterStatsBase Stats { get; }
 
-	ICharacterAIHandler AiHandler { get; }
+	Room CurrentRoom { get; }
+	bool IsMoving { get; }
 
-	IMovement Movement { get; }
-
-	ICharacterView View { get; }
-
-	Coordinator Coordinator { get; set; }
-
-	GameObject GObject { get; }
-
-	bool Lock { get; set; }
-
-	// System Character Actions
-
-	void Init ();
-
-	void MuatateReaction (string currentReaction, string newReaction);
-
-	void MutateType (Enums.CharacterTypes newType);
-
-	void MutateSide (Enums.CharacterSides newSide);
-
-	void MutateSideAndType (Enums.CharacterSides newSide, Enums.CharacterTypes newType);
-
-	void MutateFully (Enums.CharacterSides newSide, Enums.CharacterTypes newType);
-
-	void PurgeActions ();
-
-	void Tick ();
-
-	// Outside Character Facade
-
-	void Navigate (Room room, bool full);
-
+	bool IsHealthy { get; }
+	bool IsActive { get; }
+	bool IsWounded { get; }
+	bool IsUnconscious { get; }
+	bool IsDead { get; }
 	void Heal (float amount);
-
 	void Hurt (float amount);
+	void Infect (float amount);
+
+	void Navigate (Room room);
+	void Push (Vector3 point);
+	void Vanish ();
+	void ChangeLayer (int layer);
+
 }

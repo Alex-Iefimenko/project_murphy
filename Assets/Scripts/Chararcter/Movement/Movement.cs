@@ -22,25 +22,25 @@ public class Movement : MonoBehaviour, IMovement
 	
 	// Components
 	private Collider2D charColl; 
-	private ICharacter character;
 
 	// Execution Delegate
 	delegate void MultiDelegate(); 
 	private MultiDelegate onMove;
 
+	// Rotation event
+	public event RotationHandler LookOn;
+
 	//
 	// Initializing
 	//
-	
-	void Awake ()
+	public void Init (float walk, float run)
 	{
-		character = (ICharacter)gameObject.GetComponent<CharacterMain> ();
 		charColl = gameObject.GetComponent<Collider2D> ();
-		walkSpeed = character.Stats.WalkSpeed;
-		runSpeed = character.Stats.RunSpeed;
+		walkSpeed = walk;
+		runSpeed = run;
 		currentSpeed = walkSpeed;
 	}
-	
+
 	//
 	// Public Properties
 	//
@@ -50,6 +50,8 @@ public class Movement : MonoBehaviour, IMovement
 	public MovementTarget Target { get { return target; } }
 
 	public bool IsMoving { get { return movementPath.Count != 0; } }
+
+	public GameObject GObject { get { return gameObject; } }
 
 	//
 	// Public Methods
@@ -69,7 +71,7 @@ public class Movement : MonoBehaviour, IMovement
 
 	public void ToRoom (Room room)
 	{
-		Navigate (new MovementTarget (character, room));
+		Navigate (new MovementTarget (gameObject, room));
 	}
 
 	public void ToFurniture (Room room, string item)
@@ -79,12 +81,12 @@ public class Movement : MonoBehaviour, IMovement
 	
 	public void ToCharacter (ICharacter targetCharacter)
 	{
-		Navigate (new MovementTarget (character, targetCharacter));
+		Navigate (new MovementTarget (gameObject, targetCharacter));
 	}
 
 	public void ToItem (Item item)
 	{
-		Navigate (new MovementTarget (character, item));
+		Navigate (new MovementTarget (gameObject, item));
 	}
 
 	public void ToPoint (Vector3 point)
@@ -97,6 +99,11 @@ public class Movement : MonoBehaviour, IMovement
 		return (exactObject.collider2D != null && charColl.bounds.Intersects (exactObject.collider2D.bounds));
 	}
 
+	public void LookAt (Vector3 point)
+	{
+		LookOn (point);
+	}
+
 	public void Pull (IMovable other)
 	{
 		pulledObject = other;
@@ -106,7 +113,7 @@ public class Movement : MonoBehaviour, IMovement
 	
 	public void AdjustPostion (Vector3 endPoint)
 	{
-		character.View.RotateTowards (endPoint);
+		LookAt (endPoint);
 		StartCoroutine (Adjust (endPoint));
 	}
 	
@@ -131,7 +138,7 @@ public class Movement : MonoBehaviour, IMovement
 		target = newTarget;
 		movementPath = ShipState.Inst.GetStepsToRoom (currentRoom, target.Room);
 		movementPath.Add (target.Position);
-		character.View.RotateTowards (movementPath[0]);
+		LookAt (movementPath[0]);
 		onMove += Move;
 		onMove += UpdateDynamic;
 	}
@@ -162,14 +169,14 @@ public class Movement : MonoBehaviour, IMovement
 		if (movementPath.Count > 0) 
 		{
 			if (target.IsDynamic) Navigate (target);
-			character.View.RotateTowards (movementPath[0]);
+			LookAt (movementPath[0]);
 		}
 		else 
 		{
 			AdjustPostion (target.Position);
 			onMove -= Move;
 			onMove -= UpdateDynamic;
-			character.View.RotateTowards (target.Center);
+			LookAt (target.Center);
 		}
 	}
 
@@ -185,7 +192,7 @@ public class Movement : MonoBehaviour, IMovement
 	{
 		Transform pulledTransf = pulledObject.GObject.transform;
 		pulledTransf.position = Vector3.MoveTowards (pulledTransf.position, 
-		                                             GetClosestCollPoint(character.GObject, pulledTransf.gameObject), 
+		                                             GetClosestCollPoint(gameObject, pulledTransf.gameObject), 
 		                                             currentSpeed * Time.deltaTime);
 		float t = Mathf.Atan2 ((transform.position.y - pulledTransf.position.y), 
 		                       (transform.position.x - pulledTransf.position.x)) * Mathf.Rad2Deg + 90f;

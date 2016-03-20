@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CharacterStatsBase : CharatcerStatsAbstract {
 
+	public new Enums.CharacterSides side;
+	public new Enums.CharacterTypes type;
 	public new float walkSpeed;
 	public new float runSpeed;
 	public new Room basicRoom;
@@ -18,7 +20,9 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public new float attackRate;
 	public new float attackCoolDown;
 	public new bool abbleDistantAttack;
-	
+
+	public override Enums.CharacterSides Side { get { return side; } set { side = value; } }
+	public override Enums.CharacterTypes Type { get { return type; } set { type = value; } }
 	public override float WalkSpeed { get { return walkSpeed; } set { walkSpeed = value; } }
 	public override float RunSpeed { get { return runSpeed; } set { runSpeed = value; } }
 	public override Room BasicRoom { get { return basicRoom; } set { basicRoom = value; }  }
@@ -34,57 +38,23 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public override float AttackRate { get { return attackRate; } set { attackRate = value; }  }
 	public override float AttackCoolDown { get { return attackCoolDown; } set { attackCoolDown = value; }  }
 	public override bool AbbleDistantAttack { get { return abbleDistantAttack; } set { abbleDistantAttack = value; }  }
-	public delegate void AttackDelegate();
-	public event AttackDelegate attackReady;
 
-	public virtual void Init(CharacterMain character)
+	public virtual void Init()
 	{
-		RelatedCharacter = character;
 		AttackCoolDown = 0f;
+		Broadcaster.Instance.tickEvent += StatsUpdate;
 	}
 	
-	public virtual void StatsUpdate()
+	public virtual void StatsUpdate ()
 	{
 		if (Health >= 10f) Health = Health + HealthRegeneration - HealthReduction;
 		Health = Mathf.Clamp(Health, -10f, MaxHealth);
 	}
 	
-	public virtual void Purge ()
+	public override void Purge ()
 	{
-		attackReady = null;
+		base.Purge ();
 		attackCoolDown = 0f;
 	}
-
-	public void Update()
-	{
-		if (AttackCoolDown > 0f) 
-		{
-			AttackCoolDown -= Time.deltaTime;
-		}
-		else 
-		{
-			if (attackReady != null) attackReady();
-		}
-	}
 	
-	public bool IsDead ()
-	{
-		return Health <= 0f;
-	}
-	
-	public bool IsUnconscious ()
-	{
-		return (Health <= 10f && !IsDead());
-	}
-	
-	public bool IsWounded ()
-	{
-		return (Health < MaxHealth && !IsDead() && !IsUnconscious ());
-	}
-	
-	public bool IsActive ()
-	{
-		return !(IsDead() || IsUnconscious());
-
-	}
 }

@@ -19,13 +19,13 @@ public class RoomObjects {
 
 	public void ComeIn (Collider2D otherCollider)
 	{
-		ICharacter otherCharacter = otherCollider.GetComponent<CharacterMain>();
+		ICharacter otherCharacter = otherCollider.GetComponent<Character>();
 		if (otherCharacter != null && !characters.Contains(otherCharacter)) characters.Add(otherCharacter);
 	}
 
 	public void ComeOut (Collider2D otherCollider)
 	{
-		ICharacter otherCharacter = otherCollider.GetComponent<CharacterMain>();
+		ICharacter otherCharacter = otherCollider.GetComponent<Character>();
 		if (otherCharacter != null && characters.Contains(otherCharacter)) characters.Remove(otherCharacter);
 	}
 	
@@ -72,28 +72,28 @@ public class RoomObjects {
 	}
 
 	// Check if Room continse hostile Character
-	public ICharacter ContainsHostile (ICharacter character) 
+	public ICharacter ContainsHostile (Enums.CharacterSides side) 
 	{
-		return characters.Find(v => v != character && SidesRelations.Instance.IsEnemies(character, v));
+		return characters.Find(v => SidesRelations.Instance.IsEnemies(side, v.Side));
 	}
 	
 	// Check if Room continse unconscious Character
 	public ICharacter ContainsUnconscious ()
 	{
-		return characters.Find(v => v.Stats.IsUnconscious() && !v.Lock);
+		return characters.Find(v => v.IsUnconscious && !v.Lock);
 	}
 	
 	// Check if Room continse dead Character
 	public ICharacter ContainsDead ()
 	{
-		return characters.Find(v => v.Stats.IsDead() && !v.Lock);
+		return characters.Find(v => v.IsDead && !v.Lock);
 	}
 	
 	// Check if Room continse wounded Character
-	public ICharacter ContainsWounded (ICharacter character)
+	public ICharacter ContainsWounded (Enums.CharacterSides side)
 	{
 		return characters.
-			Find(v => v.Stats.IsWounded() && v != character && !v.Lock && SidesRelations.Instance.IsEnemies(character, v));
+			Find(v => v.IsWounded && !v.Lock && !SidesRelations.Instance.IsEnemies(side, v.Side));
 	}
 	
 }

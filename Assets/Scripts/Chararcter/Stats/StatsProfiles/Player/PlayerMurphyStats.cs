@@ -4,10 +4,12 @@ using System.Collections;
 public class PlayerMurphyStats : PlayerStats {
 
 	// Use this for initialization
-	public override void Init(CharacterMain character)
+	public override void Init()
 	{
-		base.Init(character);
+		base.Init();
 		// Common
+		Side 					= Enums.CharacterSides.Player;
+		Type 					= Enums.CharacterTypes.Murphy;
 		WalkSpeed			 	= 0.75f;
 		RunSpeed 				= 0.75f;
 		BasicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.Control];

@@ -4,33 +4,33 @@ using System.Linq;
 
 public class WorkState : StateBase {
 	
-	private int stateIndex = 13;
+	private new int stateIndex = 13;
 	private int tick;
 	private System.Func<Room, bool>[] responsabilities;
-	
-	public WorkState (CharacterMain character) : base(character) { }
-	
-	public override int StateKind { get { return stateIndex; } }
 
+	public override int StateKind { get { return this.stateIndex; } }
+
+	public WorkState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
+	
 	public override bool EnableCondition (Room room) 
 	{
-		bool restState = (character.AiHandler.CurrentState != null && character.AiHandler.CurrentState.StateKind == 14);
-		return (!restState && UnityEngine.Random.value > character.Stats.RestProbability);
+		bool restState = (aiHandler.CurrentState != null && aiHandler.CurrentState.StateKind == 14);
+		return (!restState && UnityEngine.Random.value > stats.RestProbability);
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
 		if (responsabilities == null) CreateWorkDelegates ();
-		character.Movement.Walk().ToFurniture(character.Stats.BasicRoom, "Random");
-		tick = Random.Range(7, 10);
+		movement.Walk ().ToFurniture(stats.BasicRoom, "Random");
+		tick = Random.Range (7, 10);
 	}
 
-	public override void ExecuteStateActions () 
+	public override void Execute () 
 	{
-		base.ExecuteStateActions ();
-		if (character.Movement.IsMoving == false)
+		base.Execute ();
+		if (movement.IsMoving == false)
 		{
-			character.View.SetSubState(1);
+			OnSubStateChange (1);
 			tick -= 1;
 			CheckRelatedEvents();
 		}
@@ -43,21 +43,16 @@ public class WorkState : StateBase {
 
 	private void CreateWorkDelegates ()
 	{
-		responsabilities = new System.Func<Room, bool>[character.Stats.WorkTasks.Length];
-		for (int i = 0; i < character.AiHandler.AiStates.Length; i++)
+		responsabilities = new System.Func<Room, bool>[stats.WorkTasks.Length];
+		for (int i = 0; i < stats.WorkTasks.Length; i++)
 		{
-			string state = character.AiHandler.AiStates[i].GetType().ToString().Replace("State", "");
-			if (character.Stats.WorkTasks.Contains(state))
-			{
-				System.Reflection.MethodInfo method = System.Type.GetType(state + "State").GetMethod("EnableCondition");
-				responsabilities[System.Array.IndexOf(character.Stats.WorkTasks, state)] =
-					(System.Func<Room, bool>) System.Delegate.CreateDelegate(
-						typeof(System.Func<Room, bool>), 
-						character.AiHandler.AiStates[i],
-						method);
-			}
+			System.Type type = System.Type.GetType(stats.WorkTasks[i] + "State");
+			System.Reflection.MethodInfo method = type.GetMethod("EnableCondition", new System.Type[] { typeof(Room) });
+			responsabilities[i] = (System.Func<Room, bool>) System.Delegate.CreateDelegate(
+				typeof(System.Func<Room, bool>), 
+				aiHandler.GetState(type),
+				method);
 		}
-
 	}
 
 	private void CheckRelatedEvents()
@@ -67,8 +62,15 @@ public class WorkState : StateBase {
 		{
 			for (int j = 0; j < rooms.Length; j++)
 			{
-				if (responsabilities[i].Invoke(rooms[j])) character.Navigate(rooms[j], false);
+				if (responsabilities[i].Invoke(rooms[j])) ForceNavigate (rooms[j]);
 			}
 		}
+	}
+
+	private void ForceNavigate (Room room)
+	{
+		NavigateState nav = aiHandler.GetState<NavigateState> ();
+		nav.TargetRoom = room;
+		aiHandler.ForceState (nav);
 	}
 }

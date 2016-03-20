@@ -17,8 +17,8 @@ public class Navigation : MonoBehaviour
 	private string layerName = "Ship";
 
 	// Player object
-	private CharacterMain player;
-	public CharacterMain Player { get { return player; } set { player = value; } }
+	private ICharacter player;
+	public ICharacter Player { get { return player; } set { player = value; } }
 
 	// Touch Controll
 	// last finger touch id
@@ -50,7 +50,7 @@ public class Navigation : MonoBehaviour
 	{
 		TouchControl ();
 		if (!moved && !scaled) CameraSizeUpdate ();
-		if (player && currentPoint && player.collider2D.bounds.Intersects(currentPoint.renderer.bounds)) 
+		if (player != null && currentPoint && player.GObject.collider2D.bounds.Intersects(currentPoint.renderer.bounds)) 
 			Destroy(currentPoint);
 
 		// Editor debug
@@ -125,7 +125,7 @@ public class Navigation : MonoBehaviour
 
 	void NavigatePlayerTo(RaycastHit2D hit)
 	{
-		player.Navigate(hit.collider.GetComponent<Room>(), true);
+		player.Navigate(hit.collider.GetComponent<Room>());
 		if (currentPoint) Destroy(currentPoint);
 		Vector3 position = new Vector3 (hit.collider.transform.position.x, hit.collider.transform.position.y, player.GObject.transform.position.z);
 		currentPoint = (GameObject)Instantiate(pointer, position, Quaternion.identity);
@@ -166,7 +166,7 @@ public class Navigation : MonoBehaviour
 			Vector3 worldTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			RaycastHit2D hit;
 			hit = Physics2D.Raycast (new Vector2(worldTouch.x, worldTouch.y), Vector2.zero, 20, layer);
-			bool walks = hit && player && !player.Stats.IsDead() && !player.Stats.IsUnconscious();
+			bool walks = hit && player != null && player.IsActive;
 			if (walks) NavigatePlayerTo (hit);
 		}
 		if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward

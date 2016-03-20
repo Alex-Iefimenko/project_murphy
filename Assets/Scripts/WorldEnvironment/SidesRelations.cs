@@ -43,13 +43,13 @@ public class SidesRelations {
 		}
 	}
 
-	public bool IsEnemies(ICharacter characterOne, ICharacter characterTwo)
+	public bool IsEnemies(Sides sideOne, Sides sideTwo)
 	{
-		return sideEnemies[characterOne.Side].Contains(characterTwo.Side);
+		return sideEnemies[sideOne].Contains(sideTwo);
 	}
 
-	public bool IsFriends(ICharacter characterOne, ICharacter characterTwo)
+	public bool IsFriends(Sides sideOne, Sides sideTwo)
 	{
-		return sideFriends[characterOne.Side].Contains(characterTwo.Side);
+		return sideFriends[sideOne].Contains(sideTwo);
 	}
 }

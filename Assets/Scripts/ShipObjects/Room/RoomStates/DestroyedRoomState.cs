@@ -30,7 +30,7 @@ public class DestroyedRoomState : RoomStateBase {
 		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) 
 		{
 			CurrentRoom.Objects.Characters[i].Hurt(999f);
-			CurrentRoom.Objects.Characters[i].Movement.AdjustPostion(new Vector3(-9f, -7f, 1f));
+			CurrentRoom.Objects.Characters[i].Push(new Vector3(-9f, -7f, 1f));
 			MonoBehaviour.Destroy(CurrentRoom.Objects.Characters[i].GObject, 15f);
 			foreach (SpriteRenderer sprite in CurrentRoom.Objects.Characters[i].GObject.GetComponentsInChildren<SpriteRenderer>())
 			{

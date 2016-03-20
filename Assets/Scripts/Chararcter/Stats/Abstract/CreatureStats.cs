@@ -3,9 +3,9 @@ using System.Collections;
 
 public class CreatureStats : CharacterStatsBase {
 
-	public override void Init(CharacterMain character)
+	public override void Init()
 	{
-		base.Init(character);
+		base.Init();
 	}
 
 	public override void StatsUpdate()
