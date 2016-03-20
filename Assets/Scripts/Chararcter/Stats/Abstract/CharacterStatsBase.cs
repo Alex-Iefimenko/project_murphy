@@ -49,6 +49,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	{
 		if (Health >= 10f) Health = Health + HealthRegeneration - HealthReduction;
 		Health = Mathf.Clamp(Health, -10f, MaxHealth);
+		HealthReduction = Mathf.Clamp(HealthReduction, 0f, MaxHealth);
 	}
 	
 	public override void Purge ()

@@ -7,5 +7,6 @@ public class IronWill : Trait {
 	{
 		Name = TraitsProvider.Traits.IronWill;
 		stats.MaxSanity *= 1.2f;
+		stats.Sanity = stats.MaxSanity;
 	}
 }

@@ -7,5 +7,6 @@ public class Puny : Trait {
 	{
 		Name = TraitsProvider.Traits.Puny;
 		stats.MaxHealth *= 0.8f;
+		stats.Health = stats.MaxHealth;
 	}
 }

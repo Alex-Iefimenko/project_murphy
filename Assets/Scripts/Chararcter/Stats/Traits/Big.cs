@@ -7,5 +7,6 @@ public class Big : Trait {
 	{
 		Name = TraitsProvider.Traits.Big;
 		stats.MaxHealth *= 1.1f;
+		stats.Health = stats.MaxHealth;
 	}
 }

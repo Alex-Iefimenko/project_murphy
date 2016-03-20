@@ -46,7 +46,7 @@ public class EliminateDeadBodyState : StateBase {
 		base.Purge ();
 		dead.Push (new Vector3(-9f, -7f, 1f));
 		dead.Vanish ();
-		dead.ChangeLayer (-100);
+		dead.ChangeLayer (-5);
 	}
 	
 }

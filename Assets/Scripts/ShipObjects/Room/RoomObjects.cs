@@ -90,10 +90,10 @@ public class RoomObjects {
 	}
 	
 	// Check if Room continse wounded Character
-	public ICharacter ContainsWounded (Enums.CharacterSides side)
+	public ICharacter ContainsWounded (GameObject character, Enums.CharacterSides side)
 	{
 		return characters.
-			Find(v => v.IsWounded && !v.Lock && !SidesRelations.Instance.IsEnemies(side, v.Side));
+			Find(v => v.IsWounded && !v.Lock && character != v.GObject && !SidesRelations.Instance.IsEnemies(side, v.Side));
 	}
 	
 }

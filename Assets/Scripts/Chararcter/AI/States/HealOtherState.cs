@@ -12,12 +12,12 @@ public class HealOtherState : StateBase {
 	
 	public override bool EnableCondition (Room room) 
 	{
-		return room.Objects.ContainsWounded(stats.Side) != null;
+		return room.Objects.ContainsWounded(movement.GObject, stats.Side) != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		wounded = movement.CurrentRoom.Objects.ContainsWounded(stats.Side);
+		wounded = movement.CurrentRoom.Objects.ContainsWounded(movement.GObject, stats.Side);
 		wounded.Lock = true;
 		movement.Run ().ToCharacter (wounded);
 	}
@@ -34,7 +34,13 @@ public class HealOtherState : StateBase {
 	
 	public override bool DisableCondition () 
 	{
-		return wounded.IsHealthy == false || (movement.IsMoving == false && !movement.IsNearObject(wounded.GObject));
+		return wounded.IsHealthy == true || (movement.IsMoving == false && !movement.IsNearObject(wounded.GObject));
 	}
-	
+
+	public override void Purge ()
+	{
+		base.Purge ();
+		wounded.Lock = false;
+	}
+
 }

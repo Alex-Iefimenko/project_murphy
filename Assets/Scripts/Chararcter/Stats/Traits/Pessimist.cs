@@ -7,5 +7,6 @@ public class Pessimist : Trait {
 	{
 		Name = TraitsProvider.Traits.Pessimist;
 		stats.MaxSanity *= 0.8f;
+		stats.Sanity = stats.MaxSanity;
 	}
 }

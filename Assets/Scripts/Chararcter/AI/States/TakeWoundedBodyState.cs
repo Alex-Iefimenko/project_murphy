@@ -42,7 +42,7 @@ public class TakeWoundedBodyState : StateBase {
 	
 	public override bool DisableCondition () 
 	{
-		return !stats.IsUnconscious;
+		return !unconscious.IsUnconscious;
 	}
 	
 	public override void Purge ()
