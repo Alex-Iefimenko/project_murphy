@@ -12,7 +12,7 @@ public class UndockState : StateBase {
 	{
 	}
 	
-	public override bool EnableCondition (Room room)
+	public override bool EnableCondition (IRoom room)
 	{
 		return stats.BasicRoom != null && stats.BasicRoom != movement.CurrentRoom;
 	}
@@ -36,7 +36,7 @@ public class UndockState : StateBase {
 	public override void Purge ()
 	{
 		base.Purge ();
-		stats.BasicRoom.Flier.FlyAway (new Vector3 (22f, -10f, 0f));
+		stats.BasicRoom.FlyAway (new Vector3 (22f, -10f, 0f));
 	}
 
 	private bool GroupGathered ()

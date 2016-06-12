@@ -17,13 +17,13 @@ public class Door : MonoBehaviour {
 		Vector3[] entrances = GetEntrancePoints ();
 		Vector3 entranceOne = entrances[0];
 		Vector3 entranceTwo = entrances[1];
-		Room neighborOne = null;
-		Room neighborTwo = null;
+		IRoom neighborOne = null;
+		IRoom neighborTwo = null;
 		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++)
 		{
-			if (ShipState.Inst.allRooms[i].collider2D.OverlapPoint(entranceOne))
+			if (ShipState.Inst.allRooms[i].GObject.collider2D.OverlapPoint(entranceOne))
 			    neighborOne = ShipState.Inst.allRooms[i];
-			if (ShipState.Inst.allRooms[i].collider2D.OverlapPoint(entranceTwo))
+			if (ShipState.Inst.allRooms[i].GObject.collider2D.OverlapPoint(entranceTwo))
 			    neighborTwo = ShipState.Inst.allRooms[i];
 			if (neighborOne != null && neighborTwo != null) break;
 		}

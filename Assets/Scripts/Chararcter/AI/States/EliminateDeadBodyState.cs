@@ -11,15 +11,15 @@ public class EliminateDeadBodyState : StateBase {
 
 	public EliminateDeadBodyState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		return room.Objects.ContainsDead () != null;
+		return room.ContainsDead != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
 		pulling = false;
-		dead = movement.CurrentRoom.Objects.ContainsDead();
+		dead = movement.CurrentRoom.ContainsDead;
 		dead.Lock = true;
 		movement.Walk ().ToCharacter (dead);
 	}

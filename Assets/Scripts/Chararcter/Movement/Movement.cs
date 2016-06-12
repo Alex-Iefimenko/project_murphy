@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour, IMovement
 	// Path components
 	private List<Vector3> movementPath = new List<Vector3> ();
 	private MovementTarget target;
-	private Room currentRoom;
+	private IRoom currentRoom;
 	private IMovable pulledObject;
 	
 	// Components
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour, IMovement
 	// Public Properties
 	//
 	
-	public Room CurrentRoom { get { return currentRoom; } }
+	public IRoom CurrentRoom { get { return currentRoom; } }
 
 	public MovementTarget Target { get { return target; } }
 
@@ -69,12 +69,12 @@ public class Movement : MonoBehaviour, IMovement
 		return this;
 	}
 
-	public void ToRoom (Room room)
+	public void ToRoom (IRoom room)
 	{
 		Navigate (new MovementTarget (gameObject, room));
 	}
 
-	public void ToFurniture (Room room, string item)
+	public void ToFurniture (IRoom room, string item)
 	{
 		Navigate (new MovementTarget (room, item));
 	}
@@ -146,7 +146,7 @@ public class Movement : MonoBehaviour, IMovement
 	// Updates current room value
 	private void OnTriggerEnter2D (Collider2D otherCollider)
 	{
-		Room room = otherCollider.GetComponent<Room> ();
+		IRoom room = otherCollider.GetComponent<Room> () as IRoom;
 		if (room != null && room != currentRoom) currentRoom = room;
 	}
 

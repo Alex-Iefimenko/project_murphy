@@ -9,7 +9,7 @@ public class FirstAidState : StateBase {
 	
 	public FirstAidState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		bool result = stats.IsWounded && movement.CurrentRoom == ShipState.Inst.specRooms[Enums.RoomTypes.MedBay];
 		return result;

@@ -19,7 +19,7 @@ public interface IState
 
 	bool EnableCondition ();
 
-	bool EnableCondition (Room room);
+	bool EnableCondition (IRoom room);
 
 	void Purge ();
 	

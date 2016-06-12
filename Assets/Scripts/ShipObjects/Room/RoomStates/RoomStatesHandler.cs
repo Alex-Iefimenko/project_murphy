@@ -4,21 +4,22 @@ using System.Linq;
 
 public class RoomStatesHandler {
 
-	private Room room;
+	private IRoomController controller;
 	private RoomStateBase[] states;
 	private GameObject[] warnings;
 	private Vector3 initialPoint;
 	private float interval;
 
-	public RoomStatesHandler (Room currentRoom) 
+	public RoomStatesHandler (IRoomController roomController, IRoomStats stats, IRoomObjectTracker objects) 
 	{
-		room = currentRoom;
-		states = room.gameObject.GetComponentsInChildren<RoomStateBase>();
+		controller = roomController;
+		states = controller.GObject.GetComponentsInChildren<RoomStateBase>();
+		for (int i = 0; i < states.Length; i++) states[i].Init (controller, stats, objects);
 		Broadcaster.Instance.tickEvent += DetectState;
 		warnings = new GameObject[states.Length];
-		Warning firstWarning = room.gameObject.GetComponentInChildren<Warning>();
+		Warning firstWarning = controller.GObject.GetComponentInChildren<Warning>();
 		Bounds warningBounds = firstWarning == null ? new Bounds(Vector3.zero, Vector3.zero) : firstWarning.renderer.bounds;
-		Bounds roomBounds = room.collider2D.bounds;
+		Bounds roomBounds = controller.RoomBounds;
 		initialPoint = new Vector3 (roomBounds.max.x - warningBounds.extents.x, roomBounds.min.y + warningBounds.extents.y);
 		interval = warningBounds.size.x / 3f;
 	}
@@ -35,7 +36,7 @@ public class RoomStatesHandler {
 
 	public bool ForceState<T> (float amount) where T : RoomStateBase
 	{
-		T state = room.gameObject.GetComponentInChildren<T>();
+		T state = controller.GObject.GetComponentInChildren<T>();
 		return state == null ? false : state.InitiatedEnable(amount);
 	}
 
@@ -44,7 +45,7 @@ public class RoomStatesHandler {
 		int warnCount = warnings.Count(s => s != null);
 		float expectedLength = interval * warnCount;
 		float actualInterval = interval;
-		if (room.collider2D.bounds.size.x < expectedLength) actualInterval = room.collider2D.bounds.size.x / warnCount;
+		if (controller.RoomBounds.size.x < expectedLength) actualInterval = controller.RoomBounds.size.x / warnCount;
 		int place = 0;
 		for (int i = 0; i < warnings.Length; i++)
 		{

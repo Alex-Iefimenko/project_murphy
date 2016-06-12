@@ -30,7 +30,7 @@ public class Character : MonoBehaviour, IGroupCharacter {
 
 	public IndividualCoordinator Coordinator { get { return coordinator; } }
 
-	public Room CurrentRoom { get { return movement.CurrentRoom; } }
+	public IRoom CurrentRoom { get { return movement.CurrentRoom; } }
 
 	public bool IsMoving { get { return movement.IsMoving; } }
 	
@@ -52,7 +52,7 @@ public class Character : MonoBehaviour, IGroupCharacter {
 	
 	public void Push (Vector3 point) { movement.AdjustPostion (point); }
 
-	public void Navigate (Room room) 
+	public void Navigate (IRoom room) 
 	{
 		NavigateState nav = aiHandler.GetState<NavigateState> ();
 		nav.TargetRoom = room;
@@ -61,7 +61,7 @@ public class Character : MonoBehaviour, IGroupCharacter {
 
 	public void Vanish () 
 	{
-		movement.CurrentRoom.Objects.Untrack(this);
+		movement.CurrentRoom.Untrack(this);
 		Destroy(GObject, 10f);
 	} 
 

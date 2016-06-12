@@ -10,7 +10,7 @@ public class IdleState : StateBase {
 
 	public IdleState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		return true;
 	}

@@ -42,7 +42,7 @@ public class StateBase : IState {
 		return EnableCondition (movement.CurrentRoom);
 	}
 	
-	public virtual bool EnableCondition (Room room) 
+	public virtual bool EnableCondition (IRoom room) 
 	{
 		return true;
 	}

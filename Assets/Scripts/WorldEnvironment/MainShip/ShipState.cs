@@ -9,10 +9,10 @@ public class ShipState {
 	private static readonly object locker = new object();
 
 	public Door[] allDoors;
-	public Room[] allRooms;
+	public IRoom[] allRooms;
 	public ICharacter[] allCharacters;
 	public ICharacter player;
-	public Dictionary<Enums.RoomTypes, Room> specRooms;
+	public Dictionary<Enums.RoomTypes, IRoom> specRooms;
 	private ShipStructure shipStructure;
 
 	private ShipState () { }
@@ -43,27 +43,27 @@ public class ShipState {
 	}
 
 	// Returns list of world points for NPC traveling
-	public List<Vector3> GetStepsToRoom (Room initialRoom, Room targetRoom) {
+	public List<Vector3> GetStepsToRoom (IRoom initialRoom, IRoom targetRoom) {
 		if (initialRoom == targetRoom) 
 			return new List<Vector3>() { };
 		else
 			return shipStructure.GetStepsToRoom(initialRoom, targetRoom);
 	}
 
-	public Room RandomNamedRoom ()
+	public IRoom RandomNamedRoom ()
 	{
-		return Helpers.GetRandomArrayValue<Room>(specRooms.Values.ToArray());
+		return Helpers.GetRandomArrayValue<IRoom>(specRooms.Values.ToArray());
 	}
 
-	public Room RandomRoom ()
+	public IRoom RandomRoom ()
 	{
-		return Helpers.GetRandomArrayValue<Room>(allRooms);
+		return Helpers.GetRandomArrayValue<IRoom>(allRooms);
 	}
 
-	public Room RoomByPoint(Vector3 point)
+	public IRoom RoomByPoint(Vector3 point)
 	{
-		Room room = null;
-		room = allRooms.Single(v => v.collider2D.OverlapPoint(point));
+		IRoom room = null;
+		room = allRooms.Single(v => v.GObject.collider2D.OverlapPoint(point));
 		return room;
 	}
 
@@ -77,9 +77,9 @@ public class ShipState {
 	private void CreateRoomAndDoorsLists ()
 	{	
 		allDoors = StoreComponent<Door>(GameObject.FindGameObjectsWithTag("Door"));
-		allRooms = StoreComponent<Room>(GameObject.FindGameObjectsWithTag("Room"));
+		allRooms = StoreComponent<Room>(GameObject.FindGameObjectsWithTag("Room")) as IRoom[];
 		AddSpecRooms();
-		for (int i = 0; i < allRooms.Length; i++ ) allRooms[i].neighbors.Clear();
+		for (int i = 0; i < allRooms.Length; i++ ) allRooms[i].Neighbors.Clear();
 		for (int i = 0; i < allDoors.Length; i++ ) allDoors[i].ConnectNeighbors();
 	}
 
@@ -95,10 +95,10 @@ public class ShipState {
 
 	private void AddSpecRooms ()
 	{
-		specRooms = new Dictionary<Enums.RoomTypes, Room> ();
+		specRooms = new Dictionary<Enums.RoomTypes, IRoom> ();
 		for (int i = 0; i < allRooms.Length; i++)
 		{
-			if (allRooms[i].roomType != Enums.RoomTypes.Nothing) specRooms.Add (allRooms[i].roomType, allRooms[i]);
+			if (allRooms[i].Type != Enums.RoomTypes.Nothing) specRooms.Add (allRooms[i].Type, allRooms[i]);
 		} 
 	}
 	

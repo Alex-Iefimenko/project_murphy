@@ -6,34 +6,34 @@ public class NoGravityRoomState : RoomStateBase {
 	
 	public override bool EnableCondition ()
 	{ 
-		bool result = !DisableCondition() && CurrentRoom.Stats.NoGravity;
+		bool result = !DisableCondition() && stats.HasNoGravity;
 		return result; 
 	} 
 	
 	public override bool DisableCondition ()
 	{ 
-		bool broken = CurrentRoom.Stats.Durability <= 0f; 
-		bool repaired = CurrentRoom.Stats.Durability >= CurrentRoom.Stats.MaxDurability;
+		bool broken = stats.IsDestroyed; 
+		bool repaired = stats.IsRepaired;
 		return broken || repaired;
 	}
 	
 	public override void StateEnable () 
 	{ 
 		base.StateEnable ();
-		CurrentRoom.Stats.WeatherThreat = false;
+		stats.HasWeatherThreat = false;
 		CurrentAnimator.SetBool("NoGravity", true);
 	}
 
 	public override bool InitiatedEnable (float amount) 
 	{ 
-		if (!CurrentRoom.Stats.NoGravity) CurrentRoom.Stats.NoGravity = true;
+		if (!stats.HasNoGravity) stats.HasNoGravity = true;
 		return AutoEnable (); 
 	}
 	
 	public override void StateDisable () 
 	{ 
 		base.StateDisable ();
-		CurrentRoom.Stats.NoGravity = false;
+		stats.HasNoGravity = false;
 		CurrentAnimator.SetBool("NoGravity", false);
 	}
 	

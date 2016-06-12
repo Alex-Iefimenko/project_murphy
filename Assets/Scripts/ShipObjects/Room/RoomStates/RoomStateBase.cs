@@ -4,15 +4,15 @@ using System.Collections;
 public class RoomStateBase : MonoBehaviour {
 
 	public virtual Animator CurrentAnimator { get; set; }
-	public virtual Room CurrentRoom { get; set; } 
 	public virtual bool Enabled { get; set; } 
 	public GameObject Warning { get { return warning; } } 
-	private GameObject warning;
-	
+	protected GameObject warning;
+	protected IRoomStats stats;
+	protected IRoomObjectTracker objects;
+	protected IRoomController controller;
 
 	// Use this for initialization
 	void Awake () {
-		CurrentRoom = GetComponentInParent<Room>();
 		CurrentAnimator = gameObject.GetComponent<Animator>();
 		Enabled = false;
 		Warning warnSign = GetComponentInChildren<Warning>();
@@ -21,6 +21,13 @@ public class RoomStateBase : MonoBehaviour {
 			warning = warnSign.gameObject;
 			warning.renderer.enabled = false;
 		}
+	}
+
+	public void Init (IRoomController roomController, IRoomStats roomStats, IRoomObjectTracker roomObjects) 
+	{
+		controller = roomController;
+		stats = roomStats;
+		objects = roomObjects;
 	}
 
 	public virtual bool EnableCondition () { return false; } 

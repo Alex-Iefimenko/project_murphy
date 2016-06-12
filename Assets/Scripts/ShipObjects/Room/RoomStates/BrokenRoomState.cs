@@ -5,14 +5,14 @@ public class BrokenRoomState : RoomStateBase {
 	
 	public override bool EnableCondition ()
 	{ 
-		bool result = !DisableCondition() && CurrentRoom.Stats.IsBroken();
+		bool result = !DisableCondition() && stats.IsBroken;
 		return result; 
 	} 
 	
 	public override bool DisableCondition ()
 	{ 
-		bool destroyed = CurrentRoom.Stats.Durability <= 0f;
-		bool repaired = CurrentRoom.Stats.Durability >= 200f; 
+		bool destroyed = stats.IsDestroyed;
+		bool repaired = stats.IsRepaired; 
 		return repaired || destroyed;
 	}
 	
@@ -23,21 +23,21 @@ public class BrokenRoomState : RoomStateBase {
 	
 	public override bool InitiatedEnable (float amount) 
 	{ 
-		if (!CurrentRoom.Stats.IsBroken()) CurrentRoom.Stats.Durability -= amount;
+		if (!stats.IsBroken) stats.Damage(amount);
 		return AutoEnable (); 
 	}
 	
 	public override void StateDisable () 
 	{ 
 		base.StateDisable ();
-		CurrentRoom.Stats.Durability = CurrentRoom.Stats.MaxDurability;
+		stats.Repair(999f);
 		CurrentAnimator.SetFloat("Breaking", 201f);
 	}
 	
 	public override void Tick () 
 	{ 
 		base.Tick ();
-		CurrentAnimator.SetFloat("Breaking", CurrentRoom.Stats.Durability);
+		CurrentAnimator.SetFloat("Breaking", stats.Durability);
 	}
 	
 }

@@ -10,14 +10,14 @@ public class BreakingState : StateBase {
 
 	public BreakingState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		return movement.CurrentRoom.Stats.Locked;
+		return movement.CurrentRoom.IsLocked;
 	}
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		movement.Walk().ToPoint(movement.CurrentRoom.Objects.DoorExitPoint());
+		movement.Walk().ToPoint(movement.CurrentRoom.DoorExitPoint());
 		tick = Random.Range(15, 20);
 	}
 	
@@ -39,6 +39,6 @@ public class BreakingState : StateBase {
 	public override void Purge ()
 	{
 		base.Purge ();
-		movement.CurrentRoom.Stats.Locked = false;
+		movement.CurrentRoom.IsLocked = false;
 	}
 }

@@ -10,14 +10,14 @@ public class HealOtherState : StateBase {
 
 	public HealOtherState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		return room.Objects.ContainsWounded(movement.GObject, stats.Side) != null;
+		return room.ContainsWounded(movement.GObject, stats.Side) != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		wounded = movement.CurrentRoom.Objects.ContainsWounded(movement.GObject, stats.Side);
+		wounded = movement.CurrentRoom.ContainsWounded(movement.GObject, stats.Side);
 		wounded.Lock = true;
 		movement.Run ().ToCharacter (wounded);
 	}

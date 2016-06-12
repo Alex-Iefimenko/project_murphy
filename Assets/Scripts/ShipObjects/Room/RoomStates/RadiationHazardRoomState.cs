@@ -6,16 +6,16 @@ public class RadiationHazardRoomState : RoomStateBase {
 	
 	public override bool EnableCondition ()
 	{ 
-		bool result = !DisableCondition() && CurrentRoom.Stats.IsRadioactive();
+		bool result = !DisableCondition() && stats.IsRadioactive;
 		return result; 
 	} 
 	
 	public override bool DisableCondition ()
 	{ 
-		bool chemistry = CurrentRoom.Stats.IsHazardous();
-		bool destroyed = CurrentRoom.Stats.Durability <= 0f;
-		bool weather = CurrentRoom.Stats.WeatherThreat; 
-		bool cleaned = CurrentRoom.Stats.RadiationLevel <= 0f;
+		bool chemistry = stats.IsHazardous;
+		bool destroyed = stats.IsDestroyed;
+		bool weather = stats.HasWeatherThreat; 
+		bool cleaned = stats.IsRadioactive;
 		return destroyed || weather || cleaned || chemistry;
 	}
 	
@@ -26,31 +26,31 @@ public class RadiationHazardRoomState : RoomStateBase {
 	
 	public override bool InitiatedEnable (float amount) 
 	{ 
-		if (!CurrentRoom.Stats.IsRadioactive()) CurrentRoom.Stats.RadiationLevel = amount;
+		if (!stats.IsRadioactive) stats.SpreadRadiation (amount);
 		return AutoEnable (); 
 	}
 	
 	public override void StateDisable () 
 	{ 
 		base.StateDisable ();
-		CurrentRoom.Stats.RadiationLevel = 0f;
+		stats.ReduceRadiation (999f);
 		CurrentAnimator.SetFloat("RadiationLevel", -1f);
 	}
 	
 	public override void Tick () 
 	{ 
 		base.Tick ();
-		CurrentAnimator.SetFloat("RadiationLevel", CurrentRoom.Stats.RadiationLevel);
-		CurrentRoom.Stats.RadiationLevel += Mathf.Ceil(CurrentRoom.Stats.RadiationLevel / 20f);
-		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) 
+		CurrentAnimator.SetFloat("RadiationLevel", stats.RadiationLevel);
+		stats.SpreadRadiation (Mathf.Ceil(stats.RadiationLevel / 20f));
+		for (int i = 0; i < objects.Characters.Count; i++ ) 
 		{
-			if (CurrentRoom.Stats.RadiationLevel > 25f && UnityEngine.Random.value > 0.2f) 
-				CurrentRoom.Objects.Characters[i].Infect (1f);
+			if (stats.RadiationLevel > 25f && UnityEngine.Random.value > 0.2f) 
+				objects.Characters[i].Infect (1f);
 		}
-		for (int i = 0; i < CurrentRoom.neighbors.Count; i++ ) 
+		for (int i = 0; i < controller.Neighbors.Count; i++ ) 
 		{
-			if (CurrentRoom.Stats.RadiationLevel > 75f && UnityEngine.Random.value > 0.8f) 
-				CurrentRoom.neighbors.Keys.ElementAt(i).SatesHandler.ForceState<RadiationHazardRoomState>(10f);
+			if (stats.RadiationLevel > 75f && UnityEngine.Random.value > 0.8f) 
+				controller.Neighbors.ElementAt(i).Room.ForceState<RadiationHazardRoomState>(10f);
 		}
 	}
 	

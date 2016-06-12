@@ -16,9 +16,9 @@ public class AttackState : StateBase {
 		shot = Helpers.GetRandomArrayValue<GameObject>(shots);
 	}
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		enemy = room.Objects.ContainsHostile (stats.Side);
+		enemy = room.ContainsHostile (stats.Side);
 		return (enemy != null && enemy.IsActive);
 	}
 

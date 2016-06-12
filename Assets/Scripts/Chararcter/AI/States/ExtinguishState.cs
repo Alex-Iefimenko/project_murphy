@@ -9,25 +9,25 @@ public class ExtinguishState : StateBase {
 	
 	public ExtinguishState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		return room.Stats.IsOnFire();
+		return room.IsOnFire;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		movement.Walk ().ToPoint (movement.CurrentRoom.Objects.GetRandomRoomPoint());
+		movement.Walk ().ToPoint (movement.CurrentRoom.GetRandomRoomPoint());
 	}
 	
 	public override void Execute () 
 	{
 		base.Execute ();
-		movement.CurrentRoom.Extinguish (stats.FireExtinguish);
+		movement.CurrentRoom.ReduceFire (stats.FireExtinguish);
 		if (movement.IsMoving == false) OnSubStateChange (1);
 	}
 	
 	public override bool DisableCondition () 
 	{
-		return movement.CurrentRoom.Stats.IsOnFire() == false;
+		return movement.CurrentRoom.IsOnFire == false;
 	}
 }

@@ -4,26 +4,26 @@ using System.Collections.Generic;
 
 public class ShipStructure  {
 
-	private Room[] roomList;
-	private Dictionary<Room, Neighbor[]> shipGraph = new Dictionary<Room, Neighbor[]>();
+	private IRoom[] roomList;
+	private Dictionary<IRoom, Neighbor[]> shipGraph = new Dictionary<IRoom, Neighbor[]>();
 
-	public ShipStructure (Room[] rooms)
+	public ShipStructure (IRoom[] rooms)
 	{
 		roomList = rooms;
 		for (int i = 0; i < roomList.Length; i++)
 		{
-			Neighbor[] roomNeighbors = new Neighbor[roomList[i].neighbors.Count];
-			roomList[i].neighbors.Values.CopyTo(roomNeighbors, 0);
+			Neighbor[] roomNeighbors = new Neighbor[roomList[i].Neighbors.Count];
+			roomList[i].Neighbors.CopyTo(roomNeighbors, 0);
 			shipGraph.Add(roomList[i], roomNeighbors);
 		}
 	}
 
 	// Returns list of world points for NPC traveling
 	// https://gist.github.com/joninvski/701720
-	public List<Vector3> GetStepsToRoom (Room initialRoom, Room targetRoom) {
+	public List<Vector3> GetStepsToRoom (IRoom initialRoom, IRoom targetRoom) {
 		// Initializing
-		Dictionary<Room, float> distances = new Dictionary<Room, float>();
-		Dictionary<Room, Room> predecessors = new Dictionary<Room, Room>();
+		Dictionary<IRoom, float> distances = new Dictionary<IRoom, float>();
+		Dictionary<IRoom, IRoom> predecessors = new Dictionary<IRoom, IRoom>();
 
 		for (int i = 0; i < roomList.Length; i++)
 		{
@@ -61,19 +61,20 @@ public class ShipStructure  {
 		}
 	}
 
-	private List<Vector3> RestoreClosesPath (Room tRoom, Dictionary<Room, Room> predecessors)
+	private List<Vector3> RestoreClosesPath (IRoom tRoom, Dictionary<IRoom, IRoom> predecessors)
 	{
 		List<Vector3> result = new List<Vector3>();
-		Room stepRoom = tRoom;
-		Room nextStepRoom;
+		IRoom stepRoom = tRoom;
+		IRoom nextStepRoom;
 //		result.Add (tRoom.transform.position);
 		while (stepRoom != null)
 		{
 			nextStepRoom = predecessors[stepRoom];
 			if (nextStepRoom != null) 
 			{ 
-				result.Add (stepRoom.neighbors[nextStepRoom].ExitPoint);
-				result.Add (stepRoom.neighbors[nextStepRoom].EntrancePoint);
+				Neighbor nextNeighbor = stepRoom.GetNeighbor (nextStepRoom);
+				result.Add (nextNeighbor.ExitPoint);
+				result.Add (nextNeighbor.EntrancePoint);
 			}
 			stepRoom = nextStepRoom;
 		}

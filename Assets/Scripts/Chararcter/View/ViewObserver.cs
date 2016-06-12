@@ -24,7 +24,7 @@ public class ViewObserver {
 
 	private void ChangeState (IState newState)
 	{
-		if (currentState !=null) UnsubscribeFromState (currentState);
+		if (currentState != null) UnsubscribeFromState (currentState);
 		currentState = newState;
 		view.SetState (currentState.StateKind);
 		currentState.SetCustomBool += CustomBoolChangeChange;

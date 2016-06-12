@@ -7,7 +7,7 @@ public class Bomb : Item {
 	public float roomDamage = 50f;
 	public float characterDamage = 40f;
 	public GameObject effect = null;
-	public Room Room { get; set; }
+	public IRoom Room { get; set; }
 
 	private int tick = 40;
 
@@ -27,8 +27,8 @@ public class Bomb : Item {
 			GameObject particle = null;
 			if (effect != null) particle = GameObject.Instantiate(effect, place, Quaternion.identity) as GameObject;
 			Room.Damage(roomDamage);
-			Room.SatesHandler.ForceState<FireRoomState>(roomDamage / 2f);
-			for (int i = 0; i < Room.Objects.Characters.Count; i++) Room.Objects.Characters[i].Hurt(characterDamage);
+			Room.ForceState<FireRoomState>(roomDamage / 2f);
+			for (int i = 0; i < Room.Characters.Count; i++) Room.Characters[i].Hurt(characterDamage);
 			Destroy(gameObject);
 			Destroy(particle, 2f);
 		}

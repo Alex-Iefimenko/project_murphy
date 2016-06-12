@@ -125,7 +125,7 @@ public class Navigation : MonoBehaviour
 
 	void NavigatePlayerTo(RaycastHit2D hit)
 	{
-		player.Navigate(hit.collider.GetComponent<Room>());
+		player.Navigate(hit.collider.GetComponent<Room>() as IRoom);
 		if (currentPoint) Destroy(currentPoint);
 		Vector3 position = new Vector3 (hit.collider.transform.position.x, hit.collider.transform.position.y, player.GObject.transform.position.z);
 		currentPoint = (GameObject)Instantiate(pointer, position, Quaternion.identity);
@@ -240,13 +240,13 @@ public class Navigation : MonoBehaviour
 
 	void HideShip ()
 	{
-		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].Flier.HideRoof();
+		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].ChangeRoof(true);
 		hidden = true;
 	}
 
 	void ShowShip ()
 	{
-		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].Flier.ShowRoof();
+		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].ChangeRoof(false);
 		hidden = false;
 	}
 }

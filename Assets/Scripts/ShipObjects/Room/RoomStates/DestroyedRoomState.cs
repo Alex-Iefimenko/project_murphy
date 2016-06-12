@@ -5,7 +5,7 @@ public class DestroyedRoomState : RoomStateBase {
 	
 	public override bool EnableCondition ()
 	{ 
-		bool result = !DisableCondition() && CurrentRoom.Stats.Durability <= 0f;
+		bool result = !DisableCondition() && stats.Durability <= 0f;
 		return result; 
 	} 
 	
@@ -17,32 +17,32 @@ public class DestroyedRoomState : RoomStateBase {
 	public override void StateEnable () 
 	{ 
 		base.StateEnable ();
-		CurrentRoom.Stats.FireLevel = 0f;
-		CurrentRoom.Stats.RadiationLevel = 0f;
-		CurrentRoom.Stats.ChemistryLevel = 0f;
-		CurrentRoom.Stats.PlantsLevel = 0f;
-		CurrentRoom.Stats.Unelectryfied = false;
-		CurrentRoom.Stats.WeatherThreat = false;
-		CurrentRoom.Stats.NoGravity = false;
+		stats.ReduceFire (999f);
+		stats.ReduceRadiation (999f);
+		stats.CleanHazard (999f);
+		stats.DamagePlants (999f);
+		stats.IsUnelectryfied = false;
+		stats.HasWeatherThreat = false;
+		stats.HasNoGravity = false;
 		CurrentAnimator.SetBool("Destroyed", true);
-		CurrentRoom.gameObject.tag = "Untagged";
+		controller.GObject.tag = "Untagged";
 		ShipState.Inst.Init();
-		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) 
+		for (int i = 0; i < objects.Characters.Count; i++ ) 
 		{
-			CurrentRoom.Objects.Characters[i].Hurt(999f);
-			CurrentRoom.Objects.Characters[i].Push(new Vector3(-9f, -7f, 1f));
-			MonoBehaviour.Destroy(CurrentRoom.Objects.Characters[i].GObject, 15f);
-			foreach (SpriteRenderer sprite in CurrentRoom.Objects.Characters[i].GObject.GetComponentsInChildren<SpriteRenderer>())
+			objects.Characters[i].Hurt(999f);
+			objects.Characters[i].Push(new Vector3(-9f, -7f, 1f));
+			MonoBehaviour.Destroy(objects.Characters[i].GObject, 15f);
+			foreach (SpriteRenderer sprite in objects.Characters[i].GObject.GetComponentsInChildren<SpriteRenderer>())
 			{
 				sprite.sortingOrder = -5;
 			}
-			CurrentRoom.Objects.Untrack(CurrentRoom.Objects.Characters[i]);
+			objects.Untrack(objects.Characters[i]);
 		}
 	}
 	
 	public override bool InitiatedEnable (float amount) 
 	{ 
-		if (!(CurrentRoom.Stats.Durability <= 0f)) CurrentRoom.Stats.Durability = 0f;
+		if (!(stats.Durability <= 0f)) stats.Damage (999f);
 		return AutoEnable (); 
 	}
 	

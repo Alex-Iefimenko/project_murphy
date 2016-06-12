@@ -3,24 +3,24 @@ using System.Collections;
 
 public class Neighbor {
 
-	public Room Room { get; set; } 
+	public IRoom Room { get; set; } 
 	public float Distance { get; set; }
 	public Door LinkingDoor { get; set; }
 	public Vector3 EntrancePoint { get; set; }
 	public Vector3 ExitPoint { get; set; }
 
-	public Neighbor (Room neighbor, Room targetRoom, Door betweenDoor)
+	public Neighbor (IRoom neighbor, IRoom targetRoom, Door betweenDoor)
 	{
 		Room = neighbor;
-		Distance = Vector2.Distance(targetRoom.transform.position, neighbor.transform.position);
+		Distance = Vector2.Distance(targetRoom.GObject.transform.position, neighbor.GObject.transform.position);
 		LinkingDoor = betweenDoor;
 		DistinctEntrances (LinkingDoor.GetEntrancePoints());
 	}
 
 	private void DistinctEntrances (Vector3[] entrances)
 	{
-		float distance1 = Vector3.Distance(Room.transform.position, entrances[0]);
-		float distance2 = Vector3.Distance(Room.transform.position, entrances[1]);
+		float distance1 = Vector3.Distance(Room.GObject.transform.position, entrances[0]);
+		float distance2 = Vector3.Distance(Room.GObject.transform.position, entrances[1]);
 		if (distance1 < distance2)
 		{
 			EntrancePoint = entrances[0];

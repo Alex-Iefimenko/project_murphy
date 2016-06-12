@@ -5,7 +5,7 @@ public delegate void RotationHandler (Vector3 point);
 
 public interface IMovement
 {
-	Room CurrentRoom { get; }
+	IRoom CurrentRoom { get; }
 
 	MovementTarget Target { get; }
 
@@ -19,9 +19,9 @@ public interface IMovement
 
 	IMovement Run ();
 
-	void ToRoom (Room room);
+	void ToRoom (IRoom room);
 
-	void ToFurniture (Room room, string item);
+	void ToFurniture (IRoom room, string item);
 
 	void ToCharacter (ICharacter character);
 	

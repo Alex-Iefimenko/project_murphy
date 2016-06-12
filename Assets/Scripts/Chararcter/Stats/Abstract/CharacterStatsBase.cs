@@ -7,7 +7,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public new Enums.CharacterTypes type;
 	public new float walkSpeed;
 	public new float runSpeed;
-	public new Room basicRoom;
+	public new IRoom basicRoom;
 	// Health
 	public new float maxHealth;
 	public new float health;
@@ -25,7 +25,7 @@ public class CharacterStatsBase : CharatcerStatsAbstract {
 	public override Enums.CharacterTypes Type { get { return type; } set { type = value; } }
 	public override float WalkSpeed { get { return walkSpeed; } set { walkSpeed = value; } }
 	public override float RunSpeed { get { return runSpeed; } set { runSpeed = value; } }
-	public override Room BasicRoom { get { return basicRoom; } set { basicRoom = value; }  }
+	public override IRoom BasicRoom { get { return basicRoom; } set { basicRoom = value; }  }
 	// Health
 	public override float MaxHealth { get { return maxHealth; } set { maxHealth = value; }  }
 	public override float Health { get { return health; } set { health = value; } }

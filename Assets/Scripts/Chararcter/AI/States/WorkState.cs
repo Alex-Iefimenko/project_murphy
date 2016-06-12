@@ -6,13 +6,13 @@ public class WorkState : StateBase {
 	
 	private new int stateIndex = 13;
 	private int tick;
-	private System.Func<Room, bool>[] responsabilities;
+	private System.Func<IRoom, bool>[] responsabilities;
 
 	public override int StateKind { get { return this.stateIndex; } }
 
 	public WorkState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		bool restState = (aiHandler.CurrentState != null && aiHandler.CurrentState.StateKind == 14);
 		return (!restState && UnityEngine.Random.value > stats.RestProbability);
@@ -43,13 +43,13 @@ public class WorkState : StateBase {
 
 	private void CreateWorkDelegates ()
 	{
-		responsabilities = new System.Func<Room, bool>[stats.WorkTasks.Length];
+		responsabilities = new System.Func<IRoom, bool>[stats.WorkTasks.Length];
 		for (int i = 0; i < stats.WorkTasks.Length; i++)
 		{
 			System.Type type = System.Type.GetType(stats.WorkTasks[i] + "State");
-			System.Reflection.MethodInfo method = type.GetMethod("EnableCondition", new System.Type[] { typeof(Room) });
-			responsabilities[i] = (System.Func<Room, bool>) System.Delegate.CreateDelegate(
-				typeof(System.Func<Room, bool>), 
+			System.Reflection.MethodInfo method = type.GetMethod("EnableCondition", new System.Type[] { typeof(IRoom) });
+			responsabilities[i] = (System.Func<IRoom, bool>) System.Delegate.CreateDelegate(
+				typeof(System.Func<IRoom, bool>), 
 				aiHandler.GetState(type),
 				method);
 		}
@@ -57,7 +57,7 @@ public class WorkState : StateBase {
 
 	private void CheckRelatedEvents()
 	{
-		Room[] rooms = ShipState.Inst.allRooms;
+		IRoom[] rooms = ShipState.Inst.allRooms;
 		for (int i = 0; i < responsabilities.Length; i++)
 		{
 			for (int j = 0; j < rooms.Length; j++)
@@ -67,7 +67,7 @@ public class WorkState : StateBase {
 		}
 	}
 
-	private void ForceNavigate (Room room)
+	private void ForceNavigate (IRoom room)
 	{
 		NavigateState nav = aiHandler.GetState<NavigateState> ();
 		nav.TargetRoom = room;

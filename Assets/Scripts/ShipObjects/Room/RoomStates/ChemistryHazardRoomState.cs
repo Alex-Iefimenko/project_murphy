@@ -6,50 +6,50 @@ public class ChemistryHazardRoomState : RoomStateBase {
 	
 	public override bool EnableCondition ()
 	{ 
-		bool result = !DisableCondition() && CurrentRoom.Stats.IsHazardous();
+		bool result = !DisableCondition() && stats.IsHazardous;
 		return result; 
 	} 
 	
 	public override bool DisableCondition ()
 	{ 
-		bool radiation = CurrentRoom.Stats.IsRadioactive();
-		bool fire = CurrentRoom.Stats.IsOnFire();
-		bool destroyed = CurrentRoom.Stats.Durability <= 0f;
-		bool weather = CurrentRoom.Stats.WeatherThreat; 
-		bool cleaned = CurrentRoom.Stats.ChemistryLevel <= 0f;
+		bool radiation = stats.IsRadioactive;
+		bool fire = stats.IsOnFire;
+		bool destroyed = stats.IsDestroyed;
+		bool weather = stats.HasWeatherThreat; 
+		bool cleaned = stats.IsHazardous;
 		return destroyed || weather || cleaned || radiation || fire;
 	}
 	
 	public override void StateEnable () 
 	{ 
 		base.StateEnable ();
-		CurrentRoom.Stats.PlantsLevel = 0f;
+		stats.DamagePlants(999f);
 	}
 	
 	public override bool InitiatedEnable (float amount) 
 	{ 
-		if (!CurrentRoom.Stats.IsHazardous()) CurrentRoom.Stats.ChemistryLevel = amount;
+		if (!stats.IsHazardous) stats.SpreadHazard (amount);
 		return AutoEnable (); 
 	}
 	
 	public override void StateDisable () 
 	{ 
 		base.StateDisable ();
-		CurrentRoom.Stats.ChemistryLevel = 0f;
+		stats.CleanHazard(999f);
 		CurrentAnimator.SetFloat("ChemistryLevel", -1f);
 	}
 	
 	public override void Tick () 
 	{ 
 		base.Tick ();
-		CurrentAnimator.SetFloat("ChemistryLevel", CurrentRoom.Stats.ChemistryLevel);
-		float damage = Mathf.Ceil(CurrentRoom.Stats.ChemistryLevel / 20f);
-		CurrentRoom.Stats.ChemistryLevel += damage;
-		for (int i = 0; i < CurrentRoom.Objects.Characters.Count; i++ ) CurrentRoom.Objects.Characters[i].Hurt(damage);
-		for (int i = 0; i < CurrentRoom.neighbors.Count; i++ ) 
+		CurrentAnimator.SetFloat("ChemistryLevel", stats.HazardLevel);
+		float damage = Mathf.Ceil(stats.HazardLevel / 20f);
+		stats.SpreadHazard (damage);
+		for (int i = 0; i < objects.Characters.Count; i++ ) objects.Characters[i].Hurt(damage);
+		for (int i = 0; i < controller.Neighbors.Count; i++ ) 
 		{
-			if (CurrentRoom.Stats.ChemistryLevel > 75f && UnityEngine.Random.value > 0.8f) 
-				CurrentRoom.neighbors.Keys.ElementAt(i).SatesHandler.ForceState<ChemistryHazardRoomState>(10f);
+			if (stats.HazardLevel > 75f && UnityEngine.Random.value > 0.8f) 
+				controller.Neighbors.ElementAt(i).Room.ForceState<ChemistryHazardRoomState>(10f);
 		}
 	}
 	

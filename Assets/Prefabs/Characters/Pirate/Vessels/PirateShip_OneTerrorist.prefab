@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 410764}
   - 212: {fileID: 21210764}
   - 61: {fileID: 6110770}
-  - 114: {fileID: 11410778}
+  - 114: {fileID: 11494910}
   m_Layer: 0
   m_Name: PirateShip_OneTerrorist
   m_TagString: Room
@@ -985,18 +985,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11410778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3278a9bbfa77ff7499d6eab4642a9bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomType: 0
 --- !u!114 &11410780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1008,7 +996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1020,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1032,7 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1044,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1056,7 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1122,6 +1110,18 @@ MonoBehaviour:
   - {fileID: 100008, guid: 893ebc1d79ac01c45ac3d5621ce41241, type: 2}
   - {fileID: 100008, guid: 45124661b33a51d4f90e05060a2bc929, type: 2}
   - {fileID: 100008, guid: 5046e7546044d084bb8dfec803f97a71, type: 2}
+--- !u!114 &11494910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c6951cbe5f14c71a6368710034449d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!198 &19842646
 ParticleSystem:
   m_ObjectHideFlags: 1

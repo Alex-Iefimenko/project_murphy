@@ -19,34 +19,34 @@ public class RoomStatesTest : MonoBehaviour {
 			switch (state)
 			{
 			case RoomStates.Broken:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<BrokenRoomState>(amount);
+				ShipState.Inst.specRooms[room].ForceState<BrokenRoomState>(amount);
 				break;
 			case RoomStates.Fire:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<FireRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<FireRoomState>(amount); 
 				break;
 			case RoomStates.RadiationHazard:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<RadiationHazardRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<RadiationHazardRoomState>(amount); 
 				break;
 			case RoomStates.ChemistryHazard:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<ChemistryHazardRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<ChemistryHazardRoomState>(amount); 
 				break;
 			case RoomStates.Unelectryfied:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<UnelectryfiedRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<UnelectryfiedRoomState>(amount); 
 				break;
 			case RoomStates.WeatherChange:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<WeatherChangeRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<WeatherChangeRoomState>(amount); 
 				break;
 			case RoomStates.NoGravity:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<NoGravityRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<NoGravityRoomState>(amount); 
 				break;
 			case RoomStates.PlantsMutation:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<PlantsMutationRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<PlantsMutationRoomState>(amount); 
 				break;
 			case RoomStates.Depressurization:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<DepressurizationRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<DepressurizationRoomState>(amount); 
 				break;
 			case RoomStates.Destroyed:
-				ShipState.Inst.specRooms[room].SatesHandler.ForceState<DestroyedRoomState>(amount); 
+				ShipState.Inst.specRooms[room].ForceState<DestroyedRoomState>(amount); 
 				break;
 			}
 

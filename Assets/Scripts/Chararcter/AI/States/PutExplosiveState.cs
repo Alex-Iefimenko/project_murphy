@@ -6,7 +6,7 @@ public class PutExplosiveState : StateBase {
 	private new int stateIndex = 103;
 	private int tick;
 	private bool deployed = false;
-	private Room target = null;
+	private IRoom target = null;
 	private GameObject bomb = null;
 
 	public override int StateKind { get { return this.stateIndex; } }
@@ -16,7 +16,7 @@ public class PutExplosiveState : StateBase {
 		bomb = Resources.Load ("DynamicPrefabs/Bomb") as GameObject;
 	}
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		return !deployed && !coordinator.Done;
 	}
@@ -53,10 +53,11 @@ public class PutExplosiveState : StateBase {
 		coordinator.Done = true;
 	}
 
-	private Room FetchSharedGoal ()
+	private IRoom FetchSharedGoal ()
 	{
-		if (coordinator.Target == null) coordinator.Target = ShipState.Inst.RandomNamedRoom().gameObject;
+		if (coordinator.Target == null) coordinator.Target = ShipState.Inst.RandomNamedRoom().GObject;
 //		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].gameObject;
-		return coordinator.Target.GetComponent<Room>();
+		IRoom targetRoom = coordinator.Target.GetComponent<Room>() as IRoom;
+		return targetRoom;
 	}
 }

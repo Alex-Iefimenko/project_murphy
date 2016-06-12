@@ -10,14 +10,14 @@ public class OffItState : StateBase {
 
 	public OffItState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		return room.Stats.IsDangerous ();
+		return room.IsDangerous;
 	}
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		Room room = Helpers.GetRandomArrayValue<Room>(movement.CurrentRoom.neighbors.Keys.ToList());
+		IRoom room = Helpers.GetRandomArrayValue<Neighbor>(movement.CurrentRoom.Neighbors).Room;
 		movement.Run ().ToRoom (room);
 	}
 	

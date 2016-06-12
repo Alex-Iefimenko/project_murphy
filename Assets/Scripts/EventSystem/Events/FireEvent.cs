@@ -10,8 +10,8 @@ public class FireEvent : EventBase {
 	
 	public override bool TryEvent ()
 	{
-		Room room = ShipState.Inst.RandomNamedRoom();
-		return room.SatesHandler.ForceState<FireRoomState>(amount);
+		IRoom room = ShipState.Inst.RandomNamedRoom();
+		return room.ForceState<FireRoomState>(amount);
 	}
 
 }

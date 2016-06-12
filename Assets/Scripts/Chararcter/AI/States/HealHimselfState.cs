@@ -9,7 +9,7 @@ public class HealHimselfState : StateBase {
 
 	public HealHimselfState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		return stats.IsHeavyWounded;
 	}

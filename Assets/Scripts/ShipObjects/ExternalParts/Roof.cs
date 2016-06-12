@@ -11,15 +11,14 @@ public class Roof : MonoBehaviour {
 		roofRenderer = GetComponent<SpriteRenderer>();
 		roofRenderer.sortingOrder = 32767;
 		roofAnimator = GetComponent<Animator>();
+		Switch (true);
+		RoomMotion roomMotion = GetComponentInParent<RoomMotion>();
+		if (roomMotion != null) roomMotion.OnRoofChange += Switch;
 	}
 	
-	public void ShowRoof()
+	public void Switch(bool state)
 	{
-		if (!roofAnimator.GetBool("RoofEnabled")) roofAnimator.SetBool("RoofEnabled", true);
+		if (roofAnimator.GetBool("RoofEnabled") != state) roofAnimator.SetBool("RoofEnabled", state);
 	}
 
-	public void HideRoof()
-	{
-		if (roofAnimator.GetBool("RoofEnabled")) roofAnimator.SetBool("RoofEnabled", false);
-	}
 }

@@ -10,8 +10,8 @@ public class ChemistryEvent : EventBase {
 	
 	public override bool TryEvent ()
 	{
-		Room room = ShipState.Inst.RandomNamedRoom();
-		return room.SatesHandler.ForceState<ChemistryHazardRoomState>(amount);
+		IRoom room = ShipState.Inst.RandomNamedRoom();
+		return room.ForceState<ChemistryHazardRoomState>(amount);
 	}
 	
 }

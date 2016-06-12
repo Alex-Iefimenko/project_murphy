@@ -9,7 +9,7 @@ public class UnconsitiousState : StateBase {
 	
 	public UnconsitiousState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		return stats.IsUnconscious;
 	}

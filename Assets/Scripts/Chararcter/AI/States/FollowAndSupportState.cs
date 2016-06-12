@@ -10,7 +10,7 @@ public class FollowAndSupportState : StateBase {
 	
 	public FollowAndSupportState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		return coordinator.Leader == false;
 	}
@@ -34,7 +34,7 @@ public class FollowAndSupportState : StateBase {
 		}
 		else if (!leader.IsMoving && !movement.IsMoving)
 		{
-			movement.Walk ().ToPoint (movement.CurrentRoom.Objects.GetRandomRoomPoint());
+			movement.Walk ().ToPoint (movement.CurrentRoom.GetRandomRoomPoint());
 		}
 	}
 	

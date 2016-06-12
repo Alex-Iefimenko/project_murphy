@@ -124,7 +124,7 @@ GameObject:
   - 4: {fileID: 415226}
   - 212: {fileID: 21215226}
   - 61: {fileID: 6115232}
-  - 114: {fileID: 11415240}
+  - 114: {fileID: 11448024}
   m_Layer: 0
   m_Name: TraderShip_OneMerchant
   m_TagString: Room
@@ -977,18 +977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5db2ab264c94dad854dfadd44eef48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11415240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3278a9bbfa77ff7499d6eab4642a9bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomType: 0
 --- !u!114 &11415242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1000,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11415244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1012,7 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11415246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1024,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11415248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1036,7 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11415250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1048,7 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11415252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1077,6 +1065,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a6aa1ba22f8480b9d5a481bb368c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11448024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c6951cbe5f14c71a6368710034449d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!198 &19815246
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 410566}
   - 212: {fileID: 21210566}
   - 61: {fileID: 6110570}
-  - 114: {fileID: 11410580}
+  - 114: {fileID: 11454142}
   m_Layer: 0
   m_Name: TradersShip_OneTrader
   m_TagString: Room
@@ -735,18 +735,6 @@ MonoBehaviour:
   characterType: 6
   prefabs:
   - {fileID: 100008, guid: 893ebc1d79ac01c45ac3d5621ce41241, type: 2}
---- !u!114 &11410580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3278a9bbfa77ff7499d6eab4642a9bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomType: 0
 --- !u!114 &11410582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -758,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -770,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -794,7 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11410590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -806,7 +794,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
+--- !u!114 &11454142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c6951cbe5f14c71a6368710034449d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!212 &21210564
 SpriteRenderer:
   m_ObjectHideFlags: 1

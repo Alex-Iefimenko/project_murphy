@@ -423,7 +423,7 @@ GameObject:
   - 4: {fileID: 488234}
   - 212: {fileID: 21288234}
   - 61: {fileID: 6188234}
-  - 114: {fileID: 11488234}
+  - 114: {fileID: 11494910}
   m_Layer: 0
   m_Name: PirateShip_TwoTerrorists
   m_TagString: Room
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11488226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11488228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11488230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
+  direction: 0
 --- !u!114 &11488232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1148,8 +1148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbaa08dd6c4a449b1783d62620134a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFree: 1
---- !u!114 &11488234
+  direction: 0
+--- !u!114 &11494910
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 188234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3278a9bbfa77ff7499d6eab4642a9bc5, type: 3}
+  m_Script: {fileID: 11500000, guid: c5c6951cbe5f14c71a6368710034449d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0

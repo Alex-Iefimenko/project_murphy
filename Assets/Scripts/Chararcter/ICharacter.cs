@@ -7,7 +7,7 @@ public interface ICharacter : IMovable {
 	Enums.CharacterSides Side { get; }
 	Enums.CharacterTypes Type { get; }
 
-	Room CurrentRoom { get; }
+	IRoom CurrentRoom { get; }
 	bool IsMoving { get; }
 
 	bool IsHealthy { get; }
@@ -19,7 +19,7 @@ public interface ICharacter : IMovable {
 	void Hurt (float amount);
 	void Infect (float amount);
 
-	void Navigate (Room room);
+	void Navigate (IRoom room);
 	void Push (Vector3 point);
 	void Vanish ();
 	void ChangeLayer (int layer);

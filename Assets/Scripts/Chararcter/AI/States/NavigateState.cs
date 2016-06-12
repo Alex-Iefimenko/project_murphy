@@ -9,9 +9,9 @@ public class NavigateState : StateBase {
 	
 	public NavigateState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public Room TargetRoom { get; set; }
+	public IRoom TargetRoom { get; set; }
 
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		return (aiHandler.CurrentState != null && aiHandler.CurrentState.StateKind == 5);
 	}

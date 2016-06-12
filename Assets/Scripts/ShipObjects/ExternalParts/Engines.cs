@@ -8,16 +8,14 @@ public class Engines : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		particalSystem = GetComponentsInChildren<ParticleSystem>();
-		SwitchOff ();
+		Switch (false);
+		RoomMotion roomMotion = GetComponentInParent<RoomMotion>();
+		if (roomMotion != null) roomMotion.OnEnginesChange += Switch;
 	}
 	
-	public void SwitchOn ()
+	public void Switch (bool state)
 	{
-		for (int i = 0; i < particalSystem.Length; i++) particalSystem[i].enableEmission = true;
+		for (int i = 0; i < particalSystem.Length; i++) particalSystem[i].enableEmission = state;
 	}
 
-	public void SwitchOff ()
-	{
-		for (int i = 0; i < particalSystem.Length; i++) particalSystem[i].enableEmission = false;
-	}
 }

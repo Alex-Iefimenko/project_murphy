@@ -9,7 +9,7 @@ public class EatState : StateBase {
 	
 	public EatState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
 		return stats.IsHungry;
 	}

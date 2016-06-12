@@ -6,34 +6,34 @@ public class UnelectryfiedRoomState : RoomStateBase {
 	
 	public override bool EnableCondition ()
 	{ 
-		bool result = !DisableCondition() && CurrentRoom.Stats.Unelectryfied;
+		bool result = !DisableCondition() && stats.IsUnelectryfied;
 		return result; 
 	} 
 	
 	public override bool DisableCondition ()
 	{ 
-//		bool repaired = CurrentRoom.Stats.Durability >= CurrentRoom.Stats.MaxDurability;
-		bool depress = CurrentRoom.Stats.Durability <= 0f;
+//		bool repaired = stats.Durability >= stats.MaxDurability;
+		bool depress = stats.Durability <= 0f;
 		return depress;// || depress;
 	}
 	
 	public override void StateEnable () 
 	{ 
 		base.StateEnable ();
-		CurrentRoom.Stats.PlantsLevel = 0f;
+		stats.DamagePlants (999f);
 		CurrentAnimator.SetBool("Unelectryfied", true);
 	}
 	
 	public override bool InitiatedEnable (float amount) 
 	{ 
-		if (!CurrentRoom.Stats.Unelectryfied) CurrentRoom.Stats.Unelectryfied = true;
+		if (!stats.IsUnelectryfied) stats.IsUnelectryfied = true;
 		return AutoEnable (); 
 	}
 	
 	public override void StateDisable () 
 	{ 
 		base.StateDisable ();
-		CurrentRoom.Stats.Unelectryfied = false;
+		stats.IsUnelectryfied = false;
 		CurrentAnimator.SetBool("Unelectryfied", false);
 	}
 	

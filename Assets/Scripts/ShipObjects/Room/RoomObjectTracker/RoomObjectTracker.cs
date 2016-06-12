@@ -3,30 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class RoomObjects {
+public class RoomObjectsTracker : IRoomObjectTracker {
 
-	private GameObject room;
+	private IRoomController controller;
 	private Furniture[] furniture;
 	private List<ICharacter> characters = new List<ICharacter>();
 
 	public List<ICharacter> Characters { get { return characters; } }
 
-	public RoomObjects (GameObject currentRoom)
+	public RoomObjectsTracker (IRoomController roomController, Furniture[] roomFurniture)
 	{
-		room = currentRoom;
-		furniture = room.GetComponentsInChildren<Furniture>();
+		controller = roomController;
+		furniture = roomFurniture;
+		controller.OnCharacterEnter += ComeIn;
+		controller.OnCharacterLeave += ComeOut;
 	}
 
-	public void ComeIn (Collider2D otherCollider)
+	public void ComeIn (ICharacter character)
 	{
-		ICharacter otherCharacter = otherCollider.GetComponent<Character>();
-		if (otherCharacter != null && !characters.Contains(otherCharacter)) characters.Add(otherCharacter);
+		characters.Add(character);
 	}
 
-	public void ComeOut (Collider2D otherCollider)
+	public void ComeOut (ICharacter character)
 	{
-		ICharacter otherCharacter = otherCollider.GetComponent<Character>();
-		if (otherCharacter != null && characters.Contains(otherCharacter)) characters.Remove(otherCharacter);
+		characters.Remove(character);
 	}
 	
 	public void Untrack (ICharacter character) {
@@ -52,29 +52,29 @@ public class RoomObjects {
 
 	public Vector3 GetRandomRoomPoint ()
 	{
-		Vector3 collCenter = room.collider2D.bounds.center;
-		Vector3 collExt = room.collider2D.bounds.extents * 0.85f;
+		Vector3 collCenter = controller.RoomBounds.center;
+		Vector3 collExt = controller.RoomBounds.extents * 0.85f;
 		float x = Random.Range(collCenter.x - collExt.x, collCenter.x + collExt.x);
 		float y = Random.Range(collCenter.y - collExt.y, collCenter.y + collExt.y);
-		return new Vector3(x, y, room.transform.position.z);
+		return new Vector3(x, y, controller.RoomTransaform.position.z);
 	}
 
 	public Vector3 DoorExitPoint ()
 	{
-		Neighbor neighbor = Helpers.GetRandomArrayValue<Neighbor>(room.GetComponent<Room>().neighbors.Values.ToArray());
+		Neighbor neighbor = Helpers.GetRandomArrayValue<Neighbor>(controller.Neighbors);
 		return neighbor.ExitPoint;
 	}
 
 	public Vector3 ClosestDoorExit (Vector3 position)
 	{
-		Neighbor[] neighbor = room.GetComponent<Room>().neighbors.Values.ToArray();
+		List<Neighbor> neighbor = controller.Neighbors;
 		return neighbor.OrderBy(v => Vector2.Distance(v.ExitPoint, position)).First().ExitPoint;
 	}
 
 	// Check if Room continse hostile Character
 	public ICharacter ContainsHostile (Enums.CharacterSides side) 
 	{
-		return characters.Find(v => SidesRelations.Instance.IsEnemies(side, v.Side));
+		return characters.Find(v => v.IsActive && SidesRelations.Instance.IsEnemies(side, v.Side));
 	}
 	
 	// Check if Room continse unconscious Character

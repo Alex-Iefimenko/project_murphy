@@ -11,15 +11,15 @@ public class TakeWoundedBodyState : StateBase {
 
 	public TakeWoundedBodyState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		return room.Objects.ContainsUnconscious() != null;
+		return room.ContainsUnconscious != null;
 	}
 
 	public override void Actualize () { 
 		base.Actualize (); 
 		pulling = false;
-		unconscious = movement.CurrentRoom.Objects.ContainsUnconscious();
+		unconscious = movement.CurrentRoom.ContainsUnconscious;
 		unconscious.Lock = true;
 		movement.Walk ().ToCharacter (unconscious);
 	}

@@ -5,7 +5,7 @@ public interface ICharacterStatePublic {
 	// Basic
 	Enums.CharacterSides Side { get; set; }
 	Enums.CharacterTypes Type { get; set; }
-	Room BasicRoom { get; }
+	IRoom BasicRoom { get; }
 	// Health
 	bool IsHealthy { get; }
 	bool IsActive { get; }

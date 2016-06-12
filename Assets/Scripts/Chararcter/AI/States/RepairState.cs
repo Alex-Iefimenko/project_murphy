@@ -9,9 +9,9 @@ public class RepairState : StateBase {
 
 	public RepairState (ICharacterAIHandler newHandler, AiStateParams param) : base(newHandler, param) { }
 	
-	public override bool EnableCondition (Room room) 
+	public override bool EnableCondition (IRoom room) 
 	{
-		return room.Stats.IsBroken ();	
+		return room.IsBroken;	
 	}
 
 	public override void Actualize () { 
@@ -28,7 +28,7 @@ public class RepairState : StateBase {
 	
 	public override bool DisableCondition () 
 	{
-		return movement.CurrentRoom.Stats.IsBroken() == false;
+		return movement.CurrentRoom.IsBroken == false;
 	}
 
 }

@@ -10,8 +10,8 @@ public class RadiationEvent : EventBase {
 	
 	public override bool TryEvent ()
 	{
-		Room room = ShipState.Inst.RandomNamedRoom();
-		return room.SatesHandler.ForceState<RadiationHazardRoomState>(amount);
+		IRoom room = ShipState.Inst.RandomNamedRoom();
+		return room.ForceState<RadiationHazardRoomState>(amount);
 	}
 	
 }

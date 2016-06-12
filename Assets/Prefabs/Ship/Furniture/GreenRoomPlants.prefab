@@ -24,8 +24,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 426898}
   - 212: {fileID: 21226896}
-  - 50: {fileID: 5026896}
   - 61: {fileID: 6126896}
+  - 50: {fileID: 5026896}
   m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
@@ -114,8 +114,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 426908}
   - 212: {fileID: 21226906}
-  - 50: {fileID: 5026906}
   - 61: {fileID: 6126906}
+  - 50: {fileID: 5026906}
   m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
@@ -132,8 +132,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 426910}
   - 212: {fileID: 21226908}
-  - 50: {fileID: 5026908}
   - 61: {fileID: 6126908}
+  - 50: {fileID: 5026908}
   m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
@@ -150,8 +150,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 426912}
   - 212: {fileID: 21226910}
-  - 50: {fileID: 5026910}
   - 61: {fileID: 6126910}
+  - 50: {fileID: 5026910}
   m_Layer: 0
   m_Name: Plant2
   m_TagString: Untagged
@@ -277,7 +277,7 @@ Transform:
   m_RootOrder: 6
 --- !u!50 &5026896
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126898}
@@ -292,7 +292,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!50 &5026898
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126900}
@@ -307,7 +307,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!50 &5026900
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126902}
@@ -322,7 +322,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!50 &5026902
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126904}
@@ -337,7 +337,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!50 &5026904
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126906}
@@ -352,7 +352,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!50 &5026906
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126908}
@@ -367,7 +367,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!50 &5026908
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126910}
@@ -382,7 +382,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!50 &5026910
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126912}

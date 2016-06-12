@@ -11,7 +11,7 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour, ICharacterStatePri
 	[HideInInspector] [System.NonSerialized] public Enums.CharacterTypes type;
 	[HideInInspector] [System.NonSerialized] public float walkSpeed;
 	[HideInInspector] [System.NonSerialized] public float runSpeed;
-	[HideInInspector] [System.NonSerialized] public Room basicRoom;
+	[HideInInspector] [System.NonSerialized] public IRoom basicRoom;
 	// Health
 	[HideInInspector] [System.NonSerialized] public float maxHealth;
 	[HideInInspector] [System.NonSerialized] public float health;
@@ -60,7 +60,7 @@ public abstract class CharatcerStatsAbstract : MonoBehaviour, ICharacterStatePri
 	public virtual Enums.CharacterTypes Type { get; set; }
 	public virtual float WalkSpeed { get; set; }
 	public virtual float RunSpeed { get; set; }
-	public virtual Room BasicRoom { get; set; }
+	public virtual IRoom BasicRoom { get; set; }
 	// Health
 	public virtual float MaxHealth { get; set; }
 	public virtual float Health { get; set; }

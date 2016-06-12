@@ -56,9 +56,9 @@ public class Beacon : MonoBehaviour {
 		directionVector = Quaternion.Euler(0, 0, Random.Range(-30, 30)) * directionVector;
 		Vector3 instantiatePoint = transform.position + Random.Range(25, 35) * directionVector;
 		GameObject ship = (GameObject)Instantiate(vessel, instantiatePoint, transform.rotation);
-		Room room = ship.GetComponent<Room>();
-		room.Flier.FlyUp(transform.position);
-		room.Flier.Gateway = this;
+		IRoom room = ship.GetComponent<Room>() as IRoom;
+		room.FlyUp(transform.position);
+		room.Gateway = this;
 	}
 
 	private bool RequestButton ()

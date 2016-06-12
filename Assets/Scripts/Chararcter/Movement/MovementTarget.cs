@@ -4,7 +4,7 @@ using System.Collections;
 public class MovementTarget
 {
 	public GameObject GObject { get; private set; }
-	public Room Room { get; private set; }
+	public IRoom Room { get; private set; }
 	public Vector3 Position { get { return endPosition(); } }
 	public Vector3 Center { get { return centerPosition(); } }
 	public bool IsDynamic { get; private set; }
@@ -18,22 +18,22 @@ public class MovementTarget
 	PositionDeleagte endPosition;
 	PositionDeleagte centerPosition;
 
-	public MovementTarget (GameObject self, Room room)
+	public MovementTarget (GameObject self, IRoom room)
 	{
 		Room = room;
-		GObject = room.gameObject;
+		GObject = room.GObject;
 		IsDynamic = false;
 		character = self;
-		transform = room.gameObject.transform;
+		transform = room.GObject.transform;
 		endPosition = ClosestEntrance;
 		centerPosition = TransformPositon;
 	}
 
-	public MovementTarget (Room room, string item)
+	public MovementTarget (IRoom room, string item)
 	{
 		Room = room;
 		IsDynamic = false;
-		Furniture obj = item == "Random" ? room.Objects.GetFreeRoomObject() : room.Objects.GetRoomObject(item);
+		Furniture obj = item == "Random" ? room.GetFreeRoomObject() : room.GetRoomObject(item);
 		if (obj != null) 
 		{
 			GObject = obj.gameObject;
@@ -44,7 +44,7 @@ public class MovementTarget
 		}
 		else
 		{
-			point = room.Objects.GetRandomRoomPoint();
+			point = room.GetRandomRoomPoint();
 			endPosition = PointPosition;
 			centerPosition = RandomDirection;
 		} 
@@ -75,9 +75,9 @@ public class MovementTarget
 	public MovementTarget (Vector3 newPoint)
 	{
 		Room = ShipState.Inst.RoomByPoint(newPoint);
-		GObject = Room.gameObject;
+		GObject = Room.GObject;
 		IsDynamic = false;
-		transform = Room.gameObject.transform;
+		transform = Room.GObject.transform;
 		point = newPoint;
 		endPosition = PointPosition;
 		centerPosition = RandomDirection;
@@ -89,7 +89,7 @@ public class MovementTarget
 	
 	private Vector3 ClosestEntrance ()
 	{
-		return Room.Objects.ClosestDoorExit(character.transform.position);
+		return Room.ClosestDoorExit(character.transform.position);
 	}
 
 	private Vector3 TransformPositon ()

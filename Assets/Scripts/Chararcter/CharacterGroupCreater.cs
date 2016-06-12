@@ -9,8 +9,8 @@ public class CharacterGroupCreater : MonoBehaviour {
 
 	public void CreateCharacters ()
 	{
-		Room room = ShipState.Inst.RoomByPoint(transform.position);
-		GameObject lead = Instantiate(leader, room.Objects.GetRandomRoomPoint(), transform.rotation) as GameObject;
+		IRoom room = ShipState.Inst.RoomByPoint(transform.position);
+		GameObject lead = Instantiate(leader, room.GetRandomRoomPoint(), transform.rotation) as GameObject;
 
 
 		IGroupCharacter groupLeader = lead.GetComponent<CharacterCreater>().CreateCharacter();
@@ -20,12 +20,12 @@ public class CharacterGroupCreater : MonoBehaviour {
 		Destroy(this.gameObject);
 	}
 
-	private IGroupCharacter[] CreateGroup (Room room, GameObject[] group)
+	private IGroupCharacter[] CreateGroup (IRoom room, GameObject[] group)
 	{
 		IGroupCharacter[] createdGroup = new IGroupCharacter[group.Length];
 		for (int i = 0; i < group.Length; i++)
 		{
-			GameObject character = Instantiate(group[i], room.Objects.GetRandomRoomPoint(), transform.rotation) as GameObject;
+			GameObject character = Instantiate(group[i], room.GetRandomRoomPoint(), transform.rotation) as GameObject;
 			createdGroup[i] = character.GetComponent<CharacterCreater>().CreateCharacter();
 		}
 		return createdGroup;
