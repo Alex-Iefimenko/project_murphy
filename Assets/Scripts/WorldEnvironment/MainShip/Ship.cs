@@ -3,27 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class ShipState {
+public class Ship {
 
-	private static ShipState instance;
+	private static Ship instance;
 	private static readonly object locker = new object();
 
 	public Door[] allDoors;
 	public IRoom[] allRooms;
 	public ICharacter[] allCharacters;
 	public ICharacter player;
-	public Dictionary<Enums.RoomTypes, IRoom> specRooms;
+	private Dictionary<string, IRoom[]> specRooms;
 	private ShipStructure shipStructure;
 
-	private ShipState () { }
+	private Ship () { }
 
-	public static ShipState Inst
+	public static Ship Inst
 	{
 		get
 		{
 			lock (locker)
 			{
-				if (instance == null) instance = new ShipState();
+				if (instance == null) instance = new Ship();
 			}
 			return instance;
 		}
@@ -50,9 +50,14 @@ public class ShipState {
 			return shipStructure.GetStepsToRoom(initialRoom, targetRoom);
 	}
 
+	public IRoom GetRoom (string name)
+	{
+		return Helpers.GetRandomArrayValue<IRoom>(specRooms[name]);
+	}
+
 	public IRoom RandomNamedRoom ()
 	{
-		return Helpers.GetRandomArrayValue<IRoom>(specRooms.Values.ToArray());
+		return Helpers.GetRandomArrayValue<IRoom>(allRooms.Where(v => v.Type != Enums.RoomTypes.Nothing).ToArray());
 	}
 
 	public IRoom RandomRoom ()
@@ -95,11 +100,12 @@ public class ShipState {
 
 	private void AddSpecRooms ()
 	{
-		specRooms = new Dictionary<Enums.RoomTypes, IRoom> ();
-		for (int i = 0; i < allRooms.Length; i++)
+		specRooms = new Dictionary<string, IRoom[]> ();
+		foreach(Enums.RoomTypes type in System.Enum.GetValues(typeof(Enums.RoomTypes)))
 		{
-			if (allRooms[i].Type != Enums.RoomTypes.Nothing) specRooms.Add (allRooms[i].Type, allRooms[i]);
-		} 
+			IRoom[] roomOfType = allRooms.Where(v => v.Type == type).ToArray ();
+			specRooms.Add (type.ToString(), roomOfType);
+		}
 	}
 	
 }

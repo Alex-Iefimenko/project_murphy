@@ -55,7 +55,7 @@ public class PutExplosiveState : StateBase {
 
 	private IRoom FetchSharedGoal ()
 	{
-		if (coordinator.Target == null) coordinator.Target = ShipState.Inst.RandomNamedRoom().GObject;
+		if (coordinator.Target == null) coordinator.Target = Ship.Inst.RandomNamedRoom().GObject;
 //		if (character.Coordinator.Target == null) character.Coordinator.Target = ShipState.Inst.specRooms[Enums.RoomTypes.Disposal].gameObject;
 		IRoom targetRoom = coordinator.Target.GetComponent<Room>() as IRoom;
 		return targetRoom;

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class RoomStatesTest : MonoBehaviour {
@@ -19,34 +19,34 @@ public class RoomStatesTest : MonoBehaviour {
 			switch (state)
 			{
 			case RoomStates.Broken:
-				ShipState.Inst.specRooms[room].ForceState<BrokenRoomState>(amount);
+				Ship.Inst.GetRoom(room.ToString()).ForceState<BrokenRoomState>(amount);
 				break;
 			case RoomStates.Fire:
-				ShipState.Inst.specRooms[room].ForceState<FireRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<FireRoomState>(amount); 
 				break;
 			case RoomStates.RadiationHazard:
-				ShipState.Inst.specRooms[room].ForceState<RadiationHazardRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<RadiationHazardRoomState>(amount); 
 				break;
 			case RoomStates.ChemistryHazard:
-				ShipState.Inst.specRooms[room].ForceState<ChemistryHazardRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<ChemistryHazardRoomState>(amount); 
 				break;
 			case RoomStates.Unelectryfied:
-				ShipState.Inst.specRooms[room].ForceState<UnelectryfiedRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<UnelectryfiedRoomState>(amount); 
 				break;
 			case RoomStates.WeatherChange:
-				ShipState.Inst.specRooms[room].ForceState<WeatherChangeRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<WeatherChangeRoomState>(amount); 
 				break;
 			case RoomStates.NoGravity:
-				ShipState.Inst.specRooms[room].ForceState<NoGravityRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<NoGravityRoomState>(amount); 
 				break;
 			case RoomStates.PlantsMutation:
-				ShipState.Inst.specRooms[room].ForceState<PlantsMutationRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<PlantsMutationRoomState>(amount); 
 				break;
 			case RoomStates.Depressurization:
-				ShipState.Inst.specRooms[room].ForceState<DepressurizationRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<DepressurizationRoomState>(amount); 
 				break;
 			case RoomStates.Destroyed:
-				ShipState.Inst.specRooms[room].ForceState<DestroyedRoomState>(amount); 
+				Ship.Inst.GetRoom(room.ToString()).ForceState<DestroyedRoomState>(amount); 
 				break;
 			}
 

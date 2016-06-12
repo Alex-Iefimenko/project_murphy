@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MovementTarget
@@ -63,7 +63,7 @@ public class MovementTarget
 
 	public MovementTarget (GameObject self, Item item)
 	{
-		Room = ShipState.Inst.RoomByPoint(item.transform.position);
+		Room = Ship.Inst.RoomByPoint(item.transform.position);
 		GObject = item.gameObject;
 		IsDynamic = false;
 		character = self;
@@ -74,7 +74,7 @@ public class MovementTarget
 
 	public MovementTarget (Vector3 newPoint)
 	{
-		Room = ShipState.Inst.RoomByPoint(newPoint);
+		Room = Ship.Inst.RoomByPoint(newPoint);
 		GObject = Room.GObject;
 		IsDynamic = false;
 		transform = Room.GObject.transform;

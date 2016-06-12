@@ -16,7 +16,7 @@ public class EatState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		movement.Walk ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery], "Random");
+		movement.Walk ().ToFurniture (Ship.Inst.GetRoom("Dinnery"), "Random");
 	}
 	
 	public override void Execute ()

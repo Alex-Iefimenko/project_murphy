@@ -12,7 +12,7 @@ public class TraderMerchantStats : HumanStats {
 		Type 					= Enums.CharacterTypes.Merchant;
 		WalkSpeed			 	= 0.5f;
 		RunSpeed 				= 0.7f;
-		BasicRoom 				= ShipState.Inst.RoomByPoint(gameObject.transform.position);
+		BasicRoom 				= Ship.Inst.RoomByPoint(gameObject.transform.position);
 		// Health
 		MaxHealth 				= Random.Range(60, 80);
 		Health 					= maxHealth;

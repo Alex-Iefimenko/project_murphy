@@ -30,7 +30,7 @@ public class TakeWoundedBodyState : StateBase {
 		if (!pulling && movement.IsNearObject(unconscious.GObject))
 		{
 			OnSubStateChange (1);
-			movement.Walk ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
+			movement.Walk ().ToFurniture (Ship.Inst.GetRoom("MedBay"), "Random");
 			movement.Pull ((IMovable)unconscious);
 			pulling = true;
 		}

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CharacterGroupCreater : MonoBehaviour {
@@ -9,7 +9,7 @@ public class CharacterGroupCreater : MonoBehaviour {
 
 	public void CreateCharacters ()
 	{
-		IRoom room = ShipState.Inst.RoomByPoint(transform.position);
+		IRoom room = Ship.Inst.RoomByPoint(transform.position);
 		GameObject lead = Instantiate(leader, room.GetRandomRoomPoint(), transform.rotation) as GameObject;
 
 

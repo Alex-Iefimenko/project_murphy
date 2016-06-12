@@ -16,7 +16,7 @@ public class HealHimselfState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		movement.Run ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.MedBay], "Random");
+		movement.Run ().ToFurniture (Ship.Inst.GetRoom("MedBay"), "Random");
 	}
 	
 	public override void Execute () 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class RoomMotion : MonoBehaviour, IRoomMotion {
@@ -60,12 +60,12 @@ public class RoomMotion : MonoBehaviour, IRoomMotion {
 
 	private void Dock()
 	{
-		ShipState.Inst.Init();
+		Ship.Inst.Init();
 		CharacterCreater[] characters = GetComponentsInChildren<CharacterCreater>();
 		for (int i = 0; i < characters.Length; i++) characters[i].CreateCharacter();
 		CharacterGroupCreater[] characterGroups = GetComponentsInChildren<CharacterGroupCreater>();
 		for (int i = 0; i < characterGroups.Length; i++) characterGroups[i].CreateCharacters();
-		ShipState.Inst.CountCharacters();
+		Ship.Inst.CountCharacters();
 		if (OnRoofChange != null) OnRoofChange (false);
 		if (OnEnginesChange != null) OnEnginesChange (false);
 		if (Gateway) Gateway.OnDock();

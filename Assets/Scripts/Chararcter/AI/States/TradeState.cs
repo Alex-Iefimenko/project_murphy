@@ -18,7 +18,7 @@ public class TradeState : StateBase {
 	
 	public override void Actualize () { 
 		base.Actualize ();
-		movement.Walk ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.Dinnery], "Random");
+		movement.Walk ().ToFurniture (Ship.Inst.GetRoom("Dinnery"), "Random");
 		tick = Random.Range(10, 15);
 	}
 	

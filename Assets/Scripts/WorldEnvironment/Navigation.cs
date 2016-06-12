@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Navigation : MonoBehaviour 
@@ -240,13 +240,13 @@ public class Navigation : MonoBehaviour
 
 	void HideShip ()
 	{
-		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].ChangeRoof(true);
+		for (int i = 0; i < Ship.Inst.allRooms.Length; i++) Ship.Inst.allRooms[i].ChangeRoof(true);
 		hidden = true;
 	}
 
 	void ShowShip ()
 	{
-		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++) ShipState.Inst.allRooms[i].ChangeRoof(false);
+		for (int i = 0; i < Ship.Inst.allRooms.Length; i++) Ship.Inst.allRooms[i].ChangeRoof(false);
 		hidden = false;
 	}
 }

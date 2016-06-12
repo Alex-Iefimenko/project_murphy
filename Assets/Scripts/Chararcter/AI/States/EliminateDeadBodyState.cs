@@ -30,7 +30,7 @@ public class EliminateDeadBodyState : StateBase {
 		if (!pulling && movement.IsNearObject(dead.GObject))
 		{
 			OnSubStateChange (1);
-			movement.Walk ().ToFurniture(ShipState.Inst.specRooms[Enums.RoomTypes.Disposal], "DisposalPort");
+			movement.Walk ().ToFurniture(Ship.Inst.GetRoom("Disposal"), "DisposalPort");
 			movement.Pull ((IMovable)dead);
 			pulling = true;
 		}

@@ -5,11 +5,11 @@ public class Initializer : MonoBehaviour {
 
 	// Use this for initialization step by step
 	void Start () {
-		ShipState.Inst.Init();
+		Ship.Inst.Init();
 		// Generate NPC stats
 		InitCharacters ();
 		// Calls all neccessary function to build ship structure
-		ShipState.Inst.CountCharacters();
+		Ship.Inst.CountCharacters();
 	}
 
 	void InitCharacters ()

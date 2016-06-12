@@ -19,12 +19,12 @@ public class Door : MonoBehaviour {
 		Vector3 entranceTwo = entrances[1];
 		IRoom neighborOne = null;
 		IRoom neighborTwo = null;
-		for (int i = 0; i < ShipState.Inst.allRooms.Length; i++)
+		for (int i = 0; i < Ship.Inst.allRooms.Length; i++)
 		{
-			if (ShipState.Inst.allRooms[i].GObject.collider2D.OverlapPoint(entranceOne))
-			    neighborOne = ShipState.Inst.allRooms[i];
-			if (ShipState.Inst.allRooms[i].GObject.collider2D.OverlapPoint(entranceTwo))
-			    neighborTwo = ShipState.Inst.allRooms[i];
+			if (Ship.Inst.allRooms[i].GObject.collider2D.OverlapPoint(entranceOne))
+			    neighborOne = Ship.Inst.allRooms[i];
+			if (Ship.Inst.allRooms[i].GObject.collider2D.OverlapPoint(entranceTwo))
+			    neighborTwo = Ship.Inst.allRooms[i];
 			if (neighborOne != null && neighborTwo != null) break;
 		}
 		if (neighborOne != null && neighborTwo != null)

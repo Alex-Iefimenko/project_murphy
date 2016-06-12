@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FireEvent : EventBase {
@@ -10,7 +10,7 @@ public class FireEvent : EventBase {
 	
 	public override bool TryEvent ()
 	{
-		IRoom room = ShipState.Inst.RandomNamedRoom();
+		IRoom room = Ship.Inst.RandomNamedRoom();
 		return room.ForceState<FireRoomState>(amount);
 	}
 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PirateTerroristStats : HumanStats {
@@ -12,7 +12,7 @@ public class PirateTerroristStats : HumanStats {
 		Type 					= Enums.CharacterTypes.Terrorist;
 		WalkSpeed			 	= 0.5f;
 		RunSpeed 				= 0.7f;
-		BasicRoom 				= ShipState.Inst.RoomByPoint(gameObject.transform.position);
+		BasicRoom 				= Ship.Inst.RoomByPoint(gameObject.transform.position);
 		// Health
 		MaxHealth 				= Random.Range(60, 80);
 		Health 					= maxHealth;

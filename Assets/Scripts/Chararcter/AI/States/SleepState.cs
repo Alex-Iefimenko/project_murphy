@@ -16,7 +16,7 @@ public class SleepState : StateBase {
 
 	public override void Actualize () { 
 		base.Actualize (); 
-		movement.Walk ().ToFurniture (ShipState.Inst.specRooms[Enums.RoomTypes.LivingQuarters], "Random");
+		movement.Walk ().ToFurniture (Ship.Inst.GetRoom("LivingQuarters"), "Random");
 	}
 	
 	public override void Execute () 

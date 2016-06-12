@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CrewDoctorStats : CrewStats {
@@ -12,7 +12,7 @@ public class CrewDoctorStats : CrewStats {
 		Type 					= Enums.CharacterTypes.Doctor;
 		WalkSpeed			 	= 0.5f;
 		RunSpeed 				= 0.7f;
-		BasicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.MedBay];
+		BasicRoom 				= Ship.Inst.GetRoom("MedBay");
 		// Health
 		MaxHealth 				= Random.Range(60, 80);
 		Health 					= maxHealth;

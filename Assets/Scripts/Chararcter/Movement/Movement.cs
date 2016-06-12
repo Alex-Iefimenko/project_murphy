@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -136,7 +136,7 @@ public class Movement : MonoBehaviour, IMovement
 	{
 		Purge ();
 		target = newTarget;
-		movementPath = ShipState.Inst.GetStepsToRoom (currentRoom, target.Room);
+		movementPath = Ship.Inst.GetStepsToRoom (currentRoom, target.Room);
 		movementPath.Add (target.Position);
 		LookAt (movementPath[0]);
 		onMove += Move;

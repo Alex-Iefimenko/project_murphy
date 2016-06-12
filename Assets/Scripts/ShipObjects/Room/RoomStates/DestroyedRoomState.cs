@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class DestroyedRoomState : RoomStateBase {
@@ -26,7 +26,7 @@ public class DestroyedRoomState : RoomStateBase {
 		stats.HasNoGravity = false;
 		CurrentAnimator.SetBool("Destroyed", true);
 		controller.GObject.tag = "Untagged";
-		ShipState.Inst.Init();
+		Ship.Inst.Init();
 		for (int i = 0; i < objects.Characters.Count; i++ ) 
 		{
 			objects.Characters[i].Hurt(999f);

@@ -11,7 +11,7 @@ public class FirstAidState : StateBase {
 	
 	public override bool EnableCondition (IRoom room) 
 	{
-		bool result = stats.IsWounded && movement.CurrentRoom == ShipState.Inst.specRooms[Enums.RoomTypes.MedBay];
+		bool result = stats.IsWounded && movement.CurrentRoom == Ship.Inst.GetRoom("MedBay");
 		return result;
 	}
 	

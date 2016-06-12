@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerMurphyStats : PlayerStats {
@@ -12,7 +12,7 @@ public class PlayerMurphyStats : PlayerStats {
 		Type 					= Enums.CharacterTypes.Murphy;
 		WalkSpeed			 	= 0.75f;
 		RunSpeed 				= 0.75f;
-		BasicRoom 				= ShipState.Inst.specRooms[Enums.RoomTypes.Control];
+		BasicRoom 				= Ship.Inst.GetRoom("Control");
 		// Health
 		MaxHealth 				= Random.Range(70, 80);
 		Health 					= maxHealth;
